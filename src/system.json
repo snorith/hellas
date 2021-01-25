@@ -1,16 +1,9 @@
 {
   "name": "hellas",
-  "title": "hellas",
-  "description": "",
+  "title": "Hellas",
+  "description": "Fan contributed support for the Hellas rpg in FoundryVTT",
   "version": "0.1.0",
-  "author": "",
-  "authors": [
-    {
-      "name": "",
-      "email": "",
-      "url": ""
-    }
-  ],
+  "author": "snorith (Stephen Smith)",
   "scripts": [],
   "esmodules": ["hellas.js"],
   "styles": ["hellas.css"],
@@ -18,13 +11,13 @@
   "languages": [],
   "gridDistance": 1,
   "gridUnits": "",
-  "minimumCoreVersion": "0.5.0",
-  "compatibleCoreVersion": "0.5.0",
-  "url": "",
+  "minimumCoreVersion": "0.7.0",
+  "compatibleCoreVersion": "0.7.9",
+  "url": "https://github.com/snorith/hellas.git",
   "manifest": "",
   "download": "",
-  "license": "",
-  "readme": "",
-  "bugs": "",
-  "changelog": ""
+  "license": "LICENSE",
+  "readme": "https://github.com/snorith/hellas#readme",
+  "bugs": "https://github.com/snorith/hellas/issues",
+  "changelog": "https://github.com/snorith/hellas#changelog"
 }
