@@ -5,6 +5,16 @@ const chalk = require('chalk');
 const archiver = require('archiver');
 const stringify = require('json-stringify-pretty-compact');
 const typescript = require('typescript');
+const postcss = require('gulp-postcss');
+const autoprefixer = require('autoprefixer');
+const bourbon = require('bourbon').includePaths;
+const cssnano = require('cssnano');
+const sourcemaps = require('gulp-sourcemaps');
+const profilemode = require('gulp-mode')({
+	modes: ["production", "development"],
+	default: "development",
+	verbose: false
+});
 
 const ts = require('gulp-typescript');
 const less = require('gulp-less');
@@ -150,9 +160,30 @@ function buildLess() {
  * Build SASS
  */
 function buildSASS() {
+	var isProduction = profilemode.production();
+	let plugins = [];
+
+	if (isProduction) {
+		plugins = [
+			autoprefixer(),
+			cssnano()
+		];
+	}
+	else {
+		plugins = [
+			autoprefixer()
+		];
+	}
+
 	return gulp
 		.src('src/*.scss')
-		.pipe(sass().on('error', sass.logError))
+		.pipe(profilemode.development(sourcemaps.init()))
+		.pipe(sass({
+			includePaths: [].concat( bourbon ),
+			outputStyle: 'expanded'   // Options: nested, expanded, compact, compressed
+		}).on('error', sass.logError))
+		.pipe(postcss(plugins))
+		.pipe(profilemode.development(sourcemaps.write()))
 		.pipe(gulp.dest('dist'));
 }
 
