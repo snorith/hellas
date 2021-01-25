@@ -3,6 +3,9 @@
 /* This is your Sass entry file			*/
 /* ------------------------------------ */
 
+@tailwind components;
+@tailwind utilities;
+
 @import "bourbon";
 
 // Import utilities.

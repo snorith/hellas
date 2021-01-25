@@ -160,17 +160,20 @@ function buildLess() {
  * Build SASS
  */
 function buildSASS() {
-	var isProduction = profilemode.production();
+	const tailwindcss = require('tailwindcss');
+	const isProduction = profilemode.production();
 	let plugins = [];
 
 	if (isProduction) {
 		plugins = [
+			tailwindcss("./tailwind.config.js"),
 			autoprefixer(),
 			cssnano()
 		];
 	}
 	else {
 		plugins = [
+			tailwindcss("./tailwind.config.js"),
 			autoprefixer()
 		];
 	}
