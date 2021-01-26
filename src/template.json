@@ -1,7 +1,80 @@
 {
   "Actor": {
-    "types": [],
-    "templates": []
+    "types": [
+      "character"
+    ],
+    "templates": {
+      "base": {
+        "version": 1
+      }
+    },
+    "character": {
+      "templates": [
+        "base"
+      ],
+      "epithet": "",
+      "race": "",
+      "profession": "",
+      "deity": "",
+      "attributes": {
+        "intelligence": {
+          "value": 0,
+          "max": 0
+        },
+        "perception": {
+          "value": 0,
+          "max": 0
+        },
+        "will": {
+          "value": 0,
+          "max": 0
+        },
+        "charisma": {
+          "value": 0,
+          "max": 0
+        },
+        "strength": {
+          "value": 0,
+          "max": 0
+        },
+        "constitution": {
+          "value": 0,
+          "max": 0
+        },
+        "dexterity": {
+          "value": 0,
+          "max": 0
+        },
+        "speed": {
+          "value": 0,
+          "max": 0
+        },
+        "glory": {
+          "value": 0,
+          "max": 0
+        },
+        "heropoints": {
+          "value": 0,
+          "max": 0
+        },
+        "combatrating": {
+          "value": 0,
+          "max": 0
+        },
+        "dynamism": {
+          "value": 0,
+          "max": 0
+        },
+        "hitpoints": {
+          "value": 0,
+          "max": 0
+        },
+        "fatepoints": {
+          "value": 0,
+          "max": 10
+        }
+      }
+    }
   },
   "Item": {
     "types": [],
