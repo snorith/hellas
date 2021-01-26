@@ -7,7 +7,9 @@ export type hellasConfigType = {
 	skills: string[],
 	skillsWSpecifics: string[],
 	skillSpecificsBreakdown: { [key: string]: string[] },
-	skillWAssocAttributes: { [key: string]: string[] }
+	skillWAssocAttributes: { [key: string]: string[] },
+	dynamismModes: string[],
+	dynamismModesSpecificBreakdowns: { [key: string]: string[] }
 }
 
 const HELLAS: hellasConfigType = {
@@ -74,7 +76,7 @@ const HELLAS: hellasConfigType = {
 		"instinct": ["intuition", "initiative"],
 		"investigatesearch": ["investigation", "search"],
 		"lore": ["agriculture", "arcanearts", "engineering", "folklore", "forgery", "gambling", "heraldry", "herblore", "geography", "history", "law", "local", "mining", "nature", "region", "streetwise", "tactics", "specify"],
-		"mode": [""],
+		"mode": [],
 		"perform": ["dance", "musicianship", "juggling", "acting", "oratory", "singing"],
 		"pilot": ["specify"],
 		"profession": ["specify"],
@@ -107,7 +109,7 @@ const HELLAS: hellasConfigType = {
 		literacy: ["INT"],
 		lore: ["INT"],
 		medicine: ["INT"],
-		mode: ["DYN"],
+		mode: ["DYN", "CR"],
 		mounted: ["CR"],
 		navigate: ["PER"],
 		pankration: ["CR"],
@@ -127,11 +129,26 @@ const HELLAS: hellasConfigType = {
 		trackingshadowing: ["PER", "DEX"],
 		trading: ["INT", "CHA"],
 		weapon: ["CR"],
-	}
+	},
+
+	dynamismModes: [],
+
+	dynamismModesSpecificBreakdowns: {
+		"attack": ['ranged', 'close', 'area'],
+		"illusion": ['illusion'],
+		"influence": ['influence'],
+		"kinetic": ['kinetic'],
+		"manifest": ['create', 'dematerialize'],
+		"manipulate": ['health', 'skill', 'attribute', 'protection', 'minortransform', 'majortransform', 'completetransform'],
+		"sensory": ['perception', 'locate', 'scry', 'obscure'],
+		"shield": ['aura', 'barrier', 'ward', 'curse']
+,	}
 }
 
 HELLAS.attributes = Object.keys(HELLAS.attributesWShortName)
 HELLAS.skillsWSpecifics = Object.keys(HELLAS.skillSpecificsBreakdown)
 HELLAS.skills = Object.keys(HELLAS.skillWAssocAttributes)
+HELLAS.dynamismModes = Object.keys(HELLAS.dynamismModesSpecificBreakdowns)
+HELLAS.skillSpecificsBreakdown["mode"] = HELLAS.dynamismModes
 
 export { HELLAS }
