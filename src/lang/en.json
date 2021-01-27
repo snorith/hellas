@@ -1,4 +1,8 @@
 {
+  "HELLAS.sheet.tabs.attributes": "Attributes",
+  "HELLAS.sheet.tabs.personal": "Personal",
+  "HELLAS.sheet.tabs.description": "Description",
+  
   "HELLAS.character.name.name": "Name",
   "HELLAS.character.epithet.name": "Epithet",
   "HELLAS.character.race.name": "Race",

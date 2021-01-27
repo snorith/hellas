@@ -1,0 +1,33 @@
+<form class="{{cssClass}} flexcol" autocomplete="off" autocapitalize="off">
+	{{!-- Sheet Header --}}
+	<header class="sheet-header">
+		{{!-- header --}}
+		<img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" alt="{{actor.name}}" height="100" width="100"/>
+		<div class="header-fields">
+			<h1 class="char-name"><input name="name" type="text" value="{{actor.name}}" placeholder="{{localize "HELLAS.character.name.name"}}" data-dtype="String"></h1>
+		</div>
+	</header>
+
+	{{!-- Sheet Tab Navigation --}}
+	<nav class="sheet-tabs tabs" data-group="primary">
+		<a class="item" data-tab="attributes">{{localize "HELLAS.sheet.tabs.attributes"}}</a>
+		<a class="item" data-tab="personal">{{localize "HELLAS.sheet.tabs.personal"}}</a>
+		<a class="item" data-tab="description">{{localize "HELLAS.sheet.tabs.description"}}</a>
+	</nav>
+
+	{{!-- Sheet Body --}}
+	<section class="sheet-body">
+		{{!-- Main sheet tab --}}
+		<div class="tab attributes" data-group="primary" data-tab="attributes">
+		</div>
+
+		{{!-- Personal Tab --}}
+		<div class="tab personal" data-group="primary" data-tab="personal">
+		</div>
+
+		{{!-- Biography Tab --}}
+		<div class="tab biography" data-group="primary" data-tab="description">
+			{{editor content=data.biography target="data.biography" button=true owner=owner editable=editable}}
+		</div>
+	</section>
+</form>

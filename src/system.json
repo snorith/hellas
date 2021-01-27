@@ -8,12 +8,18 @@
   "esmodules": ["hellas.js"],
   "styles": ["hellas.css"],
   "packs": [],
-  "languages": [],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
+  ],
   "gridDistance": 1,
   "gridUnits": "",
   "minimumCoreVersion": "0.7.0",
   "compatibleCoreVersion": "0.7.9",
-  "url": "https://github.com/snorith/hellas.git",
+  "url": "https://github.com/snorith/hellas",
   "manifest": "",
   "download": "",
   "license": "LICENSE",

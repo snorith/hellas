@@ -1,30 +1,46 @@
 /**
- * This is your TypeScript entry file for Foundry VTT.
- * Register custom settings, sheets, and constants using the Foundry API.
- * Change this heading to be more descriptive to your system, or remove it.
- * Author: [your name]
+ * Hellas RPG
+ *
+ * Author: Stephen Smith
  * Content License: [copyright and-or license] If using an existing system
  * 					you may want to put a (link to a) license or copyright
  * 					notice here (e.g. the OGL).
- * Software License: [your license] Put your desired license here, which
- * 					 determines how others may use and modify your system
+ * Software License: The MIT License (MIT)
  */
 
 // Import TypeScript modules
-import { registerSettings } from './module/settings.js';
-import { preloadTemplates } from './module/preloadTemplates.js';
+import {registerSettings, systemName} from './module/settings.js';
+import {preloadTemplates} from './module/preloadTemplates.js';
+import {HellasActor} from "./module/actor/HellasActor"
+import {HellasActorSheet} from "./module/actor/HellasActorSheet"
+import {HELLAS} from "./module/config"
 
 /* ------------------------------------ */
 /* Initialize system					*/
 /* ------------------------------------ */
 Hooks.once('init', async function() {
-	console.log('hellas | Initializing hellas');
+	console.log('Hellas | Initializing hellas');
 
 	// Assign custom classes and constants here
-	
+	game.hellas = {
+		HellasActor,
+		HellasActorSheet,
+	}
+
+	game.HELLAS = HELLAS
+
+	// define custom entity classes
+	// @ts-ignore
+	CONFIG.Actor.entityClass = HellasActor
+
+	// @ts-ignore
+	Actors.unregisterSheet("core", ActorSheet)
+	// @ts-ignore
+	Actors.registerSheet(systemName, HellasActorSheet, { makeDefault: true })
+
 	// Register custom system settings
 	registerSettings();
-	
+
 	// Preload Handlebars templates
 	await preloadTemplates();
 
