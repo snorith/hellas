@@ -1,18 +1,34 @@
+type ObjectWStringValues = { [key: string]: string }
+type ObjectWStringArrayValues = { [key: string]: string[] }
+
 export type hellasConfigType = {
+	races: string[]
 	attributes: string[],
-	attributesWShortName: { [key: string]: string },
-	attributesShortToLong: { [key: string]: string },
+	attributesWShortName: ObjectWStringValues,
+	attributesShortToLong: ObjectWStringValues,
 	characterAttributes: string[],
+	characterDisadvantages: string[],
 	initiativeAttribute: string,
 	skills: string[],
 	skillsWSpecifics: string[],
-	skillSpecificsBreakdown: { [key: string]: string[] },
-	skillWAssocAttributes: { [key: string]: string[] },
+	skillSpecificsBreakdown: ObjectWStringArrayValues,
+	skillWAssocAttributes: ObjectWStringArrayValues,
 	dynamismModes: string[],
-	dynamismModesSpecificBreakdowns: { [key: string]: string[] }
+	dynamismModesSpecificBreakdowns: ObjectWStringArrayValues
 }
 
 const HELLAS: hellasConfigType = {
+	races: [
+		"amazoran",
+		"goregon",
+		"hellene",
+		"kyklope",
+		"myrmidon",
+		"nephelai",
+		"nymphas",
+		"zintar"
+	],
+
 	attributes: [],
 
 	attributesWShortName: {
@@ -30,6 +46,9 @@ const HELLAS: hellasConfigType = {
 		heropoints: "Hero Points",
 		hitpoints: "HP",
 		fatepoint: "Fate Points",
+		relationship: "Relationship",
+		internal: "Internal",
+		external: "External",
 	},
 
 	attributesShortToLong: {
@@ -47,6 +66,9 @@ const HELLAS: hellasConfigType = {
 		"Hero Points": "heropoints",
 		"HP": "hitpoints",
 		"Fate Points": "fatepoint",
+		"Relationship": "relationship",
+		"Internal": "internal",
+		"External": "external"
 	},
 
 	characterAttributes: [
@@ -60,6 +82,12 @@ const HELLAS: hellasConfigType = {
 		"speed",
 		"combatrating",
 		"dynamism"
+	],
+
+	characterDisadvantages: [
+		"relationship",
+		"internal",
+		"external"
 	],
 
 	initiativeAttribute: "speed",

@@ -1,7 +1,18 @@
 {
-  "HELLAS.character.aaa": "",
+  "HELLAS.character.name.name": "Name",
+  "HELLAS.character.epithet.name": "Epithet",
+  "HELLAS.character.race.name": "Race",
+  "HELLAS.character.profession.name": "Profession",
+  "HELLAS.character.deity.name": "Deity",
 
-  "HELLAS.attributes.",
+  "HELLAS.character.race.choices.amazoran": "Amazoran",
+  "HELLAS.character.race.choices.goregon": "Goregon",
+  "HELLAS.character.race.choices.hellene": "Hellene",
+  "HELLAS.character.race.choices.kyklope": "Kyklope",
+  "HELLAS.character.race.choices.myrmidon": "Myrmidon",
+  "HELLAS.character.race.choices.nephelai": "Nephelai",
+  "HELLAS.character.race.choices.nymphas": "Nymphas",
+  "HELLAS.character.race.choices.zintar": "Zintar",
 
   "HELLAS.attributes.intelligence.name":  "Intelligence",
   "HELLAS.attributes.perception.name":  "Perception",
@@ -17,6 +28,9 @@
   "HELLAS.attributes.heropoints.name":  "Hero Points",
   "HELLAS.attributes.hitpoints.name":  "Hit Points",
   "HELLAS.attributes.fatepoints.name":  "Fate Points",
+  "HELLAS.attributes.relationship.name":  "Relationship",
+  "HELLAS.attributes.internal.name":  "Internal",
+  "HELLAS.attributes.external.name":  "External",
 
   "HELLAS.attributes.intelligence.short.name":  "INT",
   "HELLAS.attributes.perception.short.name":  "PER",
@@ -32,6 +46,9 @@
   "HELLAS.attributes.heropoints.short.name":  "Hero Points",
   "HELLAS.attributes.hitpoints.short.name":  "HP",
   "HELLAS.attributes.fatepoints.short.name":  "Fate Points",
+  "HELLAS.attributes.relationship.short.name":  "Fate Points",
+  "HELLAS.attributes.internal.short.name":  "Fate Points",
+  "HELLAS.attributes.external.short.name":  "Fate Points",
 
   "HELLAS.attributes.intelligence.description":  "Intelligence",
   "HELLAS.attributes.perception.description":  "Perception",
@@ -211,6 +228,7 @@
   "HELLAS.skills.specifics.weaponsmith": "Weaponsmith",
   "HELLAS.skills.specifics.xenobiology": "Xenobiology",
   "HELLAS.skills.specifics.zoology": "Zoology",
+  
   "HELLAS.skills.specifics.atlantean": "Atlantean",
   "HELLAS.skills.specifics.goregon": "Goregon",
   "HELLAS.skills.specifics.hellene": "Hellene",

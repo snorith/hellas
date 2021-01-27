@@ -72,12 +72,50 @@
         "fatepoints": {
           "value": 0,
           "max": 10
+        },
+        "relationship": {
+          "value": 0,
+          "max": 0
+        },
+        "internal": {
+          "value": 0,
+          "max": 0
+        },
+        "external": {
+          "value": 0,
+          "max": 0
         }
       }
     }
   },
   "Item": {
-    "types": [],
-    "templates": []
+    "types": ["skill", "dynamism"],
+    "templates": {
+      "common": {
+        "notes": "",
+        "order": -1,
+        "version": 1
+      },
+      "sellable": {
+        "price": "0"
+      },
+      "carriable": {
+        "carriable": true
+      },
+      "spell": {
+        "spell": true
+      }
+    },
+    "skill": {
+      "templates": ["common"]
+    },
+    "dynamism": {
+      "templates": ["common", "spell"],
+      "level": {
+        "value": 0,
+        "max": 0,
+        "attribute": ""
+      },
+    }
   }
 }
