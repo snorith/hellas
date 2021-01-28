@@ -3,9 +3,6 @@
 /* This is your Sass entry file			*/
 /* ------------------------------------ */
 
-@tailwind components;
-@tailwind utilities;
-
 @import "bourbon";
 
 // Import utilities.
@@ -16,11 +13,12 @@
 
 /* Global styles */
 @import 'styles/global/window';
-@import 'styles/global/grid';
-@import 'styles/global/flex';
+//@import 'styles/global/grid';
+//@import 'styles/global/flex';
 
 /* Styles limited to hellas sheets */
 .hellas {
+	@import "styles/global/tailwind";
 	@import 'styles/components/forms';
 	@import 'styles/components/resource';
 	@import 'styles/components/tabs';

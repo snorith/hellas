@@ -164,18 +164,12 @@ function buildSASS() {
 	const isProduction = profilemode.production();
 	let plugins = [];
 
+	plugins = [
+		tailwindcss("./tailwind.config.js"),
+		autoprefixer()
+	];
 	if (isProduction) {
-		plugins = [
-			tailwindcss("./tailwind.config.js"),
-			autoprefixer(),
-			cssnano()
-		];
-	}
-	else {
-		plugins = [
-			tailwindcss("./tailwind.config.js"),
-			autoprefixer()
-		];
+		plugins.push(cssnano())
 	}
 
 	return gulp
