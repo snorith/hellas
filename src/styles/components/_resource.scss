@@ -24,6 +24,11 @@
 	background-color: $c-field-background-medium;
 }
 
+.marble-bkgd {
+	background-image: url("assets/images/red-marble.png");
+	background-repeat: repeat-x;
+}
+
 .tooltip-templates { display: none; }
 
 // SVG labels on attributes
