@@ -22,23 +22,13 @@
 			<div class="grid grid-cols-5 gap-2">
 				{{#each data.HELLAS.characterAttributes as |attributeName|}}
 					{{#with (lookup @root.data.attributes attributeName)}}
-						<div class="h-10 p-3 align-middle text-center items-center border-1 border-solid border-gray-900">
+						<div class="h-20.5 p-3 align-middle text-center items-center border-1 border-solid border-gray-900 bg-gray-300 bg-opacity-40">
 							<div class="uppercase align-middle">{{localize (concat "HELLAS.attributes." attributeName ".name")}}</div>
 							<div class="flex p-3 items-center justify-center">
 								<input class="rounded-full w-1/2" type="number" name="data.attributes.{{attributeName}}.value" value="{{value}}" data-dtype="Number" title="{{localize (concat "HELLAS.attributes." attributeName ".name")}}">
 							</div>
 						</div>
 					{{/with}}
-				{{/each}}
-				{{#each data.attributes as |attribute key|}}
-					{{#ifIn key @root.data.HELLAS.characterAttributes}}
-						<div class="h-10 p-3 align-middle text-center items-center border-1 border-solid border-gray-900">
-							<div class="uppercase align-middle">{{localize (concat "HELLAS.attributes." key ".name")}}</div>
-							<div class="flex p-3 items-center justify-center">
-								<input class="rounded-full w-1/2" type="number" name="data.attributes.{{key}}.value" value="{{attribute.value}}" data-dtype="Number" title="{{localize (concat "HELLAS.attributes." key ".name")}}">
-							</div>
-						</div>
-					{{/ifIn}}
 				{{/each}}
 			</div>
 		</div>
