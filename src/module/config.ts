@@ -72,14 +72,14 @@ const HELLAS: hellasConfigType = {
 	},
 
 	characterAttributes: [
-		"intelligence",
-		"perception",
-		"will",
 		"charisma",
-		"strength",
 		"constitution",
 		"dexterity",
+		"intelligence",
+		"perception",
 		"speed",
+		"strength",
+		"will",
 		"combatrating",
 		"dynamism"
 	],

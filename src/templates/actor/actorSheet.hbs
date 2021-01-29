@@ -19,29 +19,18 @@
 	<section class="sheet-body">
 		{{!-- Main sheet tab --}}
 		<div class="tab attributes" data-group="primary" data-tab="attributes">
-				<div class="grid grid-cols-5 gap-2">
-					<div class="h-auto p-3 align-middle text-center items-center border-1 border-solid border-gray-400">
-						<div class="align-middle">
-							<svg class="w-1/3" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
-								<path id="curve" d="M243.2, 382.4c-74.8, 0-135.5-60.7-135.5-135.5s60.7-135.5,135.5-135.5s135.5, 60.7, 135.5, 135.5 S318, 382.4, 243.2, 382.4z" transform="rotate(12,250,250) />
-								<text class="text-2xl uppercase" width="500">
-									<textPath xlink:href="#curve" aria-label="Intelligence">
-										Intelligence
-									</textPath>
-								</text>
-							</svg>
+			<div class="grid grid-cols-5 gap-2">
+				{{#each data.attributes as |attribute key|}}
+					{{#ifIn key ../data.HELLAS.characterAttributes}}
+						<div class="h-10 p-3 align-middle text-center items-center border-1 border-solid border-gray-900">
+							<div class="uppercase align-middle">{{localize (concat "HELLAS.attributes." key ".name")}}</div>
+							<div class="flex p-3 items-center justify-center">
+								<input class="rounded-full w-1/2" type="number" name="data.attributes.{{key}}.value" value="{{attribute.value}}" data-dtype="Number" title="{{localize (concat "HELLAS.attributes." key ".name")}}">
+							</div>
 						</div>
-						<div class="flex p-3 items-center justify-center">
-							 <input class="rounded-full w-1/3" type="number" name="aaa" value="3">
-						</div>
-					</div>
-					<div class="h-auto p-3 align-middle text-center items-center border-1 border-solid border-gray-400">Hello2</div>
-					<div class="h-auto p-3 align-middle text-center items-center border-1 border-solid border-gray-400">Hello3</div>
-					<div class="h-auto p-3 align-middle text-center items-center border-1 border-solid border-gray-400">Hello4</div>
-					<div class="h-auto p-3 align-middle text-center items-center border-1 border-solid border-gray-400">Hello5</div>
-					<div class="h-auto p-3 align-middle text-center items-center border-1 border-solid border-gray-400">Hello6</div>
-					<div class="h-auto p-3 align-middle text-center items-center border-1 border-solid border-gray-400">Hello7</div>
-				</div>
+					{{/ifIn}}
+				{{/each}}
+			</div>
 		</div>
 
 		{{!-- Personal Tab --}}
