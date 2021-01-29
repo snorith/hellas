@@ -25,5 +25,6 @@
   "license": "LICENSE",
   "readme": "https://github.com/snorith/hellas#readme",
   "bugs": "https://github.com/snorith/hellas/issues",
-  "changelog": "https://github.com/snorith/hellas#changelog"
+  "changelog": "https://github.com/snorith/hellas#changelog",
+  "primaryTokenAttribute": "attributes.hitpoints"
 }
