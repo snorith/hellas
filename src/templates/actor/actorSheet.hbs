@@ -19,7 +19,7 @@
 	<section class="sheet-body">
 		{{!-- Main sheet tab --}}
 		<div class="tab attributes" data-group="primary" data-tab="attributes">
-			<div class="marble-bkgd h-5 w-full mb-1"></div>
+			<div class="marble-bkgd h-5 w-full mb-1 bg-gradient-to-t"></div>
 			<div class="text-center uppercase h-auto w-full p-1.5 mb-1 border-2 border-opacity-70 border-solid border-gray-900 header-background-light">
 				{{localize "HELLAS.section.attributes.title"}}
 			</div>
@@ -73,7 +73,7 @@
 					<span class="fate-progress cursor-pointer align-middle text-center align-middle items-center w-6 h-6 rounded-full last:mr-0 mr-2 p-0.5 border border-opacity-70 border-solid bg-clip-padding {{#if (lte @num data.attributes.fatepoints.value)}}border-gray-100 bg-gray-700{{else}}border-gray-900{{/if}}" data-item-id="{{@num}}">{{#if @last}}<i class="fas fa-skull-crossbones align-middle {{#if (lte @num data.attributes.fatepoints.value)}}text-gray-50{{/if}}" title="{{localize "HELLAS.character.status.dead.title"}}"></i>{{/if}}</span>
 				{{/repeat}}
 			</div>
-			<div class="marble-bkgd h-5 w-full mb-1 bg-center"></div>
+			<div class="marble-bkgd h-5 w-full mb-1 bg-center bg-gradient-to-b"></div>
 
 		</div>
 
