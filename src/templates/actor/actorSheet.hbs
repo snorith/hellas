@@ -34,7 +34,38 @@
 					{{/with}}
 				{{/each}}
 			</div>
-			<div class="flex flex-wrap justify-center items-center p-2 border border-opacity-70 border-solid border-gray-900 header-background-light">
+			<div class="flex flex-wrap justify-center items-center mb-1">
+
+				<div class="h-20.5 p-2 align-middle text-center items-center last:mr-0 mr-2 border-2 border-opacity-70 border-solid border-gray-900 bg-yellow-300 bg-opacity-5 break-all">
+					<div class="uppercase align-middle overflow-ellipsis">{{localize "HELLAS.attributes.glory.name"}}</div>
+					<div class="flex p-3 items-center justify-center">
+						<input class="rounded-full w-1/2" type="number" name="data.attributes.glory.value" value="{{data.attributes.glory.value}}" min="-10" step="1" oninput="this.value = Math.round(this.value|0);" data-dtype="Number" title="{{localize "HELLAS.attributes.glory.name"}}">
+					</div>
+				</div>
+
+				<div class="h-20.5 p-2 align-middle text-center items-center last:mr-0 mr-2 border-2 border-opacity-70 border-solid border-gray-900 bg-yellow-300 bg-opacity-5 break-all">
+					<div class="uppercase align-middle overflow-ellipsis">{{localize "HELLAS.attributes.heropoints.name"}}</div>
+					<div class="flex p-3 items-center justify-center">
+						<input class="rounded-full w-1/2" type="number" name="data.attributes.heropoints.value" value="{{data.attributes.heropoints.value}}" min="-10" step="1" oninput="this.value = Math.round(this.value|0);" data-dtype="Number" title="{{localize "HELLAS.attributes.heropoints.name"}}">
+					</div>
+				</div>
+
+				<div class="h-20.5 p-2 align-middle text-center items-center last:mr-0 mr-2 border-2 border-opacity-70 border-solid border-gray-900 bg-yellow-300 bg-opacity-5 break-all">
+					<div class="uppercase align-middle overflow-ellipsis">{{localize "HELLAS.attributes.hitpoints.max.name"}}</div>
+					<div class="flex p-3 items-center justify-center">
+						<input class="rounded-full w-1/2" type="number" name="data.attributes.hitpoints.max" value="{{data.attributes.hitpoints.max}}" min="-10" step="1" oninput="this.value = Math.round(this.value|0);" data-dtype="Number" title="{{localize "HELLAS.attributes.hitpoints.max.name"}}">
+					</div>
+				</div>
+
+				<div class="h-20.5 p-2 align-middle text-center items-center last:mr-0 mr-2 border-2 border-opacity-70 border-solid border-gray-900 bg-yellow-300 bg-opacity-5 break-all">
+					<div class="uppercase align-middle overflow-ellipsis">{{localize "HELLAS.attributes.hitpoints.current.name"}}</div>
+					<div class="flex p-3 items-center justify-center">
+						<input class="rounded-full w-1/2" type="number" name="data.attributes.hitpoints.value" value="{{data.attributes.hitpoints.value}}" min="-10" step="1" oninput="this.value = Math.round(this.value|0);" data-dtype="Number" title="{{localize "HELLAS.attributes.hitpoints.current.name"}}">
+					</div>
+				</div>
+
+			</div>
+			<div class="flex flex-wrap justify-center items-center p-1.5 mb-1 border border-opacity-70 border-solid border-gray-900 header-background-light">
 				<span class="fate-progress mr-3 uppercase" data-item-id="0">{{localize "HELLAS.section.attributes.fatepoints.title"}}</span>
 				{{#repeat data.attributes.fatepoints.max}}
 					<span class="fate-progress cursor-pointer align-middle text-center align-middle items-center w-6 h-6 rounded-full last:mr-0 mr-2 p-0.5 border border-opacity-70 border-solid bg-clip-padding {{#if (lte @num data.attributes.fatepoints.value)}}border-gray-100 bg-gray-700{{else}}border-gray-900{{/if}}" data-item-id="{{@num}}">{{#if @last}}<i class="fas fa-skull-crossbones align-middle {{#if (lte @num data.attributes.fatepoints.value)}}text-gray-50{{/if}}" title="{{localize "HELLAS.character.status.dead.title"}}"></i>{{/if}}</span>

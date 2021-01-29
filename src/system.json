@@ -26,5 +26,6 @@
   "readme": "https://github.com/snorith/hellas#readme",
   "bugs": "https://github.com/snorith/hellas/issues",
   "changelog": "https://github.com/snorith/hellas#changelog",
-  "primaryTokenAttribute": "attributes.hitpoints"
+  "primaryTokenAttribute": "attributes.hitpoints",
+  "secondaryTokenAttribute": "attributes.fatepoints"
 }
