@@ -105,7 +105,17 @@ export class HellasActorSheet extends ActorSheet {
 			return false
 
 		// @ts-ignore
-		this.actor.data.data.attributes.fatepoints.value = index
+		const data = {
+			data: {
+				attributes: {
+					fatepoints: {
+						value: index
+					}
+				}
+			}
+		}
+
+		this.actor.update(data)
 		this.render(false)
 
 		return false
