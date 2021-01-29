@@ -18,7 +18,10 @@
 }
 
 .header-background-light {
-	background-color: $c-field-background;
+	background-color: $c-field-background-light;
+}
+.header-background-medium {
+	background-color: $c-field-background-medium;
 }
 
 .tooltip-templates { display: none; }
