@@ -19,17 +19,27 @@
 	<section class="sheet-body">
 		{{!-- Main sheet tab --}}
 		<div class="tab attributes" data-group="primary" data-tab="attributes">
-			<div class="grid grid-cols-5 gap-2">
+			<div class="text-center uppercase h-auto w-full p-1.5 mb-1 border-2 border-opacity-70 border-solid border-gray-900 bg-gray-300 bg-opacity-50">
+				{{localize "HELLAS.section.attributes.title"}}
+			</div>
+			<div class="grid grid-cols-5 gap-2 mb-1">
 				{{#each data.HELLAS.characterAttributes as |attributeName|}}
 					{{#with (lookup @root.data.attributes attributeName)}}
-						<div class="h-20.5 p-3 align-middle text-center items-center border-1 border-solid border-gray-900 bg-gray-300 bg-opacity-40">
+						<div class="h-20.5 p-2 align-middle text-center items-center border-2 border-opacity-70 border-solid border-gray-900 bg-yellow-300 bg-opacity-5">
 							<div class="uppercase align-middle">{{localize (concat "HELLAS.attributes." attributeName ".name")}}</div>
 							<div class="flex p-3 items-center justify-center">
-								<input class="rounded-full w-1/2" type="number" name="data.attributes.{{attributeName}}.value" value="{{value}}" data-dtype="Number" title="{{localize (concat "HELLAS.attributes." attributeName ".name")}}">
+								<input class="rounded-full w-1/2" type="number" name="data.attributes.{{attributeName}}.value" value="{{value}}" min="-10" step="1" oninput="this.value = Math.round(this.value|0);" data-dtype="Number" title="{{localize (concat "HELLAS.attributes." attributeName ".name")}}">
 							</div>
 						</div>
 					{{/with}}
 				{{/each}}
+			</div>
+			<div class="flex flex-wrap justify-center items-center p-2 border border-opacity-70 border-solid border-gray-900">
+				<span class="mr-3 uppercase">{{localize "HELLAS.section.attributes.fatepoints.title"}}</span>
+
+				{{#repeat data.attributes.fatepoints.max}}
+					<div class="fate-progress inline cursor-pointer align-middle text-center align-middle items-center w-6 h-6 rounded-full last:mr-0 mr-2 border border-opacity-70 border-solid border-gray-900 {{#if (lte @num data.attributes.fatepoints.value)}}bg-gray-700{{else}}bg-gray-300{{/if}}" data-item-id="{{@num}}">{{#if @last}}<i class="fas fa-skull-crossbones align-middle {{#if (lte @num data.attributes.fatepoints.value)}}text-gray-50{{/if}}" title="{{localize "HELLAS.character.status.dead.title"}}"></i>{{/if}}</div>
+				{{/repeat}}
 			</div>
 		</div>
 

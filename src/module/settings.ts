@@ -18,6 +18,7 @@ export const registerSettings = function() {
 		return accum
 	})
 
+	// concatenate some number of strings passed as parameters
 	Handlebars.registerHelper('concat', function() {
 		let outStr = ''
 		for (let arg in arguments) {
@@ -28,11 +29,35 @@ export const registerSettings = function() {
 		return outStr
 	})
 
+	// if 'elem' is in an array
 	Handlebars.registerHelper('ifIn', function(elem, list, options) {
 		if(list.indexOf(elem) > -1) {
 			return options.fn(this);
 		}
 		return options.inverse(this);
+	});
+
+	// repeat something 'n' times
+	Handlebars.registerHelper("repeat", function (times, opts) {
+		let out = "";
+		let i;
+		let data = {} as any;
+
+		if ( times && Number.isFinite(times) ) {
+			for ( i = 0; i < times; i++ ) {
+				data.index = i
+				data.num = i + 1
+				data.first = i === 0
+				data.last = i === (times - 1)
+				out += opts.fn(this, {
+					data: data
+				});
+			}
+		} else {
+			out = opts.inverse(this)
+		}
+
+		return out;
 	});
 
 	Handlebars.registerHelper('toLowerCase', function(str) {

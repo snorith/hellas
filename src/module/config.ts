@@ -17,6 +17,11 @@ export type hellasConfigType = {
 	dynamismModesSpecificBreakdowns: ObjectWStringArrayValues
 }
 
+export type foundryAttributeValueMax = {
+	value: number,
+	max: number
+}
+
 const HELLAS: hellasConfigType = {
 	races: [
 		"amazoran",

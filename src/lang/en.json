@@ -3,6 +3,11 @@
   "HELLAS.sheet.tabs.personal": "Personal",
   "HELLAS.sheet.tabs.description": "Description",
   
+  "HELLAS.section.attributes.title": "Attributes",
+  "HELLAS.section.attributes.fatepoints.title": "Fate Points",
+  
+  "HELLAS.character.status.dead.title": "Dead",
+  
   "HELLAS.character.name.name": "Name",
   "HELLAS.character.epithet.name": "Epithet",
   "HELLAS.character.race.name": "Race",
