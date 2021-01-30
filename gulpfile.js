@@ -7,6 +7,7 @@ const stringify = require('json-stringify-pretty-compact');
 const rollup = require("rollup");
 const commonjs = require('@rollup/plugin-commonjs');
 const typescript = require('@rollup/plugin-typescript');
+const resolve = require('@rollup/plugin-node-resolve');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const bourbon = require('bourbon').includePaths;
@@ -81,6 +82,7 @@ function buildTS() {
 			input: nameTS,
 			plugins: [
 				typescript(),
+				resolve.nodeResolve({ browser: true }),
 				commonjs(),
 			]
 		})

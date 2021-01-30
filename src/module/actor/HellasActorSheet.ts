@@ -4,6 +4,7 @@
  */
 import {systemBasePath, systemName} from "../settings"
 import {foundryAttributeValueMax, HELLAS} from "../config"
+import set from "lodash-es/set"
 
 export class HellasActorSheet extends ActorSheet {
 
@@ -103,21 +104,12 @@ export class HellasActorSheet extends ActorSheet {
 		event.preventDefault();
 
 		const element = event.currentTarget
-		const index = parseInt(element.dataset.itemId)
+		const fpCount = parseInt(element.dataset.itemId)
 
-		if (isNaN(index))
+		if (isNaN(fpCount))
 			return false
 
-		// @ts-ignore
-		const data = {
-			data: {
-				attributes: {
-					fatepoints: {
-						value: index
-					}
-				}
-			}
-		}
+		const data = set({}, "data.attributes.fatepoints.value", fpCount)
 
 		this.actor.update(data)
 		this.render(false)
