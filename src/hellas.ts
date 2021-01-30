@@ -14,6 +14,8 @@ import {preloadTemplates} from './module/preloadTemplates.js';
 import {HellasActor} from "./module/actor/HellasActor"
 import {HellasActorSheet} from "./module/actor/HellasActorSheet"
 import {HELLAS} from "./module/config"
+import {HellasSkillItem} from "./module/item/HellasSkillItem"
+import {HellasItem} from "./module/item/HellasItem"
 
 /* ------------------------------------ */
 /* Initialize system					*/
@@ -25,6 +27,8 @@ Hooks.once('init', async function() {
 	game.hellas = {
 		HellasActor,
 		HellasActorSheet,
+		HellasItem,
+		HellasSkillAbilityItem: HellasSkillItem,
 	}
 
 	game.HELLAS = HELLAS
@@ -32,6 +36,8 @@ Hooks.once('init', async function() {
 	// define custom entity classes
 	// @ts-ignore
 	CONFIG.Actor.entityClass = HellasActor
+	// @ts-ignore
+	CONFIG.Item.entityClass = HellasItem
 
 	// @ts-ignore
 	Actors.unregisterSheet("core", ActorSheet)

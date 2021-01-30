@@ -90,7 +90,7 @@
     }
   },
   "Item": {
-    "types": ["skill", "dynamism"],
+    "types": ["skill", "dynamism", "weapon"],
     "templates": {
       "common": {
         "notes": "",
@@ -108,7 +108,12 @@
       }
     },
     "skill": {
-      "templates": ["common"]
+      "templates": ["common"],
+      "attribute": "",
+      "level": {
+        "value": 0,
+        "max": 0
+      }
     },
     "dynamism": {
       "templates": ["common", "spell"],

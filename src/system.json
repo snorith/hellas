@@ -2,7 +2,7 @@
   "name": "hellas",
   "title": "Hellas",
   "description": "Fan contributed support for the Hellas rpg in FoundryVTT",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "author": "snorith (Stephen Smith)",
   "scripts": [],
   "esmodules": ["hellas.js"],

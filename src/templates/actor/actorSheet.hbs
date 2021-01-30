@@ -39,9 +39,9 @@
 					{{/with}}
 				{{/each}}
 			</div>
-			<div class="flex flex-wrap justify-center items-center mb-1">
 
-				<div class="flex h-20 p-2 align-middle text-center items-center last:mr-0 mr-2 border-2 border-opacity-70 border-solid border-gray-900 bg-red-300 bg-opacity-5 break-all bg-red-400 bg-opacity-40">
+			<div class="flex flex-wrap justify-center items-center mb-1">
+				<div class="flex h-20 p-2 align-middle text-center items-center last:mr-0 mr-2 border-2 border-opacity-70 border-solid border-gray-900 bg-red-300 bg-opacity-5 break-all bg-red-100 bg-opacity-40">
 					<div>
 						<div class="uppercase align-middle overflow-ellipsis">{{localize "HELLAS.attributes.hitpoints.current.name"}}</div>
 						<div class="flex p-2 items-center justify-center">
@@ -69,8 +69,8 @@
 						<input class="rounded-full w-1/2" type="number" name="data.attributes.heropoints.value" value="{{data.attributes.heropoints.value}}" min="-10" step="1" oninput="this.value = Math.round(this.value|0);" data-dtype="Number" title="{{localize "HELLAS.attributes.heropoints.name"}}">
 					</div>
 				</div>
-
 			</div>
+
 			<div class="flex flex-wrap justify-center items-center p-1.5 mb-1 border border-opacity-70 border-solid border-gray-900">
 				<span class="fate-progress mr-3 uppercase" data-item-id="0" title="{{localize "HELLAS.attributes.fatepoints.title" current=data.attributes.fatepoints.value max=data.attributes.fatepoints.max}}">{{localize "HELLAS.attributes.fatepoints.name"}}</span>
 				<div class="fatepoints-line-bkgd inline-flex w-auto pl-2 pr-2 bg-left">
@@ -79,14 +79,31 @@
 				{{/repeat}}
 				</div>
 			</div>
+
 			<div class="greek-meander-bkgd h-5 w-full mb-1"></div>
 
-			<div class="static text-center uppercase h-auto w-full p-1.5 mb-1 border-2 border-opacity-70 border-solid border-gray-900 header-background-light">
-				{{localize "HELLAS.section.skills.title"}}
-				<div class="item-controls absolute bottom-1/2 right-0.5 align-middle text-center">
-					<a class="item-control item-create" title="{{localize "HELLAS.skills.controls.add"}}" data-type="skill"><i class="fas fa-plus"></i></a>
-				</div>
-			</div>
+			{{!-- Skill list --}}
+			<table class="skills">
+				<thead>
+				<tr>
+					<td colspan="5">{{localize "HELLAS.section.skills.title"}}</td>
+				</tr>
+				<tr>
+					<td>Name</td>
+					<td>Level</td>
+					<td>Attr</td>
+					<td>Rating</td>
+					<td>
+						<div class="item-controls">
+							<a class="item-control item-create" title="{{localize "HELLAS.skills.controls.add"}}" data-type="skill"><i class="fas fa-plus"></i></a>
+						</div>
+					</td>
+				</tr>
+				</thead>
+				<tbody>
+
+				</tbody>
+			</table>
 		</div>
 
 		{{!-- Personal Tab --}}

@@ -249,7 +249,9 @@
   "HELLAS.skills.specifics.hellene": "Hellene",
   "HELLAS.skills.specifics.nymphas": "Nymphas",
   "HELLAS.skills.specifics.zintar": "Zintar",
-  "HELLAS.skills.specifics.zoran": "Zoran"
+  "HELLAS.skills.specifics.zoran": "Zoran",
+
+  "HELLAS.item.skill.newSkill": "New skill"
 }
 
 
