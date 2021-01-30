@@ -18,7 +18,6 @@ const profilemode = require('gulp-mode')({
 	verbose: false
 });
 
-const ts = require('gulp-typescript');
 const less = require('gulp-less');
 const sass = require('gulp-sass');
 const git = require('gulp-git');
@@ -63,82 +62,6 @@ function getManifest() {
 
 	return json;
 }
-
-/**
- * TypeScript transformers
- * @returns {typescript.TransformerFactory<typescript.SourceFile>}
- */
-function createTransformer() {
-	/**
-	 * @param {typescript.Node} node
-	 */
-	function shouldMutateModuleSpecifier(node) {
-		if (
-			!typescript.isImportDeclaration(node) &&
-			!typescript.isExportDeclaration(node)
-		)
-			return false;
-		if (node.moduleSpecifier === undefined) return false;
-		if (!typescript.isStringLiteral(node.moduleSpecifier)) return false;
-		if (
-			!node.moduleSpecifier.text.startsWith('./') &&
-			!node.moduleSpecifier.text.startsWith('../')
-		)
-			return false;
-		if (path.extname(node.moduleSpecifier.text) !== '') return false;
-		return true;
-	}
-
-	/**
-	 * Transforms import/export declarations to append `.js` extension
-	 * @param {typescript.TransformationContext} context
-	 */
-	function importTransformer(context) {
-		return (node) => {
-			/**
-			 * @param {typescript.Node} node
-			 */
-			function visitor(node) {
-				if (shouldMutateModuleSpecifier(node)) {
-					if (typescript.isImportDeclaration(node)) {
-						const newModuleSpecifier = typescript.createLiteral(
-							`${node.moduleSpecifier.text}.js`
-						);
-						return typescript.updateImportDeclaration(
-							node,
-							node.decorators,
-							node.modifiers,
-							node.importClause,
-							newModuleSpecifier
-						);
-					} else if (typescript.isExportDeclaration(node)) {
-						const newModuleSpecifier = typescript.createLiteral(
-							`${node.moduleSpecifier.text}.js`
-						);
-						return typescript.updateExportDeclaration(
-							node,
-							node.decorators,
-							node.modifiers,
-							node.exportClause,
-							newModuleSpecifier
-						);
-					}
-				}
-				return typescript.visitEachChild(node, visitor, context);
-			}
-
-			return typescript.visitNode(node, visitor);
-		};
-	}
-
-	return importTransformer;
-}
-
-const tsConfig = ts.createProject('tsconfig.json', {
-	getCustomTransformers: (_program) => ({
-		after: [createTransformer()],
-	}),
-});
 
 /********************/
 /*		BUILD		*/
