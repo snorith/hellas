@@ -4,7 +4,9 @@ const path = require('path');
 const chalk = require('chalk');
 const archiver = require('archiver');
 const stringify = require('json-stringify-pretty-compact');
-const typescript = require('typescript');
+const rollup = require("rollup");
+const commonjs = require('@rollup/plugin-commonjs');
+const typescript = require('@rollup/plugin-typescript');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const bourbon = require('bourbon').includePaths;
@@ -146,7 +148,27 @@ const tsConfig = ts.createProject('tsconfig.json', {
  * Build TypeScript
  */
 function buildTS() {
-	return gulp.src('src/**/*.ts').pipe(tsConfig()).pipe(gulp.dest('dist'));
+	const manifest = getManifest();
+	const name = manifest.file.name
+	const nameTS = `./src/${name}.ts`;
+	const nameJS = `./dist/${name}.js`;
+
+	return rollup
+		.rollup({
+			input: nameTS,
+			plugins: [
+				typescript(),
+				commonjs(),
+			]
+		})
+		.then(bundle => {
+			return bundle.write({
+				file: nameJS,
+				format: "esm",
+				name: manifest.file.name,
+				sourcemap: !profilemode.production()
+			});
+		});
 }
 
 /**
