@@ -76,6 +76,10 @@
   "HELLAS.attributes.hitpoints.description":  "Hit Points",
   "HELLAS.attributes.fatepoints.description":  "Fate Points",
 
+  "HELLAS.skills.controls.add": "Add skill",
+  "HELLAS.skills.controls.edit": "Edit skill",
+  "HELLAS.skills.controls.delete": "Delete skill",
+  
   "HELLAS.skills.animalhandling.name": "Animal Handling",
   "HELLAS.skills.athletics.name": "Athletics",
   "HELLAS.skills.command.name": "Command",
