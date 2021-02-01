@@ -2,13 +2,37 @@
  * Extend the basic ActorSheet with some very simple modifications
  * @extends {ActorSheet}
  */
-import {systemBasePath, systemName} from "../settings"
-import {foundryAttributeValueMax, HELLAS} from "../config"
+import {isEmptyOrSpaces, systemBasePath, systemName} from "../settings"
+import {foundryAttributeValueMax, HELLAS, SPECIFY_SUBTYPE} from "../config"
 import set from "lodash-es/set"
-import {HellasSkillItem} from "../item/HellasSkillItem"
+import {HellasSkillItem, SkillItemType} from "../item/HellasSkillItem"
 
 // short skills
-const sortSkillsByNameFunction = (a, b) => a.name < b.name ? -1 : a.name > b.name ? 1 : 0;
+const sortSkillsByFullnameFunction = (a, b) => a.data.fullname < b.data.fullname ? -1 : a.data.fullname > b.data.fullname ? 1 : 0;
+
+function fullName(item: Item): string {
+	switch (item.type) {
+		case HellasSkillItem.type:
+			let skill = item as unknown as SkillItemType;
+
+			let name = skill.name
+			const specifier = skill.data.specifier
+			const specifierCustom = skill.data.specifierCustom
+
+			if (SPECIFY_SUBTYPE === specifier) {
+				if (!isEmptyOrSpaces(specifierCustom))
+					name = `${name} ${specifierCustom}`
+			}
+			else if (!isEmptyOrSpaces(specifier))
+				name = `${name} ${specifier}`
+
+			return name
+		default:
+			break
+	}
+
+	return ''
+}
 
 export class HellasActorSheet extends ActorSheet {
 
@@ -76,8 +100,11 @@ export class HellasActorSheet extends ActorSheet {
 		}).forEach(([val, type]) => {
 			// @ts-ignore
 			if (!sheetData.data.items[val])
-			{ // @ts-ignore
-				sheetData.data.items[val] = items.filter(i => i.type === type).sort(sortSkillsByNameFunction)
+			{
+				sheetData.data.items[val] = items.filter(i => i.type === type).map(i => {
+					i.data['fullname'] = fullName(i)
+					return i
+				}).sort(sortSkillsByFullnameFunction)
 			}
 		});
 	}

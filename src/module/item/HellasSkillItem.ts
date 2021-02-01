@@ -33,21 +33,4 @@ export class HellasSkillItem extends Item {
 
         itemData.name = this.data.name || game.i18n.localize("HELLAS.item.skill.newSkill");
     }
-
-   fullName(): string {
-		let itemData = this.data as unknown as SkillItemType;
-
-    	let name = itemData.name
-		const specifier = itemData.data.specifier
-		const specifierCustom = itemData.data.specifierCustom
-
-		if (SPECIFY_SUBTYPE === specifier) {
-			if (!isEmptyOrSpaces(specifierCustom))
-				name += ` ${specifierCustom}`
-		}
-		else if (isEmptyOrSpaces(specifier))
-			name += ` ${specifier}`
-
-		return name
-	}
 }

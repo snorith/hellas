@@ -40,17 +40,17 @@
 			</div>
 
 			<div class="flex flex-wrap justify-center items-center mb-1">
-				<div class="flex h-20 p-2 align-middle text-gray-50 text-center items-center last:mr-0 mr-2 break-all border-2 border-opacity-70 border-solid border-gray-50 marble-bkgd bg-opacity-5">
+				<div class="flex h-20 p-2 align-middle text-gray-50 text-center items-center last:mr-0 mr-2 break-all border-2 border-opacity-70 border-solid border-gray-900 marble-lighter-bkgd">
 					<div>
-						<div class="uppercase text-gray-50 align-middle overflow-ellipsis">{{localize "HELLAS.attributes.hitpoints.current.name"}}</div>
+						<div class="uppercase text-white font-bold align-middle overflow-ellipsis">{{localize "HELLAS.attributes.hitpoints.current.name"}}</div>
 						<div class="flex p-2 items-center justify-center">
-							<input class="rounded-full text-gray-50 border-gray-50 w-1/2" type="number" name="data.attributes.hitpoints.value" value="{{data.attributes.hitpoints.value}}" min="-10" step="1" oninput="this.value = Math.round(this.value|0);" data-dtype="Number" title="{{localize "HELLAS.attributes.hitpoints.current.name"}}">
+							<input class="rounded-full text-white font-bold border-2 border-gray-50 w-1/2" type="number" name="data.attributes.hitpoints.value" value="{{data.attributes.hitpoints.value}}" min="-10" step="1" oninput="this.value = Math.round(this.value|0);" data-dtype="Number" title="{{localize "HELLAS.attributes.hitpoints.current.name"}}">
 						</div>
 					</div>
 					<div>
-						<div class="uppercase text-gray-50 align-middle overflow-ellipsis">{{localize "HELLAS.attributes.hitpoints.max.name"}}</div>
+						<div class="uppercase text-white font-bold align-middle overflow-ellipsis">{{localize "HELLAS.attributes.hitpoints.max.name"}}</div>
 						<div class="flex p-2 items-center justify-center">
-							<input class="rounded-full text-gray-50 border-gray-50 w-1/2" type="number" name="data.attributes.hitpoints.max" value="{{data.attributes.hitpoints.max}}" min="-10" step="1" oninput="this.value = Math.round(this.value|0);" data-dtype="Number" title="{{localize "HELLAS.attributes.hitpoints.max.name"}}">
+							<input class="rounded-full text-white font-bold border-2 border-gray-50 w-1/2" type="number" name="data.attributes.hitpoints.max" value="{{data.attributes.hitpoints.max}}" min="-10" step="1" oninput="this.value = Math.round(this.value|0);" data-dtype="Number" title="{{localize "HELLAS.attributes.hitpoints.max.name"}}">
 						</div>
 					</div>
 				</div>
@@ -81,41 +81,51 @@
 
 			<div class="greek-meander-bkgd h-5 w-full mb-1"></div>
 
-			{{!-- Skill list --}}
-			<table class="skills">
-				<thead>
-				<tr>
-					<td colspan="5" class="text-center">{{localize "HELLAS.section.skills.title"}}</td>
-				</tr>
-				<tr>
-					<td class="text-center">Name</td>
-					<td class="text-center">Level</td>
-					<td class="text-center">Attr</td>
-					<td class="text-center">Rating</td>
-					<td class="text-center items-center">
-						<div class="item-controls w-auto">
-							<a class="item-control item-create" title="{{localize "HELLAS.skills.controls.add"}}" data-type="skill"><i class="fas fa-plus"></i></a>
-						</div>
-					</td>
-				</tr>
-				</thead>
-				<tbody>
-				{{#each data.items.skills as |skill key|}}
-					<tr class="item" data-item-id="{{skill._id}}">
-						<td>{{fullName skill}}</td>
-						<td>{{skill.level.value}}</td>
-						<td>{{skill.attribute}}</td>
-						<td>{{skill.level.max}}</td>
-						<td>
-							<div class="item-controls  w-auto">
-								<a class="item-control item-edit" title="{{localize "MAELSTROM.weapons.controls.add"}}"><i class="fas fa-edit"></i></a>
-								<a class="item-control item-delete" title="{{localize "MAELSTROM.weapons.controls.delete"}}"><i class="fas fa-trash"></i></a>
-							</div>
-						</td>
-					</tr>
-				{{/each}}
-				</tbody>
-			</table>
+			<div class="grid grid-cols-2 gap-2">
+				<div>
+					{{!-- Skill list --}}
+					<table class="skills">
+						<thead>
+						<tr>
+							<td colspan="5" class="text-center">{{localize "HELLAS.section.skills.title"}}</td>
+						</tr>
+						<tr>
+							<td class="text-center">Name</td>
+							<td class="text-center">Level</td>
+							<td class="text-center">Attr</td>
+							<td class="text-center">Rating</td>
+							<td class="text-center items-center">
+								<div class="item-controls w-auto">
+									<a class="item-control item-create" title="{{localize "HELLAS.skills.controls.add"}}" data-type="skill"><i class="fas fa-plus"></i></a>
+								</div>
+							</td>
+						</tr>
+						</thead>
+						<tbody>
+						{{#each data.items.skills as |skill key|}}
+							<tr class="item" data-item-id="{{skill._id}}">
+								<td>{{skill.data.fullname}}</td>
+								<td>{{skill.data.level.value}}</td>
+								<td>{{skill.data.attribute}}</td>
+								<td>{{skill.data.level.max}}</td>
+								<td>
+									<div class="item-controls  w-auto">
+										<a class="item-control item-edit" title="{{localize "HELLAS.skills.controls.edit"}}"><i class="fas fa-edit"></i></a>
+										<a class="item-control item-delete" title="{{localize "HELLAS.skills.controls.delete"}}"><i class="fas fa-trash"></i></a>
+									</div>
+								</td>
+							</tr>
+						{{/each}}
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div>
+				Weapons<br>
+				Armor<br>
+				Dynamisms<br>
+				Disadvantages
+			</div>
 		</div>
 
 		{{!-- Personal Tab --}}
