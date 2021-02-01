@@ -16,6 +16,7 @@ import {HellasActorSheet} from "./module/actor/HellasActorSheet"
 import {HELLAS} from "./module/config"
 import {HellasSkillItem} from "./module/item/HellasSkillItem"
 import {HellasItem} from "./module/item/HellasItem"
+import {HellasSkillItemSheet} from "./module/item/sheet/HellasSkillItemSheet"
 
 /* ------------------------------------ */
 /* Initialize system					*/
@@ -43,6 +44,9 @@ Hooks.once('init', async function() {
 	Actors.unregisterSheet("core", ActorSheet)
 	// @ts-ignore
 	Actors.registerSheet(systemName, HellasActorSheet, { makeDefault: true })
+
+	Items.unregisterSheet("core", ItemSheet);
+	Items.registerSheet(systemName, HellasSkillItemSheet, { types: [HellasSkillItem.type], makeDefault: true, label: "Hellas Skill Item" });
 
 	// Register custom system settings
 	registerSettings();

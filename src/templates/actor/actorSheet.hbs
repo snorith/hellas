@@ -1,5 +1,4 @@
-<form class="hellas {{cssClass}}" autocomplete="off" autocapitalize="off">
-	<div class="marble-bkgd h-5 w-full mb-1 bg-gradient-to-t"></div>
+<form class="{{cssClass}}" autocomplete="off" autocapitalize="off">
 	<div class="greek-meander-bkgd h-5 w-full mb-1"></div>
 
 	{{!-- Sheet Header --}}
@@ -41,7 +40,7 @@
 			</div>
 
 			<div class="flex flex-wrap justify-center items-center mb-1">
-				<div class="flex h-20 p-2 align-middle text-center items-center last:mr-0 mr-2 border-2 border-opacity-70 border-solid border-gray-900 bg-red-300 bg-opacity-5 break-all bg-red-100 bg-opacity-40">
+				<div class="flex h-20 p-2 align-middle text-gray-50 text-center items-center last:mr-0 mr-2 break-all border-2 border-opacity-70 border-solid border-gray-900 marble-bkgd bg-opacity-5">
 					<div>
 						<div class="uppercase align-middle overflow-ellipsis">{{localize "HELLAS.attributes.hitpoints.current.name"}}</div>
 						<div class="flex p-2 items-center justify-center">
@@ -86,22 +85,35 @@
 			<table class="skills">
 				<thead>
 				<tr>
-					<td colspan="5">{{localize "HELLAS.section.skills.title"}}</td>
+					<td colspan="5" class="text-center">{{localize "HELLAS.section.skills.title"}}</td>
 				</tr>
 				<tr>
-					<td>Name</td>
-					<td>Level</td>
-					<td>Attr</td>
-					<td>Rating</td>
-					<td>
-						<div class="item-controls">
+					<td class="text-center">Name</td>
+					<td class="text-center">Level</td>
+					<td class="text-center">Attr</td>
+					<td class="text-center">Rating</td>
+					<td class="text-center items-center">
+						<div class="item-controls w-auto">
 							<a class="item-control item-create" title="{{localize "HELLAS.skills.controls.add"}}" data-type="skill"><i class="fas fa-plus"></i></a>
 						</div>
 					</td>
 				</tr>
 				</thead>
 				<tbody>
-
+				{{#each data.items.skills as |skill key|}}
+					<tr class="item" data-item-id="{{skill._id}}">
+						<td>{{fullName skill}}</td>
+						<td>{{skill.level.value}}</td>
+						<td>{{skill.attribute}}</td>
+						<td>{{skill.level.max}}</td>
+						<td>
+							<div class="item-controls  w-auto">
+								<a class="item-control item-edit" title="{{localize "MAELSTROM.weapons.controls.add"}}"><i class="fas fa-edit"></i></a>
+								<a class="item-control item-delete" title="{{localize "MAELSTROM.weapons.controls.delete"}}"><i class="fas fa-trash"></i></a>
+							</div>
+						</td>
+					</tr>
+				{{/each}}
 				</tbody>
 			</table>
 		</div>

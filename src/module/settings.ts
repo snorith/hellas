@@ -1,4 +1,3 @@
-
 export const systemName = "hellas"
 export const systemBasePath = `systems/${systemName}`
 
@@ -7,15 +6,12 @@ export const registerSettings = function() {
 
 	// Register custom Handlebar helpers
 
-	// Adds a simple Handlebars "for loop" block helper
-	Handlebars.registerHelper('for', function (times: number, block: any) {
-		let accum = ''
-		for (let i = 0; i < times; i++) {
-			block.data.index = i
-			block.data.num = i + 1
-			accum += block.fn(i)
+	// helper to call the 'getFullName' function on an object
+	Handlebars.registerHelper('fullName', function (skill) {
+		if (typeof this.fullName === 'function') {
+			return this.fullName()
 		}
-		return accum
+		return 'n/a'
 	})
 
 	// concatenate some number of strings passed as parameters
@@ -68,10 +64,10 @@ export const registerSettings = function() {
 
 	// https://stackoverflow.com/questions/39766555/how-to-check-for-empty-string-null-or-white-spaces-in-handlebar
 	Handlebars.registerHelper('ifEmptyOrWhitespace', function (value, options) {
-		if (!value) { return options.fn(this); }
-		return value.replace(/\s*/g, '').length === 0
-			? options.fn(this)
-			: options.inverse(this)
+		if (isEmptyOrSpaces(value))
+			options.fn(this)
+		else
+			options.inverse(this)
 	})
 
 	Handlebars.registerHelper('isZeroThenBlank', function (value) {

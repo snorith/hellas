@@ -5,6 +5,10 @@
 import {systemBasePath, systemName} from "../settings"
 import {foundryAttributeValueMax, HELLAS} from "../config"
 import set from "lodash-es/set"
+import {HellasSkillItem} from "../item/HellasSkillItem"
+
+// short skills
+const sortSkillsByNameFunction = (a, b) => a.name < b.name ? -1 : a.name > b.name ? 1 : 0;
 
 export class HellasActorSheet extends ActorSheet {
 
@@ -62,6 +66,20 @@ export class HellasActorSheet extends ActorSheet {
 	_prepareCharacterItems(sheetData: ActorSheet.Data<any>) {
 		// @ts-ignore
 		sheetData.data.items = sheetData.actor.items || {};
+
+		// @ts-ignore
+		const items = sheetData.data.items;
+
+		// filter out skills and sort them
+		Object.entries({
+			skills: HellasSkillItem.type
+		}).forEach(([val, type]) => {
+			// @ts-ignore
+			if (!sheetData.data.items[val])
+			{ // @ts-ignore
+				sheetData.data.items[val] = items.filter(i => i.type === type).sort(sortSkillsByNameFunction)
+			}
+		});
 	}
 
 	/* -------------------------------------------- */
@@ -73,24 +91,12 @@ export class HellasActorSheet extends ActorSheet {
 		// Everything below here is only needed if the sheet is editable
 		if (!this.options.editable) return;
 
-		// Add Inventory Item
+		// Add Item
 		html.find('.item-create').click(this._onItemCreate.bind(this));
-
-		// // Update Inventory Item
-		// html.find('.item-edit').click(ev => {
-		// 	const td = $(ev.currentTarget).parents(".item");
-		// 	const item = this.actor.getOwnedItem(td.data("itemId"));
-		// 	item.sheet.render(true);
-		// });
-		//
-		// // Delete Inventory Item
-		// html.find('.item-delete').click(ev => {
-		// 	if (window.confirm('Delete the item?')) {
-		// 		const td = $(ev.currentTarget).parents(".item");
-		// 		this.actor.deleteOwnedItem(td.data("itemId"));
-		// 		td.slideUp(200, () => this.render(false));
-		// 	}
-		// });
+		// Update Item
+		html.find('.item-edit').click(this._onItemEdit.bind(this));
+		// Delete Item
+		html.find('.item-delete').click(this._onDeleteItem.bind(this));
 
 		// Heal all wounds by one
 		html.find('.fate-progress').click(this._onFateProgressClick.bind(this))
@@ -143,5 +149,35 @@ export class HellasActorSheet extends ActorSheet {
 
 		// Finally, create the item!
 		return this.actor.createOwnedItem(itemData);
+	}
+
+	/**
+	 * Handle editing an Owned Item
+	 * @param event
+	 */
+	_onItemEdit(event) {
+		event.preventDefault()
+
+		const td = $(event.currentTarget).parents(".item");
+		const item = this.actor.getOwnedItem(td.data("itemId"));
+		item.sheet.render(true);
+
+		return false
+	}
+
+	/**
+	 * Handle deleting an Owned Item
+	 * @param event
+	 */
+	_onDeleteItem(event) {
+		event.preventDefault()
+
+		if (window.confirm('Delete the item?')) {
+			const td = $(event.currentTarget).parents(".item");
+			this.actor.deleteOwnedItem(td.data("itemId"));
+			td.slideUp(200, () => this.render(false));
+		}
+
+		return false
 	}
 }

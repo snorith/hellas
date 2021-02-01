@@ -110,6 +110,8 @@
     "skill": {
       "templates": ["common"],
       "attribute": "",
+      "specifier": "",
+      "specifierCustom": "",
       "level": {
         "value": 0,
         "max": 0

@@ -17,11 +17,20 @@
 //@import 'styles/global/flex';
 
 /* Styles limited to hellas sheets */
-.hellas {
-	@import "styles/global/tailwind";
-	@import 'styles/components/forms';
-	@import 'styles/components/resource';
-	@import 'styles/components/tabs';
-	@import 'styles/components/items';
+div.hellas {
+	// Background of sheets
+	.window-content {
+		// Credit: <span>Photo by <a href="https://unsplash.com/@augustinewong?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Augustine Wong</a> on <a href="https://unsplash.com/s/photos/marble-texture?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+		background-image: url("assets/images/augustine-wong-li0iC0rjvvg-unsplash.jpg");
+		background-repeat: repeat;
+	}
+
+	form {
+		@import "styles/global/tailwind";
+		@import 'styles/components/forms';
+		@import 'styles/components/resource';
+		@import 'styles/components/tabs';
+		@import 'styles/components/items';
+	}
 }
 

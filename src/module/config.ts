@@ -1,6 +1,8 @@
 type ObjectWStringValues = { [key: string]: string }
 type ObjectWStringArrayValues = { [key: string]: string[] }
 
+export const SPECIFY_SUBTYPE = 'specify'
+
 export type hellasConfigType = {
 	races: string[]
 	attributes: string[],
@@ -102,23 +104,23 @@ const HELLAS: hellasConfigType = {
 	skillsWSpecifics: [],
 
 	skillSpecificsBreakdown: {
-		"athletics": ["swimming", "climbing", "balancing", "flying", "jumping", "ropeclimbing", "running", "strengthfeat", "endurance", "specify"],
-		"computers": ["personal", "mainframe", "starship", "specify"],
-		"etiquette": ["specify"],
+		"athletics": ["swimming", "climbing", "balancing", "flying", "jumping", "ropeclimbing", "running", "strengthfeat", "endurance", SPECIFY_SUBTYPE],
+		"computers": ["personal", "mainframe", "starship", SPECIFY_SUBTYPE],
+		"etiquette": [SPECIFY_SUBTYPE],
 		"handicraft": ["alchemy", "armorer", "artificer", "artisan", "bowyerfletcher", "brewervintner", "engineermechanical", "engineerstructural", "gunsmith", "finearts", "vehicles", "weaponsmith"],
 		"instinct": ["intuition", "initiative"],
 		"investigatesearch": ["investigation", "search"],
-		"lore": ["agriculture", "arcanearts", "engineering", "folklore", "forgery", "gambling", "heraldry", "herblore", "geography", "history", "law", "local", "mining", "nature", "region", "streetwise", "tactics", "specify"],
+		"lore": ["agriculture", "arcanearts", "engineering", "folklore", "forgery", "gambling", "heraldry", "herblore", "geography", "history", "law", "local", "mining", "nature", "region", "streetwise", "tactics", SPECIFY_SUBTYPE],
 		"mode": [],
 		"perform": ["dance", "musicianship", "juggling", "acting", "oratory", "singing"],
-		"pilot": ["specify"],
-		"profession": ["specify"],
-		"science": ["astronomy", "biology",	"botany","chemistry", "geology", "mathematics",	"medicine",	"metallurgy","physics",	"xenobiology", "theology", "zoology", "specify"],
-		"speaklanguage": ["atlantean", "goregon", "hellene", "nymphas", "zintar", "zoran", "specify"],
-		"survival": ["savannah", "forest", "jungle,", "desert", "arctic", "swamp", "alpine", "aquatic", "urban", "specify"],
+		"pilot": [SPECIFY_SUBTYPE],
+		"profession": [SPECIFY_SUBTYPE],
+		"science": ["astronomy", "biology",	"botany","chemistry", "geology", "mathematics",	"medicine",	"metallurgy","physics",	"xenobiology", "theology", "zoology", SPECIFY_SUBTYPE],
+		"speaklanguage": ["atlantean", "goregon", "hellene", "nymphas", "zintar", "zoran", SPECIFY_SUBTYPE],
+		"survival": ["savannah", "forest", "jungle,", "desert", "arctic", "swamp", "alpine", "aquatic", "urban", SPECIFY_SUBTYPE],
 		"trackingshadowing": ["tracking", "shadowing"],
 		"trading": ["appraising", "haggling"],
-		"weapon": ["melee", "ranged", "heavyweapons", "guns", "thrown", "vehicleweapons", "specify"],
+		"weapon": ["melee", "ranged", "heavyweapons", "guns", "thrown", "vehicleweapons", SPECIFY_SUBTYPE],
 	},
 
 	skillWAssocAttributes: {

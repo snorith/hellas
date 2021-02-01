@@ -24,7 +24,7 @@ export class HellasSkillItemSheet extends ItemSheet {
 	 * @type {String}
 	 */
 	get template() {
-		return `${systemBasePath}/templates/item/${this.type}Sheet.html`;
+		return `${systemBasePath}/templates/item/${this.type}Sheet.hbs`;
 	}
 
 	get type() {

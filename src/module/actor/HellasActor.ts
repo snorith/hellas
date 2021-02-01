@@ -4,7 +4,6 @@
  */
 import {HELLAS} from "../config"
 
-
 export class HellasActor extends Actor {
 	prepareData() {
 		super.prepareData();
