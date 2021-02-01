@@ -18,7 +18,7 @@ export class HellasActorSheet extends ActorSheet {
 			classes: ["hellas", "sheet", "actor"],
 			width: 925,
 			height: 1000,
-			tabs: [{navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "description"}]
+			tabs: [{navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "attributes"}]
 		});
 	}
 

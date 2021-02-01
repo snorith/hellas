@@ -174,3 +174,4 @@ $RECYCLE.BIN/
 node_modules
 foundryconfig.json
 dist
+/src/assets/images/red-marble.afphoto

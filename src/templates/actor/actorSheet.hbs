@@ -29,7 +29,7 @@
 			<div class="grid grid-cols-5 gap-2 mb-1">
 				{{#each data.HELLAS.characterAttributes as |attributeName|}}
 					{{#with (lookup @root.data.attributes attributeName)}}
-						<div class="h-20 p-2 align-middle text-center items-center border-2 border-opacity-70 border-solid border-gray-900 bg-yellow-300 bg-opacity-5 break-all">
+						<div class="h-20 p-2 align-middle text-center items-center border-2 border-opacity-70 border-solid border-gray-900 break-all">
 							<div class="uppercase align-middle overflow-ellipsis">{{localize (concat "HELLAS.attributes." attributeName ".name")}}</div>
 							<div class="flex p-3 items-center justify-center">
 								<input class="rounded-full w-1/2" type="number" name="data.attributes.{{attributeName}}.value" value="{{value}}" min="-10" step="1" oninput="this.value = Math.round(this.value|0);" data-dtype="Number" title="{{localize (concat "HELLAS.attributes." attributeName ".name")}}">
@@ -40,29 +40,29 @@
 			</div>
 
 			<div class="flex flex-wrap justify-center items-center mb-1">
-				<div class="flex h-20 p-2 align-middle text-gray-50 text-center items-center last:mr-0 mr-2 break-all border-2 border-opacity-70 border-solid border-gray-900 marble-bkgd bg-opacity-5">
+				<div class="flex h-20 p-2 align-middle text-gray-50 text-center items-center last:mr-0 mr-2 break-all border-2 border-opacity-70 border-solid border-gray-50 marble-bkgd bg-opacity-5">
 					<div>
-						<div class="uppercase align-middle overflow-ellipsis">{{localize "HELLAS.attributes.hitpoints.current.name"}}</div>
+						<div class="uppercase text-gray-50 align-middle overflow-ellipsis">{{localize "HELLAS.attributes.hitpoints.current.name"}}</div>
 						<div class="flex p-2 items-center justify-center">
-							<input class="rounded-full w-1/2" type="number" name="data.attributes.hitpoints.value" value="{{data.attributes.hitpoints.value}}" min="-10" step="1" oninput="this.value = Math.round(this.value|0);" data-dtype="Number" title="{{localize "HELLAS.attributes.hitpoints.current.name"}}">
+							<input class="rounded-full text-gray-50 border-gray-50 w-1/2" type="number" name="data.attributes.hitpoints.value" value="{{data.attributes.hitpoints.value}}" min="-10" step="1" oninput="this.value = Math.round(this.value|0);" data-dtype="Number" title="{{localize "HELLAS.attributes.hitpoints.current.name"}}">
 						</div>
 					</div>
 					<div>
-						<div class="uppercase align-middle overflow-ellipsis">{{localize "HELLAS.attributes.hitpoints.max.name"}}</div>
+						<div class="uppercase text-gray-50 align-middle overflow-ellipsis">{{localize "HELLAS.attributes.hitpoints.max.name"}}</div>
 						<div class="flex p-2 items-center justify-center">
-							<input class="rounded-full w-1/2" type="number" name="data.attributes.hitpoints.max" value="{{data.attributes.hitpoints.max}}" min="-10" step="1" oninput="this.value = Math.round(this.value|0);" data-dtype="Number" title="{{localize "HELLAS.attributes.hitpoints.max.name"}}">
+							<input class="rounded-full text-gray-50 border-gray-50 w-1/2" type="number" name="data.attributes.hitpoints.max" value="{{data.attributes.hitpoints.max}}" min="-10" step="1" oninput="this.value = Math.round(this.value|0);" data-dtype="Number" title="{{localize "HELLAS.attributes.hitpoints.max.name"}}">
 						</div>
 					</div>
 				</div>
 
-				<div class="h-20 p-2 align-middle text-center items-center last:mr-0 mr-2 border-2 border-opacity-70 border-solid border-gray-900 bg-yellow-300 bg-opacity-5 break-all">
+				<div class="h-20 p-2 align-middle text-center items-center last:mr-0 mr-2 border-2 border-opacity-70 border-solid border-gray-900 break-all">
 					<div class="uppercase align-middle overflow-ellipsis">{{localize "HELLAS.attributes.glory.name"}}</div>
 					<div class="flex p-3 items-center justify-center">
 						<input class="rounded-full w-1/2" type="number" name="data.attributes.glory.value" value="{{data.attributes.glory.value}}" min="-10" step="1" oninput="this.value = Math.round(this.value|0);" data-dtype="Number" title="{{localize "HELLAS.attributes.glory.name"}}">
 					</div>
 				</div>
 
-				<div class="h-20 p-2 align-middle text-center items-center last:mr-0 mr-2 border-2 border-opacity-70 border-solid border-gray-900 bg-yellow-300 bg-opacity-5 break-all">
+				<div class="h-20 p-2 align-middle text-center items-center last:mr-0 mr-2 border-2 border-opacity-70 border-solid border-gray-900 break-all">
 					<div class="uppercase align-middle overflow-ellipsis">{{localize "HELLAS.attributes.heropoints.name"}}</div>
 					<div class="flex p-3 items-center justify-center">
 						<input class="rounded-full w-1/2" type="number" name="data.attributes.heropoints.value" value="{{data.attributes.heropoints.value}}" min="-10" step="1" oninput="this.value = Math.round(this.value|0);" data-dtype="Number" title="{{localize "HELLAS.attributes.heropoints.name"}}">
