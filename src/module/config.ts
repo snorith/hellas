@@ -191,11 +191,9 @@ HELLAS.skillSpecificsBreakdown["mode"] = HELLAS.dynamismModes
 
 // create a shadowed list of long attribute names per skill from the provided list of shortened attribute names
 for (let [key, attributes] of Object.entries(HELLAS.skillWAssocShortAttributes)) {
-	const longAttributes = []
-	for (let i = 0; i < attributes.length; i++) {
-		longAttributes.push(HELLAS.attributesShortToLong[attributes[i]])
-	}
-	HELLAS.skillWAssocLongAttributes[key] = longAttributes
+	HELLAS.skillWAssocLongAttributes[key] = attributes.map(value => {
+		return HELLAS.attributesShortToLong[value]
+	})
 }
 
 export { HELLAS }
