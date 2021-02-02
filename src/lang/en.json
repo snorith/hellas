@@ -268,14 +268,14 @@
   "HELLAS.skill.skill.label": "Skill",
   "HELLAS.skill.specifier.label": "Specifier",
   "HELLAS.skill.specifier.custom.label": "Custom",
-  "HELLAS.skill.attribute.label": "Skill",
+  "HELLAS.skill.attribute.label": "Attribute",
   "HELLAS.skill.level.label": "Level",
 
   "HELLAS.skill.name.title": "Skill",
   "HELLAS.skill.skill.title": "Skill",
   "HELLAS.skill.specifier.title": "Specifier",
   "HELLAS.skill.specifier.title.label": "Custom",
-  "HELLAS.skill.attribute.title": "Skill",
+  "HELLAS.skill.attribute.title": "Attribute",
   "HELLAS.skill.level.title": "Level"
 }
 

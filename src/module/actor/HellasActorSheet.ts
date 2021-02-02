@@ -10,30 +10,6 @@ import {HellasSkillItem, SkillItemType} from "../item/HellasSkillItem"
 // short skills
 const sortSkillsByNameFunction = (a, b) => a.name < b.name ? -1 : a.name > b.name ? 1 : 0
 
-function fullName(item: Item): string {
-	switch (item.type) {
-		case HellasSkillItem.type:
-			let skill = item as unknown as SkillItemType;
-
-			let skillName = skill.data.skill
-			const specifier = skill.data.specifier
-			const specifierCustom = skill.data.specifierCustom
-
-			if (SPECIFY_SUBTYPE === specifier) {
-				if (!isEmptyOrSpaces(specifierCustom))
-					skillName = `${skillName} ${specifierCustom}`
-			}
-			else if (!isEmptyOrSpaces(specifier))
-				skillName = `${skillName} ${specifier}`
-
-			return skillName
-		default:
-			break
-	}
-
-	return ''
-}
-
 export class HellasActorSheet extends ActorSheet {
 
 	/** @override */
@@ -101,10 +77,7 @@ export class HellasActorSheet extends ActorSheet {
 			// @ts-ignore
 			if (!sheetData.data.items[val])
 			{
-				sheetData.data.items[val] = items.filter(i => i.type === type).map(i => {
-					i.name = fullName(i)
-					return i
-				}).sort(sortSkillsByNameFunction)
+				sheetData.data.items[val] = items.filter(i => i.type === type).sort(sortSkillsByNameFunction)
 			}
 		});
 	}

@@ -1,6 +1,7 @@
 import {systemBasePath} from "../../settings"
 import {HellasSkillItem, SkillItemType, SkillMemoryType} from "../HellasSkillItem"
-import {HELLAS} from "../../config"
+import {HELLAS, SPECIFY_SUBTYPE} from "../../config"
+import {fullName} from "../HellasItem"
 
 export class HellasSkillItemSheet extends ItemSheet {
 	/**
@@ -34,27 +35,29 @@ export class HellasSkillItemSheet extends ItemSheet {
 
 	// @ts-ignore
 	getData() {
-		const sheet = super.getData() as unknown as SkillMemoryType
+		let sheet = super.getData() as unknown as SkillMemoryType
 
-		if (sheet.data.skill) {
-			sheet.item['attributesList'] = HELLAS.skillWAssocLongAttributes[sheet.data.skill]
+		if (!sheet.data.skill)
+			sheet.data.skill = HELLAS.skills[0]
 
-			if (HELLAS.skillsWSpecifics.includes(sheet.data.skill))
-				sheet.item['skillSpecifics'] = HELLAS.skillSpecificsBreakdown[sheet.data.skill]
-			else {
-				sheet.data.specifier = ''
+		// determine whether, based on the skill, there are optional specifics and which are the appropriate attributes
+		sheet.item['ATTRIBUTESLIST'] = HELLAS.skillWAssocLongAttributes[sheet.data.skill]
+
+		if (HELLAS.skillsWSpecifics.includes(sheet.data.skill)) {
+			sheet.item['SKILLSPECIFICS'] = HELLAS.skillSpecificsBreakdown[sheet.data.skill]
+
+			if (sheet.data.specifier !== SPECIFY_SUBTYPE)
 				sheet.data.specifierCustom = ''
-
-				sheet.item['skillSpecifics'] = []
-			}
 		}
 		else {
 			sheet.data.specifier = ''
 			sheet.data.specifierCustom = ''
 
-			sheet.item['attributesList'] = []
-			sheet.item['skillSpecifics'] = []
+			sheet.item['SKILLSPECIFICS'] = []
 		}
+
+		// @ts-ignore
+		// sheet.item['name'] = fullName(sheet.item)
 
 		return sheet
 	}

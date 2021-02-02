@@ -1,45 +1,58 @@
 <form class="{{cssClass}} item" autocomplete="off" autocapitalize="off">
 	<header class="sheet-header">
 		<img class="profile-img" src="{{item.img}}" data-edit="img" {{#if item.name}}title="{{item.name}}"{{/if}}/>
-		<div class="header-fields">
-			<label title="{{localize "HELLAS.skill.skill.title"}}">{{localize "HELLAS.skill.skill.label"}}
-				<select name="data.skill" title="{{localize "HELLAS.skill.skill.title"}}" data-dtype="String">
+		<div class="grid grid-cols-2 gap-2 flex-none align-middle">
+			<div class="text-right">
+				<label for="{{item._id}}.data.skill" title="{{localize "HELLAS.skill.skill.title"}}">{{localize "HELLAS.skill.skill.label"}}</label>
+			</div>
+			<div>
+				<select id="{{item._id}}.data.skill" name="data.skill" title="{{localize "HELLAS.skill.skill.title"}}" data-dtype="String">
 					{{#select data.skill}}
 						{{#each item.HELLAS.skills as |skill|}}
 							<option value="{{skill}}">{{localize (concat "HELLAS.skills." skill ".name")}}</option>
 						{{/each}}
 					{{/select}}
 				</select>
-			</label>
+			</div>
 
-			{{#if item.skillSpecifics.length}}
-				<label title="{{localize "HELLAS.skill.specifier.title"}}">{{localize "HELLAS.skill.specifier.label"}}
-					<select name="data.specifier" title="{{localize "HELLAS.skill.specifier.title"}}" data-dtype="String">
+			{{#if item.SKILLSPECIFICS.length}}
+				<div class="text-right">
+					<label for="{{item._id}}.data.specifier" title="{{localize "HELLAS.skill.specifier.title"}}">{{localize "HELLAS.skill.specifier.label"}}</label>
+				</div>
+				<div>
+					<select id="{{item._id}}.data.specifier" name="data.specifier" title="{{localize "HELLAS.skill.specifier.title"}}" data-dtype="String" {{#unless not item.SKILLSPECIFICS.length}}disabled{{/unless}}>
 						{{#select data.specifier}}
-							{{#each item.skillSpecifics as |breakout|}}
+							{{#each item.SKILLSPECIFICS as |breakout|}}
 								<option value="{{breakout}}">{{localize (concat "HELLAS.skills.specifics." breakout)}}</option>
 							{{/each}}
 						{{/select}}
 					</select>
-				</label>
+				</div>
 			{{/if}}
 
 			{{#if (eq data.specifier item.SPECIFY_SUBTYPE)}}
-				<label title="{{localize "HELLAS.skill.specifier.custom.title"}}">{{localize "HELLAS.skill.specifier.custom.label"}}
-					<input type="text" name="data.specifierCustom" value="{{data.specifierCustom}}" data-dtype="String" title="{{localize "HELLAS.skill.specifier.custom.title"}}"/>
-				</label>
+				<div class="text-right">
+					<label for="{{item._id}}.data.specifierCustom" title="{{localize "HELLAS.skill.specifier.custom.title"}}">{{localize "HELLAS.skill.specifier.custom.label"}}</label>
+				</div>
+				<div>
+					<input type="text" id="{{item._id}}.data.specifierCustom" name="data.specifierCustom" value="{{data.specifierCustom}}" data-dtype="String" title="{{localize "HELLAS.skill.specifier.custom.title"}}"/>
+				</div>
 			{{/if}}
 
-			{{#if item.attributesList.length}}
-				<label title="{{localize "HELLAS.skill.attribute.title"}}">{{localize "HELLAS.skill.attribute.label"}}
-					<select name="data.attribute" title="{{localize "HELLAS.skill.attribute.title"}}" data-dtype="String">
+			{{#if item.ATTRIBUTESLIST.length}}
+				<div class="text-right">
+					<label for="{{item._id}}.data.attribute" title="{{localize "HELLAS.skill.attribute.title"}}">{{localize "HELLAS.skill.attribute.label"}}</label>
+				</div>
+				<div>
+					<select id="{{item._id}}.data.attribute" name="data.attribute" title="{{localize "HELLAS.skill.attribute.title"}}" data-dtype="String">
 						{{#select data.attribute}}
-							{{#each item.attributesList as |attribute|}}
+							{{#each item.ATTRIBUTESLIST as |attribute|}}
 								<option value="{{attribute}}">{{localize (concat "HELLAS.attributes." attribute ".name")}}</option>
 							{{/each}}
 						{{/select}}
 					</select>
-				</label>
+				</div>
+
 			{{/if}}
 		</div>
 	</header>

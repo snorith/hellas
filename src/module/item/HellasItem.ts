@@ -12,7 +12,9 @@
  * @class HellasItem
  * @extends {Item}
  */
-import {HellasSkillItem} from "./HellasSkillItem"
+import {HellasSkillItem, SkillItemType} from "./HellasSkillItem"
+import {SPECIFY_SUBTYPE} from "../config"
+import {isEmptyOrSpaces} from "../settings"
 
 export const HellasItem = new Proxy(function () {}, {
 
@@ -58,3 +60,26 @@ export const HellasItem = new Proxy(function () {}, {
         }
     },
 });
+
+export function fullName(item: Item): string {
+	switch (item.type) {
+		case HellasSkillItem.type:
+			let skill = item as unknown as SkillItemType;
+
+			let skillName = skill.data.skill
+			const specifier = skill.data.specifier
+			const specifierCustom = skill.data.specifierCustom
+
+			if (SPECIFY_SUBTYPE === specifier && !isEmptyOrSpaces(specifierCustom)) {
+				skillName = `${skillName} ${specifierCustom}`
+			}
+			else if (!isEmptyOrSpaces(specifier))
+				skillName = `${skillName} ${specifier}`
+
+			return skillName
+		default:
+			break
+	}
+
+	return ''
+}
