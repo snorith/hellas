@@ -1,4 +1,4 @@
-import {foundryAttributeValueMax, SPECIFY_SUBTYPE} from "../config"
+import {foundryAttributeValueMax, HELLAS, SPECIFY_SUBTYPE} from "../config"
 import {isEmptyOrSpaces} from "../settings"
 
 export type SkillItemDataType = {
@@ -32,5 +32,6 @@ export class HellasSkillItem extends Item {
             itemData = itemData.data;
 
         itemData.name = this.data.name || game.i18n.localize("HELLAS.item.skill.newSkill");
+        itemData.HELLAS = HELLAS
     }
 }

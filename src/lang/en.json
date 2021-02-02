@@ -100,6 +100,7 @@
   "HELLAS.skills.literacy.name": "Literacy",
   "HELLAS.skills.lore.name": "Lore",
   "HELLAS.skills.medicine.name": "Medicine",
+  "HELLAS.skills.mode.name": "Mode",
   "HELLAS.skills.mounted.name": "Mounted",
   "HELLAS.skills.navigate.name": "Navigate",
   "HELLAS.skills.pankration.name": "Pankration",
@@ -140,6 +141,7 @@
   "HELLAS.skills.literacy.description": "",
   "HELLAS.skills.lore.description": "",
   "HELLAS.skills.medicine.description": "",
+  "HELLAS.skills.mode.description": "",
   "HELLAS.skills.mounted.description": "",
   "HELLAS.skills.navigate.description": "",
   "HELLAS.skills.pankration.description": "",
@@ -251,6 +253,15 @@
   "HELLAS.skills.specifics.zintar": "Zintar",
   "HELLAS.skills.specifics.zoran": "Zoran",
 
+  "HELLAS.skills.specifics.attack":  "Attack",
+  "HELLAS.skills.specifics.illusion": "Illusion",
+  "HELLAS.skills.specifics.influence":  "Influence",
+  "HELLAS.skills.specifics.kinetic": "Kinetic",
+  "HELLAS.skills.specifics.manifest":  "Manifest",
+  "HELLAS.skills.specifics.manipulate": "Manipulate",
+  "HELLAS.skills.specifics.sensory":  "Sensory",
+  "HELLAS.skills.specifics.shield": "Shield",
+  
   "HELLAS.item.skill.newSkill": "New skill"
 }
 
