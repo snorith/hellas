@@ -2,7 +2,7 @@
  * Extend the base Actor entity by defining a custom roll data structure which is ideal for the Simple system.
  * @extends {Actor}
  */
-import {HELLAS} from "../config"
+import {HELLAS, SPECIFY_SUBTYPE} from "../config"
 
 export class HellasActor extends Actor {
 	prepareData() {
@@ -23,6 +23,7 @@ export class HellasActor extends Actor {
 	_prepareCharacterData(actorData: Actor.Data<any>) {
 		const data = actorData.data
 
-		data.HELLAS = HELLAS
+		this['HELLAS'] = HELLAS
+		this['SPECIFY_SUBTYPE'] = SPECIFY_SUBTYPE
 	}
 }

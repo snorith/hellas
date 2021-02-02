@@ -2,9 +2,9 @@ import {foundryAttributeValueMax, HELLAS, SPECIFY_SUBTYPE} from "../config"
 import {isEmptyOrSpaces} from "../settings"
 
 export type SkillItemDataType = {
-	name: string,
 	version: number,
 	notes: string,
+	skill: string,
 	attribute: string,
 	specifier: string,
 	specifierCustom: string,
@@ -12,9 +12,16 @@ export type SkillItemDataType = {
 }
 
 export type SkillItemType = {
+	_id: string,
     name: string,
+	img: string,
+	type, string,
 	data: SkillItemDataType
+}
 
+export type SkillMemoryType = {
+	item: Item,
+	data: SkillItemDataType
 }
 
 export class HellasSkillItem extends Item {
@@ -32,6 +39,7 @@ export class HellasSkillItem extends Item {
             itemData = itemData.data;
 
         itemData.name = this.data.name || game.i18n.localize("HELLAS.item.skill.newSkill");
-        itemData.HELLAS = HELLAS
+        this.data['HELLAS'] = HELLAS						// this is being set on the item itself that the handlebars template sees
+		this.data['SPECIFY_SUBTYPE'] = SPECIFY_SUBTYPE		// this is being set on the item itself that the handlebars template sees
     }
 }

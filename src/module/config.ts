@@ -14,7 +14,8 @@ export type hellasConfigType = {
 	skills: string[],
 	skillsWSpecifics: string[],
 	skillSpecificsBreakdown: ObjectWStringArrayValues,
-	skillWAssocAttributes: ObjectWStringArrayValues,
+	skillWAssocShortAttributes: ObjectWStringArrayValues,
+	skillWAssocLongAttributes: ObjectWStringArrayValues,
 	dynamismModes: string[],
 	dynamismModesSpecificBreakdowns: ObjectWStringArrayValues
 }
@@ -123,7 +124,7 @@ const HELLAS: hellasConfigType = {
 		"weapon": ["melee", "ranged", "heavyweapons", "guns", "thrown", "vehicleweapons", SPECIFY_SUBTYPE],
 	},
 
-	skillWAssocAttributes: {
+	skillWAssocShortAttributes: {
 		athletics: ["CON", "DEX", "SPD", "STR"],
 		animalhandling: ["WIL"],
 		command: ["CHA"],
@@ -166,6 +167,8 @@ const HELLAS: hellasConfigType = {
 		weapon: ["CR"],
 	},
 
+	skillWAssocLongAttributes: {},
+
 	dynamismModes: [],
 
 	dynamismModesSpecificBreakdowns: {
@@ -182,8 +185,17 @@ const HELLAS: hellasConfigType = {
 
 HELLAS.attributes = Object.keys(HELLAS.attributesWShortName)
 HELLAS.skillsWSpecifics = Object.keys(HELLAS.skillSpecificsBreakdown)
-HELLAS.skills = Object.keys(HELLAS.skillWAssocAttributes)
+HELLAS.skills = Object.keys(HELLAS.skillWAssocShortAttributes)
 HELLAS.dynamismModes = Object.keys(HELLAS.dynamismModesSpecificBreakdowns)
 HELLAS.skillSpecificsBreakdown["mode"] = HELLAS.dynamismModes
+
+// create a shadowed list of long attribute names per skill from the provided list of shortened attribute names
+for (let [key, attributes] of Object.entries(HELLAS.skillWAssocShortAttributes)) {
+	const longAttributes = []
+	for (let i = 0; i < attributes.length; i++) {
+		longAttributes.push(HELLAS.attributesShortToLong[attributes[i]])
+	}
+	HELLAS.skillWAssocLongAttributes[key] = longAttributes
+}
 
 export { HELLAS }

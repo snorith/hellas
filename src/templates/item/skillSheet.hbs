@@ -1,8 +1,46 @@
 <form class="{{cssClass}} item" autocomplete="off" autocapitalize="off">
 	<header class="sheet-header">
-		<img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}"/>
+		<img class="profile-img" src="{{item.img}}" data-edit="img" {{#if item.name}}title="{{item.name}}"{{/if}}/>
 		<div class="header-fields">
-			<h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="Name" data-dtype="String"/></h1>
+			<label title="{{localize "HELLAS.skill.skill.title"}}">{{localize "HELLAS.skill.skill.label"}}
+				<select name="data.skill" title="{{localize "HELLAS.skill.skill.title"}}" data-dtype="String">
+					{{#select data.skill}}
+						{{#each item.HELLAS.skills as |skill|}}
+							<option value="{{skill}}">{{localize (concat "HELLAS.skills." skill ".name")}}</option>
+						{{/each}}
+					{{/select}}
+				</select>
+			</label>
+
+			{{#if item.skillSpecifics.length}}
+				<label title="{{localize "HELLAS.skill.specifier.title"}}">{{localize "HELLAS.skill.specifier.label"}}
+					<select name="data.specifier" title="{{localize "HELLAS.skill.specifier.title"}}" data-dtype="String">
+						{{#select data.specifier}}
+							{{#each item.skillSpecifics as |breakout|}}
+								<option value="{{breakout}}">{{localize (concat "HELLAS.skills.specifics." breakout)}}</option>
+							{{/each}}
+						{{/select}}
+					</select>
+				</label>
+			{{/if}}
+
+			{{#if (eq data.specifier item.SPECIFY_SUBTYPE)}}
+				<label title="{{localize "HELLAS.skill.specifier.custom.title"}}">{{localize "HELLAS.skill.specifier.custom.label"}}
+					<input type="text" name="data.specifierCustom" value="{{data.specifierCustom}}" data-dtype="String" title="{{localize "HELLAS.skill.specifier.custom.title"}}"/>
+				</label>
+			{{/if}}
+
+			{{#if item.attributesList.length}}
+				<label title="{{localize "HELLAS.skill.attribute.title"}}">{{localize "HELLAS.skill.attribute.label"}}
+					<select name="data.attribute" title="{{localize "HELLAS.skill.attribute.title"}}" data-dtype="String">
+						{{#select data.attribute}}
+							{{#each item.attributesList as |attribute|}}
+								<option value="{{attribute}}">{{localize (concat "HELLAS.attributes." attribute ".name")}}</option>
+							{{/each}}
+						{{/select}}
+					</select>
+				</label>
+			{{/if}}
 		</div>
 	</header>
 

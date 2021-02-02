@@ -1,5 +1,6 @@
 import {systemBasePath} from "../../settings"
-import {HellasSkillItem} from "../HellasSkillItem"
+import {HellasSkillItem, SkillItemType, SkillMemoryType} from "../HellasSkillItem"
+import {HELLAS} from "../../config"
 
 export class HellasSkillItemSheet extends ItemSheet {
 	/**
@@ -29,6 +30,33 @@ export class HellasSkillItemSheet extends ItemSheet {
 
 	get type() {
 		return HellasSkillItem.type;
+	}
+
+	// @ts-ignore
+	getData() {
+		const sheet = super.getData() as unknown as SkillMemoryType
+
+		if (sheet.data.skill) {
+			sheet.item['attributesList'] = HELLAS.skillWAssocLongAttributes[sheet.data.skill]
+
+			if (HELLAS.skillsWSpecifics.includes(sheet.data.skill))
+				sheet.item['skillSpecifics'] = HELLAS.skillSpecificsBreakdown[sheet.data.skill]
+			else {
+				sheet.data.specifier = ''
+				sheet.data.specifierCustom = ''
+
+				sheet.item['skillSpecifics'] = []
+			}
+		}
+		else {
+			sheet.data.specifier = ''
+			sheet.data.specifierCustom = ''
+
+			sheet.item['attributesList'] = []
+			sheet.item['skillSpecifics'] = []
+		}
+
+		return sheet
 	}
 
 	/** @override */

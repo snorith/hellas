@@ -8,25 +8,25 @@ import set from "lodash-es/set"
 import {HellasSkillItem, SkillItemType} from "../item/HellasSkillItem"
 
 // short skills
-const sortSkillsByFullnameFunction = (a, b) => a.data.fullname < b.data.fullname ? -1 : a.data.fullname > b.data.fullname ? 1 : 0;
+const sortSkillsByNameFunction = (a, b) => a.name < b.name ? -1 : a.name > b.name ? 1 : 0
 
 function fullName(item: Item): string {
 	switch (item.type) {
 		case HellasSkillItem.type:
 			let skill = item as unknown as SkillItemType;
 
-			let name = skill.name
+			let skillName = skill.data.skill
 			const specifier = skill.data.specifier
 			const specifierCustom = skill.data.specifierCustom
 
 			if (SPECIFY_SUBTYPE === specifier) {
 				if (!isEmptyOrSpaces(specifierCustom))
-					name = `${name} ${specifierCustom}`
+					skillName = `${skillName} ${specifierCustom}`
 			}
 			else if (!isEmptyOrSpaces(specifier))
-				name = `${name} ${specifier}`
+				skillName = `${skillName} ${specifier}`
 
-			return name
+			return skillName
 		default:
 			break
 	}
@@ -102,9 +102,9 @@ export class HellasActorSheet extends ActorSheet {
 			if (!sheetData.data.items[val])
 			{
 				sheetData.data.items[val] = items.filter(i => i.type === type).map(i => {
-					i.data['fullname'] = fullName(i)
+					i.name = fullName(i)
 					return i
-				}).sort(sortSkillsByFullnameFunction)
+				}).sort(sortSkillsByNameFunction)
 			}
 		});
 	}

@@ -100,7 +100,7 @@
   "HELLAS.skills.literacy.name": "Literacy",
   "HELLAS.skills.lore.name": "Lore",
   "HELLAS.skills.medicine.name": "Medicine",
-  "HELLAS.skills.mode.name": "Mode",
+  "HELLAS.skills.mode.name": "Mode (Dynamism)",
   "HELLAS.skills.mounted.name": "Mounted",
   "HELLAS.skills.navigate.name": "Navigate",
   "HELLAS.skills.pankration.name": "Pankration",
@@ -262,7 +262,21 @@
   "HELLAS.skills.specifics.sensory":  "Sensory",
   "HELLAS.skills.specifics.shield": "Shield",
   
-  "HELLAS.item.skill.newSkill": "New skill"
+  "HELLAS.item.skill.newSkill": "New skill",
+  
+  "HELLAS.skill.name.label": "Skill",
+  "HELLAS.skill.skill.label": "Skill",
+  "HELLAS.skill.specifier.label": "Specifier",
+  "HELLAS.skill.specifier.custom.label": "Custom",
+  "HELLAS.skill.attribute.label": "Skill",
+  "HELLAS.skill.level.label": "Level",
+
+  "HELLAS.skill.name.title": "Skill",
+  "HELLAS.skill.skill.title": "Skill",
+  "HELLAS.skill.specifier.title": "Specifier",
+  "HELLAS.skill.specifier.title.label": "Custom",
+  "HELLAS.skill.attribute.title": "Skill",
+  "HELLAS.skill.level.title": "Level"
 }
 
 
