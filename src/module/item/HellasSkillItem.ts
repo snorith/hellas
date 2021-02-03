@@ -117,30 +117,12 @@ export class HellasSkillItem extends Item {
 		if (skillName === HELLAS.dynamismMode) {
 			workingil8nName = game.i18n.localize("HELLAS.skills.mode.short.name")
 
-			if (!isEmptyOrSpaces(specifier)) {
-				const specifics = HELLAS.skillSpecificsBreakdown[skillName]
-				if (specifics && specifics.includes(specifier)) {
-					const specifieril8nName = game.i18n.localize("HELLAS.skills.specifics." + specifier)
-
-					const types = HELLAS.dynamismModesSpecificBreakdowns[specifier]
-					if (types && types.includes(specifierCustom)) {
-						if (specifierCustom === specifier)
-							return game.i18n.format("HELLAS.item.skill.name.combiner", { skill: workingil8nName, specifier: specifieril8nName})
-						else {
-							const typeil8nName = game.i18n.localize("HELLAS.skills.mode." + specifierCustom)
-							return game.i18n.format("HELLAS.item.skill.name.combiner2", { skill: workingil8nName, specifier: specifieril8nName, type: typeil8nName})
-						}
-					}
-					else {
-						return game.i18n.format("HELLAS.item.skill.name.combiner", { skill: workingil8nName, specifier: specifieril8nName})
-					}
-				}
-				else {
-					return workingil8nName
-				}
-			}
+			const specifieril8nName = game.i18n.localize("HELLAS.skills.specifics." + specifier)
+			if (specifierCustom === specifier)
+				return game.i18n.format("HELLAS.item.skill.name.combiner", { skill: workingil8nName, specifier: specifieril8nName})
 			else {
-				return workingil8nName
+				const typeil8nName = game.i18n.localize("HELLAS.skills.mode." + specifierCustom)
+				return game.i18n.format("HELLAS.item.skill.name.combiner2", { skill: workingil8nName, specifier: specifieril8nName, type: typeil8nName})
 			}
 		}
 		else {
