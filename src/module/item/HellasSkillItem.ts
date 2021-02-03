@@ -1,6 +1,6 @@
 import {foundryAttributeValueMax, HELLAS, SPECIFY_SUBTYPE} from "../config"
+import set from "lodash-es/set"
 import {isEmptyOrSpaces} from "../settings"
-import {fullName} from "./HellasItem"
 
 export type SkillItemDataType = {
 	version: number,
@@ -38,12 +38,41 @@ export class HellasSkillItem extends Item {
 		const itemData = this.data.data || {}
 
 		if (this.data)
-        	this.data.name = fullName(this)
+        	this.data.name = this.fullName()
         // @ts-ignore
 		itemData.name = this.data ? this.data.name : game.i18n.localize("HELLAS.item.skill.newSkill")
+		// @ts-ignore
+		const data = set({}, "name", itemData.name)
+		this.update(data).catch(reason => console.log(reason))
 
         this.data['HELLAS'] = HELLAS						// this is being set on the item itself that the handlebars template sees
 		this.data['SPECIFY_SUBTYPE'] = SPECIFY_SUBTYPE		// this is being set on the item itself that the handlebars template sees
     }
+
+	fullName(): string {
+		// @ts-ignore
+		let skillName = this.data.data.skill || ''
+		// @ts-ignore
+		let specifier = this.data.data.specifier || ''
+		// @ts-ignore
+		const specifierCustom = this.data.data.specifierCustom || ''
+
+		if (isEmptyOrSpaces(skillName)) {
+			return game.i18n.localize("HELLAS.item.skill.newSkill")
+		}
+		else {
+			skillName = game.i18n.localize("HELLAS.skills." + skillName + ".name")
+
+			if (SPECIFY_SUBTYPE === specifier && !isEmptyOrSpaces(specifierCustom)) {
+				skillName = `${skillName} ${specifierCustom}`
+			}
+			else if (!isEmptyOrSpaces(specifier)) {
+				specifier = game.i18n.localize("HELLAS.skills.specifics." + specifier)
+				skillName = `${skillName} ${specifier}`
+			}
+		}
+
+		return skillName
+	}
 }
 

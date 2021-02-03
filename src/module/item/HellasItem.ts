@@ -12,9 +12,7 @@
  * @class HellasItem
  * @extends {Item}
  */
-import {HellasSkillItem, SkillItemType} from "./HellasSkillItem"
-import {SPECIFY_SUBTYPE} from "../config"
-import {isEmptyOrSpaces} from "../settings"
+import {HellasSkillItem} from "./HellasSkillItem"
 
 export const HellasItem = new Proxy(function () {}, {
 
@@ -61,35 +59,3 @@ export const HellasItem = new Proxy(function () {}, {
     },
 });
 
-export function fullName(item: Item): string {
-	switch (item.type) {
-		case HellasSkillItem.type:
-			// @ts-ignore
-			let skillName = item.data.data.skill || ''
-			// @ts-ignore
-			let specifier = item.data.data.specifier || ''
-			// @ts-ignore
-			const specifierCustom = item.data.data.specifierCustom || ''
-
-			if (isEmptyOrSpaces(skillName)) {
-				return game.i18n.localize("HELLAS.item.skill.newSkill")
-			}
-			else {
-				skillName = game.i18n.localize("HELLAS.skills." + skillName + ".name")
-
-				if (SPECIFY_SUBTYPE === specifier && !isEmptyOrSpaces(specifierCustom)) {
-					skillName = `${skillName} ${specifierCustom}`
-				}
-				else if (!isEmptyOrSpaces(specifier)) {
-					specifier = game.i18n.localize("HELLAS.skills.specifics." + specifier)
-					skillName = `${skillName} ${specifier}`
-				}
-			}
-
-			return skillName
-		default:
-			break
-	}
-
-	return ''
-}

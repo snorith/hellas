@@ -2,10 +2,10 @@
  * Extend the basic ActorSheet with some very simple modifications
  * @extends {ActorSheet}
  */
-import {isEmptyOrSpaces, systemBasePath, systemName} from "../settings"
-import {foundryAttributeValueMax, HELLAS, SPECIFY_SUBTYPE} from "../config"
+import {systemBasePath} from "../settings"
+import {foundryAttributeValueMax, HELLAS} from "../config"
 import set from "lodash-es/set"
-import {HellasSkillItem, SkillItemType} from "../item/HellasSkillItem"
+import {HellasSkillItem} from "../item/HellasSkillItem"
 
 // short skills
 const sortSkillsByNameFunction = (a, b) => a.name < b.name ? -1 : a.name > b.name ? 1 : 0

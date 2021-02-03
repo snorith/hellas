@@ -1,7 +1,6 @@
 import {systemBasePath} from "../../settings"
-import {HellasSkillItem, SkillItemType, SkillMemoryType} from "../HellasSkillItem"
+import {HellasSkillItem, SkillMemoryType} from "../HellasSkillItem"
 import {HELLAS, SPECIFY_SUBTYPE} from "../../config"
-import {fullName} from "../HellasItem"
 
 export class HellasSkillItemSheet extends ItemSheet {
 	/**
@@ -61,9 +60,6 @@ export class HellasSkillItemSheet extends ItemSheet {
 
 			sheet.item['SKILLSPECIFICS'] = []
 		}
-
-		// @ts-ignore
-		// sheet.item['name'] = fullName(sheet.item)
 
 		return sheet
 	}

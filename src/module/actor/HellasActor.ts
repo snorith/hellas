@@ -23,7 +23,7 @@ export class HellasActor extends Actor {
 	_prepareCharacterData(actorData: Actor.Data<any>) {
 		const data = actorData.data
 
-		this['HELLAS'] = HELLAS
-		this['SPECIFY_SUBTYPE'] = SPECIFY_SUBTYPE
+		this.data['HELLAS'] = HELLAS
+		this.data['SPECIFY_SUBTYPE'] = SPECIFY_SUBTYPE
 	}
 }
