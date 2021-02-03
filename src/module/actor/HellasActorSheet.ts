@@ -117,7 +117,7 @@ export class HellasActorSheet extends ActorSheet {
 
 		const data = set({}, "data.attributes.fatepoints.value", fpCount)
 
-		this.actor.update(data)
+		this.actor.update(data).catch(reason => console.log(reason))
 		this.render(false)
 
 		return false

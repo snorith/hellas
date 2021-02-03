@@ -41,8 +41,19 @@ export class HellasSkillItemSheet extends ItemSheet {
 
 		if (HELLAS.skillsWSpecifics.includes(sheet.data.skill)) {
 			sheet.item['SKILLSPECIFICS'] = HELLAS.skillSpecificsBreakdown[sheet.data.skill]
+
+			if (sheet.data.skill === HELLAS.dynamismMode) {
+				if (!sheet.item['SKILLSPECIFICS'].includes(sheet.data.specifier)) {
+					sheet.data.specifier = sheet.item['SKILLSPECIFICS'][0]
+				}
+				sheet.item['MODESPECIFICS'] = HELLAS.dynamismModesSpecificBreakdowns[sheet.data.specifier]
+			}
+			else {
+				sheet.item['MODESPECIFICS'] = []
+			}
 		}
 		else {
+			sheet.item['MODESPECIFICS'] = []
 			sheet.item['SKILLSPECIFICS'] = []
 		}
 

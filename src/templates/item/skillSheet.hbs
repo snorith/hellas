@@ -51,20 +51,41 @@
 					</select>
 				</div>
 
-				<div class="text-right {{#unless (eq data.specifier item.SPECIFY_SUBTYPE)}}text-gray-400{{/unless}}">
-					<label for="{{item._id}}.data.specifierCustom"
-						   class="align-middle"
-						   title="{{localize "HELLAS.skill.specifier.custom.title"}}">{{localize "HELLAS.skill.specifier.custom.label"}}</label>
-				</div>
-				<div class="col-span-2">
-					<input type="text"
-						   id="{{item._id}}.data.specifierCustom"
-						   name="data.specifierCustom"
-						   value="{{data.specifierCustom}}"
-						   data-dtype="String"
-						   title="{{localize "HELLAS.skill.specifier.custom.title"}}"
-						{{#unless (eq data.specifier item.SPECIFY_SUBTYPE)}}class="disabled:opacity-50" disabled{{/unless}}/>
-				</div>
+				{{#if item.MODESPECIFICS.length}}
+					<div class="text-right">
+						<label for="{{item._id}}.data.specifierCustom"
+							   class="align-middle"
+							   title="{{localize "HELLAS.skill.type.title"}}">{{localize "HELLAS.skill.type.label"}}</label>
+					</div>
+					<div class="col-span-2">
+						<select id="{{item._id}}.data.specifierCustom"
+								name="data.specifierCustom"
+								title="{{localize "HELLAS.skill.type.title"}}"
+								data-dtype="String"
+							>
+							{{#select data.specifierCustom}}
+								{{#each item.MODESPECIFICS as |breakout|}}
+									<option value="{{breakout}}">{{localize (concat "HELLAS.skills.mode." breakout)}}</option>
+								{{/each}}
+							{{/select}}
+						</select>
+					</div>
+				{{else}}
+					<div class="text-right {{#unless (eq data.specifier item.SPECIFY_SUBTYPE)}}text-gray-400{{/unless}}">
+						<label for="{{item._id}}.data.specifierCustom"
+							   class="align-middle"
+							   title="{{localize "HELLAS.skill.specifier.custom.title"}}">{{localize "HELLAS.skill.specifier.custom.label"}}</label>
+					</div>
+					<div class="col-span-2">
+						<input type="text"
+							   id="{{item._id}}.data.specifierCustom"
+							   name="data.specifierCustom"
+							   value="{{data.specifierCustom}}"
+							   data-dtype="String"
+							   title="{{localize "HELLAS.skill.specifier.custom.title"}}"
+							{{#unless (eq data.specifier item.SPECIFY_SUBTYPE)}}class="disabled:opacity-50" disabled{{/unless}}/>
+					</div>
+				{{/if}}
 
 				<div class="text-right {{#unless item.SHORTATTRIBUTELIST.length}}text-gray-400{{/unless}}">
 					<label for="{{item._id}}.data.attribute"

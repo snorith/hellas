@@ -17,7 +17,8 @@ export type hellasConfigType = {
 	skillWAssocShortAttributes: ObjectWStringArrayValues,
 	skillWAssocLongAttributes: ObjectWStringArrayValues,
 	dynamismModes: string[],
-	dynamismModesSpecificBreakdowns: ObjectWStringArrayValues
+	dynamismModesSpecificBreakdowns: ObjectWStringArrayValues,
+	dynamismMode: string
 }
 
 export type foundryAttributeValueMax = {
@@ -180,7 +181,9 @@ const HELLAS: hellasConfigType = {
 		"manipulate": ['health', 'skill', 'attribute', 'protection', 'minortransform', 'majortransform', 'completetransform'],
 		"sensory": ['perception', 'locate', 'scry', 'obscure'],
 		"shield": ['aura', 'barrier', 'ward', 'curse']
-,	}
+,	},
+
+	dynamismMode: "mode"
 }
 
 HELLAS.attributes = Object.keys(HELLAS.attributesWShortName)

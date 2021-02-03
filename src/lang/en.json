@@ -261,15 +261,42 @@
   "HELLAS.skills.specifics.manipulate": "Manipulate",
   "HELLAS.skills.specifics.sensory":  "Sensory",
   "HELLAS.skills.specifics.shield": "Shield",
+
+  "HELLAS.skills.mode.ranged": "Ranged",
+  "HELLAS.skills.mode.close": "Close",
+  "HELLAS.skills.mode.area": "Area",
+  "HELLAS.skills.mode.illusion": "Illusion",
+  "HELLAS.skills.mode.influence": "Influence",
+  "HELLAS.skills.mode.kinetic": "Kinetic",
+  "HELLAS.skills.mode.create": "Create",
+  "HELLAS.skills.mode.dematerialize": "Dematerialize",
+  "HELLAS.skills.mode.health": "Health",
+  "HELLAS.skills.mode.skill": "Skill",
+  "HELLAS.skills.mode.attribute": "Attribute",
+  "HELLAS.skills.mode.protection": "Protection",
+  "HELLAS.skills.mode.minortransform": "Minor Transform",
+  "HELLAS.skills.mode.majortransform": "Major Transform",
+  "HELLAS.skills.mode.completetransform": "Complete Transform",
+  "HELLAS.skills.mode.perception": "Perception",
+  "HELLAS.skills.mode.locate": "Locate",
+  "HELLAS.skills.mode.scry": "Scry",
+  "HELLAS.skills.mode.obscure": "Obscure",
+  "HELLAS.skills.mode.aura": "Aura",
+  "HELLAS.skills.mode.barrier": "Barrier",
+  "HELLAS.skills.mode.ward": "Ward",
+  "HELLAS.skills.mode.curse": "Curse",
   
   "HELLAS.item.skill.newSkill": "New skill",
   "HELLAS.item.skill.name.combiner": "{skill} - {specifier}",
+  "HELLAS.item.skill.name.combiner2": "{skill} - {specifier} - {type}",
   "HELLAS.item.skill.roll": "Roll skill",
   
   "HELLAS.skill.name.label": "Skill",
   "HELLAS.skill.skill.label": "Skill",
   "HELLAS.skill.specifier.label": "Specifier",
   "HELLAS.skill.specifier.custom.label": "Custom",
+  "HELLAS.skill.mode.label": "Mode",
+  "HELLAS.skill.type.label": "Type",
   "HELLAS.skill.attribute.label": "Attribute",
   "HELLAS.skill.level.label": "Level",
 
@@ -277,9 +304,12 @@
   "HELLAS.skill.skill.title": "Skill",
   "HELLAS.skill.specifier.title": "Specifier",
   "HELLAS.skill.specifier.title.label": "Custom",
+  "HELLAS.skill.mode.title": "Mode",
+  "HELLAS.skill.type.title": "Type",
   "HELLAS.skill.attribute.title": "Attribute",
   "HELLAS.skill.level.title": "Level"
 }
 
 
 
+ 
