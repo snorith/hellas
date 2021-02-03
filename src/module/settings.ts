@@ -64,7 +64,7 @@ export const registerSettings = function() {
 
 	// https://stackoverflow.com/questions/39766555/how-to-check-for-empty-string-null-or-white-spaces-in-handlebar
 	Handlebars.registerHelper('ifEmptyOrWhitespace', function (value, options) {
-		if (isEmptyOrSpaces(value))
+		if (isEmptyOrSpaces(value || ''))
 			options.fn(this)
 		else
 			options.inverse(this)

@@ -264,6 +264,7 @@
   
   "HELLAS.item.skill.newSkill": "New skill",
   "HELLAS.item.skill.name.combiner": "{skill} - {specifier}",
+  "HELLAS.item.skill.roll": "Roll skill",
   
   "HELLAS.skill.name.label": "Skill",
   "HELLAS.skill.skill.label": "Skill",
