@@ -37,12 +37,16 @@ export class HellasSkillItem extends Item {
 
 		const itemData = this.data.data || {}
 
+		// @ts-ignore
+		const newSkill = isEmptyOrSpaces(itemData.skill || '')
 		this.processSpecifiersForSkills()
-
-		if (this.data)
+		if (newSkill)
+			this.data.name = game.i18n.localize("HELLAS.item.skill.newSkill")
+		else
         	this.data.name = this.fullName()
+
         // @ts-ignore
-		itemData.name = this.data ? this.data.name : game.i18n.localize("HELLAS.item.skill.newSkill")
+		itemData.name = this.data.name
 		// @ts-ignore
 		const data = set({}, "name", itemData.name)
 		this.update(data).catch(reason => console.log(reason))

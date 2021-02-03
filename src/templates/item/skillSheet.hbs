@@ -1,6 +1,9 @@
 <form class="{{cssClass}} item" autocomplete="off" autocapitalize="off">
 	<header class="sheet-header">
 		<img class="profile-img" src="{{item.img}}" data-edit="img" {{#if item.name}}title="{{item.name}}"{{/if}}/>
+		<div class="header-fields">
+			<h1 class="charname">{{item.name}}</h1>
+		</div>
 	</header>
 
 	{{!-- Sheet Tab Navigation --}}
@@ -13,7 +16,7 @@
 	<section class="sheet-body">
 		{{!-- Attributes Tab --}}
 		<div class="tab skill" data-group="primary-tabs" data-tab="skill">
-			<div class="grid grid-cols-3 gap-2 mt-2 flex-none align-middle">
+			<div class="grid grid-cols-3 gap-2 mt-4 flex-none align-middle">
 				<div class="text-right">
 					<label for="{{item._id}}.data.skill"
 						   class="align-middle"
