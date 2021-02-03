@@ -6,14 +6,6 @@ export const registerSettings = function() {
 
 	// Register custom Handlebar helpers
 
-	// helper to call the 'getFullName' function on an object
-	Handlebars.registerHelper('fullName', function (skill) {
-		if (typeof this.fullName === 'function') {
-			return this.fullName()
-		}
-		return 'n/a'
-	})
-
 	// concatenate some number of strings passed as parameters
 	Handlebars.registerHelper('concat', function() {
 		let outStr = ''
@@ -55,6 +47,10 @@ export const registerSettings = function() {
 
 		return out;
 	});
+
+	Handlebars.registerHelper("setVar", function(varName, varValue, options) {
+		options.data.root[varName] = varValue;
+	})
 
 	Handlebars.registerHelper('toLowerCase', function(str) {
 		return str.toLowerCase()

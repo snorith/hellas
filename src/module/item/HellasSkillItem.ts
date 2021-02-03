@@ -4,6 +4,7 @@ import {isEmptyOrSpaces} from "../settings"
 
 export type SkillItemDataType = {
 	version: number,
+	skilltype: string,
 	notes: string,
 	skill: string,
 	attribute: string,
@@ -81,16 +82,21 @@ export class HellasSkillItem extends Item {
 				}
 			}
 			else if (data.specifier !== SPECIFY_SUBTYPE) {
-				changes = set(changes, data.specifierCustom, '')
+				changes = set(changes, 'data.specifierCustom', '')
 				data.specifierCustom = ''
 			}
 		}
 		else {
-			changes = set(changes, data.specifier, '')
-			changes = set(changes, data.specifierCustom, '')
+			changes = set(changes, "data.specifier", '')
+			changes = set(changes, "data.specifierCustom", '')
 			data.specifier = ''
 			data.specifierCustom = ''
 		}
+
+		// `skilltype` is used to uniquely identify a skill based on the attribute/specifier/custom
+		const skilltype = [data.skill, data.specifier, data.specifierCustom].join('.')
+		data.skilltype = skilltype
+		changes = set(changes, "data.skilltype", skilltype)
 
 		this.update(changes).catch(reason => console.log(reason))
 	}

@@ -32,15 +32,22 @@
 					</select>
 				</div>
 
+				{{#if item.MODESPECIFICS.length}}
+					{{setVar "title" (localize "HELLAS.skill.mode.title")}}
+					{{setVar "label" (localize "HELLAS.skill.mode.label")}}
+				{{else}}
+					{{setVar "title" (localize "HELLAS.skill.specifier.title")}}
+					{{setVar "label" (localize "HELLAS.skill.specifier.label")}}
+				{{/if}}
 				<div class="text-right {{#unless item.SKILLSPECIFICS.length}}text-gray-400{{/unless}}">
 					<label for="{{item._id}}.data.specifier"
 						   class="align-middle"
-						   title="{{localize "HELLAS.skill.specifier.title"}}">{{localize "HELLAS.skill.specifier.label"}}</label>
+						   title="{{title}}">{{label}}</label>
 				</div>
 				<div class="col-span-2">
 					<select id="{{item._id}}.data.specifier"
 							name="data.specifier"
-							title="{{localize "HELLAS.skill.specifier.title"}}"
+							title="{{title}}"
 							data-dtype="String"
 						{{#unless item.SKILLSPECIFICS.length}}class="disabled:opacity-50" disabled{{/unless}}>
 						{{#select data.specifier}}
@@ -52,7 +59,8 @@
 				</div>
 
 				{{#if item.MODESPECIFICS.length}}
-					<div class="text-right">
+					{{setVar "disabled" (eq item.MODESPECIFICS.length 1)}}
+					<div class="text-right {{#if disabled}}text-gray-400{{/if}}">
 						<label for="{{item._id}}.data.specifierCustom"
 							   class="align-middle"
 							   title="{{localize "HELLAS.skill.type.title"}}">{{localize "HELLAS.skill.type.label"}}</label>
@@ -62,7 +70,7 @@
 								name="data.specifierCustom"
 								title="{{localize "HELLAS.skill.type.title"}}"
 								data-dtype="String"
-							>
+							{{#if disabled}}class="disabled:opacity-50" disabled{{/if}}>
 							{{#select data.specifierCustom}}
 								{{#each item.MODESPECIFICS as |breakout|}}
 									<option value="{{breakout}}">{{localize (concat "HELLAS.skills.mode." breakout)}}</option>
