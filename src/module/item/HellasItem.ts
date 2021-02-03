@@ -64,17 +64,27 @@ export const HellasItem = new Proxy(function () {}, {
 export function fullName(item: Item): string {
 	switch (item.type) {
 		case HellasSkillItem.type:
-			let skill = item as unknown as SkillItemType;
+			// @ts-ignore
+			let skillName = item.data.data.skill || ''
+			// @ts-ignore
+			let specifier = item.data.data.specifier || ''
+			// @ts-ignore
+			const specifierCustom = item.data.data.specifierCustom || ''
 
-			let skillName = skill.data.skill
-			const specifier = skill.data.specifier
-			const specifierCustom = skill.data.specifierCustom
-
-			if (SPECIFY_SUBTYPE === specifier && !isEmptyOrSpaces(specifierCustom)) {
-				skillName = `${skillName} ${specifierCustom}`
+			if (isEmptyOrSpaces(skillName)) {
+				return game.i18n.localize("HELLAS.item.skill.newSkill")
 			}
-			else if (!isEmptyOrSpaces(specifier))
-				skillName = `${skillName} ${specifier}`
+			else {
+				skillName = game.i18n.localize("HELLAS.skills." + skillName + ".name")
+
+				if (SPECIFY_SUBTYPE === specifier && !isEmptyOrSpaces(specifierCustom)) {
+					skillName = `${skillName} ${specifierCustom}`
+				}
+				else if (!isEmptyOrSpaces(specifier)) {
+					specifier = game.i18n.localize("HELLAS.skills.specifics." + specifier)
+					skillName = `${skillName} ${specifier}`
+				}
+			}
 
 			return skillName
 		default:

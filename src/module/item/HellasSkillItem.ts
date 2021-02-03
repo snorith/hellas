@@ -35,12 +35,12 @@ export class HellasSkillItem extends Item {
         if (!this.data.img) this.data.img = 'icons/svg/lightning.svg';
         super.prepareData();
 
-        let itemData = this.data as any;
-        if (itemData.hasOwnProperty("data"))
-            itemData = itemData.data;
+		const itemData = this.data.data || {}
 
-        // this.data.name = fullName(this) || game.i18n.localize("HELLAS.item.skill.newSkill");
-        // itemData.name = this.data.name
+		if (this.data)
+        	this.data.name = fullName(this)
+        // @ts-ignore
+		itemData.name = this.data ? this.data.name : game.i18n.localize("HELLAS.item.skill.newSkill")
 
         this.data['HELLAS'] = HELLAS						// this is being set on the item itself that the handlebars template sees
 		this.data['SPECIFY_SUBTYPE'] = SPECIFY_SUBTYPE		// this is being set on the item itself that the handlebars template sees

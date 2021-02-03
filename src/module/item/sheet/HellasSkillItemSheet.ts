@@ -41,14 +41,19 @@ export class HellasSkillItemSheet extends ItemSheet {
 			sheet.data.skill = HELLAS.skills[0]
 
 		// determine whether, based on the skill, there are optional specifics and which are the appropriate attributes
-		sheet.item['ATTRIBUTESLIST'] = HELLAS.skillWAssocLongAttributes[sheet.data.skill]
 		sheet.item['SHORTATTRIBUTELIST'] = HELLAS.skillWAssocShortAttributes[sheet.data.skill]
 
 		if (HELLAS.skillsWSpecifics.includes(sheet.data.skill)) {
-			sheet.item['SKILLSPECIFICS'] = HELLAS.skillSpecificsBreakdown[sheet.data.skill]
+			const specifiers = HELLAS.skillSpecificsBreakdown[sheet.data.skill]
+			sheet.item['SKILLSPECIFICS'] = specifiers
 
-			if (sheet.data.specifier !== SPECIFY_SUBTYPE)
+			if (!specifiers.includes(sheet.data.specifier) && specifiers.length > 0) {
+				sheet.data.specifier = specifiers[0]
+			}
+
+			if (sheet.data.specifier !== SPECIFY_SUBTYPE) {
 				sheet.data.specifierCustom = ''
+			}
 		}
 		else {
 			sheet.data.specifier = ''
