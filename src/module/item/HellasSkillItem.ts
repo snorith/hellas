@@ -41,6 +41,7 @@ export class HellasSkillItem extends Item {
 		// @ts-ignore
 		const newSkill = isEmptyOrSpaces(itemData.skill || '')
 		this.processSpecifiersForSkills()
+		this.determineRating()
 		if (newSkill)
 			this.data.name = game.i18n.localize("HELLAS.item.skill.newSkill")
 		else
@@ -93,11 +94,37 @@ export class HellasSkillItem extends Item {
 			data.specifierCustom = ''
 		}
 
+		if (isEmptyOrSpaces(data.attribute)) {
+			data.attribute = HELLAS.skillWAssocShortAttributes[data.skill][0]
+			changes = set(changes, "data.attribute", data.attribute)
+		}
+
 		// `skilltype` is used to uniquely identify a skill based on the attribute/specifier/custom
 		// this is used which skill to associate with a dynamism (spell) when defining them
 		const skilltype = [data.skill, data.specifier, data.specifierCustom].join('.')
 		data.skilltype = skilltype
 		changes = set(changes, "data.skilltype", skilltype)
+
+		this.update(changes).catch(reason => console.log(reason))
+	}
+
+	determineRating() {
+		const data = this.data.data as SkillItemDataType
+		let changes = {}
+
+    	if (!this.actor) {
+			changes = set(changes, "data.level.max", 0)
+			data.level.max = 0
+		}
+    	else {
+			const actorData = this.actor.data.data
+			const attribute = HELLAS.attributesShortToLong[data.attribute]
+			// @ts-ignore
+			const attributeValue = actorData.attributes[attribute]['value']
+
+			data.level.max = data.level.value + attributeValue
+			changes = set(changes, "data.level.max", data.level.max)
+		}
 
 		this.update(changes).catch(reason => console.log(reason))
 	}
