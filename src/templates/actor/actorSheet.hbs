@@ -29,7 +29,7 @@
 			<div class="grid grid-cols-5 gap-2 mb-1">
 				{{#each actor.HELLAS.characterAttributes as |attributeName|}}
 					{{#with (lookup @root.data.attributes attributeName)}}
-						<div class="h-20 p-2 align-middle text-center items-center border-2 border-opacity-70 border-solid border-gray-900 shadow-md break-all">
+						<div class="rounded-lg h-20 p-2 align-middle text-center items-center border-2 border-opacity-70 border-solid border-gray-900 shadow-md break-all">
 							<div class="uppercase align-middle overflow-ellipsis">{{localize (concat "HELLAS.attributes." attributeName ".name")}}</div>
 							<div class="flex p-3 items-center justify-center">
 								<input class="rounded-full w-1/2" type="number" name="data.attributes.{{attributeName}}.value" value="{{value}}" min="-10" step="1" oninput="this.value = Math.round(this.value|0);" data-dtype="Number" title="{{localize (concat "HELLAS.attributes." attributeName ".name")}}">
@@ -62,7 +62,7 @@
 					</div>
 				</div>
 
-				<div class="h-20 p-2 align-middle text-center items-center last:mr-0 mr-2 border-2 border-opacity-70 border-solid border-gray-900 shadow-md break-all">
+				<div class="h-20 p-2 align-middle text-center items-center last:mr-0 mr-2 border-2 border-opacity-70 border-solid border-gray-900 shadow-md break-all aluminum-foil-bkgd">
 					<div class="uppercase align-middle overflow-ellipsis">{{localize "HELLAS.attributes.heropoints.name"}}</div>
 					<div class="flex p-3 items-center justify-center">
 						<input class="rounded-full w-1/2" type="number" name="data.attributes.heropoints.value" value="{{data.attributes.heropoints.value}}" min="-10" step="1" oninput="this.value = Math.round(this.value|0);" data-dtype="Number" title="{{localize "HELLAS.attributes.heropoints.name"}}">

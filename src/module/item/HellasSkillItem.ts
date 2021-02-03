@@ -37,6 +37,8 @@ export class HellasSkillItem extends Item {
 
 		const itemData = this.data.data || {}
 
+		this.processSpecifiersForSkills()
+
 		if (this.data)
         	this.data.name = this.fullName()
         // @ts-ignore
@@ -49,30 +51,57 @@ export class HellasSkillItem extends Item {
 		this.data['SPECIFY_SUBTYPE'] = SPECIFY_SUBTYPE		// this is being set on the item itself that the handlebars template sees
     }
 
+    processSpecifiersForSkills() {
+    	const data = this.data.data as SkillItemDataType
+
+		if (!data.skill)
+			data.skill = HELLAS.skills[0]
+
+		if (HELLAS.skillsWSpecifics.includes(data.skill)) {
+			const specifiers = HELLAS.skillSpecificsBreakdown[data.skill]
+
+			if (!specifiers.includes(data.specifier) && specifiers.length > 0) {
+				data.specifier = specifiers[0]
+			}
+
+			if (data.specifier !== SPECIFY_SUBTYPE) {
+				data.specifierCustom = ''
+			}
+		}
+		else {
+			data.specifier = ''
+			data.specifierCustom = ''
+		}
+	}
+
 	fullName(): string {
 		// @ts-ignore
-		let skillName = this.data.data.skill || ''
+		const skillName = this.data.data.skill || ''
+
+		if (isEmptyOrSpaces(skillName)) {
+			return game.i18n.localize("HELLAS.item.skill.newSkill")
+		}
+
+		let name = game.i18n.localize("HELLAS.skills." + skillName + ".name")
+
+		if (!HELLAS.skillsWSpecifics.includes(skillName)) {
+			return name
+		}
+
 		// @ts-ignore
 		let specifier = this.data.data.specifier || ''
 		// @ts-ignore
 		const specifierCustom = this.data.data.specifierCustom || ''
 
-		if (isEmptyOrSpaces(skillName)) {
-			return game.i18n.localize("HELLAS.item.skill.newSkill")
+		if (SPECIFY_SUBTYPE === specifier && !isEmptyOrSpaces(specifierCustom)) {
+			return game.i18n.format("HELLAS.item.skill.name.combiner", { skill: name, specifier: specifierCustom})
 		}
-		else {
-			skillName = game.i18n.localize("HELLAS.skills." + skillName + ".name")
-
-			if (SPECIFY_SUBTYPE === specifier && !isEmptyOrSpaces(specifierCustom)) {
-				skillName = `${skillName} ${specifierCustom}`
-			}
-			else if (!isEmptyOrSpaces(specifier)) {
-				specifier = game.i18n.localize("HELLAS.skills.specifics." + specifier)
-				skillName = `${skillName} ${specifier}`
-			}
+		else if (!isEmptyOrSpaces(specifier)) {
+			specifier = game.i18n.localize("HELLAS.skills.specifics." + specifier)
+			return game.i18n.format("HELLAS.item.skill.name.combiner", { skill: name, specifier: specifier})
 		}
 
-		return skillName
+		return name
 	}
 }
 

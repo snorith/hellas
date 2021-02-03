@@ -168,7 +168,7 @@
   "HELLAS.skills.specifics.alpine": "Alpine",
   "HELLAS.skills.specifics.appraising": "Appraising",
   "HELLAS.skills.specifics.aquatic": "Aquatic",
-  "HELLAS.skills.specifics.arcanearts": "Arcanearts",
+  "HELLAS.skills.specifics.arcanearts": "Arcane Arts",
   "HELLAS.skills.specifics.arctic": "Arctic",
   "HELLAS.skills.specifics.armorer": "Armorer",
   "HELLAS.skills.specifics.artificer": "Artificer",
@@ -263,6 +263,7 @@
   "HELLAS.skills.specifics.shield": "Shield",
   
   "HELLAS.item.skill.newSkill": "New skill",
+  "HELLAS.item.skill.name.combiner": "{skill} - {specifier}",
   
   "HELLAS.skill.name.label": "Skill",
   "HELLAS.skill.skill.label": "Skill",
