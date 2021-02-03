@@ -94,6 +94,7 @@ export class HellasSkillItem extends Item {
 		}
 
 		// `skilltype` is used to uniquely identify a skill based on the attribute/specifier/custom
+		// this is used which skill to associate with a dynamism (spell) when defining them
 		const skilltype = [data.skill, data.specifier, data.specifierCustom].join('.')
 		data.skilltype = skilltype
 		changes = set(changes, "data.skilltype", skilltype)
