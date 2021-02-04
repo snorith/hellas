@@ -7,7 +7,6 @@ interface dialogCancelledT {
 interface modifierDialogFieldsT {
 	discriminator: "fields",
 	dod: number,
-	actionpenalty: number,
 	nonproficiency: number,
 	multipleactionscount: number,
 	modifier: number
@@ -44,7 +43,6 @@ function _processRollDialog(form): modifierDialogFieldsT {
 	return {
 		discriminator: "fields",
 		dod: form.dod.value,
-		actionpenalty: form.actionpenalty.value,
 		nonproficiency: form.nonproficiency.value,
 		multipleactionscount: form.multipleactionscount.value,
 		modifier: form.modifier.value
