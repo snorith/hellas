@@ -312,7 +312,13 @@
 
   "HELLAS.roll.modifiers.dialog.title": "Roll modifiers",
   "HELLAS.roll.modifiers.dialog.button.roll.label": "Roll",
-  "HELLAS.roll.modifiers.dialog.button.cancel.label": "Cancel"
+  "HELLAS.roll.modifiers.dialog.button.cancel.label": "Cancel",
+  "HELLAS.roll.modifiers.dialog.dod.label": "DoD",
+  "HELLAS.roll.modifiers.dialog.dod.title": "Degree of Difficulty",
+
+  "HELLAS.roll.modifiers.dialog.actionpenalty.label": "Action Penalty",
+  "HELLAS.roll.modifiers.dialog.actionpenalty.title": "Action Penalty",
+  
 }
 
 

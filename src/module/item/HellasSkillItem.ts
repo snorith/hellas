@@ -194,19 +194,22 @@ export class HellasSkillItem extends Item {
 		if (!this.actor)
 			return false
 
-		const actorData = this.actor.data.data;
-		const item = this.data as unknown as SkillItemType
-		const itemData = clone(item.data);
-
 		// get modifier data
 		const modifiers = await getRollModifiers()
 		if (modifiers.discriminator == "cancelled")
 			return false
 
-		let rollData = mergeObject(itemData as any, modifiers)
-		rollData = mergeObject(rollData, { spdused: modifiers.multipleactionscount > 0 ? 1 : 0 })
+		const actorData = this.actor.data.data as any
+		const item = this.data as unknown as SkillItemType
+		const itemData = item.data
 
-		let roll = new Roll('d20 + @level.max + @dod + @actionpenalty + @nonproficiency + ((@multipleactionscount * -5) - (@spdused * @attributes.speed.value)) + @modifier', itemData)
+		let rollData = mergeObject({
+			speed: actorData.attributes.speed.value,
+			spdused: modifiers.multipleactionscount > 0 ? 1 : 0
+		}, modifiers as any)
+		rollData = mergeObject(rollData, itemData)
+
+		let roll = new Roll('d20 + @level.max + @dod + @actionpenalty + @nonproficiency + ((@multipleactionscount * -5) - (@spdused * @speed)) + @modifier', rollData)
 		let label = `Rolling ${item.name}`
 		await roll.roll().toMessage({
 			speaker: ChatMessage.getSpeaker({ actor: this.actor }),
