@@ -40,6 +40,7 @@ export class HellasSkillItem extends Item {
 
 		// @ts-ignore
 		const newSkill = isEmptyOrSpaces(itemData.skill || '')
+
 		this.processSpecifiersForSkills()
 		this.determineRating()
 		if (newSkill)
@@ -51,7 +52,9 @@ export class HellasSkillItem extends Item {
 		itemData.name = this.data.name
 		// @ts-ignore
 		const data = set({}, "name", itemData.name)
-		this.update(data).catch(reason => console.log(reason))
+
+		if (this.actor)
+			this.update(data).catch(reason => console.log(reason))
 
         this.data['HELLAS'] = HELLAS						// this is being set on the item itself that the handlebars template sees
 		this.data['SPECIFY_SUBTYPE'] = SPECIFY_SUBTYPE		// this is being set on the item itself that the handlebars template sees
@@ -94,7 +97,7 @@ export class HellasSkillItem extends Item {
 			data.specifierCustom = ''
 		}
 
-		if (isEmptyOrSpaces(data.attribute)) {
+		if (isEmptyOrSpaces(data.attribute) || !HELLAS.skillWAssocShortAttributes[data.skill].includes(data.attribute)) {
 			data.attribute = HELLAS.skillWAssocShortAttributes[data.skill][0]
 			changes = set(changes, "data.attribute", data.attribute)
 		}
@@ -105,7 +108,8 @@ export class HellasSkillItem extends Item {
 		data.skilltype = skilltype
 		changes = set(changes, "data.skilltype", skilltype)
 
-		this.update(changes).catch(reason => console.log(reason))
+		if (this.actor)
+			this.update(changes).catch(reason => console.log(reason))
 	}
 
 	determineRating() {
@@ -124,9 +128,12 @@ export class HellasSkillItem extends Item {
 
 			data.level.max = data.level.value + attributeValue
 			changes = set(changes, "data.level.max", data.level.max)
+
+			// console.log('attribute = ' + attribute + ' attr level = ' + attributeValue + ' skill level = ' + data.level.value + ' rating = ' + data.level.max)
 		}
 
-		this.update(changes).catch(reason => console.log(reason))
+		if (this.actor)
+			this.update(changes).catch(reason => console.log(reason))
 	}
 
 	fullName(): string {

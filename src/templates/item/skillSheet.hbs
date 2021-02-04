@@ -3,6 +3,7 @@
 		<img class="profile-img" src="{{item.img}}" data-edit="img" {{#if item.name}}title="{{item.name}}"{{/if}}/>
 		<div class="header-fields">
 			<h1 class="charname">{{item.name}}</h1>
+			<input class="invisible hidden" name="name" type="text" value="{{item.name}}" data-dtype="String"/>
 		</div>
 	</header>
 

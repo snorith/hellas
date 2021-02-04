@@ -8,7 +8,7 @@ export const preloadTemplates = async function() {
 		`${systemBasePath}/templates/actor/actorSheet.hbs`,
 
 		//Item sheets
-		`${systemBasePath}/templates/item/skillsSheet.hbs`,
+		`${systemBasePath}/templates/item/skillSheet.hbs`,
 	];
 
 	return loadTemplates(templatePaths);
