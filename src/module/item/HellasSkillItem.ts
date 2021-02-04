@@ -119,8 +119,8 @@ export class HellasSkillItem extends Item {
 		let changes = {}
 
     	if (!this.actor) {
-			changes = set(changes, "data.level.max", 0)
-			data.level.max = 0
+			data.level.max = data.level.value
+			changes = set(changes, "data.level.max", data.level.max)
 		}
     	else {
 			const actorData = this.actor.data.data
