@@ -11,6 +11,7 @@ export type SkillItemDataType = {
 	specifier: string,
 	specifierCustom: string,
 	level: foundryAttributeValueMax,
+	firstTime: boolean
 }
 
 export type SkillItemType = {
@@ -39,14 +40,15 @@ export class HellasSkillItem extends Item {
 		const itemData = this.data.data || {}
 
 		// @ts-ignore
-		const newSkill = isEmptyOrSpaces(itemData.skill || '')
-
-		this.processSpecifiersForSkills()
-		this.determineRating()
-		if (newSkill)
-			this.data.name = game.i18n.localize("HELLAS.item.skill.newSkill")
-		else
-        	this.data.name = this.fullName()
+		if (isEmptyOrSpaces(itemData.skill || '')) {
+			if (isEmptyOrSpaces(this.data.name))
+				this.data.name = game.i18n.localize("HELLAS.item.skill.newSkill")
+		}
+        else {
+			this.processSpecifiersForSkills()
+			this.determineRating()
+			this.data.name = this.fullName()
+		}
 
         // @ts-ignore
 		itemData.name = this.data.name

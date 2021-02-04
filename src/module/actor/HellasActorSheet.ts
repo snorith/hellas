@@ -136,13 +136,14 @@ export class HellasActorSheet extends ActorSheet {
 		const type = element.dataset.type;
 		// Grab any data associated with this control.
 		const data = duplicate(element.dataset);
+
 		// Initialize a default name.
-		const name = `New ${type.capitalize()}`;
+		const name = game.i18n.localize(`HELLAS.item.${type}.newSkill`)
 		// Prepare the item object.
 		const itemData = {
 			name: name,
 			type: type,
-			data: data
+			data: data,
 		};
 		// Remove the type from the dataset since it's in the itemData.type prop.
 		delete itemData.data["type"];

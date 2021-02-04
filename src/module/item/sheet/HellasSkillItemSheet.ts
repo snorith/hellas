@@ -57,8 +57,9 @@ export class HellasSkillItemSheet extends ItemSheet {
 			sheet.item['SKILLSPECIFICS'] = []
 		}
 
-		// const item = this.item as HellasSkillItem
-		// item.determineRating()
+		const item = this.item as HellasSkillItem
+		item.processSpecifiersForSkills()
+		item.determineRating()
 
 		return sheet
 	}
