@@ -23,13 +23,13 @@ export async function getRollModifiers(): Promise<modifierDialogT> {
 			title: game.i18n.localize("HELLAS.roll.modifiers.dialog.title"),
 			content: html,
 			buttons: {
-				normal: {
-					label: game.i18n.localize("HELLAS.roll.modifiers.dialog.button.roll.label"),
-					callback: html => resolve(_processRollDialog(html[0].querySelector("form")))
-				},
 				cancel: {
 					label: game.i18n.localize("HELLAS.roll.modifiers.dialog.button.cancel.label"),
 					callback: html => resolve({ discriminator: "cancelled" })
+				},
+				normal: {
+					label: game.i18n.localize("HELLAS.roll.modifiers.dialog.button.roll.label"),
+					callback: html => resolve(_processRollDialog(html[0].querySelector("form")))
 				}
 			},
 			default: "normal",
@@ -39,12 +39,15 @@ export async function getRollModifiers(): Promise<modifierDialogT> {
 	})
 }
 
-function _processRollDialog(form): modifierDialogFieldsT {
+function _processRollDialog(form: HTMLFormElement): modifierDialogFieldsT {
+	const elements = form.elements
+
+	// @ts-ignore
 	return {
 		discriminator: "fields",
-		dod: form.dod.value,
-		nonproficiency: form.nonproficiency.value,
-		multipleactionscount: form.multipleactionscount.value,
-		modifier: form.modifier.value
+		dod: parseInt((elements.namedItem('dod') as HTMLInputElement).value),
+		nonproficiency: parseInt((elements.namedItem('nonproficiency') as HTMLInputElement).value),
+		multipleactionscount: parseInt((elements.namedItem('multipleactionscount') as HTMLInputElement).value),
+		modifier: parseInt((elements.namedItem('modifier') as HTMLInputElement).value)
 	}
 }

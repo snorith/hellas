@@ -98,8 +98,26 @@ export class HellasActorSheet extends ActorSheet {
 		// Delete Item
 		html.find('.item-delete').click(this._onDeleteItem.bind(this))
 
-		// Heal all wounds by one
+		// Fate point display
 		html.find('.fate-progress').click(this._onFateProgressClick.bind(this))
+
+		// roll a skill
+		html.find('.skill-roll').click(this._onSkillRoll.bind(this))
+	}
+
+	_onSkillRoll(event) {
+		event.preventDefault()
+
+		const element = event.currentTarget
+		const itemID = element.dataset.itemId
+
+		const item = this.actor.getOwnedItem(itemID) as HellasSkillItem
+		if (!item)
+			return false
+
+		item.roll().catch(reason => console.log(reason))
+
+		return false
 	}
 
 	/**

@@ -11,12 +11,12 @@
 		<label for="hellas.roll.multipleactionscount" title="{{localize "HELLAS.roll.modifiers.dialog.multipleactionscount.title"}}">{{localize "HELLAS.roll.modifiers.dialog.multipleactionscount.label"}}</label>
 		<select id="hellas.roll.multipleactionscount" name="multipleactionscount" data-dtype="Number"  title="{{localize "HELLAS.roll.modifiers.dialog.multipleactionscount.title"}}">
 			{{#repeat 11}}
-				<option value="@index" {{selected @first}}>@index</option>
+				<option value="{{@index}}" {{selected @first}}>{{@index}}</option>
 			{{/repeat}}
 		</select>
 	</div>
 	<div class="form-group">
 		<label for="hellas.roll.modifier" title="{{localize "HELLAS.roll.modifiers.dialog.modifier.title"}}">{{localize "HELLAS.roll.modifiers.dialog.modifier.label"}}</label>
-		<input type="number" id="hellas.roll.modifier" name="modifer" value="0" data-dtype="Number" min="-10" step="1" oninput="this.value = Math.round(this.value|0);" title="{{localize "HELLAS.roll.modifiers.dialog.modifier.title"}}"/>
+		<input type="number" id="hellas.roll.modifier" name="modifier" value="0" data-dtype="Number" min="-10" step="1" oninput="this.value = Math.round(this.value|0);" title="{{localize "HELLAS.roll.modifiers.dialog.modifier.title"}}"/>
 	</div>
 </form>

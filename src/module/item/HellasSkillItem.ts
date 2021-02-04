@@ -188,9 +188,7 @@ export class HellasSkillItem extends Item {
 	 * @param {Event} event   The originating click event
 	 * @private
 	 */
-	async roll(event: Event) {
-		event.preventDefault()
-
+	async roll() {
 		if (!this.actor)
 			return false
 

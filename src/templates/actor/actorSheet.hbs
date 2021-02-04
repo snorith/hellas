@@ -116,11 +116,7 @@
 							<tr class="item" data-item-id="{{skill._id}}">
 								<td>{{skill.name}}</td>
 								<td class="text-center w-4">
-								{{#ifEmptyOrWhitespace skill.data.attribute}}
-									<i class="fas fa-dice-d20 disabled"></i>
-								{{else}}
-									<a class="item-control skill-roll" data-rating="{{skill.data.level.max}}" data-name="{{skill.name}}" title="{{localize "HELLAS.item.skill.roll"}}"><i class="fas fa-dice-d20"></i></a>
-								{{/ifEmptyOrWhitespace}}
+									<a class="item-control skill-roll" data-item-id="{{skill._id}}" data-rating="{{skill.data.level.max}}" data-name="{{skill.name}}" title="{{localize "HELLAS.item.skill.roll"}}"><i class="fas fa-dice-d20"></i></a>
 								</td>
 								<td class="text-center">{{skill.data.level.value}}</td>
 								<td class="text-center">{{skill.data.attribute}}</td>
