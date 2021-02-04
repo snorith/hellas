@@ -86,17 +86,17 @@ export class HellasActorSheet extends ActorSheet {
 
 	/** @override */
 	activateListeners(html) {
-		super.activateListeners(html);
+		super.activateListeners(html)
 
 		// Everything below here is only needed if the sheet is editable
-		if (!this.options.editable) return;
+		if (!this.options.editable) return
 
 		// Add Item
-		html.find('.item-create').click(this._onItemCreate.bind(this));
+		html.find('.item-create').click(this._onItemCreate.bind(this))
 		// Update Item
-		html.find('.item-edit').click(this._onItemEdit.bind(this));
+		html.find('.item-edit').click(this._onItemEdit.bind(this))
 		// Delete Item
-		html.find('.item-delete').click(this._onDeleteItem.bind(this));
+		html.find('.item-delete').click(this._onDeleteItem.bind(this))
 
 		// Heal all wounds by one
 		html.find('.fate-progress').click(this._onFateProgressClick.bind(this))
@@ -107,7 +107,7 @@ export class HellasActorSheet extends ActorSheet {
 	 * @param event
 	 */
 	_onFateProgressClick(event) {
-		event.preventDefault();
+		event.preventDefault()
 
 		const element = event.currentTarget
 		const fpCount = parseInt(element.dataset.itemId)
@@ -129,13 +129,13 @@ export class HellasActorSheet extends ActorSheet {
 	 * @private
 	 */
 	_onItemCreate(event) {
-		event.preventDefault();
+		event.preventDefault()
 
-		const element = event.currentTarget;
+		const element = event.currentTarget
 		// Get the type of item to create.
-		const type = element.dataset.type;
+		const type = element.dataset.type
 		// Grab any data associated with this control.
-		const data = duplicate(element.dataset);
+		const data = duplicate(element.dataset)
 
 		// Initialize a default name.
 		const name = game.i18n.localize(`HELLAS.item.${type}.newSkill`)
@@ -144,12 +144,12 @@ export class HellasActorSheet extends ActorSheet {
 			name: name,
 			type: type,
 			data: data,
-		};
+		}
 		// Remove the type from the dataset since it's in the itemData.type prop.
-		delete itemData.data["type"];
+		delete itemData.data["type"]
 
 		// Finally, create the item!
-		return this.actor.createOwnedItem(itemData);
+		return this.actor.createOwnedItem(itemData)
 	}
 
 	/**
@@ -159,9 +159,9 @@ export class HellasActorSheet extends ActorSheet {
 	_onItemEdit(event) {
 		event.preventDefault()
 
-		const td = $(event.currentTarget).parents(".item");
-		const item = this.actor.getOwnedItem(td.data("itemId"));
-		item.sheet.render(true);
+		const td = $(event.currentTarget).parents(".item")
+		const item = this.actor.getOwnedItem(td.data("itemId"))
+		item.sheet.render(true)
 
 		return false
 	}

@@ -1,6 +1,8 @@
 import {foundryAttributeValueMax, HELLAS, SPECIFY_SUBTYPE} from "../config"
 import set from "lodash-es/set"
 import {isEmptyOrSpaces} from "../settings"
+import {getRollModifiers} from "../roll/modifiers"
+import clone from "lodash-es/clone"
 
 export type SkillItemDataType = {
 	version: number,
@@ -179,6 +181,37 @@ export class HellasSkillItem extends Item {
 		}
 
 		return workingil8nName
+	}
+
+	/**
+	 * Handle clickable rolls.
+	 * @param {Event} event   The originating click event
+	 * @private
+	 */
+	async roll(event: Event) {
+		event.preventDefault()
+
+		if (!this.actor)
+			return false
+
+		const actorData = this.actor.data.data;
+		const item = this.data as unknown as SkillItemType
+		const itemData = clone(item.data);
+
+		// get modifier data
+		const modifiers = await getRollModifiers()
+		if (modifiers.discriminator == "cancelled")
+			return false
+
+		let rollData = mergeObject(itemData as any, modifiers)
+		rollData = mergeObject(rollData, { spdused: modifiers.multipleactionscount > 0 ? 1 : 0 })
+
+		let roll = new Roll('d20 + @level.max + @dod + @actionpenalty + @nonproficiency + ((@multipleactionscount * -5) - (@spdused * @attributes.speed.value)) + @modifier', itemData)
+		let label = `Rolling ${item.name}`
+		await roll.roll().toMessage({
+			speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+			flavor: label
+		})
 	}
 }
 

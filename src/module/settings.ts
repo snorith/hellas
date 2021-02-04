@@ -56,6 +56,7 @@ export const registerSettings = function() {
 		return str.toLowerCase()
 	})
 
+	Handlebars.registerHelper("selected", value => value ? "selected" : "")
 	Handlebars.registerHelper("disabled", value => value ? "disabled" : "")
 
 	// https://stackoverflow.com/questions/39766555/how-to-check-for-empty-string-null-or-white-spaces-in-handlebar

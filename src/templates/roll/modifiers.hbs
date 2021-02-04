@@ -1,0 +1,26 @@
+<form autocomplete="off" autocapitalize="off">
+	<div class="form-group">
+		<label for="hellas.roll.dod">{{localize "dod"}}</label>
+		<input type="number" id="hellas.roll.dod" name="dod" value="0" data-dtype="Number" min="-1000" step="1" oninput="this.value = Math.round(this.value|0);" title=""/>
+	</div>
+	<div class="form-group">
+		<label for="hellas.roll.actionpenalty">{{localize "actionpenalty"}}</label>
+		<input type="number" id="hellas.roll.actionpenalty" name="actionpenalty" value="0" data-dtype="Number" min="-1000" step="1" oninput="this.value = Math.round(this.value|0);" title=""/>
+	</div>
+	<div class="form-group">
+		<label for="hellas.roll.nonproficiency">{{localize "nonproficiency"}}</label>
+		<input type="number" id="hellas.roll.nonproficiency" name="nonproficiency" value="0" data-dtype="Number" min="-1000" step="1" oninput="this.value = Math.round(this.value|0);" title=""/>
+	</div>
+	<div class="form-group">
+		<label for="hellas.roll.multipleactionscount">{{localize "multipleactionscount"}}</label>
+		<select id="hellas.roll.multipleactionscount" name="multipleactionscount" data-dtype="Number" title="">
+			{{#repeat 11}}
+				<option value="@index" {{selected @first}}>@index</option>
+			{{/repeat}}
+		</select>
+	</div>
+	<div class="form-group">
+		<label for="hellas.roll.modifier">{{localize "modifier"}}</label>
+		<input type="number" id="hellas.roll.modifier" name="modifer" value="0" data-dtype="Number" min="-10" step="1" oninput="this.value = Math.round(this.value|0);" title=""/>
+	</div>
+</form>
