@@ -11,7 +11,7 @@ export const preloadTemplates = async function() {
 		`${systemBasePath}/templates/item/skillSheet.hbs`,
 
 		// Roll modifier
-		`${systemBasePath}/templates/roll/modifiers.hbs`,
+		`${systemBasePath}/templates/dialog/modifiers.hbs`,
 	];
 
 	return loadTemplates(templatePaths);

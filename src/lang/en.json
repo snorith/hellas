@@ -314,11 +314,11 @@
   "HELLAS.roll.modifiers.dialog.button.roll.label": "Roll",
   "HELLAS.roll.modifiers.dialog.button.cancel.label": "Cancel",
   "HELLAS.roll.modifiers.dialog.dod.label": "DoD",
-  "HELLAS.roll.modifiers.dialog.dod.title": "Degree of Difficulty",
+  "HELLAS.roll.modifiers.dialog.dod.title": "Degree of Difficulty: e.g.: -10 = very hard, 0 = average helene, 10 = very easy",
   "HELLAS.roll.modifiers.dialog.nonproficiency.label": "Non-proficiency",
-  "HELLAS.roll.modifiers.dialog.nonproficiency.title": "Non-proficiency",
+  "HELLAS.roll.modifiers.dialog.nonproficiency.title": "Non-proficiency penalty for using a skill you do not have",
   "HELLAS.roll.modifiers.dialog.multipleactionscount.label": "Multiple Actions",
-  "HELLAS.roll.modifiers.dialog.multipleactionscount.title": "Multiple Actions Count",
+  "HELLAS.roll.modifiers.dialog.multipleactionscount.title": "Multi-action penalty: The number of actions you have already performed this combat round",
   "HELLAS.roll.modifiers.dialog.modifier.label": "Other Modifier",
   "HELLAS.roll.modifiers.dialog.modifier.title": "Other Modifier"
 }

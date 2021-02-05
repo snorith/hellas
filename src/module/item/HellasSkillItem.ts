@@ -1,7 +1,7 @@
 import {foundryAttributeValueMax, HELLAS, SPECIFY_SUBTYPE} from "../config"
 import set from "lodash-es/set"
 import {isEmptyOrSpaces} from "../settings"
-import {getRollModifiers} from "../roll/modifiers"
+import {getRollModifiers} from "../dialog/modifiers"
 import clone from "lodash-es/clone"
 
 export type SkillItemDataType = {
@@ -207,7 +207,7 @@ export class HellasSkillItem extends Item {
 		}, modifiers as any)
 		rollData = mergeObject(rollData, itemData)
 
-		let roll = new Roll('d20 + @level.max + @dod + @actionpenalty + @nonproficiency + ((@multipleactionscount * -5) - (@spdused * @speed)) + @modifier', rollData)
+		let roll = new Roll('d20 + @level.max + @dod + @nonproficiency + ((@multipleactionscount * -5) + (@spdused * @speed)) + @modifier', rollData)
 		let label = `Rolling ${item.name}`
 		await roll.roll().toMessage({
 			speaker: ChatMessage.getSpeaker({ actor: this.actor }),
