@@ -318,7 +318,7 @@
   "HELLAS.roll.modifiers.dialog.nonproficiency.label": "Non-proficiency",
   "HELLAS.roll.modifiers.dialog.nonproficiency.title": "Non-proficiency penalty for using a skill you do not have",
   "HELLAS.roll.modifiers.dialog.multipleactionscount.label": "Multiple Actions",
-  "HELLAS.roll.modifiers.dialog.multipleactionscount.title": "Multi-action penalty: The number of actions you have already performed this combat round partially offset by your SPD",
+  "HELLAS.roll.modifiers.dialog.multipleactionscount.title": "Multi-action penalty: The number of actions you have already performed this combat round; it will be partially offset by your SPD",
   "HELLAS.roll.modifiers.dialog.modifier.label": "Other Modifier",
   "HELLAS.roll.modifiers.dialog.modifier.title": "Other Modifier",
   "HELLAS.roll.modifiers.dialog.skillrating.label": "Skill Rating",
