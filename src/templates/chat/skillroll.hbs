@@ -3,20 +3,9 @@
 </header>
 <h3 style="text-align: center; font-size: 140%; font-weight: bold;">{{localize "HELLAS.roll.chat.outcome" outcome=(localize (concat "HELLAS.die.roll.outcome." outcome)) }}</h3>
 <details>
-	hello1<br><br>
-	hello2<br>
-	hello3
-	hello4
-	<dl>
-		<dt>{{localize "HELLAS.roll.modifiers.dialog.skillrating.label"}}</dt>
-		<dd>{{data.level.max}}</dd>
-		<dt>{{localize "HELLAS.roll.modifiers.dialog.dod.label"}}</dt>
-		<dd>{{data.dod}}</dd>
-		<dt>{{localize "HELLAS.roll.modifiers.dialog.nonproficiency.label"}}</dt>
-		<dd>{{data.nonproficiency}}</dd>
-		<dt>{{localize "HELLAS.roll.modifiers.dialog.multipleactionscount.label"}}</dt>
-		<dd>{{data.multipleactionscount}}</dd>
-		<dt>{{localize "HELLAS.roll.modifiers.dialog.modifier.label"}}</dt>
-		<dd>{{data.modifier}}</dd>
-	</dl>
+	{{localize "HELLAS.roll.modifiers.dialog.skillrating.label"}}: {{data.level.max}}<br>
+	{{localize "HELLAS.roll.modifiers.dialog.dod.label"}}: {{data.dod}}<br>
+	{{localize "HELLAS.roll.modifiers.dialog.nonproficiency.label"}}: {{data.nonproficiency}}<br>
+	{{localize "HELLAS.roll.modifiers.dialog.multipleactionscount.label"}}: {{data.multipleactionscount}}<br>
+	{{localize "HELLAS.roll.modifiers.dialog.modifier.label"}}: {{data.modifier}}
 </details>
