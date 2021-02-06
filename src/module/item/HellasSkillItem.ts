@@ -1,8 +1,8 @@
 import {foundryAttributeValueMax, HELLAS, SPECIFY_SUBTYPE} from "../config"
 import set from "lodash-es/set"
-import {isEmptyOrSpaces} from "../settings"
+import {isEmptyOrSpaces, systemBasePath} from "../settings"
 import {getRollModifiers} from "../dialog/modifiers"
-import clone from "lodash-es/clone"
+import {determineDieRollOutcome} from "../dice"
 
 export type SkillItemDataType = {
 	version: number,
@@ -185,10 +185,8 @@ export class HellasSkillItem extends Item {
 
 	/**
 	 * Handle clickable rolls.
-	 * @param {Event} event   The originating click event
-	 * @private
 	 */
-	async roll() {
+	async roll(): Promise<boolean> {
 		if (!this.actor)
 			return false
 
@@ -207,12 +205,22 @@ export class HellasSkillItem extends Item {
 		}, modifiers as any)
 		rollData = mergeObject(rollData, itemData)
 
-		let roll = new Roll('d20 + @level.max + @dod + @nonproficiency + ((@multipleactionscount * -5) + (@spdused * @speed)) + @modifier', rollData)
-		let label = `Rolling ${item.name}`
-		await roll.roll().toMessage({
-			speaker: ChatMessage.getSpeaker({ actor: this.actor }),
-			flavor: label
+		const roll = new Roll('d20 + @level.max + @dod + @nonproficiency + ((@multipleactionscount * -5) + (@spdused * @speed)) + @modifier', rollData).roll()
+		const outcome = determineDieRollOutcome( roll.total )
+
+		const template = `${systemBasePath}/templates/chat/skillroll.hbs`
+		const html = await renderTemplate(template, {
+			name: item.name,
+			outcome: outcome,
+			data: rollData,
 		})
+
+		await roll.toMessage({
+			speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+			flavor: html
+		}, {rollMode: CONFIG.Dice.rollModes.PUBLIC})
+
+		return true
 	}
 }
 

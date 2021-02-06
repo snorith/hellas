@@ -1,7 +1,14 @@
 <form autocomplete="off" autocapitalize="off">
 	<div class="form-group">
 		<label for="hellas.roll.dod" title="{{localize "HELLAS.roll.modifiers.dialog.dod.title"}}">{{localize "HELLAS.roll.modifiers.dialog.dod.label"}}</label>
-		<input type="number" id="hellas.roll.dod" name="dod" value="0" data-dtype="Number" min="-1000" step="1" title="{{localize "HELLAS.roll.modifiers.dialog.dod.title"}}"/>
+		<input type="number"
+			   id="hellas.roll.dod"
+			   name="dod"
+			   value="0"
+			   data-dtype="Number"
+			   min="-1000" step="1"
+			   title="{{localize "HELLAS.roll.modifiers.dialog.dod.title"}}"
+			   onfocus="this.select();"/>
 	</div>
 	<div class="form-group">
 		<label for="hellas.roll.nonproficiency" title="{{localize "HELLAS.roll.modifiers.dialog.nonproficiency.title"}}">{{localize "HELLAS.roll.modifiers.dialog.nonproficiency.label"}}</label>

@@ -12,6 +12,9 @@ export const preloadTemplates = async function() {
 
 		// Roll modifier
 		`${systemBasePath}/templates/dialog/modifiers.hbs`,
+
+		// Skill roll chat template
+		`${systemBasePath}/templates/chat/skillroll.hbs`
 	];
 
 	return loadTemplates(templatePaths);

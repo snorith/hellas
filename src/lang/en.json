@@ -320,5 +320,15 @@
   "HELLAS.roll.modifiers.dialog.multipleactionscount.label": "Multiple Actions",
   "HELLAS.roll.modifiers.dialog.multipleactionscount.title": "Multi-action penalty: The number of actions you have already performed this combat round partially offset by your SPD",
   "HELLAS.roll.modifiers.dialog.modifier.label": "Other Modifier",
-  "HELLAS.roll.modifiers.dialog.modifier.title": "Other Modifier"
+  "HELLAS.roll.modifiers.dialog.modifier.title": "Other Modifier",
+  "HELLAS.roll.modifiers.dialog.skillrating.label": "Skill Rating",
+
+  "HELLAS.roll.chat.title": "Rolling {title}",
+  "HELLAS.roll.chat.outcome": "{outcome}",
+  
+  "HELLAS.die.roll.outcome.critfail": "Critical Failure",
+  "HELLAS.die.roll.outcome.fail": "Failure",
+  "HELLAS.die.roll.outcome.partialsuccess": "Partial Success",
+  "HELLAS.die.roll.outcome.success": "Success",
+  "HELLAS.die.roll.outcome.critsuccess": "Critical Success"
 }
