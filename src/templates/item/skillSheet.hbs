@@ -132,6 +132,35 @@
 						   title="{{localize "HELLAS.skill.level.title"}}"/>
 				</div>
 			</div>
+			{{#if (ne data.skill "")}}
+				{{setVar "notes" false}}
+				<div class="mt-4 ml-4 mr-4">
+					<h2>{{localize "HELLAS.item.skill.modification.note"}}</h2>
+					{{#if item.SKILLSPECIFICS.length}}
+						{{#ifIn data.skill @root.item.HELLAS.skillSpecificsGetOneOnly}}
+							<p>{{localize "HELLAS.item.skill.specifier.only.one_included"}}</p>
+						{{else}}
+							<p>{{localize "HELLAS.item.skill.specifier.all.included"}}</p>
+						{{/ifIn}}
+						{{setVar "notes" true}}
+					{{/if}}
+					{{#if (gt item.SHORTATTRIBUTELIST.length 1)}}
+						{{#unless item.SKILLSPECIFICS.length}}
+							<p>{{localize "HELLAS.item.skill.specifier.all.included"}}</p>
+						{{/unless}}
+						{{#if (eq data.skill "etiquette")}}
+							<p>{{localize "HELLAS.item.skill.multi.attribute.etiquette"}}</p>
+						{{else}}
+							<p>{{localize "HELLAS.item.skill.multi.attribute.normal"}}</p>
+						{{/if}}
+						{{setVar "notes" true}}
+					{{else}}
+					{{/if}}
+					{{#unless notes}}
+						<p>{{localize "HELLAS.item.skill.modification.na"}}</p>
+					{{/unless}}
+				</div>
+			{{/if}}
 		</div>
 
 		{{!-- Description Tab --}}

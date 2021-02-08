@@ -291,6 +291,13 @@
   "HELLAS.item.skill.name.combiner": "{skill} - {specifier}",
   "HELLAS.item.skill.name.combiner2": "{skill} - {specifier} - {type}",
   "HELLAS.item.skill.roll": "Roll skill",
+
+  "HELLAS.item.skill.modification.note": "Notes:",
+  "HELLAS.item.skill.modification.na": "n/a",
+  "HELLAS.item.skill.specifier.all.included": "If you have one or more levels in this skill then you have all variations of this skill (specifiers vs attributes). Create multiple variations at the same level as needed to roll against an attribute with a rating.",
+  "HELLAS.item.skill.specifier.only.one_included": "Having levels in this skill only provides a single specific variation (specifier or attribute). To get different variations you must separately gain levels in a different combination",
+  "HELLAS.item.skill.multi.attribute.normal": "Please select the appropriate attribute to accompany this variation",
+  "HELLAS.item.skill.multi.attribute.etiquette": "However you do get both variations of attribute with which ever culture you specify.",
   
   "HELLAS.skill.name.label": "Skill",
   "HELLAS.skill.skill.label": "Skill",
