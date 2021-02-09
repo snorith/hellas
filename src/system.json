@@ -2,11 +2,16 @@
   "name": "hellas",
   "title": "Hellas",
   "description": "Fan contributed support for the Hellas rpg in FoundryVTT",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "author": "snorith (Stephen Smith)",
-  "scripts": [],
+  "scripts": [
+    "lib/tooltipster/tooltipster.bundle.min.js"
+  ],
   "esmodules": ["hellas.js"],
-  "styles": ["hellas.css"],
+  "styles": [
+    "hellas.css",
+    "lib/tooltipster/tooltipster.bundle.min.css"
+  ],
   "packs": [],
   "languages": [
     {

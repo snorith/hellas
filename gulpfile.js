@@ -87,6 +87,14 @@ function buildTS() {
 			]
 		})
 		.then(bundle => {
+			if (profilemode.production()) {
+				return bundle.write({
+					file: nameJS,
+					format: "esm",
+					name: manifest.file.name,
+				});
+			}
+
 			return bundle.write({
 				file: nameJS,
 				format: "esm",
@@ -117,6 +125,15 @@ function buildSASS() {
 	];
 	if (isProduction) {
 		plugins.push(cssnano())
+
+		return gulp
+			.src('src/*.scss')
+			.pipe(sass({
+				includePaths: [].concat( bourbon ),
+				outputStyle: 'expanded'   // Options: nested, expanded, compact, compressed
+			}).on('error', sass.logError))
+			.pipe(postcss(plugins))
+			.pipe(gulp.dest('dist'));
 	}
 
 	return gulp
@@ -139,6 +156,7 @@ async function copyFiles() {
 		'lang',
 		'fonts',
 		'assets',
+		'lib',
 		'templates',
 		'module.json',
 		'system.json',
@@ -164,7 +182,7 @@ function buildWatch() {
 	gulp.watch('src/**/*.less', { ignoreInitial: false }, buildLess);
 	gulp.watch('src/**/*.scss', { ignoreInitial: false }, buildSASS);
 	gulp.watch(
-		['src/fonts', 'src/lang', 'src/templates', 'src/*.json'],
+		['src/fonts', 'src/lang', 'src/lib', 'src/templates', 'src/*.json'],
 		{ ignoreInitial: false },
 		copyFiles
 	);
