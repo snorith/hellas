@@ -76,6 +76,8 @@
   "HELLAS.attributes.hitpoints.description":  "Hit Points",
   "HELLAS.attributes.fatepoints.description":  "Fate Points",
 
+  "HELLAS.attribute.roll": "Roll attribute",
+
   "HELLAS.skills.controls.add": "Add skill",
   "HELLAS.skills.controls.edit": "Edit skill",
   "HELLAS.skills.controls.delete": "Delete skill",
@@ -329,8 +331,10 @@
   "HELLAS.roll.modifiers.dialog.modifier.label": "Other Modifier",
   "HELLAS.roll.modifiers.dialog.modifier.title": "Other Modifier",
   "HELLAS.roll.modifiers.dialog.skillrating.label": "Skill Rating",
+  "HELLAS.roll.modifiers.dialog.attribute.label": "Attribute Level",
 
-  "HELLAS.roll.chat.title": "Rolling {title} ({attribute})",
+  "HELLAS.roll.chat.skill.title": "Rolling {title} ({attribute})",
+  "HELLAS.roll.chat.attribute.title": "Rolling {attribute}",
   "HELLAS.roll.chat.outcome": "{outcome}",
   
   "HELLAS.die.roll.outcome.critfail": "Critical Failure",

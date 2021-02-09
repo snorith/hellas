@@ -1,9 +1,9 @@
 <header>
-	<h3>{{localize "HELLAS.roll.chat.skill.title" title=name attribute=data.attribute}}</h3>
+	<h3>{{localize "HELLAS.roll.chat.attribute.title" attribute=(localize (concat "HELLAS.attributes." name ".name")) }}</h3>
 </header>
 <h3 style="text-align: center; font-size: 140%; font-weight: bold;">{{localize "HELLAS.roll.chat.outcome" outcome=(localize (concat "HELLAS.die.roll.outcome." outcome)) }}</h3>
 <details>
-	{{localize "HELLAS.roll.modifiers.dialog.skillrating.label"}}: {{data.level.max}}<br>
+	{{localize "HELLAS.roll.modifiers.dialog.attribute.label"}}: {{data.attribute.value}}<br>
 	{{localize "HELLAS.roll.modifiers.dialog.dod.label"}}: {{data.dod}}<br>
 	{{localize "HELLAS.roll.modifiers.dialog.nonproficiency.label"}}: {{data.nonproficiency}}<br>
 	{{localize "HELLAS.roll.modifiers.dialog.multipleactionscount.label"}}: {{data.multipleactionscount}}<br>

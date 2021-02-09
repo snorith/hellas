@@ -6,6 +6,7 @@ import {systemBasePath} from "../settings"
 import {foundryAttributeValueMax, HELLAS} from "../config"
 import set from "lodash-es/set"
 import {HellasSkillItem} from "../item/HellasSkillItem"
+import {HellasActor} from "./HellasActor"
 
 // short skills
 const sortSkillsByNameFunction = (a, b) => a.name < b.name ? -1 : a.name > b.name ? 1 : 0
@@ -103,6 +104,23 @@ export class HellasActorSheet extends ActorSheet {
 
 		// roll a skill
 		html.find('.skill-roll').click(this._onSkillRoll.bind(this))
+
+		// roll an attribute
+		html.find('.attr-roll').click(this._onAttrRoll.bind(this))
+	}
+
+	_onAttrRoll(event) {
+		event.preventDefault()
+
+		const element = event.currentTarget
+		const attribute = element.dataset.itemId
+		const rating = parseInt(element.dataset.rating)
+
+		const actor = this.actor as HellasActor
+
+		actor.attrRoll(attribute, rating).catch(reason => console.log(reason))
+
+		return false
 	}
 
 	_onSkillRoll(event) {

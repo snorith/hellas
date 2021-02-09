@@ -37,6 +37,7 @@
 									<div class="rounded-2xl h-20 p-2 align-middle text-center items-center border-2 border-opacity-70 border-solid border-gray-900 shadow-md break-all">
 										<div class="uppercase align-middle overflow-ellipsis">{{localize (concat "HELLAS.attributes." attributeName ".name")}}</div>
 										<div class="flex p-3 items-center justify-center">
+											<a class="mr-2 item-control attr-roll" data-item-id="{{attributeName}}" data-rating="{{value}}" title="{{localize "HELLAS.attribute.roll"}}"><i class="fas fa-dice-d20"></i></a>
 											<input class="rounded-full w-1/2" type="number" name="data.attributes.{{attributeName}}.value" value="{{value}}" min="-10" step="1" oninput="this.value = Math.round(this.value|0);" data-dtype="Number" title="{{localize (concat "HELLAS.attributes." attributeName ".name")}}">
 										</div>
 									</div>
