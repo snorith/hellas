@@ -323,14 +323,14 @@
   "HELLAS.roll.modifiers.dialog.dod.label": "DoD",
   "HELLAS.roll.modifiers.dialog.dod.title": "Degree of Difficulty: e.g.: -10 = very hard, 0 = average for a Helene, 10 = very easy",
   "HELLAS.roll.modifiers.dialog.nonproficiency.label": "Non-proficiency",
-  "HELLAS.roll.modifiers.dialog.nonproficiency.title": "Non-proficiency penalty for using a skill you do not have",
+  "HELLAS.roll.modifiers.dialog.nonproficiency.title": "Non-proficiency with a weapon penalty, or unskilled/substitution use of a skill that you do not have",
   "HELLAS.roll.modifiers.dialog.multipleactionscount.label": "Multiple Actions",
   "HELLAS.roll.modifiers.dialog.multipleactionscount.title": "Multi-action penalty: The number of actions you have already performed this combat round; it will be partially offset by your SPD",
   "HELLAS.roll.modifiers.dialog.modifier.label": "Other Modifier",
   "HELLAS.roll.modifiers.dialog.modifier.title": "Other Modifier",
   "HELLAS.roll.modifiers.dialog.skillrating.label": "Skill Rating",
 
-  "HELLAS.roll.chat.title": "Rolling {title}",
+  "HELLAS.roll.chat.title": "Rolling {title} ({attribute})",
   "HELLAS.roll.chat.outcome": "{outcome}",
   
   "HELLAS.die.roll.outcome.critfail": "Critical Failure",
