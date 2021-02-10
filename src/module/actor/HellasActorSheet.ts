@@ -151,9 +151,8 @@ export class HellasActorSheet extends ActorSheet {
 		if (isNaN(fpCount))
 			return false
 
-		const data = set({}, "data.attributes.fatepoints.value", fpCount)
-
-		this.actor.update(data).catch(reason => console.log(reason))
+		// @ts-ignore
+		this.actor.data.data.attributes.fatepoints.value = fpCount
 		this.render(false)
 
 		return false
