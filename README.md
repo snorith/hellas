@@ -34,7 +34,7 @@ The HELLAS RPG is TM and © 2012 Khepera Publishing  The Khepera Scarab and the 
 
 For further information about other Khepera Publishing products check out their website and forums at https://kheperapublishing.com/
 
-Content in this system or associated files derived from Khepera publishing is used as fan material and should not be construed as a challenge to those trademarks or copyrights.
+Content in this system or associated files derived from Khepera Publishing is used as fan material and should not be construed as a challenge to those trademarks or copyrights.
 
 The contents of this site are for personal, non-commercial use only. Khepera Publishing is not responsible for this site or system or any of the content.
 
