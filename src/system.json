@@ -1,36 +1,36 @@
 {
-  "name": "hellas",
-  "title": "Hellas",
-  "description": "Fan contributed support for the Hellas rpg in FoundryVTT",
-  "version": "0.1.5",
-  "author": "snorith (Stephen Smith)",
-  "scripts": [
-    "lib/tooltipster/tooltipster.bundle.min.js"
-  ],
-  "esmodules": ["hellas.js"],
-  "styles": [
-    "hellas.css",
-    "lib/tooltipster/tooltipster.bundle.min.css"
-  ],
-  "packs": [],
-  "languages": [
-    {
-      "lang": "en",
-      "name": "English",
-      "path": "lang/en.json"
-    }
-  ],
-  "gridDistance": 1,
-  "gridUnits": "",
-  "minimumCoreVersion": "0.7.0",
-  "compatibleCoreVersion": "0.7.9",
-  "url": "https://github.com/snorith/hellas",
-  "manifest": "",
-  "download": "",
-  "license": "LICENSE",
-  "readme": "https://github.com/snorith/hellas#readme",
-  "bugs": "https://github.com/snorith/hellas/issues",
-  "changelog": "https://github.com/snorith/hellas#changelog",
-  "primaryTokenAttribute": "attributes.hitpoints",
-  "secondaryTokenAttribute": "attributes.fatepoints"
+	"name": "hellas",
+	"title": "Hellas",
+	"description": "Fan contributed support for the Hellas rpg in FoundryVTT",
+	"version": "0.1.6",
+	"author": "snorith (Stephen Smith)",
+	"scripts": [
+		"lib/tooltipster/tooltipster.bundle.min.js"
+	],
+	"esmodules": ["hellas.js"],
+	"styles": [
+		"hellas.css",
+		"lib/tooltipster/tooltipster.bundle.min.css"
+	],
+	"packs": [],
+	"languages": [
+		{
+			"lang": "en",
+			"name": "English",
+			"path": "lang/en.json"
+		}
+	],
+	"gridDistance": 1,
+	"gridUnits": "",
+	"minimumCoreVersion": "0.7.0",
+	"compatibleCoreVersion": "0.7.9",
+	"url": "https://github.com/snorith/hellas.git",
+	"manifest": "https://raw.githubusercontent.com/snorith/hellas/master/src/system.json",
+	"download": "https://raw.githubusercontent.com/snorith/hellas/v0.1.6/package/hellas-v0.1.6.zip",
+	"license": "LICENSE",
+	"readme": "https://github.com/snorith/hellas#readme",
+	"bugs": "https://github.com/snorith/hellas/issues",
+	"changelog": "https://github.com/snorith/hellas#changelog",
+	"primaryTokenAttribute": "attributes.hitpoints",
+	"secondaryTokenAttribute": "attributes.fatepoints"
 }
