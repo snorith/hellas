@@ -10,7 +10,6 @@ const typescript = require('@rollup/plugin-typescript');
 const resolve = require('@rollup/plugin-node-resolve');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
-const bourbon = require('bourbon').includePaths;
 const cssnano = require('cssnano');
 const sourcemaps = require('gulp-sourcemaps');
 const profilemode = require('gulp-mode')({
@@ -129,7 +128,6 @@ function buildSASS() {
 		return gulp
 			.src('src/*.scss')
 			.pipe(sass({
-				includePaths: [].concat( bourbon ),
 				outputStyle: 'expanded'   // Options: nested, expanded, compact, compressed
 			}).on('error', sass.logError))
 			.pipe(postcss(plugins))
@@ -140,7 +138,6 @@ function buildSASS() {
 		.src('src/*.scss')
 		.pipe(profilemode.development(sourcemaps.init()))
 		.pipe(sass({
-			includePaths: [].concat( bourbon ),
 			outputStyle: 'expanded'   // Options: nested, expanded, compact, compressed
 		}).on('error', sass.logError))
 		.pipe(postcss(plugins))

@@ -122,7 +122,6 @@ export class HellasSkillItem extends Item {
 
     	if (!this.actor) {
 			data.level.max = data.level.value
-			changes = set(changes, "data.level.max", data.level.max)
 		}
     	else {
 			const actorData = this.actor.data.data
@@ -134,10 +133,8 @@ export class HellasSkillItem extends Item {
 			changes = set(changes, "data.level.max", data.level.max)
 
 			// console.log('attribute = ' + attribute + ' attr level = ' + attributeValue + ' skill level = ' + data.level.value + ' rating = ' + data.level.max)
-		}
-
-		if (this.actor)
 			this.update(changes).catch(reason => console.log(reason))
+		}
 	}
 
 	fullName(): string {
@@ -163,7 +160,7 @@ export class HellasSkillItem extends Item {
 			workingil8nName = game.i18n.localize("HELLAS.skills.mode.short.name")
 
 			const specifieril8nName = game.i18n.localize("HELLAS.skills.specifics." + specifier)
-			if (specifierCustom === specifier)
+			if (specifierCustom === specifier || !this.actor)
 				return game.i18n.format("HELLAS.item.skill.name.combiner", { skill: workingil8nName, specifier: specifieril8nName})
 			else {
 				const typeil8nName = game.i18n.localize("HELLAS.skills.mode." + specifierCustom)

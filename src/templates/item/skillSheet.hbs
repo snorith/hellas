@@ -136,14 +136,20 @@
 				{{setVar "notes" false}}
 				<div class="mt-4 ml-4 mr-4">
 					<h2>{{localize "HELLAS.item.skill.modification.note"}}</h2>
-					{{#if item.SKILLSPECIFICS.length}}
-						{{#ifIn data.skill @root.item.HELLAS.skillSpecificsGetOneOnly}}
-							<p>{{localize "HELLAS.item.skill.specifier.only.one_included"}}</p>
-						{{else}}
-							<p>{{localize "HELLAS.item.skill.specifier.all.included"}}</p>
-						{{/ifIn}}
+					{{#if item.MODESPECIFICS.length}}
 						{{setVar "notes" true}}
+						<p>{{localize "HELLAS.item.skill.specifier.only.one_included.mode"}}</p>
+					{{else}}
+						{{#if item.SKILLSPECIFICS.length}}
+							{{#ifIn data.skill @root.item.HELLAS.skillSpecificsGetOneOnly}}
+								<p>{{localize "HELLAS.item.skill.specifier.only.one_included.normal"}}</p>
+							{{else}}
+								<p>{{localize "HELLAS.item.skill.specifier.all.included"}}</p>
+							{{/ifIn}}
+							{{setVar "notes" true}}
+						{{/if}}
 					{{/if}}
+
 					{{#if (gt item.SHORTATTRIBUTELIST.length 1)}}
 						{{#unless item.SKILLSPECIFICS.length}}
 							<p>{{localize "HELLAS.item.skill.specifier.all.included"}}</p>

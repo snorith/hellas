@@ -25,7 +25,7 @@
 			<table class="skills shadow-md">
 				<thead>
 				<tr>
-					<td colspan="6" class="text-center">{{localize "HELLAS.section.attributes.title"}}</td>
+					<td colspan="6" class="hellas-titling text-center">{{localize "HELLAS.section.attributes.title"}}</td>
 				</tr>
 				</thead>
 				<tbody>
@@ -35,7 +35,7 @@
 							{{#each actor.HELLAS.characterAttributes as |attributeName|}}
 								{{#with (lookup @root.data.attributes attributeName)}}
 									<div class="rounded-2xl h-20 p-2 align-middle text-center items-center border-2 border-opacity-70 border-solid border-gray-900 shadow-md break-all">
-										<div class="uppercase align-middle overflow-ellipsis">{{localize (concat "HELLAS.attributes." attributeName ".name")}}</div>
+										<div class="hellas-titling uppercase align-middle overflow-ellipsis">{{localize (concat "HELLAS.attributes." attributeName ".name")}}</div>
 										<div class="flex p-3 items-center justify-center">
 											<a class="mr-2 item-control attr-roll" data-item-id="{{attributeName}}" data-rating="{{value}}" title="{{localize "HELLAS.attribute.roll"}}"><i class="fas fa-dice-d20"></i></a>
 											<input class="rounded-full w-1/2" type="number" name="data.attributes.{{attributeName}}.value" value="{{value}}" min="-10" step="1" oninput="this.value = Math.round(this.value|0);" data-dtype="Number" title="{{localize (concat "HELLAS.attributes." attributeName ".name")}}">
@@ -48,13 +48,13 @@
 						<div class="flex flex-wrap justify-center items-center mb-1">
 							<div class="flex h-20 p-2 align-middle text-center items-center last:mr-0 mr-2 break-all border-2 border-opacity-70 border-solid border-gray-900 shadow-md aluminum-foil-bkgd">
 								<div>
-									<div class="uppercase font-bold align-middle overflow-ellipsis">{{localize "HELLAS.attributes.hitpoints.current.name"}}</div>
+									<div class="hellas-titling uppercase font-bold align-middle overflow-ellipsis">{{localize "HELLAS.attributes.hitpoints.current.name"}}</div>
 									<div class="flex p-2 items-center justify-center">
 										<input class="rounded-full font-bold border-2 border-gray-900 w-1/2" type="number" name="data.attributes.hitpoints.value" value="{{data.attributes.hitpoints.value}}" min="-10" step="1" oninput="this.value = Math.round(this.value|0);" data-dtype="Number" title="{{localize "HELLAS.attributes.hitpoints.current.name"}}">
 									</div>
 								</div>
 								<div>
-									<div class="uppercase font-bold align-middle overflow-ellipsis">{{localize "HELLAS.attributes.hitpoints.max.name"}}</div>
+									<div class="hellas-titling uppercase font-bold align-middle overflow-ellipsis">{{localize "HELLAS.attributes.hitpoints.max.name"}}</div>
 									<div class="flex p-2 items-center justify-center">
 										<input class="rounded-full font-bold border-2 border-gray-900 w-1/2" type="number" name="data.attributes.hitpoints.max" value="{{data.attributes.hitpoints.max}}" min="-10" step="1" oninput="this.value = Math.round(this.value|0);" data-dtype="Number" title="{{localize "HELLAS.attributes.hitpoints.max.name"}}">
 									</div>
@@ -62,14 +62,14 @@
 							</div>
 
 							<div class="h-20 p-2 align-middle text-center items-center last:mr-0 mr-2 border-2 border-opacity-70 border-solid border-gray-900 shadow-md break-all gold-foil-bkgd">
-								<div class="uppercase align-middle overflow-ellipsis">{{localize "HELLAS.attributes.glory.name"}}</div>
+								<div class="hellas-titling uppercase align-middle overflow-ellipsis">{{localize "HELLAS.attributes.glory.name"}}</div>
 								<div class="flex p-3 items-center justify-center">
 									<input class="rounded-full w-1/2" type="number" name="data.attributes.glory.value" value="{{data.attributes.glory.value}}" min="-10" step="1" oninput="this.value = Math.round(this.value|0);" data-dtype="Number" title="{{localize "HELLAS.attributes.glory.name"}}">
 								</div>
 							</div>
 
 							<div class="h-20 p-2 align-middle text-center items-center last:mr-0 mr-2 border-2 border-opacity-70 border-solid border-gray-900 shadow-md break-all aluminum-foil-bkgd">
-								<div class="uppercase align-middle overflow-ellipsis">{{localize "HELLAS.attributes.heropoints.name"}}</div>
+								<div class="hellas-titling uppercase align-middle overflow-ellipsis">{{localize "HELLAS.attributes.heropoints.name"}}</div>
 								<div class="flex p-3 items-center justify-center">
 									<input class="rounded-full w-1/2" type="number" name="data.attributes.heropoints.value" value="{{data.attributes.heropoints.value}}" min="-10" step="1" oninput="this.value = Math.round(this.value|0);" data-dtype="Number" title="{{localize "HELLAS.attributes.heropoints.name"}}">
 								</div>
@@ -77,7 +77,7 @@
 						</div>
 
 						<div class="flex flex-wrap justify-center items-center p-1.5 mb-1">
-							<span class="fate-progress mr-3 uppercase" data-item-id="0" title="{{localize "HELLAS.attributes.fatepoints.title" current=data.attributes.fatepoints.value max=data.attributes.fatepoints.max}}">{{localize "HELLAS.attributes.fatepoints.name"}}</span>
+							<span class="hellas-titling fate-progress mr-3 uppercase" data-item-id="0" title="{{localize "HELLAS.attributes.fatepoints.title" current=data.attributes.fatepoints.value max=data.attributes.fatepoints.max}}">{{localize "HELLAS.attributes.fatepoints.name"}}</span>
 							<div class="fatepoints-line-bkgd inline-flex w-auto pl-2 pr-2 bg-left">
 								{{#repeat data.attributes.fatepoints.max}}
 									<span class="fate-progress cursor-pointer align-middle text-center items-center w-6 h-6 rounded-full last:mr-0 mr-2 p-0.5 border border-opacity-70 border-solid bg-clip-padding shadow-md {{#if (lte @num data.attributes.fatepoints.value)}}border-gray-100 bg-gray-700{{else}}border-gray-900 marble-bkgd{{/if}}" data-item-id="{{@num}}">{{#if @last}}<i class="fas fa-skull-crossbones align-middle {{#if (lte @num data.attributes.fatepoints.value)}}text-gray-50{{/if}}" title="{{localize "HELLAS.character.status.dead.title"}}"></i>{{/if}}</span>
@@ -97,15 +97,15 @@
 					<table class="skills shadow-md">
 						<thead>
 						<tr>
-							<td colspan="6" class="text-center">{{localize "HELLAS.section.skills.title"}}</td>
+							<td colspan="6" class="hellas-titling text-center">{{localize "HELLAS.section.skills.title"}}</td>
 						</tr>
 						<tr>
-							<td class="text-center">Name</td>
+							<td class="hellas-titling text-center">Name</td>
 							<td class="w-4"></td>
-							<td class="text-center">Level</td>
-							<td class="text-center">Attr</td>
-							<td class="text-center">Rating</td>
-							<td class="text-center items-center w-4">
+							<td class="hellas-titling text-center">Level</td>
+							<td class="hellas-titling text-center">Attr</td>
+							<td class="hellas-titling text-center">Rating</td>
+							<td class="hellas-titling text-center items-center w-4">
 								<div class="item-controls w-auto">
 									<a class="item-control item-create" title="{{localize "HELLAS.skills.controls.add"}}" data-type="skill"><i class="fas fa-plus"></i></a>
 								</div>

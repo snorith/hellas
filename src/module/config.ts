@@ -109,10 +109,14 @@ const HELLAS: hellasConfigType = {
 	skillSpecificsBreakdown: {
 		"athletics": ["swimming", "climbing", "balancing", "flying", "jumping", "ropeclimbing", "running", "strengthfeat", "endurance", SPECIFY_SUBTYPE],
 		"computers": ["personal", "mainframe", "starship", SPECIFY_SUBTYPE],
+		"deception": ['deception', "disguise"],
+		"drive": [SPECIFY_SUBTYPE],
 		"etiquette": [SPECIFY_SUBTYPE],
-		"handicraft": ["alchemy", "armorer", "artificer", "artisan", "bowyerfletcher", "brewervintner", "engineermechanical", "engineerstructural", "gunsmith", "finearts", "vehicles", "weaponsmith"],
+		"handicraft": ["alchemy", "armorer", "artificer", "artisan", "bowyerfletcher", "brewervintner", "engineermechanical", "engineerstructural", "gunsmith", "finearts", "vehicles", "weaponsmith", SPECIFY_SUBTYPE],
 		"instinct": ["intuition", "initiative"],
-		"investigatesearch": ["investigation", "search"],
+		"intimidate": ["words", "physically"],
+		"investigatesearch": ["investigationwcha", "investigationwint", "search"],
+		"literacy": [SPECIFY_SUBTYPE],
 		"lore": ["agriculture", "arcanearts", "engineering", "folklore", "forgery", "gambling", "heraldry", "herblore", "geography", "history", "law", "local", "mining", "nature", "region", "streetwise", "tactics", SPECIFY_SUBTYPE],
 		"mode": [],
 		"perform": ["dance", "musicianship", "juggling", "acting", "oratory", "singing"],
@@ -128,9 +132,11 @@ const HELLAS: hellasConfigType = {
 
 	skillSpecificsGetOneOnly: [
 		"computers",
+		"drive",
 		"etiquette",
 		"handicraft",
 		"instinct",
+		"literacy",
 		"mode",
 		"perform",
 		"pilot",

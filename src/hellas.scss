@@ -3,8 +3,6 @@
 /* This is your Sass entry file			*/
 /* ------------------------------------ */
 
-@import "bourbon";
-
 // Import utilities.
 @import 'styles/utils/typography';
 @import 'styles/utils/colors';
@@ -12,12 +10,14 @@
 @import 'styles/utils/variables';
 
 /* Global styles */
-@import 'styles/global/window';
+//@import 'styles/global/window';
 //@import 'styles/global/grid';
 //@import 'styles/global/flex';
 
 /* Styles limited to hellas sheets */
 div.hellas {
+	font-family: $font-primary;
+
 	// Background of sheets
 	.window-content {
 		// Credit: <span>Photo by <a href="https://unsplash.com/@augustinewong?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Augustine Wong</a> on <a href="https://unsplash.com/s/photos/marble-texture?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
@@ -25,12 +25,16 @@ div.hellas {
 		background-repeat: repeat;
 	}
 
+	.hellas-titling {
+		font-family: $font-titles;
+	}
+
 	form {
 		@import "styles/global/tailwind";
 		@import 'styles/components/forms';
 		@import 'styles/components/resource';
 		@import 'styles/components/tabs';
-		@import 'styles/components/items';
+		//@import 'styles/components/items';
 	}
 }
 
