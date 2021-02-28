@@ -48,7 +48,7 @@
 						<div class="flex flex-wrap justify-center items-center mb-1">
 							<div class="flex h-20 p-2 align-middle text-center items-center last:mr-0 mr-2 break-all border-2 border-opacity-70 border-solid border-gray-900 shadow-md aluminum-foil-bkgd">
 								<div>
-									<div class="hellas-titling uppercase font-bold align-middle overflow-ellipsis">{{localize "HELLAS.attributes.hitpoints.current.name"}}</div>
+									<div class="hellas-titling uppercase font-bold align-middle overflow-ellipsis" title="{{localize "HELLAS.attributes.hitpoints.description"}}">{{localize "HELLAS.attributes.hitpoints.current.name"}}</div>
 									<div class="flex p-2 items-center justify-center">
 										<input class="rounded-full font-bold border-2 border-gray-900 w-1/2" type="number" name="data.attributes.hitpoints.value" value="{{data.attributes.hitpoints.value}}" min="-10" step="1" oninput="this.value = Math.round(this.value|0);" data-dtype="Number" title="{{localize "HELLAS.attributes.hitpoints.current.name"}}">
 									</div>
