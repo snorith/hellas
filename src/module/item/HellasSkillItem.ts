@@ -168,7 +168,13 @@ export class HellasSkillItem extends Item {
 			}
 		}
 		else {
-			if (SPECIFY_SUBTYPE === specifier && !isEmptyOrSpaces(specifierCustom)) {
+			if (skillName === 'perform' && !this.actor) {
+				return game.i18n.format("HELLAS.item.skill.name.combiner", { skill: workingil8nName, specifier: game.i18n.localize("HELLAS.skills.specifics.specify")});
+			}
+			else if (HELLAS.skillSpecificsGetAll.includes(skillName) && !this.actor) {
+				return game.i18n.format("HELLAS.item.skill.name.combiner", { skill: workingil8nName, specifier: '*'});
+			}
+			else if (SPECIFY_SUBTYPE === specifier && !isEmptyOrSpaces(specifierCustom)) {
 				return game.i18n.format("HELLAS.item.skill.name.combiner", { skill: workingil8nName, specifier: specifierCustom})
 			}
 			else if (!isEmptyOrSpaces(specifier)) {

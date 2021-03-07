@@ -15,6 +15,7 @@ export type hellasConfigType = {
 	skillsWSpecifics: string[],
 	skillSpecificsBreakdown: ObjectWStringArrayValues,
 	skillSpecificsGetOneOnly: string[],
+	skillSpecificsGetAll: string[],
 	skillWAssocShortAttributes: ObjectWStringArrayValues,
 	skillWAssocLongAttributes: ObjectWStringArrayValues,
 	dynamismModes: string[],
@@ -122,9 +123,11 @@ const HELLAS: hellasConfigType = {
 		"perform": ["dance", "musicianship", "juggling", "acting", "oratory", "singing"],
 		"pilot": [SPECIFY_SUBTYPE],
 		"profession": [SPECIFY_SUBTYPE],
-		"science": ["astronomy", "biology",	"botany", "chemistry", "geology", "mathematics",	"medicine",	"metallurgy", "physics", "xenobiology", "theology", "zoology", SPECIFY_SUBTYPE],
+		"science": ["astronomy", "biology",	"botany", "chemistry", "geology", "mathematics", "medicine", "metallurgy", "physics", "xenobiology", "theology", "zoology", SPECIFY_SUBTYPE],
+		"sleightofhand": ['perform', 'detect'],
 		"speaklanguage": ["atlantean", "goregon", "hellene", "nymphas", "zintar", "zoran", SPECIFY_SUBTYPE],
 		"survival": ["savannah", "forest", "jungle", "desert", "arctic", "swamp", "alpine", "aquatic", "urban", SPECIFY_SUBTYPE],
+		"torture": [SPECIFY_SUBTYPE],
 		"trackingshadowing": ["tracking", "shadowing"],
 		"trading": ["appraising", "haggling"],
 		"weapon": ["melee", "ranged", "heavyweapons", "guns", "thrown", "vehicleweapons", SPECIFY_SUBTYPE],
@@ -148,6 +151,10 @@ const HELLAS: hellasConfigType = {
 		"lore"
 	],
 
+	skillSpecificsGetAll: [
+		"torture"
+	],
+
 	skillWAssocShortAttributes: {
 		athletics: ["CON", "DEX", "SPD", "STR"],
 		animalhandling: ["WIL"],
@@ -169,7 +176,7 @@ const HELLAS: hellasConfigType = {
 		literacy: ["INT"],
 		lore: ["INT"],
 		medicine: ["INT"],
-		mode: ["DYN", "CR"],
+		mode: ["DYN", "PER", "CR"],
 		mounted: ["CR"],
 		navigate: ["PER"],
 		pankration: ["CR"],
@@ -181,7 +188,7 @@ const HELLAS: hellasConfigType = {
 		resolve: ["WIL"],
 		ride: ["DEX"],
 		science: ["INT"],
-		sleightofhand: ["DEX"],
+		sleightofhand: ["DEX", "PER"],
 		speaklanguage: ["INT"],
 		stealth: ["DEX"],
 		survival: ["CON", "INT"],
@@ -196,10 +203,10 @@ const HELLAS: hellasConfigType = {
 	dynamismModes: [],
 
 	dynamismModesSpecificBreakdowns: {
-		"attack": ['ranged', 'close', 'area'],
-		"illusion": ['illusion'],
+		"attack": ['skill', 'cr'],
+		"illusion": ['illusion', 'resist'],
 		"influence": ['influence'],
-		"kinetic": ['kinetic'],
+		"kinetic": ['kinetic', 'grapple'],
 		"manifest": ['create', 'dematerialize'],
 		"manipulate": ['health', 'skill', 'attribute', 'protection', 'minortransform', 'majortransform', 'completetransform'],
 		"sensory": ['perception', 'locate', 'scry', 'obscure'],
