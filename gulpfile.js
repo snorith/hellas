@@ -154,6 +154,7 @@ async function copyFiles() {
 		'fonts',
 		'assets',
 		'lib',
+		'packs',
 		'templates',
 		'module.json',
 		'system.json',
@@ -179,7 +180,7 @@ function buildWatch() {
 	gulp.watch('src/**/*.less', { ignoreInitial: false }, buildLess);
 	gulp.watch('src/**/*.scss', { ignoreInitial: false }, buildSASS);
 	gulp.watch(
-		['src/assets', 'src/fonts', 'src/lang', 'src/lib', 'src/templates', 'src/*.json'],
+		['src/assets', 'src/fonts', 'src/lang', 'src/lib', 'src/packs', 'src/templates', 'src/*.json'],
 		{ ignoreInitial: false },
 		copyFiles
 	);

@@ -12,7 +12,15 @@
 		"hellas.css",
 		"lib/tooltipster/tooltipster.bundle.min.css"
 	],
-	"packs": [],
+	"packs": [
+    {
+      "name": "systemSkills",
+      "label": "System Skills",
+      "system": "hellas",
+      "path": "./packs/system-skills.db",
+      "entity": "Item"
+    }
+  ],
 	"languages": [
 		{
 			"lang": "en",
