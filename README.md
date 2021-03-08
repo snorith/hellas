@@ -47,4 +47,25 @@ The contents of this site are for personal, non-commercial use only. Khepera Pub
 ---
 
 **Sheet background image credit:**
+
 Photo by [Augustine Wong](https://unsplash.com/@augustinewong?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/marble-texture?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText)
+
+**Game-Icons.net credit**
+
+Several game icons have been included from [Game-Icons.net](https://game-icons.net)
+
+- Delapouite
+  - https://game-icons.net/1x1/delapouite/atlas.html
+  - https://game-icons.net/1x1/delapouite/body-balance.html
+  - https://game-icons.net/1x1/delapouite/bully-minion.html
+  - https://game-icons.net/1x1/delapouite/convince.html
+  - https://game-icons.net/1x1/delapouite/crafting.html
+  - https://game-icons.net/1x1/delapouite/evasion.html
+  - https://game-icons.net/1x1/delapouite/flail.html
+  - https://game-icons.net/1x1/delapouite/forest-camp.html
+- Lorc
+  - https://game-icons.net/1x1/lorc/awareness.html
+  - https://game-icons.net/1x1/lorc/domino-mask.html
+- Lord Berandas
+  - https://game-icons.net/1x1/lord-berandas/computing.html
+  
