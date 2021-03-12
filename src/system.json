@@ -5,7 +5,8 @@
 	"version": "0.1.6",
 	"author": "snorith (Stephen Smith)",
 	"scripts": [
-		"lib/tooltipster/tooltipster.bundle.min.js"
+		"lib/tooltipster/tooltipster.bundle.min.js",
+    "lib/tooltipster-scrollabletip/tooltipster-scrollableTip.min.js"
 	],
 	"esmodules": ["hellas.js"],
 	"styles": [
