@@ -54,7 +54,7 @@ Photo by [Augustine Wong](https://unsplash.com/@augustinewong?utm_source=unsplas
 
 Several game icons have been included from [Game-Icons.net](https://game-icons.net)
 
-- Delapouite
+- [Delapouite](https://delapouite.com/)
   - https://game-icons.net/1x1/delapouite/atlas.html
   - https://game-icons.net/1x1/delapouite/body-balance.html
   - https://game-icons.net/1x1/delapouite/bully-minion.html
@@ -63,9 +63,33 @@ Several game icons have been included from [Game-Icons.net](https://game-icons.n
   - https://game-icons.net/1x1/delapouite/evasion.html
   - https://game-icons.net/1x1/delapouite/flail.html
   - https://game-icons.net/1x1/delapouite/forest-camp.html
-- Lorc
+  - https://game-icons.net/1x1/delapouite/healing.html
+  - https://game-icons.net/1x1/delapouite/hole-ladder.html
+  - https://game-icons.net/1x1/delapouite/hummingbird.html
+  - https://game-icons.net/1x1/delapouite/jump-across.html
+  - https://game-icons.net/1x1/delapouite/misdirection.html
+  - https://game-icons.net/1x1/delapouite/pool-dive.html
+  - https://game-icons.net/1x1/delapouite/puzzle.html
+  - https://game-icons.net/1x1/delapouite/rope-coil.html
+  - https://game-icons.net/1x1/delapouite/sextant.html
+  - https://game-icons.net/1x1/delapouite/shaking-hands.html
+  - https://game-icons.net/1x1/delapouite/ship-wheel.html
+  - https://game-icons.net/1x1/delapouite/steering-wheel.html
+  - https://game-icons.net/1x1/delapouite/teacher.html
+- [Lorc](https://lorcblog.blogspot.com/)
   - https://game-icons.net/1x1/lorc/awareness.html
   - https://game-icons.net/1x1/lorc/domino-mask.html
-- Lord Berandas
+  - https://game-icons.net/1x1/lorc/gift-of-knowledge.html
+  - https://game-icons.net/1x1/lorc/horse-head.html
+  - https://game-icons.net/1x1/lorc/magnifying-glass.html
+  - https://game-icons.net/1x1/lorc/materials-science.html
+  - https://game-icons.net/1x1/lorc/punch.html
+  - https://game-icons.net/1x1/lorc/run.html
+  - https://game-icons.net/1x1/lorc/sing.html
+  - https://game-icons.net/1x1/lorc/spoon.html
+  - https://game-icons.net/1x1/lorc/strong.html
+- [Lord Berandas](https://www.deviantart.com/berandas)
   - https://game-icons.net/1x1/lord-berandas/computing.html
+- Skoll
+  - https://game-icons.net/1x1/skoll/talk.html
   
