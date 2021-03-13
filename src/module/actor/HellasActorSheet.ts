@@ -92,6 +92,12 @@ export class HellasActorSheet extends ActorSheet {
 		// Everything below here is only needed if the sheet is editable
 		if (!this.options.editable) return
 
+		// Tooltips
+		html.find('.tooltip').tooltipster({
+			interactive: true,
+			plugins: ['sideTip', 'scrollableTip']
+		})
+
 		// Add Item
 		html.find('.item-create').click(this._onItemCreate.bind(this))
 		// Update Item

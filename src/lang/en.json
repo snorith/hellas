@@ -286,6 +286,11 @@
   "HELLAS.skill.attribute.title": "Attribute",
   "HELLAS.skill.level.title": "Level",
 
+  "HELLAS.skill.column.name": "Name",
+  "HELLAS.skill.column.level": "Level",
+  "HELLAS.skill.column.attr": "Attr",
+  "HELLAS.skill.column.rating": "Rating",
+
   "HELLAS.roll.modifiers.dialog.title": "Roll modifiers",
   "HELLAS.roll.modifiers.dialog.button.roll.label": "Roll",
   "HELLAS.roll.modifiers.dialog.button.cancel.label": "Cancel",
