@@ -20,8 +20,6 @@ export const HellasItem = new Proxy(function () {}, {
     construct: function (target, info, ...args) {
         const [data, newTarget] = info
 
-        console.log('construct item type = ' + data.type)
-
         switch (data.type) {
             case HellasSkillItem.type:
                 return new HellasSkillItem(data, newTarget)

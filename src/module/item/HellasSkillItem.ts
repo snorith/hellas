@@ -6,7 +6,7 @@ import {determineDieRollOutcome} from "../dice"
 
 export type SkillItemDataType = {
 	version: number,
-	skilltype: string,
+	skillid: string,
 	notes: string,
 	skill: string,
 	attribute: string,
@@ -47,26 +47,38 @@ export class HellasSkillItem extends Item {
 				this.data.name = game.i18n.localize("HELLAS.item.skill.newSkill")
 		}
         else {
-			this.processSpecifiersForSkills()
-			this.determineRating()
+			this.processSpecifiersForSkills(itemData as SkillItemDataType)
+			this.determineRating(itemData as SkillItemDataType)
+
 			this.data.name = this.fullName()
 		}
 
         // @ts-ignore
 		itemData.name = this.data.name
 		// @ts-ignore
-		const data = set({}, "name", itemData.name)
+		this.data.name = itemData.name
 
-		if (this.actor)
-			this.update(data).catch(reason => console.log(reason))
+		// @ts-ignore
+		if (this.name !== itemData.name) {
+			const data = {
+				_id: this._id,
+				// @ts-ignore
+				name: itemData.name
+			}
+			if (!!this.actor)
+				this.actor.updateOwnedItem(data).catch(reason => console.log(reason))
+			else
+				this.update(data).catch(reason => console.log(reason))
+		}
 
         this.data['HELLAS'] = HELLAS						// this is being set on the item itself that the handlebars template sees
 		this.data['SPECIFY_SUBTYPE'] = SPECIFY_SUBTYPE		// this is being set on the item itself that the handlebars template sees
     }
 
-    processSpecifiersForSkills() {
-    	const data = this.data.data as SkillItemDataType
-		let changes = {}
+    processSpecifiersForSkills(data: SkillItemDataType) {
+		let changes = {
+    		_id: this._id
+		}
 
 		if (!data.skill) {
 			changes = set(changes, "data.skill", HELLAS.skills[0])
@@ -106,35 +118,44 @@ export class HellasSkillItem extends Item {
 			changes = set(changes, "data.attribute", data.attribute)
 		}
 
-		// `skilltype` is used to uniquely identify a skill based on the attribute/specifier/custom
+		// `skillid` is used to uniquely identify a skill based on the attribute/specifier/custom
 		// this is used which skill to associate with a dynamism (spell) when defining them
-		const skilltype = [data.skill, data.specifier, data.specifierCustom].join('.')
-		data.skilltype = skilltype
-		changes = set(changes, "data.skilltype", skilltype)
+		const skillid = [data.skill, data.specifier, data.specifierCustom].join('.')
+		data.skillid = skillid
+		changes = set(changes, "data.skillid", skillid)
 
-		if (this.actor)
-			this.update(changes).catch(reason => console.log(reason))
+		this.data.data = data
 	}
 
-	determineRating() {
-		const data = this.data.data as SkillItemDataType
-		let changes = {}
+	determineRating(data: SkillItemDataType) {
+		let changes = {
+			_id: this._id
+		}
+
+		let max = data.level.max
 
     	if (!this.actor) {
-			data.level.max = data.level.value
+			max = data.level.value
 		}
     	else {
 			const actorData = this.actor.data.data
 			const attribute = HELLAS.attributesShortToLong[data.attribute]
 			// @ts-ignore
 			const attributeValue = actorData.attributes[attribute]['value']
-
-			data.level.max = data.level.value + attributeValue
-			changes = set(changes, "data.level.max", data.level.max)
-
-			// console.log('attribute = ' + attribute + ' attr level = ' + attributeValue + ' skill level = ' + data.level.value + ' rating = ' + data.level.max)
-			this.update(changes).catch(reason => console.log(reason))
+			max = data.level.value + attributeValue
 		}
+
+		if (data.level.max !== max) {
+			data.level.max = max
+			this.data.data = data
+
+			if (!!this.actor) {
+				changes = set(changes, "data.level.max", data.level.max)
+				this.actor.updateOwnedItem(changes).catch(reason => console.log(reason))
+			}
+		}
+		else
+			this.data.data = data
 	}
 
 	fullName(): string {
