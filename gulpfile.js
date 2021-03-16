@@ -9,11 +9,6 @@ const commonjs = require('@rollup/plugin-commonjs');
 const typescript = require('@rollup/plugin-typescript');
 const resolve = require('@rollup/plugin-node-resolve');
 const postcss = require('gulp-postcss');
-const postcssScss = require('postcss-scss');
-const postcssAdvanced = require('postcss-advanced-variables');
-const postcssNested = require('postcss-nested');
-const postcssFixes = require('postcss-flexbugs-fixes');
-const postcssImport = require('postcss-import');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 const sourcemaps = require('gulp-sourcemaps');
@@ -26,7 +21,6 @@ const profilemode = require('gulp-mode')({
 const less = require('gulp-less');
 const sass = require('gulp-sass');
 const git = require('gulp-git');
-const rename = require('gulp-rename');
 
 const argv = require('yargs').argv;
 
@@ -122,13 +116,10 @@ function buildLess() {
 function buildSASS() {
 	const tailwindcss = require('tailwindcss');
 	const isProduction = profilemode.production();
+	let plugins = [];
 
-	let plugins = [
-		postcssImport(),
-		postcssFixes(),
+	plugins = [
 		tailwindcss("./tailwind.config.js"),
-		postcssNested(),
-		postcssAdvanced,
 		autoprefixer()
 	];
 	if (isProduction) {
@@ -136,17 +127,21 @@ function buildSASS() {
 
 		return gulp
 			.src('src/*.scss')
-			.pipe(postcss(plugins, { parser: postcssScss}))
-			.pipe(rename('hellas.css'))
+			.pipe(sass({
+				outputStyle: 'expanded'   // Options: nested, expanded, compact, compressed
+			}).on('error', sass.logError))
+			.pipe(postcss(plugins))
 			.pipe(gulp.dest('dist'));
 	}
 
 	return gulp
 		.src('src/*.scss')
 		.pipe(profilemode.development(sourcemaps.init()))
-		.pipe(postcss(plugins, { parser: postcssScss}))
+		.pipe(sass({
+			outputStyle: 'expanded'   // Options: nested, expanded, compact, compressed
+		}).on('error', sass.logError))
+		.pipe(postcss(plugins))
 		.pipe(profilemode.development(sourcemaps.write()))
-		.pipe(rename('hellas.css'))
 		.pipe(gulp.dest('dist'));
 }
 

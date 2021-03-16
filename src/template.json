@@ -123,10 +123,10 @@
     },
     "dynamism": {
       "templates": ["common", "spell", "skilltype"],
+      "attribute": "",
       "level": {
         "value": 0,
-        "max": 0,
-        "attribute": ""
+        "max": 0
       }
     }
   }
