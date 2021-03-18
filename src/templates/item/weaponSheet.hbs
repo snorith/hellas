@@ -1,0 +1,168 @@
+<form class="{{cssClass}} item" autocomplete="off" autocapitalize="off">
+	<header class="sheet-header">
+		<img class="profile-img" src="{{item.img}}" data-edit="img" {{#if item.name}}title="{{item.name}}"{{/if}}/>
+		<div class="header-fields">
+			<input class="charname" name="name" type="text" required value="{{item.name}}" data-dtype="String"/>
+		</div>
+	</header>
+
+	{{!-- Sheet Tab Navigation --}}
+	<nav class="sheet-tabs tabs" data-group="primary-tabs">
+		<a class="item" data-tab="weapon">Weapon</a>
+		<a class="item" data-tab="description">Description</a>
+	</nav>
+
+	{{!-- Sheet Body --}}
+	<section class="sheet-body">
+		{{!-- weapon Tab --}}
+		<div class="tab weapon" data-group="primary-tabs" data-tab="weapon">
+			<div class="grid grid-cols-3 gap-2 mt-4 flex-none align-middle">
+				<div class="text-right">
+					<label for="{{item._id}}.data.acc"
+						   class="align-middle"
+						   title="{{localize "HELLAS.weapon.acc.title"}}">{{localize "HELLAS.weapon.acc.label"}}</label>
+				</div>
+				<div class="col-span-2">
+					<input type="number"
+						   class="w-10"
+						   id="{{item._id}}.data.acc"
+						   name="data.acc"
+						   value="{{data.acc}}"
+						   data-dtype="Number"
+						   min="-100" oninput="this.value = Math.round(this.value|0);"
+						   title="{{localize "HELLAS.weapon.acc.title"}}"/>
+				</div>
+
+				<div class="text-right">
+					<label for="{{item._id}}.data.dr"
+						   class="align-middle"
+						   title="{{localize "HELLAS.weapon.dr.title"}}">{{localize "HELLAS.weapon.dr.label"}}</label>
+				</div>
+				<div class="col-span-2">
+					<input type="number"
+						   class="w-10"
+						   id="{{item._id}}.data.dr"
+						   name="data.dr"
+						   value="{{data.dr}}"
+						   data-dtype="Number"
+						   min="-100" oninput="this.value = Math.round(this.value|0);"
+						   title="{{localize "HELLAS.weapon.dr.title"}}"/>
+				</div>
+
+				<div class="text-right">
+					<label for="{{item._id}}.data.modifier"
+						   class="align-middle"
+						   title="{{localize "HELLAS.weapon.modifier.title"}}">{{localize "HELLAS.weapon.modifier.label"}}</label>
+				</div>
+				<div class="col-span-2">
+					<select id="{{item._id}}.data.modifier" name="data.modifier" title="{{localize "HELLAS.weapon.modifier.title"}}" data-dtype="String">
+						{{#select data.modifier}}
+							{{#each item.HELLAS.weaponModifiers as |modifier|}}
+								<option value="{{modifier}}">{{localize (concat "HELLAS.weapon.modifier." modifier)}}</option>
+							{{/each}}
+						{{/select}}
+					</select>
+				</div>
+
+				<div class="text-right">
+					<label for="{{item._id}}.data.wt"
+						   class="align-middle"
+						   title="{{localize "HELLAS.weapon.wt.title"}}">{{localize "HELLAS.weapon.wt.label"}}</label>
+				</div>
+				<div class="col-span-2">
+					<input type="number"
+						   class="w-10"
+						   id="{{item._id}}.data.wt"
+						   name="data.wt"
+						   value="{{data.wt}}"
+						   data-dtype="Number"
+						   min="-100" oninput="this.value = Math.round(this.value|0);"
+						   title="{{localize "HELLAS.weapon.wt.title"}}"/>
+				</div>
+
+				<div class="text-right">
+					<label for="{{item._id}}.data.str"
+						   class="align-middle"
+						   title="{{localize "HELLAS.weapon.str.title"}}">{{localize "HELLAS.weapon.str.label"}}</label>
+				</div>
+				<div class="col-span-2">
+					<input type="number"
+						   class="w-10"
+						   id="{{item._id}}.data.str"
+						   name="data.str"
+						   value="{{data.str}}"
+						   data-dtype="Number"
+						   min="-100" oninput="this.value = Math.round(this.value|0);"
+						   title="{{localize "HELLAS.weapon.str.title"}}"/>
+				</div>
+
+				<div class="text-right">
+					<label for="{{item._id}}.data.rof"
+						   class="align-middle"
+						   title="{{localize "HELLAS.weapon.rof.title"}}">{{localize "HELLAS.weapon.rof.label"}}</label>
+				</div>
+				<div class="col-span-2">
+					<input type="number"
+						   class="w-10"
+						   id="{{item._id}}.data.rof"
+						   name="data.rof"
+						   value="{{data.rof}}"
+						   data-dtype="Number"
+						   min="-100" oninput="this.value = Math.round(this.value|0);"
+						   title="{{localize "HELLAS.weapon.rof.title"}}"/>
+				</div>
+
+				<div class="text-right">
+					<label for="{{item._id}}.data.ammo"
+						   class="align-middle"
+						   title="{{localize "HELLAS.weapon.ammo.title"}}">{{localize "HELLAS.weapon.ammo.label"}}</label>
+				</div>
+				<div class="col-span-2">
+					<input type="text"
+						   class="w-48"
+						   id="{{item._id}}.data.ammo"
+						   name="data.ammo"
+						   value="{{data.ammo}}"
+						   data-dtype="String"
+						   title="{{localize "HELLAS.weapon.ammo.title"}}"/>
+				</div>
+
+				<div class="text-right">
+					<label for="{{item._id}}.data.rng"
+						   class="align-middle"
+						   title="{{localize "HELLAS.weapon.rng.title"}}">{{localize "HELLAS.weapon.rng.label"}}</label>
+				</div>
+				<div class="col-span-2">
+					<input type="text"
+						   class="w-48"
+						   id="{{item._id}}.data.rng"
+						   name="data.rng"
+						   value="{{data.rng}}"
+						   data-dtype="String"
+						   title="{{localize "HELLAS.weapon.rng.title"}}"/>
+				</div>
+
+				<div class="text-right">
+					<label for="{{item._id}}.data.price"
+						   class="align-middle"
+						   title="{{localize "HELLAS.weapon.price.title"}}">{{localize "HELLAS.weapon.price.label"}}</label>
+				</div>
+				<div class="col-span-2">
+					<input type="number"
+						   class="w-10"
+						   id="{{item._id}}.data.price"
+						   name="data.price"
+						   value="{{data.price}}"
+						   data-dtype="Number"
+						   min="-100" oninput="this.value = Math.round(this.value|0);"
+						   title="{{localize "HELLAS.weapon.price.title"}}"/>
+				</div>
+			</div>
+		</div>
+
+		{{!-- Description Tab --}}
+		<div class="tab description" data-group="primary-tabs" data-tab="description">
+			{{editor content=data.notes target="data.notes" button=true owner=owner editable=editable}}
+		</div>
+	</section>
+</form>

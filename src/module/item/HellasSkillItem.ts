@@ -70,9 +70,6 @@ export class HellasSkillItem extends Item {
 			else
 				this.update(data).catch(reason => console.log(reason))
 		}
-
-        this.data['HELLAS'] = HELLAS						// this is being set on the item itself that the handlebars template sees
-		this.data['SPECIFY_SUBTYPE'] = SPECIFY_SUBTYPE		// this is being set on the item itself that the handlebars template sees
     }
 
     processSpecifiersForSkills(data: SkillItemDataType) {

@@ -20,7 +20,8 @@ export type hellasConfigType = {
 	skillWAssocLongAttributes: ObjectWStringArrayValues,
 	dynamismModes: string[],
 	dynamismModesSpecificBreakdowns: ObjectWStringArrayValues,
-	dynamismMode: string
+	dynamismMode: string,
+	weaponModifiers: string[]
 }
 
 export type foundryAttributeValueMax = {
@@ -213,7 +214,24 @@ const HELLAS: hellasConfigType = {
 		"shield": ['aura', 'barrier', 'ward', 'curse']
 ,	},
 
-	dynamismMode: "mode"
+	dynamismMode: "mode",
+
+	weaponModifiers: [
+		"regular",
+		"aether",
+		"armorpiercing",
+		"beam",
+		"bulky",
+		"emp",
+		"fast",
+		"flame",
+		"impaling",
+		"needle",
+		"slugthrower",
+		"sonic",
+		"torch",
+		"vehicularscale"
+	]
 }
 
 HELLAS.attributes = Object.keys(HELLAS.attributesWShortName)

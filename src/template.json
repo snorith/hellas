@@ -90,7 +90,7 @@
     }
   },
   "Item": {
-    "types": ["skill", "dynamism", "weapon"],
+    "types": ["skill", "dynamism", "weapon", "armor"],
     "templates": {
       "common": {
         "notes": "",
@@ -128,6 +128,19 @@
         "value": 0,
         "max": 0
       }
+    },
+    "weapon": {
+      "templates": ["common", "carriable", "sellable"],
+      "attribute": "combatrating",
+      "acc": 0,
+      "dr": 0,
+      "wt": 0,
+      "rof": 0,
+      "price": 0,
+      "str": 0,
+      "ammo": "",
+      "rng": "",
+      "modifier": "regular"
     }
   }
 }

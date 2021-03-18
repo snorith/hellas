@@ -57,6 +57,9 @@ export class HellasSkillItemSheet extends ItemSheet {
 			sheet.item['SKILLSPECIFICS'] = []
 		}
 
+		sheet.item['HELLAS'] = HELLAS						// this is being set on the item itself that the handlebars template sees
+		sheet.item['SPECIFY_SUBTYPE'] = SPECIFY_SUBTYPE		// this is being set on the item itself that the handlebars template sees
+
 		return sheet
 	}
 

@@ -13,6 +13,7 @@
  * @extends {Item}
  */
 import {HellasSkillItem} from "./HellasSkillItem"
+import {HellasWeaponItem} from "./HellasWeaponItem"
 
 export const HellasItem = new Proxy(function () {}, {
 
@@ -23,6 +24,8 @@ export const HellasItem = new Proxy(function () {}, {
         switch (data.type) {
             case HellasSkillItem.type:
                 return new HellasSkillItem(data, newTarget)
+			case HellasWeaponItem.type:
+				return new HellasWeaponItem(data, newTarget)
         }
     },
 
@@ -37,6 +40,8 @@ export const HellasItem = new Proxy(function () {}, {
                     switch (data.type) {
                         case HellasSkillItem.type:
                             return HellasSkillItem.create(data, options)
+						case HellasWeaponItem.type:
+							return HellasWeaponItem.create(data, options)
                     }
                 };
 
@@ -45,6 +50,7 @@ export const HellasItem = new Proxy(function () {}, {
                 return function (instance) {
                     return (
                         instance instanceof HellasSkillItem ||
+							HellasWeaponItem ||
                         // other instanceof
                         false
                     );
