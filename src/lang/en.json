@@ -5,6 +5,7 @@
   
   "HELLAS.section.attributes.title": "Attributes",
   "HELLAS.section.skills.title": "Skills",
+  "HELLAS.section.weapons.title": "Weapons",
   
   "HELLAS.character.status.dead.title": "Dead",
   
@@ -255,7 +256,7 @@
   "HELLAS.skills.mode.ward": "Ward",
   "HELLAS.skills.mode.curse": "Curse",
   
-  "HELLAS.item.skill.newSkill": "New skill",
+  "HELLAS.item.skill.new": "New skill",
   "HELLAS.item.skill.name.combiner": "{skill} - {specifier}",
   "HELLAS.item.skill.name.combiner2": "{skill} - {specifier} - {type}",
   "HELLAS.item.skill.roll": "Roll skill",
@@ -316,7 +317,12 @@
   "HELLAS.die.roll.outcome.success": "Success",
   "HELLAS.die.roll.outcome.critsuccess": "Critical Success",
 
-  "HELLAS.item.weapon.newWeapon": "New weapon",
+  "HELLAS.item.weapon.new": "New weapon",
+  "HELLAS.item.weapon.roll": "Roll weapon",
+
+  "HELLAS.weapons.controls.add": "Add skill",
+  "HELLAS.weapons.controls.edit": "Edit skill",
+  "HELLAS.weapons.controls.delete": "Delete skill",
   
   "HELLAS.weapon.modifier.regular": "Regular",
   "HELLAS.weapon.modifier.aether": "Æther (Æ)",
@@ -333,6 +339,7 @@
   "HELLAS.weapon.modifier.torch": "Torch (†)",
   "HELLAS.weapon.modifier.vehicularscale": "Vehicular-Scale (☼)",
 
+  "HELLAS.weapon.skillid.label": "Skill",
   "HELLAS.weapon.acc.label": "Accuracy",
   "HELLAS.weapon.dr.label": "Damage Rating",
   "HELLAS.weapon.modifier.label": "Modifier",
@@ -343,6 +350,7 @@
   "HELLAS.weapon.rng.label": "Range",
   "HELLAS.weapon.price.label": "Price",
 
+  "HELLAS.weapon.skillid.title": "Skill used with this weapon",
   "HELLAS.weapon.acc.title": "(ACC) Accuracy modifier that is either added or subtracted from the attack roll",
   "HELLAS.weapon.dr.title": "(DR) Base Damage Rating: Minimum damage the weapon inflicts upon a successful attack",
   "HELLAS.weapon.modifier.title": "Modifier",

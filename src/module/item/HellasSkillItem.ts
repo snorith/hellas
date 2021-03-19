@@ -44,7 +44,7 @@ export class HellasSkillItem extends Item {
 		// @ts-ignore
 		if (isEmptyOrSpaces(itemData.skill || '')) {
 			if (isEmptyOrSpaces(this.data.name))
-				this.data.name = game.i18n.localize("HELLAS.item.skill.newSkill")
+				this.data.name = game.i18n.localize("HELLAS.item.skill.new")
 		}
         else {
 			this.processSpecifiersForSkills(itemData as SkillItemDataType)
@@ -118,8 +118,12 @@ export class HellasSkillItem extends Item {
 		// `skillid` is used to uniquely identify a skill based on the attribute/specifier/custom
 		// this is used which skill to associate with a dynamism (spell) when defining them
 		const skillid = [data.skill, data.specifier, data.specifierCustom].join('.')
-		data.skillid = skillid
-		changes = set(changes, "data.skillid", skillid)
+
+		if (data.skillid !== skillid && !!this.actor) {
+			data.skillid = skillid
+			changes = set(changes, "data.skillid", skillid)
+			this.actor.updateOwnedItem(changes).catch(reason => console.log(reason))
+		}
 
 		this.data.data = data
 	}
@@ -160,7 +164,7 @@ export class HellasSkillItem extends Item {
 		const skillName = this.data.data.skill || ''
 
 		if (isEmptyOrSpaces(skillName)) {
-			return game.i18n.localize("HELLAS.item.skill.newSkill")
+			return game.i18n.localize("HELLAS.item.skill.new")
 		}
 
 		let workingil8nName = game.i18n.localize("HELLAS.skills." + skillName + ".name")

@@ -6,7 +6,8 @@ import {HELLAS, SPECIFY_SUBTYPE} from "../config"
 import {getRollModifiers} from "../dialog/modifiers"
 import {determineDieRollOutcome} from "../dice"
 import {systemBasePath} from "../settings"
-import {SkillItemType} from "../item/HellasSkillItem"
+import {HellasSkillItem, SkillItemType} from "../item/HellasSkillItem"
+import {sortItemsByNameFunction} from "./HellasActorSheet"
 
 export class HellasActor extends Actor {
 	prepareData() {
@@ -64,5 +65,18 @@ export class HellasActor extends Actor {
 		}, {rollMode: CONFIG.Dice.rollModes.PUBLIC})
 
 		return true
+	}
+
+	/**
+	 * Get a list of skills whose skillid begins with a prefix
+	 *
+	 * @param {string} prefix
+	 * @returns {HellasSkillItem[]}
+	 */
+	getSkillsBySkillIDPrefix(prefix) {
+		const items = this.data.items as any
+		const skills = items.filter(i => i.type === HellasSkillItem.type && i.data?.skillid?.startsWith(prefix)).sort(sortItemsByNameFunction)
+
+		return skills
 	}
 }

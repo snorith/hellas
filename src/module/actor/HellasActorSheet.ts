@@ -7,9 +7,9 @@ import {foundryAttributeValueMax, HELLAS} from "../config"
 import set from "lodash-es/set"
 import {HellasSkillItem} from "../item/HellasSkillItem"
 import {HellasActor} from "./HellasActor"
+import {HellasWeaponItem} from "../item/HellasWeaponItem"
 
-// short skills
-const sortSkillsByNameFunction = (a, b) => a.name < b.name ? -1 : a.name > b.name ? 1 : 0
+export const sortItemsByNameFunction = (a, b) => a.name < b.name ? -1 : a.name > b.name ? 1 : 0
 
 export class HellasActorSheet extends ActorSheet {
 
@@ -73,12 +73,13 @@ export class HellasActorSheet extends ActorSheet {
 
 		// filter out skills and sort them
 		Object.entries({
-			skills: HellasSkillItem.type
+			skills: HellasSkillItem.type,
+			weapons: HellasWeaponItem.type
 		}).forEach(([val, type]) => {
 			// @ts-ignore
 			if (!sheetData.data.items[val])
 			{
-				sheetData.data.items[val] = items.filter(i => i.type === type).sort(sortSkillsByNameFunction)
+				sheetData.data.items[val] = items.filter(i => i.type === type).sort(sortItemsByNameFunction)
 			}
 		});
 	}
@@ -179,7 +180,7 @@ export class HellasActorSheet extends ActorSheet {
 		const data = duplicate(element.dataset)
 
 		// Initialize a default name.
-		const name = game.i18n.localize(`HELLAS.item.${type}.newSkill`)
+		const name = game.i18n.localize(`HELLAS.item.${type}.new`)
 		// Prepare the item object.
 		const itemData = {
 			name: name,

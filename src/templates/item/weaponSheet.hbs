@@ -18,6 +18,22 @@
 		<div class="tab weapon" data-group="primary-tabs" data-tab="weapon">
 			<div class="grid grid-cols-3 gap-2 mt-4 flex-none align-middle">
 				<div class="text-right">
+					<label for="{{item._id}}.data.skillid"
+						   class="align-middle"
+						   title="{{localize "HELLAS.weapon.skillid.title"}}">{{localize "HELLAS.weapon.skillid.label"}}</label>
+				</div>
+				<div class="col-span-2">
+					<select id="{{item._id}}.data.skillid" name="data.modifier" title="{{localize "HELLAS.weapon.skillid.title"}}" data-dtype="String">
+						<option value="combatrating">{{localize "HELLAS.attributes.combatrating.name"}}</option>
+						{{#select data.skillid}}
+							{{#each item.SKILLS as |skill|}}
+								<option value="{{skill._id}}">{{skill.name}}</option>
+							{{/each}}
+						{{/select}}
+					</select>
+				</div>
+
+				<div class="text-right">
 					<label for="{{item._id}}.data.acc"
 						   class="align-middle"
 						   title="{{localize "HELLAS.weapon.acc.title"}}">{{localize "HELLAS.weapon.acc.label"}}</label>

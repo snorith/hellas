@@ -130,8 +130,7 @@
       }
     },
     "weapon": {
-      "templates": ["common", "carriable", "sellable"],
-      "attribute": "combatrating",
+      "templates": ["common", "carriable", "sellable", "skilltype"],
       "acc": 0,
       "dr": 0,
       "wt": 0,

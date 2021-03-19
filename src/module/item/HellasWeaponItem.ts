@@ -3,7 +3,7 @@ import {isEmptyOrSpaces} from "../settings"
 export type WeaponItemDataType = {
 	version: number,
 	notes: string,
-	attribute: string,			// attribute used when rolling to hit
+	skillid: string,				// attribute used when rolling to hit
 	acc: number,				// accuracy modifier on roll to hit
 	dr: number,					// damage rating -- minimum damage done
 	wt: number,					// weight
@@ -28,6 +28,8 @@ export type WeaponMemoryType = {
 	data: WeaponItemType
 }
 
+export const DEFAULT_WEAPON_SKILLID = 'combatrating'
+
 export class HellasWeaponItem extends Item {
 	static get type() {
 		return "weapon";
@@ -38,7 +40,7 @@ export class HellasWeaponItem extends Item {
 		if (!this.data.img) this.data.img = 'icons/svg/sword.svg';
 		super.prepareData();
 
-		const itemData = this.data.data || {}
+		const itemData = (this.data.data || {}) as unknown as WeaponItemDataType
 
 		if (isEmptyOrSpaces(this.data.name))
 			this.data.name = game.i18n.localize("HELLAS.item.weapon.newWeapon")
@@ -47,5 +49,20 @@ export class HellasWeaponItem extends Item {
 		itemData.name = this.data.name
 		// @ts-ignore
 		this.data.name = itemData.name
+
+		itemData.skillid = itemData.skillid || DEFAULT_WEAPON_SKILLID
+
+		if (!this.actor) {
+			// if we don't belong to an actor, then default the 'skillid'
+			if (itemData.skillid !== DEFAULT_WEAPON_SKILLID) {
+				const changeData = {
+					_id: this._id,
+					data: {
+						"skillid": DEFAULT_WEAPON_SKILLID
+					}
+				}
+				this.update(changeData).catch(reason => console.log(reason))
+			}
+		}
 	}
 }

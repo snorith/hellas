@@ -1,6 +1,7 @@
 import {systemBasePath} from "../../settings"
 import {HellasWeaponItem, WeaponMemoryType} from "../HellasWeaponItem"
 import {HELLAS} from "../../config"
+import {HellasActor} from "../../actor/HellasActor"
 
 export class HellasWeaponItemSheet extends ItemSheet {
 	/**
@@ -37,6 +38,10 @@ export class HellasWeaponItemSheet extends ItemSheet {
 		let sheet = super.getData() as unknown as WeaponMemoryType
 
 		sheet.item['HELLAS'] = HELLAS
+		if (this.actor)
+			sheet.item['SKILLS'] = (this.actor as HellasActor).getSkillsBySkillIDPrefix("weapon")
+		else
+			sheet.item['SKILLS'] = []
 
 		return sheet
 	}
