@@ -320,9 +320,9 @@
   "HELLAS.item.weapon.new": "New weapon",
   "HELLAS.item.weapon.roll": "Roll weapon",
 
-  "HELLAS.weapons.controls.add": "Add skill",
-  "HELLAS.weapons.controls.edit": "Edit skill",
-  "HELLAS.weapons.controls.delete": "Delete skill",
+  "HELLAS.weapons.controls.add": "Add weapon",
+  "HELLAS.weapons.controls.edit": "Edit weapon",
+  "HELLAS.weapons.controls.delete": "Delete weapon",
   
   "HELLAS.weapon.modifier.regular": "Regular",
   "HELLAS.weapon.modifier.aether": "Æther (Æ)",
@@ -339,6 +339,8 @@
   "HELLAS.weapon.modifier.torch": "Torch (†)",
   "HELLAS.weapon.modifier.vehicularscale": "Vehicular-Scale (☼)",
 
+  "HELLAS.weapon.skillid.default.name":  "Combat Rating Attribute",
+  
   "HELLAS.weapon.skillid.label": "Skill",
   "HELLAS.weapon.acc.label": "Accuracy",
   "HELLAS.weapon.dr.label": "Damage Rating",

@@ -23,8 +23,8 @@
 						   title="{{localize "HELLAS.weapon.skillid.title"}}">{{localize "HELLAS.weapon.skillid.label"}}</label>
 				</div>
 				<div class="col-span-2">
-					<select id="{{item._id}}.data.skillid" name="data.modifier" title="{{localize "HELLAS.weapon.skillid.title"}}" data-dtype="String">
-						<option value="combatrating">{{localize "HELLAS.attributes.combatrating.name"}}</option>
+					<select id="{{item._id}}.data.skillid" name="data.skillid" title="{{localize "HELLAS.weapon.skillid.title"}}" data-dtype="String">
+						<option value="combatrating">{{localize "HELLAS.weapon.skillid.default.name"}}</option>
 						{{#select data.skillid}}
 							{{#each item.SKILLS as |skill|}}
 								<option value="{{skill._id}}">{{skill.name}}</option>
