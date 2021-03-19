@@ -29,15 +29,25 @@ export type WeaponMemoryType = {
 }
 
 export const DEFAULT_WEAPON_SKILLID = 'combatrating'
+const DEFAULT_WEAPON_IMG = 'icons/svg/sword.svg'
 
 export class HellasWeaponItem extends Item {
 	static get type() {
 		return "weapon";
 	}
 
+	/**
+	 * Create a new entity using provided input data
+	 * @override
+	 */
+	static async create(data, options = {}) {
+		data.img = DEFAULT_WEAPON_IMG;
+		return super.create(data, options);
+	}
+
 	prepareData() {
 		// Override common default icon
-		if (!this.data.img) this.data.img = 'icons/svg/sword.svg';
+		if (!this.data.img) this.data.img = DEFAULT_WEAPON_IMG;
 		super.prepareData();
 
 		const itemData = (this.data.data || {}) as unknown as WeaponItemDataType

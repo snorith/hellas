@@ -3,6 +3,7 @@ import set from "lodash-es/set"
 import {isEmptyOrSpaces, systemBasePath} from "../settings"
 import {getRollModifiers} from "../dialog/modifiers"
 import {determineDieRollOutcome} from "../dice"
+import {DEFAULT_WEAPON_IMG} from "./HellasWeaponItem"
 
 export type SkillItemDataType = {
 	version: number,
@@ -29,14 +30,25 @@ export type SkillMemoryType = {
 	data: SkillItemDataType
 }
 
+const DEFAULT_SKILL_IMG = 'icons/svg/lightning.svg'
+
 export class HellasSkillItem extends Item {
     static get type() {
         return "skill";
     }
 
+	/**
+	 * Create a new entity using provided input data
+	 * @override
+	 */
+	static async create(data, options = {}) {
+		data.img = DEFAULT_SKILL_IMG;
+		return super.create(data, options);
+	}
+
     prepareData() {
         // Override common default icon
-        if (!this.data.img) this.data.img = 'icons/svg/lightning.svg';
+        if (!this.data.img) this.data.img = DEFAULT_SKILL_IMG;
         super.prepareData();
 
 		const itemData = this.data.data || {}

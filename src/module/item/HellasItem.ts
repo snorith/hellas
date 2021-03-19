@@ -35,8 +35,6 @@ export const HellasItem = new Proxy(function () {}, {
             case "create":
                 //Calling the class' create() static function
                 return function (data, options) {
-                    console.log('new item type = ' + data.type)
-
                     switch (data.type) {
                         case HellasSkillItem.type:
                             return HellasSkillItem.create(data, options)
