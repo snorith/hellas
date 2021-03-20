@@ -17,6 +17,26 @@ export const registerSettings = function() {
 		return outStr
 	})
 
+	/**
+	 * Given an array of objects, return the first entry where the object's property named 'key' has the value 'value'
+	 */
+	Handlebars.registerHelper('findEntryByKeyValue', function (arr: object[], key: string, value: any, options): object {
+		if (!Array.isArray(arr)) {
+			console.log('first param is not an array: ' + arr)
+			return null
+		}
+
+		for (let i = 0; i < arr.length; i++) {
+			const entry = arr[i]
+			if (!entry.hasOwnProperty(key))
+				continue
+			if (entry[key] === value)
+				return entry
+		}
+
+		return null
+	})
+
 	// if 'elem' is in an array
 	Handlebars.registerHelper('ifIn', function(elem, list, options) {
 		if(list.indexOf(elem) > -1) {

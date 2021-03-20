@@ -4,7 +4,6 @@
  */
 import {systemBasePath} from "../settings"
 import {foundryAttributeValueMax, HELLAS} from "../config"
-import set from "lodash-es/set"
 import {HellasSkillItem} from "../item/HellasSkillItem"
 import {HellasActor} from "./HellasActor"
 import {HellasWeaponItem} from "../item/HellasWeaponItem"
@@ -114,6 +113,9 @@ export class HellasActorSheet extends ActorSheet {
 
 		// roll an attribute
 		html.find('.attr-roll').click(this._onAttrRoll.bind(this))
+
+		// roll a weapon
+		html.find('.weapon-roll').click(this._onWeaponRoll.bind(this))
 	}
 
 	_onAttrRoll(event) {
@@ -137,6 +139,21 @@ export class HellasActorSheet extends ActorSheet {
 		const itemID = element.dataset.itemId
 
 		const item = this.actor.getOwnedItem(itemID) as HellasSkillItem
+		if (!item)
+			return false
+
+		item.roll().catch(reason => console.log(reason))
+
+		return false
+	}
+
+	_onWeaponRoll(event) {
+		event.preventDefault()
+
+		const element = event.currentTarget
+		const itemID = element.dataset.itemId
+
+		const item = this.actor.getOwnedItem(itemID) as HellasWeaponItem
 		if (!item)
 			return false
 

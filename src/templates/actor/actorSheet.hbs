@@ -143,15 +143,17 @@
 					<table class="skills shadow-md border-gray-500 border-solid border-opacity-100 border-l border-r">
 						<thead>
 						<tr>
-							<td colspan="7" class="hellas-titling text-center">{{localize "HELLAS.section.weapons.title"}}</td>
+							<td colspan="9" class="hellas-titling text-center">{{localize "HELLAS.section.weapons.title"}}</td>
 						</tr>
 						<tr>
 							<td></td>
-							<td class="hellas-titling text-center">{{localize "HELLAS.skill.column.name"}}</td>
+							<td class="hellas-titling text-center">{{localize "HELLAS.weapon.column.name"}}</td>
 							<td class="w-4"></td>
-<!--							<td class="hellas-titling text-center">{{localize "HELLAS.skill.column.level"}}</td>-->
-<!--							<td class="hellas-titling text-center">{{localize "HELLAS.skill.column.attr"}}</td>-->
-<!--							<td class="hellas-titling text-center">{{localize "HELLAS.skill.column.rating"}}</td>-->
+							<td class="hellas-titling text-center">{{localize "HELLAS.weapon.column.acc"}}</td>
+							<td class="hellas-titling text-center">{{localize "HELLAS.weapon.column.dr"}}</td>
+							<td class="hellas-titling text-center">{{localize "HELLAS.weapon.column.rof"}}</td>
+							<td class="hellas-titling text-center">{{localize "HELLAS.weapon.column.ammo"}}</td>
+							<td class="hellas-titling text-center">{{localize "HELLAS.weapon.column.rng"}}</td>
 							<td class="hellas-titling text-center items-center w-4">
 								<div class="item-controls w-auto">
 									<a class="item-control item-create" title="{{localize "HELLAS.weapons.controls.add"}}" data-type="weapon"><i class="fas fa-plus"></i></a>
@@ -162,18 +164,18 @@
 						<tbody>
 						{{#each data.items.weapons as |weapon key|}}
 							<tr class="item" data-item-id="{{weapon._id}}">
-								<td class="pl-1">{{#ifEmptyOrWhitespace weapon.data.notes}}
-									<i class="fas fa-info-circle disabled"></i>
-								{{else}}
+								<td class="pl-1">
 									<span class="tooltip" data-tooltip-content="#tooltip_content_{{weapon._id}}"><i class="fas fa-info-circle"></i></span>
-								{{/ifEmptyOrWhitespace}}</td>
+								</td>
 								<td>{{weapon.name}}</td>
-<!--								<td class="text-center w-4">-->
-<!--									<a class="item-control skill-roll" data-item-id="{{weapon._id}}" data-rating="{{weapon.data.level.max}}" data-name="{{skill.name}}" title="{{localize "HELLAS.item.skill.roll"}}"><i class="fas fa-dice-d20"></i></a>-->
-<!--								</td>-->
-<!--								<td class="text-center">{{skill.data.level.value}}</td>-->
-<!--								<td class="text-center">{{skill.data.attribute}}</td>-->
-<!--								<td class="text-center">{{skill.data.level.max}}</td>-->
+								<td class="text-center w-4">
+									<a class="item-control weapon-roll" data-item-id="{{weapon._id}}" title="{{localize "HELLAS.item.weapon.roll"}}"><i class="fas fa-dice-d20"></i></a>
+								</td>
+								<td class="text-center">{{weapon.data.acc}}</td>
+								<td class="text-center">{{weapon.data.dr}}{{localize (concat "HELLAS.weapon.modifier.short." weapon.data.modifier)}}</td>
+								<td class="text-center">{{weapon.data.rof}}</td>
+								<td class="text-center">{{weapon.data.ammo}}</td>
+								<td class="text-center">{{weapon.data.rng}}</td>
 								<td class="text-center align-middle w-4 pr-1">
 									<div class="item-controls w-auto">
 										<a class="item-control item-edit" title="{{localize "HELLAS.weapons.controls.edit"}}"><i class="fas fa-edit"></i></a>
@@ -216,6 +218,71 @@
 						<div style="max-width: 640px;">
 							{{!-- raw html output --}}
 							{{{skill.data.notes}}}
+						</div>
+					</div>
+				{{/each}}
+				{{#each data.items.weapons as |weapon key|}}
+					<div id="tooltip_content_{{weapon._id}}">
+						<img src="{{weapon.img}}" title="{{weapon.name}}" alt="{{weapon.name}}" height="50"/>
+						<h1 style="display: inline; margin-left: 4px;">{{weapon.name}}</h1>
+						<table style="max-width: 640px;">
+							<tbody>
+							<tr>
+								<td>{{localize "HELLAS.weapon.skillid.label"}}</td>
+								<td>{{#if (eq weapon.data.skillid "combatrating")}}
+									{{localize "HELLAS.weapon.skillid.default.name"}}
+								{{else}}
+									{{setVar "weaponSkill" (findEntryByKeyValue @root.data.items.skills "_id" weapon.data.skillid)}}
+									{{#if @root.weaponSkill}}
+										{{@root.weaponSkill.name}}
+									{{else}}
+										{{localize "HELLAS.weapon.skillid.unknown.name"}}
+									{{/if}}
+								{{/if}}
+								</td>
+							</tr>
+							<tr>
+								<td>{{localize "HELLAS.weapon.acc.label"}}</td>
+								<td>{{weapon.data.acc}}</td>
+							</tr>
+							<tr>
+								<td>{{localize "HELLAS.weapon.dr.label"}}</td>
+								<td>{{weapon.data.dr}}</td>
+							</tr>
+
+							<tr>
+								<td>{{localize "HELLAS.weapon.modifier.label"}}</td>
+								<td>{{localize (concat "HELLAS.weapon.modifier.long." weapon.data.modifier)}}</td>
+							</tr>
+							<tr>
+								<td>{{localize "HELLAS.weapon.wt.label"}}</td>
+								<td>{{weapon.data.wt}}</td>
+							</tr>
+							<tr>
+								<td>{{localize "HELLAS.weapon.str.label"}}</td>
+								<td>{{weapon.data.str}}</td>
+							</tr>
+							<tr>
+								<td>{{localize "HELLAS.weapon.rof.label"}}</td>
+								<td>{{weapon.data.rof}}</td>
+							</tr>
+							<tr>
+								<td>{{localize "HELLAS.weapon.ammo.label"}}</td>
+								<td>{{weapon.data.ammo}}</td>
+							</tr>
+							<tr>
+								<td>{{localize "HELLAS.weapon.rng.label"}}</td>
+								<td>{{weapon.data.rng}}</td>
+							</tr>
+							<tr>
+								<td>{{localize "HELLAS.weapon.price.label"}}</td>
+								<td>{{weapon.data.price}}</td>
+							</tr>
+							</tbody>
+						</table>
+						<div style="max-width: 640px;">
+							{{!-- raw html output --}}
+							{{{weapon.data.notes}}}
 						</div>
 					</div>
 				{{/each}}

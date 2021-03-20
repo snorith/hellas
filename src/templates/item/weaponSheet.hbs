@@ -74,7 +74,7 @@
 					<select id="{{item._id}}.data.modifier" name="data.modifier" title="{{localize "HELLAS.weapon.modifier.title"}}" data-dtype="String">
 						{{#select data.modifier}}
 							{{#each item.HELLAS.weaponModifiers as |modifier|}}
-								<option value="{{modifier}}">{{localize (concat "HELLAS.weapon.modifier." modifier)}}</option>
+								<option value="{{modifier}}">{{localize (concat "HELLAS.weapon.modifier.long." modifier)}}</option>
 							{{/each}}
 						{{/select}}
 					</select>

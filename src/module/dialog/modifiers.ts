@@ -14,9 +14,11 @@ interface modifierDialogFieldsT {
 
 type modifierDialogT = dialogCancelledT | modifierDialogFieldsT
 
-export async function getRollModifiers(): Promise<modifierDialogT> {
+export async function getRollModifiers(baseModifier = 0): Promise<modifierDialogT> {
 	const template = `${systemBasePath}/templates/dialog/modifiers.hbs`
-	const html = await renderTemplate(template, {})
+	const html = await renderTemplate(template, {
+		baseModifier
+	})
 
 	return new Promise(resolve => {
 		const data = {
