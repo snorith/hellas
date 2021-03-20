@@ -143,7 +143,8 @@ export class HellasWeaponItem extends Item {
 
 		const template = `${systemBasePath}/templates/chat/weaponroll.hbs`
 		const html = await renderTemplate(template, {
-			name: skillName,
+			name: this.name,
+			skill: skillName,
 			outcome: outcome,
 			data: rollData,
 		})
