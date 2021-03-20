@@ -15,7 +15,8 @@ export type WeaponItemDataType = {
 	str: number,				// strength penalty (pg 206 of core book, -2 roll modifier penalty for each point that the character's STR falls short of this weapon's minimum STR requirement, missile weapons suffer -4 roll modifier per point)
 	ammo: string,				// type of ammo (if slug thrower)
 	rng: string,				// range (if ranged weapon)
-	modifier: string			// type of weapon (aether, flame, sonic etc...)
+	modifier: string,			// type of weapon (aether, flame, sonic etc...),
+	ismissile: boolean			// is a missile weapon for purposes of STR penalty
 }
 
 export type WeaponItemType = {
@@ -103,10 +104,7 @@ export class HellasWeaponItem extends Item {
 		 */
 		if (characterSTR < itemData.str) {
 			const delta = itemData.str - characterSTR
-			let penalty = -2
-			if (!isEmptyOrSpaces(itemData.rng))
-				penalty = -4
-			weaponRollingPenalty += delta * penalty
+			weaponRollingPenalty += delta * ((!!itemData.ismissile) ? -4 : -2)
 		}
 		weaponRollingPenalty += itemData.acc
 

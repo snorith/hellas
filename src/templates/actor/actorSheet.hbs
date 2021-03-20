@@ -228,7 +228,7 @@
 						<table style="max-width: 640px;">
 							<tbody>
 							<tr>
-								<td>{{localize "HELLAS.weapon.skillid.label"}}</td>
+								<td style="padding-right: 3px;">{{localize "HELLAS.weapon.skillid.label"}}</td>
 								<td>{{#if (eq weapon.data.skillid "combatrating")}}
 									{{localize "HELLAS.weapon.skillid.default.name"}}
 								{{else}}
@@ -242,40 +242,44 @@
 								</td>
 							</tr>
 							<tr>
-								<td>{{localize "HELLAS.weapon.acc.label"}}</td>
+								<td style="padding-right: 3px;">{{localize "HELLAS.weapon.acc.label"}}</td>
 								<td>{{weapon.data.acc}}</td>
 							</tr>
 							<tr>
-								<td>{{localize "HELLAS.weapon.dr.label"}}</td>
+								<td style="padding-right: 3px;">{{localize "HELLAS.weapon.dr.label"}}</td>
 								<td>{{weapon.data.dr}}</td>
 							</tr>
 
 							<tr>
-								<td>{{localize "HELLAS.weapon.modifier.label"}}</td>
+								<td style="padding-right: 3px;">{{localize "HELLAS.weapon.modifier.label"}}</td>
 								<td>{{localize (concat "HELLAS.weapon.modifier.long." weapon.data.modifier)}}</td>
 							</tr>
 							<tr>
-								<td>{{localize "HELLAS.weapon.wt.label"}}</td>
+								<td style="padding-right: 3px;">{{localize "HELLAS.weapon.wt.label"}}</td>
 								<td>{{weapon.data.wt}}</td>
 							</tr>
 							<tr>
-								<td>{{localize "HELLAS.weapon.str.label"}}</td>
+								<td style="padding-right: 3px;">{{localize "HELLAS.weapon.str.label"}}</td>
 								<td>{{weapon.data.str}}</td>
 							</tr>
 							<tr>
-								<td>{{localize "HELLAS.weapon.rof.label"}}</td>
+								<td style="padding-right: 3px;">{{localize "HELLAS.weapon.rof.label"}}</td>
 								<td>{{weapon.data.rof}}</td>
 							</tr>
 							<tr>
-								<td>{{localize "HELLAS.weapon.ammo.label"}}</td>
+								<td style="padding-right: 3px;">{{localize "HELLAS.weapon.ammo.label"}}</td>
 								<td>{{weapon.data.ammo}}</td>
 							</tr>
 							<tr>
-								<td>{{localize "HELLAS.weapon.rng.label"}}</td>
+								<td style="padding-right: 3px;">{{localize "HELLAS.weapon.rng.label"}}</td>
 								<td>{{weapon.data.rng}}</td>
 							</tr>
 							<tr>
-								<td>{{localize "HELLAS.weapon.price.label"}}</td>
+								<td style="padding-right: 3px;">{{localize "HELLAS.weapon.ismissile.label"}}</td>
+								<td>{{#if weapon.data.ismissile}}<i class="fas fa-check-square"></i>{{/if}}</td>
+							</tr>
+							<tr>
+								<td style="padding-right: 3px;">{{localize "HELLAS.weapon.price.label"}}</td>
 								<td>{{weapon.data.price}}</td>
 							</tr>
 							</tbody>

@@ -139,7 +139,8 @@
       "str": 0,
       "ammo": "",
       "rng": "",
-      "modifier": "regular"
+      "modifier": "regular",
+      "ismissile": false
     }
   }
 }

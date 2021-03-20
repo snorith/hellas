@@ -222,7 +222,6 @@ const HELLAS: hellasConfigType = {
 		"armorpiercing",
 		"beam",
 		"bulky",
-		"emp",
 		"fast",
 		"flame",
 		"impaling",

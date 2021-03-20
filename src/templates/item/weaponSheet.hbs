@@ -159,6 +159,15 @@
 				</div>
 
 				<div class="text-right">
+					<label for="{{item._id}}.data.ismissile"
+						   class="align-middle"
+						   title="{{localize "HELLAS.weapon.ismissile.title"}}">{{localize "HELLAS.weapon.ismissile.label"}}</label>
+				</div>
+				<div class="col-span-2">
+					<input type="checkbox" id="{{item._id}}.data.ismissile" name="data.ismissile" {{checked data.ismissile}} data-dtype="Boolean" title="{{localize "HELLAS.weapon.ismissile.title"}}"/>
+				</div>
+
+				<div class="text-right">
 					<label for="{{item._id}}.data.price"
 						   class="align-middle"
 						   title="{{localize "HELLAS.weapon.price.title"}}">{{localize "HELLAS.weapon.price.label"}}</label>
