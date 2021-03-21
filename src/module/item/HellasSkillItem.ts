@@ -1,7 +1,7 @@
 import {foundryAttributeValueMax, HELLAS, SPECIFY_SUBTYPE} from "../config"
 import set from "lodash-es/set"
 import {isEmptyOrSpaces, systemBasePath} from "../settings"
-import {getRollModifiers} from "../dialog/modifiers"
+import {getRollModifiers, multipleActionPenalty} from "../dialog/modifiers"
 import {determineDieRollOutcome} from "../dice"
 import {DEFAULT_WEAPON_IMG} from "./HellasWeaponItem"
 
@@ -237,12 +237,11 @@ export class HellasSkillItem extends Item {
 		const itemData = item.data
 
 		let rollData = mergeObject({
-			speed: actorData.attributes.speed.value,
-			spdused: modifiers.multipleactionscount > 0 ? 1 : 0
+			multipleactionspenalty: multipleActionPenalty(modifiers.multipleactionscount, actorData.attributes.speed.value)
 		}, modifiers as any)
 		rollData = mergeObject(rollData, itemData)
 
-		const roll = new Roll('d20 + @level.max + @dod + @nonproficiency + ((@multipleactionscount * -5) + (@spdused * @speed)) + @modifier', rollData).roll()
+		const roll = new Roll('d20 + @level.max + @dod + @nonproficiency + @multipleactionspenalty + @modifier', rollData).roll()
 		const outcome = determineDieRollOutcome( roll.total )
 
 		const template = `${systemBasePath}/templates/chat/skillroll.hbs`

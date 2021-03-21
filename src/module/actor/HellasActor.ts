@@ -3,7 +3,7 @@
  * @extends {Actor}
  */
 import {HELLAS, SPECIFY_SUBTYPE} from "../config"
-import {getRollModifiers} from "../dialog/modifiers"
+import {getRollModifiers, multipleActionPenalty} from "../dialog/modifiers"
 import {determineDieRollOutcome} from "../dice"
 import {systemBasePath} from "../settings"
 import {HellasSkillItem, SkillItemType} from "../item/HellasSkillItem"
@@ -44,12 +44,11 @@ export class HellasActor extends Actor {
 		const actorData = this.data.data as any
 
 		const rollData = mergeObject({
-			speed: actorData.attributes.speed.value,
-			spdused: modifiers.multipleactionscount > 0 ? 1 : 0,
+			multipleactionspenalty: multipleActionPenalty(modifiers.multipleactionscount, actorData.attributes.speed.value),
 			attribute: actorData.attributes[attribute]
 		}, modifiers as any)
 
-		const roll = new Roll('d20 + @attribute.value + @dod + @nonproficiency + ((@multipleactionscount * -5) + (@spdused * @speed)) + @modifier', rollData).roll()
+		const roll = new Roll('d20 + @attribute.value + @dod + @nonproficiency + @multipleactionspenalty + @modifier', rollData).roll()
 		const outcome = determineDieRollOutcome( roll.total )
 
 		const template = `${systemBasePath}/templates/chat/attributeroll.hbs`

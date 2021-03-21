@@ -1,5 +1,5 @@
 import {isEmptyOrSpaces, systemBasePath} from "../settings"
-import {getRollModifiers} from "../dialog/modifiers"
+import {getRollModifiers, multipleActionPenalty} from "../dialog/modifiers"
 import {determineDieRollOutcome} from "../dice"
 import {HellasSkillItem, SkillItemType} from "./HellasSkillItem"
 
@@ -131,12 +131,11 @@ export class HellasWeaponItem extends Item {
 		}
 
 		let rollData = mergeObject({
-			speed: actorData.attributes.speed.value,
-			spdused: modifiers.multipleactionscount > 0 ? 1 : 0,
+			multipleactionspenalty: multipleActionPenalty(modifiers.multipleactionscount, actorData.attributes.speed.value),
 			baseLevel
 		}, modifiers as any)
 
-		const roll = new Roll('d20 + @baseLevel + @dod + @nonproficiency + ((@multipleactionscount * -5) + (@spdused * @speed)) + @modifier', rollData).roll()
+		const roll = new Roll('d20 + @baseLevel + @dod + @nonproficiency + @multipleactionspenalty + @modifier', rollData).roll()
 		const outcome = determineDieRollOutcome( roll.total )
 
 		const template = `${systemBasePath}/templates/chat/weaponroll.hbs`
