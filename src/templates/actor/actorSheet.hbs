@@ -254,6 +254,11 @@
 								<td style="padding-right: 3px;">{{localize "HELLAS.weapon.modifier.label"}}</td>
 								<td>{{localize (concat "HELLAS.weapon.modifier.long." weapon.data.modifier)}}</td>
 							</tr>
+							{{#unless (eq weapon.data.modifier "regular")}}
+								<tr>
+									<td colspan="2">{{{localize (concat "HELLAS.weapon.modifier.desc." weapon.data.modifier)}}}</td>
+								</tr>
+							{{/unless}}
 							<tr>
 								<td style="padding-right: 3px;">{{localize "HELLAS.weapon.wt.label"}}</td>
 								<td>{{weapon.data.wt}}</td>
