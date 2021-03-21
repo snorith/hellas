@@ -42,7 +42,7 @@ export class HellasSkillItem extends Item {
 	 * @override
 	 */
 	static async create(data, options = {}) {
-		data.img = DEFAULT_SKILL_IMG;
+		data.img = data.img ||  DEFAULT_SKILL_IMG;
 		return super.create(data, options);
 	}
 

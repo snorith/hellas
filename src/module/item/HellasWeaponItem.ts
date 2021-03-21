@@ -45,7 +45,7 @@ export class HellasWeaponItem extends Item {
 	 * @override
 	 */
 	static async create(data, options = {}) {
-		data.img = DEFAULT_WEAPON_IMG;
+		data.img = data.img || DEFAULT_WEAPON_IMG;
 		return super.create(data, options);
 	}
 
