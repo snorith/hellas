@@ -6,6 +6,7 @@
   "HELLAS.section.attributes.title": "Attributes",
   "HELLAS.section.skills.title": "Skills",
   "HELLAS.section.weapons.title": "Weapons",
+  "HELLAS.section.armor.title": "Armor",
   
   "HELLAS.character.status.dead.title": "Dead",
   
@@ -390,6 +391,7 @@
   "HELLAS.weapon.rng.label": "Range",
   "HELLAS.weapon.price.label": "Price",
   "HELLAS.weapon.ismissile.label": "Missile Weapon",
+  "HELLAS.weapon.active.label": "Active",
 
   "HELLAS.weapon.skillid.title": "Skill used with this weapon",
   "HELLAS.weapon.acc.title": "(ACC) Accuracy modifier that is either added or subtracted from the attack roll",
@@ -401,5 +403,62 @@
   "HELLAS.weapon.ammo.title": "Ammo: Ammunition type and aspects",
   "HELLAS.weapon.rng.title": "(Rng) Range: range of the weapon",
   "HELLAS.weapon.price.title": "Price",
-  "HELLAS.weapon.ismissile.title": "Is a missile weapon: minimum STR penalty is -4 * Δ rather than -2 * Δ"
+  "HELLAS.weapon.ismissile.title": "Is a missile weapon: minimum STR penalty is -4 * Δ rather than -2 * Δ",
+  "HELLAS.weapon.active.title": "Active, currently worn or used by the character",
+
+  "HELLAS.item.armor.new": "New armor",
+
+  "HELLAS.armor.column.name": "Name",
+  "HELLAS.armor.column.active": "Active",
+  "HELLAS.armor.column.pr": "PR",
+  "HELLAS.armor.column.parry":  "Parry",
+  
+  "HELLAS.armor.controls.add": "Add armor",
+  "HELLAS.armor.controls.edit": "Edit armor",
+  "HELLAS.armor.controls.delete": "Delete armor",
+
+  "HELLAS.armor.price.label": "Price",
+  "HELLAS.armor.str.label": "STR",
+  "HELLAS.armor.per.label": "PER modifier",
+  "HELLAS.armor.cha.label": "CHA modifier",
+  "HELLAS.armor.parry.label": "Parry modifier",
+  "HELLAS.armor.pr.label": "Protection",
+  "HELLAS.armor.wt.label": "Weight",
+  "HELLAS.armor.md.label": "Maximum Damage",
+  "HELLAS.armor.type.label": "Type",
+  "HELLAS.armor.modifier.label": "Modifier",
+  "HELLAS.armor.active.label": "Active",
+
+  "HELLAS.armor.price.title": "Price",
+  "HELLAS.armor.str.title": "(STR) Minimum strength of character before -1 * Δ DEX modifier penalty",
+  "HELLAS.armor.per.title": "(PER) Perception modifier, helmets can block peripheral vision for example",
+  "HELLAS.armor.cha.title": "(CHA) Charm modifier, wearing visible armor can hinder social interactions, while stylish clothing can enhance it",
+  "HELLAS.armor.parry.title": "Parry skill modifier while using this item",
+  "HELLAS.armor.pr.title": "(PR) Protection rating, damage soak amount",
+  "HELLAS.armor.wt.title": "Weight",
+  "HELLAS.armor.md.title": "(MD) Maximum damage in a single attack before parry skill modifier reduced by -1",
+  "HELLAS.armor.type.title": "Type, clothing, cuirass, helmet, shield, drone etc..",
+  "HELLAS.armor.modifier.title": "Modifier, regular, energy, aether",
+  "HELLAS.armor.active.title": "Active, currently worn or used by the character",
+
+  "HELLAS.armor.type.long.naked": "Naked",
+  "HELLAS.armor.type.long.clothing": "Clothing",
+  "HELLAS.armor.type.long.cuirass": "Cuirass",
+  "HELLAS.armor.type.long.full": "Full",
+  "HELLAS.armor.type.long.helmet": "Helment",
+  "HELLAS.armor.type.long.shieldlight": "Shield – light",
+  "HELLAS.armor.type.long.shieldmedium": "Shield – medium",
+  "HELLAS.armor.type.long.shieldheavy": "Shield – heavy",
+  "HELLAS.armor.type.long.shielddrone": "Shield – drone",
+  "HELLAS.armor.type.long.shrouda": "Shroud – class A",
+  "HELLAS.armor.type.long.shroudb": "Shroud – class B",
+  "HELLAS.armor.type.long.shroudc": "Shroud – class C",
+  
+  "HELLAS.armor.modifier.long.regular": "Regular",
+  "HELLAS.armor.modifier.long.energy": "Energy (☼)",
+  "HELLAS.armor.modifier.long.aether": "Æther (Æ)",
+
+  "HELLAS.armor.modifier.short.regular": " ",
+  "HELLAS.armor.modifier.short.energy": "☼",
+  "HELLAS.armor.modifier.short.aether": "Æ"
 }

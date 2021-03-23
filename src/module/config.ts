@@ -21,7 +21,9 @@ export type hellasConfigType = {
 	dynamismModes: string[],
 	dynamismModesSpecificBreakdowns: ObjectWStringArrayValues,
 	dynamismMode: string,
-	weaponModifiers: string[]
+	weaponModifiers: string[],
+	armorModifiers: string[],
+	armorTypes: string[]
 }
 
 export type foundryAttributeValueMax = {
@@ -230,6 +232,27 @@ const HELLAS: hellasConfigType = {
 		"sonic",
 		"torch",
 		"vehicularscale"
+	],
+
+	armorModifiers: [
+		"regular",
+		"energy",
+		"aether"
+	],
+
+	armorTypes: [
+		"naked",
+		"clothing",
+		"cuirass",
+		"full",
+		"helmet",
+		"shieldlight",
+		"shieldmedium",
+		"shieldheavy",
+		"shielddrone",
+		"shrouda",
+		"shroudb",
+		"shroudc"
 	]
 }
 

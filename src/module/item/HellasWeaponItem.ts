@@ -12,11 +12,12 @@ export type WeaponItemDataType = {
 	wt: number,					// weight
 	rof: number,				// rate of fire
 	price: number,				// price
-	str: number,				// strength penalty (pg 206 of core book, -2 roll modifier penalty for each point that the character's STR falls short of this weapon's minimum STR requirement, missile weapons suffer -4 roll modifier per point)
+	str: number,				// strength penalty (pg 206 of core book, -2 roll modifier penalty to CR for each point that the character's STR falls short of this weapon's minimum STR requirement, missile weapons suffer -4 roll modifier per point)
 	ammo: string,				// type of ammo (if slug thrower)
 	rng: string,				// range (if ranged weapon)
 	modifier: string,			// type of weapon (aether, flame, sonic etc...),
-	ismissile: boolean			// is a missile weapon for purposes of STR penalty
+	ismissile: boolean,			// is a missile weapon for purposes of STR penalty
+	active: boolean				// is currently being used by the character
 }
 
 export type WeaponItemType = {
@@ -57,7 +58,7 @@ export class HellasWeaponItem extends Item {
 		const itemData = (this.data.data || {}) as unknown as WeaponItemDataType
 
 		if (isEmptyOrSpaces(this.data.name))
-			this.data.name = game.i18n.localize("HELLAS.item.weapon.newWeapon")
+			this.data.name = game.i18n.localize("HELLAS.item.weapon.new")
 
 		// @ts-ignore
 		itemData.name = this.data.name

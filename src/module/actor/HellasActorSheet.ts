@@ -7,6 +7,7 @@ import {foundryAttributeValueMax, HELLAS} from "../config"
 import {HellasSkillItem} from "../item/HellasSkillItem"
 import {HellasActor} from "./HellasActor"
 import {HellasWeaponItem} from "../item/HellasWeaponItem"
+import {HellasArmorItem} from "../item/HellasArmorItem"
 
 export const sortItemsByNameFunction = (a, b) => a.name < b.name ? -1 : a.name > b.name ? 1 : 0
 
@@ -73,7 +74,8 @@ export class HellasActorSheet extends ActorSheet {
 		// filter out skills and sort them
 		Object.entries({
 			skills: HellasSkillItem.type,
-			weapons: HellasWeaponItem.type
+			weapons: HellasWeaponItem.type,
+			armor: HellasArmorItem.type
 		}).forEach(([val, type]) => {
 			// @ts-ignore
 			if (!sheetData.data.items[val])
@@ -108,11 +110,11 @@ export class HellasActorSheet extends ActorSheet {
 		// Fate point display
 		html.find('.fate-progress').click(this._onFateProgressClick.bind(this))
 
-		// roll a skill
-		html.find('.skill-roll').click(this._onSkillRoll.bind(this))
-
 		// roll an attribute
 		html.find('.attr-roll').click(this._onAttrRoll.bind(this))
+
+		// roll a skill
+		html.find('.skill-roll').click(this._onSkillRoll.bind(this))
 
 		// roll a weapon
 		html.find('.weapon-roll').click(this._onWeaponRoll.bind(this))

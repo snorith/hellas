@@ -10,6 +10,7 @@ export const preloadTemplates = async function() {
 		//Item sheets
 		`${systemBasePath}/templates/item/skillSheet.hbs`,
 		`${systemBasePath}/templates/item/weaponSheet.hbs`,
+		`${systemBasePath}/templates/item/armorSheet.hbs`,
 
 		// Roll modifier
 		`${systemBasePath}/templates/dialog/modifiers.hbs`,

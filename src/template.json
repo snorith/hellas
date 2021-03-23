@@ -108,6 +108,9 @@
       },
       "skilltype": {
         "skillid": ""
+      },
+      "wearable": {
+        "active": false
       }
     },
     "skill": {
@@ -130,17 +133,29 @@
       }
     },
     "weapon": {
-      "templates": ["common", "carriable", "sellable", "skilltype"],
+      "templates": ["common", "carriable", "sellable", "skilltype", "wearable"],
       "acc": 0,
       "dr": 0,
       "wt": 0,
       "rof": 0,
-      "price": 0,
       "str": 0,
+      "cha": 0,
       "ammo": "",
       "rng": "",
       "modifier": "regular",
       "ismissile": false
+    },
+    "armor": {
+      "templates": ["common", "carriable", "sellable", "wearable"],
+      "str": 0,
+      "per": 0,
+      "cha": 0,
+      "parry": 0,
+      "pr": 0,
+      "wt": 0,
+      "md": 0,
+      "type": "clothing",
+      "modifier": "regular"
     }
   }
 }
