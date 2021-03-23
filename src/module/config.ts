@@ -23,7 +23,7 @@ export type hellasConfigType = {
 	dynamismMode: string,
 	weaponModifiers: string[],
 	armorModifiers: string[],
-	armorTypes: string[]
+	armorTypes: ObjectWStringArrayValues
 }
 
 export type foundryAttributeValueMax = {
@@ -237,23 +237,19 @@ const HELLAS: hellasConfigType = {
 	armorModifiers: [
 		"regular",
 		"energy",
-		"aether"
+		"aether",
+		"holo"
 	],
 
-	armorTypes: [
-		"naked",
-		"clothing",
-		"cuirass",
-		"full",
-		"helmet",
-		"shieldlight",
-		"shieldmedium",
-		"shieldheavy",
-		"shielddrone",
-		"shrouda",
-		"shroudb",
-		"shroudc"
-	]
+	armorTypes: {
+		"naked": ["nakednudity", "nakedenchantingbeauty"],
+		"clothing": ["clothingutility", "clothingofftherack", "clothinghighfashion", "clothingnoblewear"],
+		"cuirass": ["cuirasslight", "cuirassmedium", "cuirassheavy"],
+		"full": ["fulllight", "fullmedium", "fullheavy"],
+		"helmet": ["helmetlight", "helmetmedium", "helmetheavy"],
+		"shield": ["shieldlight", "shieldmedium", "shieldheavy", "shielddrone"],
+		"shroud": ["shroudclassa", "shroudclassb", "shroudclassc"]
+	}
 }
 
 HELLAS.attributes = Object.keys(HELLAS.attributesWShortName)

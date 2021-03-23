@@ -18,9 +18,43 @@
 		<div class="tab weapon" data-group="primary-tabs" data-tab="weapon">
 			<div class="grid grid-cols-3 gap-2 mt-4 flex-none align-middle">
 				<div class="text-right">
+					<label for="{{item._id}}.data.type"
+						   class="align-middle"
+						   title="{{localize "HELLAS.armor.type.title"}}">{{localize "HELLAS.armor.type.label"}}</label>
+				</div>
+				<div class="col-span-2">
+					<select id="{{item._id}}.data.type" name="data.type" title="{{localize "HELLAS.armor.type.title"}}" data-dtype="String">
+						{{#select data.type}}
+							{{#each item.HELLAS.armorTypes as |types|}}
+								<optgroup label="{{localize (concat "HELLAS.armor.type.group.long." @key)}}">
+									{{#each types as |type|}}
+										<option value="{{type}}">{{localize (concat "HELLAS.armor.type.opt.long." type)}}</option>
+									{{/each}}
+								</optgroup>
+							{{/each}}
+						{{/select}}
+					</select>
+				</div>
+
+				<div class="text-right">
+					<label for="{{item._id}}.data.modifier"
+						   class="align-middle"
+						   title="{{localize "HELLAS.armor.modifier.title"}}">{{localize "HELLAS.armor.modifier.label"}}</label>
+				</div>
+				<div class="col-span-2">
+					<select id="{{item._id}}.data.modifier" name="data.modifier" title="{{localize "HELLAS.armor.modifier.title"}}" data-dtype="String">
+						{{#select data.modifier}}
+							{{#each item.HELLAS.armorModifiers as |modifier|}}
+								<option value="{{modifier}}">{{localize (concat "HELLAS.armor.modifier.long." modifier)}}</option>
+							{{/each}}
+						{{/select}}
+					</select>
+				</div>
+
+				<div class="text-right">
 					<label for="{{item._id}}.data.pr"
 						   class="align-middle"
-						   title="{{localize "HELLAS.weapon.pr.title"}}">{{localize "HELLAS.weapon.pr.label"}}</label>
+						   title="{{localize "HELLAS.armor.pr.title"}}">{{localize "HELLAS.armor.pr.label"}}</label>
 				</div>
 				<div class="col-span-2">
 					<input type="number"
@@ -30,39 +64,7 @@
 						   value="{{data.pr}}"
 						   data-dtype="Number"
 						   min="-100" oninput="this.value = Math.round(this.value|0);"
-						   title="{{localize "HELLAS.weapon.pr.title"}}"/>
-				</div>
-
-				<div class="text-right">
-					<label for="{{item._id}}.data.md"
-						   class="align-middle"
-						   title="{{localize "HELLAS.weapon.md.title"}}">{{localize "HELLAS.weapon.md.label"}}</label>
-				</div>
-				<div class="col-span-2">
-					<input type="number"
-						   class="w-10"
-						   id="{{item._id}}.data.md"
-						   name="data.md"
-						   value="{{data.md}}"
-						   data-dtype="Number"
-						   min="-100" oninput="this.value = Math.round(this.value|0);"
-						   title="{{localize "HELLAS.weapon.md.title"}}"/>
-				</div>
-
-				<div class="text-right">
-					<label for="{{item._id}}.data.parry"
-						   class="align-middle"
-						   title="{{localize "HELLAS.weapon.parry.title"}}">{{localize "HELLAS.weapon.parry.label"}}</label>
-				</div>
-				<div class="col-span-2">
-					<input type="number"
-						   class="w-10"
-						   id="{{item._id}}.data.parry"
-						   name="data.parry"
-						   value="{{data.parry}}"
-						   data-dtype="Number"
-						   min="-100" oninput="this.value = Math.round(this.value|0);"
-						   title="{{localize "HELLAS.weapon.parry.title"}}"/>
+						   title="{{localize "HELLAS.armor.pr.title"}}"/>
 				</div>
 
 				<div class="text-right">
@@ -82,6 +84,38 @@
 				</div>
 
 				<div class="text-right">
+					<label for="{{item._id}}.data.parry"
+						   class="align-middle"
+						   title="{{localize "HELLAS.armor.parry.title"}}">{{localize "HELLAS.armor.parry.label"}}</label>
+				</div>
+				<div class="col-span-2">
+					<input type="number"
+						   class="w-10"
+						   id="{{item._id}}.data.parry"
+						   name="data.parry"
+						   value="{{data.parry}}"
+						   data-dtype="Number"
+						   min="-100" oninput="this.value = Math.round(this.value|0);"
+						   title="{{localize "HELLAS.weapon.parry.title"}}"/>
+				</div>
+
+				<div class="text-right">
+					<label for="{{item._id}}.data.md"
+						   class="align-middle"
+						   title="{{localize "HELLAS.armor.md.title"}}">{{localize "HELLAS.armor.md.label"}}</label>
+				</div>
+				<div class="col-span-2">
+					<input type="number"
+						   class="w-10"
+						   id="{{item._id}}.data.md"
+						   name="data.md"
+						   value="{{data.md}}"
+						   data-dtype="Number"
+						   min="-100" oninput="this.value = Math.round(this.value|0);"
+						   title="{{localize "HELLAS.armor.md.title"}}"/>
+				</div>
+
+				<div class="text-right">
 					<label for="{{item._id}}.data.per"
 						   class="align-middle"
 						   title="{{localize "HELLAS.armor.per.title"}}">{{localize "HELLAS.armor.per.label"}}</label>
@@ -90,7 +124,7 @@
 					<input type="number"
 						   class="w-10"
 						   id="{{item._id}}.data.per"
-						   name="data.str"
+						   name="data.per"
 						   value="{{data.per}}"
 						   data-dtype="Number"
 						   min="-100" oninput="this.value = Math.round(this.value|0);"
@@ -111,36 +145,6 @@
 						   data-dtype="Number"
 						   min="-100" oninput="this.value = Math.round(this.value|0);"
 						   title="{{localize "HELLAS.armor.cha.title"}}"/>
-				</div>
-
-				<div class="text-right">
-					<label for="{{item._id}}.data.type"
-						   class="align-middle"
-						   title="{{localize "HELLAS.armor.type.title"}}">{{localize "HELLAS.armor.type.label"}}</label>
-				</div>
-				<div class="col-span-2">
-					<select id="{{item._id}}.data.type" name="data.type" title="{{localize "HELLAS.armor.type.title"}}" data-dtype="String">
-						{{#select data.type}}
-							{{#each item.HELLAS.armorTypes as |type|}}
-								<option value="{{type}}">{{localize (concat "HELLAS.armor.type.long." modifier)}}</option>
-							{{/each}}
-						{{/select}}
-					</select>
-				</div>
-
-				<div class="text-right">
-					<label for="{{item._id}}.data.modifier"
-						   class="align-middle"
-						   title="{{localize "HELLAS.armor.modifier.title"}}">{{localize "HELLAS.armor.modifier.label"}}</label>
-				</div>
-				<div class="col-span-2">
-					<select id="{{item._id}}.data.modifier" name="data.modifier" title="{{localize "HELLAS.armor.modifier.title"}}" data-dtype="String">
-						{{#select data.modifier}}
-							{{#each item.HELLAS.armorModifiers as |modifier|}}
-								<option value="{{modifier}}">{{localize (concat "HELLAS.armor.modifier.long." modifier)}}</option>
-							{{/each}}
-						{{/select}}
-					</select>
 				</div>
 
 				<div class="text-right">

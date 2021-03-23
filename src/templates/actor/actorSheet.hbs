@@ -187,10 +187,10 @@
 						</tbody>
 					</table>
 
-					<table class="skills shadow-md border-gray-500 border-solid border-opacity-100 border-l border-r">
+					<table class="skills shadow-md border-gray-500 border-solid border-opacity-100 border-l border-r border-b">
 						<thead>
 						<tr>
-							<td colspan="9" class="hellas-titling text-center">{{localize "HELLAS.section.armor.title"}}</td>
+							<td colspan="6" class="hellas-titling text-center">{{localize "HELLAS.section.armor.title"}}</td>
 						</tr>
 						<tr>
 							<td></td>
@@ -213,7 +213,7 @@
 								</td>
 								<td>{{armor.name}}</td>
 								<td class="text-center">
-									<a class="item-control armor-active-checkbox" data-item-id="{{armor._id}}" title="{{localize "HELLAS.armor.active.title"}}">{{#if armor.data.active}}<i class="fas fa-check-square">{{else}}<i class="fas fa-square-o">{{/if}}</i></a>
+									<a class="item-control armor-active-checkbox" data-item-id="{{armor._id}}" title="{{#if armor.data.active}}{{localize "HELLAS.armor.active.title"}}{{else}}{{localize "HELLAS.armor.inactive.title"}}{{/if}}">{{#if armor.data.active}}<i class="fas fa-check-square">{{else}}<i class="far fa-square">{{/if}}</i></a>
 								</td>
 								<td class="text-center">{{armor.data.pr}}{{localize (concat "HELLAS.armor.modifier.short." armor.data.modifier)}}</td>
 								<td class="text-center">{{armor.data.parry}}</td>
@@ -226,6 +226,11 @@
 							</tr>
 						{{/each}}
 						</tbody>
+						<tfoot>
+						<tr>
+							<td colspan="6" class="text-center border-gray-500 border-solid">{{localize "HELLAS.armor.total.pr" total=data.totalpr}}</td>
+						</tr>
+						</tfoot>
 					</table>
 					Dynamisms<br>
 					Disadvantages
@@ -335,7 +340,61 @@
 						</div>
 					</div>
 				{{/each}}
-			</div>
+				{{#each data.items.armor as |armor key|}}
+					<div id="tooltip_content_{{armor._id}}">
+						<img src="{{armor.img}}" title="{{armor.name}}" alt="{{armor.name}}" height="50"/>
+						<h1 style="display: inline; margin-left: 4px;">{{armor.name}}</h1>
+						<table style="max-width: 640px;">
+							<tbody>
+							<tr>
+								<td style="padding-right: 3px;">{{localize "HELLAS.armor.type.label"}}</td>
+								<td>{{localize (concat "HELLAS.armor.type.opt.long." armor.data.type)}}</td>
+							</tr>
+							<tr>
+								<td style="padding-right: 3px;">{{localize "HELLAS.armor.modifier.label"}}</td>
+								<td>{{localize (concat "HELLAS.armor.modifier.long." armor.data.modifier)}}</td>
+							</tr>
+							<tr>
+								<td style="padding-right: 3px;">{{localize "HELLAS.armor.pr.label"}}</td>
+								<td>{{armor.data.pr}}</td>
+							</tr>
+							<tr>
+								<td style="padding-right: 3px;">{{localize "HELLAS.armor.str.label"}}</td>
+								<td>{{armor.data.str}}</td>
+							</tr>
+							<tr>
+								<td style="padding-right: 3px;">{{localize "HELLAS.armor.parry.label"}}</td>
+								<td>{{armor.data.parry}}</td>
+							</tr>
+							<tr>
+								<td style="padding-right: 3px;">{{localize "HELLAS.armor.md.label"}}</td>
+								<td>{{armor.data.md}}</td>
+							</tr>
+							<tr>
+								<td style="padding-right: 3px;">{{localize "HELLAS.armor.per.label"}}</td>
+								<td>{{armor.data.per}}</td>
+							</tr>
+							<tr>
+								<td style="padding-right: 3px;">{{localize "HELLAS.armor.cha.label"}}</td>
+								<td>{{armor.data.cha}}</td>
+							</tr>
+							<tr>
+								<td style="padding-right: 3px;">{{localize "HELLAS.armor.wt.label"}}</td>
+								<td>{{armor.data.wt}}</td>
+							</tr>
+							<tr>
+								<td style="padding-right: 3px;">{{localize "HELLAS.armor.price.label"}}</td>
+								<td>{{armor.data.price}}</td>
+							</tr>
+							</tbody>
+						</table>
+						<div style="max-width: 640px;">
+							{{!-- raw html output --}}
+							{{{armor.data.notes}}}
+						</div>
+					</div>
+				{{/each}}
+		</div>
 		</div>
 
 		{{!-- Personal Tab --}}

@@ -7,7 +7,7 @@ import {foundryAttributeValueMax, HELLAS} from "../config"
 import {HellasSkillItem} from "../item/HellasSkillItem"
 import {HellasActor} from "./HellasActor"
 import {HellasWeaponItem} from "../item/HellasWeaponItem"
-import {HellasArmorItem} from "../item/HellasArmorItem"
+import {ArmorItemDataType, HellasArmorItem} from "../item/HellasArmorItem"
 
 export const sortItemsByNameFunction = (a, b) => a.name < b.name ? -1 : a.name > b.name ? 1 : 0
 
@@ -83,6 +83,14 @@ export class HellasActorSheet extends ActorSheet {
 				sheetData.data.items[val] = items.filter(i => i.type === type).sort(sortItemsByNameFunction)
 			}
 		});
+
+		// total armor PR
+		sheetData.data.totalpr = sheetData.data.items['armor'].reduce((acc: number, curr: HellasWeaponItem) => {
+			const data = curr.data as unknown as ArmorItemDataType
+			if (data.active)
+				return acc + data.pr
+			return acc
+		}, 0)
 	}
 
 	/* -------------------------------------------- */
@@ -118,6 +126,22 @@ export class HellasActorSheet extends ActorSheet {
 
 		// roll a weapon
 		html.find('.weapon-roll').click(this._onWeaponRoll.bind(this))
+
+		// active/deactivate a piece of armor
+		html.find('.armor-active-checkbox').click(this._onArmorActiveClick.bind(this))
+	}
+
+	_onArmorActiveClick(event) {
+		event.preventDefault()
+
+		const element = event.currentTarget
+		const itemID = element.dataset.itemId
+
+		const item = this.actor.getOwnedItem(itemID) as HellasArmorItem
+		if (!item)
+			return false
+
+		item.toggleActive()
 	}
 
 	_onAttrRoll(event) {

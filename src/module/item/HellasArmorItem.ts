@@ -1,4 +1,5 @@
 import {isEmptyOrSpaces} from "../settings"
+import {WeaponItemDataType, WeaponItemType} from "./HellasWeaponItem"
 
 export type ArmorItemDataType = {
 	version: number,
@@ -30,7 +31,7 @@ export type ArmorMemoryType = {
 }
 
 export const DEFAULT_WEAPON_SKILLID = 'combatrating'
-export const DEFAULT_ARMOR_IMG = 'icons/svg/shield.svg.svg'
+export const DEFAULT_ARMOR_IMG = 'icons/svg/shield.svg'
 
 export class HellasArmorItem extends Item {
 	static get type() {
@@ -63,5 +64,25 @@ export class HellasArmorItem extends Item {
 
 		if (!this.actor) {
 		}
+	}
+
+	toggleActive(): boolean {
+		if (!this.actor)
+			return false
+
+		const item = this.data as unknown as ArmorItemType
+		const itemData = item.data || {} as ArmorItemDataType
+
+		itemData.active = !itemData.active
+
+		const changeData = {
+			_id: this._id,
+			data: {
+				"active": itemData.active
+			}
+		}
+		this.update(changeData).catch(reason => console.log(reason))
+
+		return true
 	}
 }
