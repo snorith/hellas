@@ -53,3 +53,12 @@
     padding: 0 8px;
   }
 }
+
+form {
+	.width10 {
+		@apply w-10;
+	}
+	.width48 {
+		@apply w-48;
+	}
+}
