@@ -10,6 +10,9 @@ const typescript = require('@rollup/plugin-typescript');
 const resolve = require('@rollup/plugin-node-resolve');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
+const advancedVars = require("postcss-advanced-variables");
+const nested = require("postcss-nested");
+const postImport = require("postcss-import");
 const cssnano = require('cssnano');
 const sourcemaps = require('gulp-sourcemaps');
 const profilemode = require('gulp-mode')({
@@ -18,13 +21,9 @@ const profilemode = require('gulp-mode')({
 	verbose: false
 });
 
-const less = require('gulp-less');
-const sass = require('gulp-sass');
 const git = require('gulp-git');
 
 const argv = require('yargs').argv;
-
-sass.compiler = require('sass');
 
 function getConfig() {
 	const configPath = path.resolve(process.cwd(), 'foundryconfig.json');
@@ -104,21 +103,19 @@ function buildTS() {
 }
 
 /**
- * Build Less
+ * Build CSS
  */
-function buildLess() {
-	return gulp.src('src/*.less').pipe(less()).pipe(gulp.dest('dist'));
-}
-
-/**
- * Build SASS
- */
-function buildSASS() {
+function buildCSS() {
 	const tailwindcss = require('tailwindcss');
 	const isProduction = profilemode.production();
+	process.env.env = isProduction ? 'production' : 'develop'
+
 	let plugins = [];
 
 	plugins = [
+		postImport(),
+		nested(),
+		advancedVars(),
 		tailwindcss("./tailwind.config.js"),
 		autoprefixer()
 	];
@@ -126,20 +123,14 @@ function buildSASS() {
 		plugins.push(cssnano())
 
 		return gulp
-			.src('src/*.scss')
-			.pipe(sass({
-				outputStyle: 'expanded'   // Options: nested, expanded, compact, compressed
-			}).on('error', sass.logError))
+			.src('src/*.css')
 			.pipe(postcss(plugins))
 			.pipe(gulp.dest('dist'));
 	}
 
 	return gulp
-		.src('src/*.scss')
+		.src('src/*.css')
 		.pipe(profilemode.development(sourcemaps.init()))
-		.pipe(sass({
-			outputStyle: 'expanded'   // Options: nested, expanded, compact, compressed
-		}).on('error', sass.logError))
 		.pipe(postcss(plugins))
 		.pipe(profilemode.development(sourcemaps.write()))
 		.pipe(gulp.dest('dist'));
@@ -177,8 +168,7 @@ async function copyFiles() {
  */
 function buildWatch() {
 	gulp.watch('src/**/*.ts', { ignoreInitial: false }, buildTS);
-	gulp.watch('src/**/*.less', { ignoreInitial: false }, buildLess);
-	gulp.watch('src/**/*.scss', { ignoreInitial: false }, buildSASS);
+	gulp.watch('src/**/*.css', { ignoreInitial: false }, buildCSS);
 	gulp.watch(
 		['src/assets', 'src/fonts', 'src/lang', 'src/lib', 'src/packs', 'src/templates', 'src/*.json'],
 		{ ignoreInitial: false },
@@ -212,10 +202,9 @@ async function clean() {
 		);
 	}
 
-	// If the project uses Less or SASS
+	// If the project uses PostSASS
 	if (
-		fs.existsSync(path.join('src', `${name}.less`)) ||
-		fs.existsSync(path.join('src', `${name}.scss`))
+		fs.existsSync(path.join('src', `${name}.css`))
 	) {
 		files.push('fonts', `${name}.css`);
 	}
@@ -478,7 +467,7 @@ function gitTag() {
 
 const execGit = gulp.series(gitAdd, gitCommit, gitTag);
 
-const execBuild = gulp.parallel(buildTS, buildLess, buildSASS, copyFiles);
+const execBuild = gulp.parallel(buildTS, buildCSS, copyFiles);
 
 exports.build = gulp.series(clean, execBuild);
 exports.watch = buildWatch;

@@ -1,40 +1,29 @@
-/* ------------------------------------ */
-/*				   Sass					*/
-/* This is your Sass entry file			*/
-/* ------------------------------------ */
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
-// Import utilities.
-@import 'styles/utils/typography';
-@import 'styles/utils/colors';
-@import 'styles/utils/mixins';
-@import 'styles/utils/variables';
+ /*Import utilities.*/
+@import 'styles/utils/typography.css';
+@import 'styles/utils/colors.css';
+@import 'styles/utils/mixins.css';
+@import 'styles/utils/variables.css';
 
-/* Global styles */
-//@import 'styles/global/window';
-//@import 'styles/global/grid';
-//@import 'styles/global/flex';
+@import 'styles/components/forms.css';
+@import 'styles/components/resource.css';
+@import 'styles/components/tabs.css';
 
 /* Styles limited to hellas sheets */
 div.hellas {
 	font-family: $font-primary;
 
-	// Background of sheets
+	 /*Background of sheets*/
 	.window-content {
-		// Credit: <span>Photo by <a href="https://unsplash.com/@augustinewong?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Augustine Wong</a> on <a href="https://unsplash.com/s/photos/marble-texture?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+		 /*Credit: <span>Photo by <a href="https://unsplash.com/@augustinewong?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Augustine Wong</a> on <a href="https://unsplash.com/s/photos/marble-texture?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>*/
 		background-image: url("assets/images/augustine-wong-li0iC0rjvvg-unsplash.jpg");
 		background-repeat: repeat;
 	}
 
 	.hellas-titling {
 		font-family: $font-titles;
-	}
-
-	form {
-		@import "styles/global/tailwind";
-		@import 'styles/components/forms';
-		@import 'styles/components/resource';
-		@import 'styles/components/tabs';
-		//@import 'styles/components/items';
 	}
 }
 
