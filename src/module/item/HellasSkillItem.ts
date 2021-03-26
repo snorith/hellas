@@ -3,7 +3,6 @@ import set from "lodash-es/set"
 import {isEmptyOrSpaces, systemBasePath} from "../settings"
 import {getRollModifiers, multipleActionPenalty} from "../dialog/modifiers"
 import {determineDieRollOutcome} from "../dice"
-import {DEFAULT_WEAPON_IMG} from "./HellasWeaponItem"
 
 export type SkillItemDataType = {
 	version: number,

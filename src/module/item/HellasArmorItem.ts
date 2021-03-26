@@ -1,5 +1,4 @@
 import {isEmptyOrSpaces} from "../settings"
-import {WeaponItemDataType, WeaponItemType} from "./HellasWeaponItem"
 
 export type ArmorItemDataType = {
 	version: number,

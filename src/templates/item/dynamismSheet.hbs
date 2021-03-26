@@ -1,0 +1,104 @@
+<form class="{{cssClass}} item" autocomplete="off" autocapitalize="off">
+	<header class="sheet-header">
+		<img class="profile-img" src="{{item.img}}" data-edit="img" {{#if item.name}}title="{{item.name}}"{{/if}}/>
+		<div class="header-fields">
+			<input class="charname" name="name" type="text" required value="{{item.name}}" data-dtype="String"/>
+		</div>
+	</header>
+
+	{{!-- Sheet Tab Navigation --}}
+	<nav class="sheet-tabs tabs" data-group="primary-tabs">
+		<a class="item" data-tab="weapon">{{localize "HELLAS.sheet.tabs.dynamism"}}</a>
+		<a class="item" data-tab="description">{{localize "HELLAS.sheet.tabs.description"}}</a>
+	</nav>
+
+	{{!-- Sheet Body --}}
+	<section class="sheet-body">
+		{{!-- dynamism Tab --}}
+		<div class="tab weapon" data-group="primary-tabs" data-tab="dynamism">
+			<div class="grid grid-cols-3 gap-2 mt-4 flex-none align-middle">
+				<div class="text-right">
+					<label for="{{item._id}}.data.skillid"
+						   class="align-middle"
+						   title="{{localize "HELLAS.dynamism.skillid.title"}}">{{localize "HELLAS.dynamism.skillid.label"}}</label>
+				</div>
+				<div class="col-span-2">
+					<select id="{{item._id}}.data.skillid" name="data.skillid" title="{{localize "HELLAS.dynamism.skillid.title"}}" data-dtype="String">
+						<option value="dynamism">{{localize "HELLAS.dynamism.skillid.default.name"}}</option>
+						{{#select data.skillid}}
+							{{#each item.SKILLS as |skill|}}
+								<option value="{{skill._id}}">{{skill.name}}</option>
+							{{/each}}
+						{{/select}}
+					</select>
+				</div>
+
+				<div class="text-right">
+					<label for="{{item._id}}.data.dod"
+						   class="align-middle"
+						   title="{{localize "HELLAS.dynamism.dod.title"}}">{{localize "HELLAS.dynamism.dod.label"}}</label>
+				</div>
+				<div class="col-span-2">
+					<input type="number"
+						   class="width10"
+						   id="{{item._id}}.data.dod"
+						   name="data.dod"
+						   value="{{data.dod}}"
+						   data-dtype="Number"
+						   min="-100" oninput="this.value = Math.round(this.value|0);"
+						   title="{{localize "HELLAS.dynamism.dod.title"}}"/>
+				</div>
+
+				<div class="text-right">
+					<label for="{{item._id}}.data.range"
+						   class="align-middle"
+						   title="{{localize "HELLAS.dynamism.range.title"}}">{{localize "HELLAS.dynamism.range.label"}}</label>
+				</div>
+				<div class="col-span-2">
+					<input type="text"
+						   class="width48"
+						   id="{{item._id}}.data.range"
+						   name="data.range"
+						   value="{{data.range}}"
+						   data-dtype="String"
+						   title="{{localize "HELLAS.dynamism.range.title"}}"/>
+				</div>
+
+				<div class="text-right">
+					<label for="{{item._id}}.data.tradition"
+						   class="align-middle"
+						   title="{{localize "HELLAS.dynamism.tradition.title"}}">{{localize "HELLAS.dynamism.tradition.label"}}</label>
+				</div>
+				<div class="col-span-2">
+					<input type="text"
+						   class="width48"
+						   id="{{item._id}}.data.tradition"
+						   name="data.tradition"
+						   value="{{data.tradition}}"
+						   data-dtype="String"
+						   title="{{localize "HELLAS.dynamism.tradition.title"}}"/>
+				</div>
+
+				<div class="text-right">
+					<label for="{{item._id}}.data.duration"
+						   class="align-middle"
+						   title="{{localize "HELLAS.dynamism.duration.title"}}">{{localize "HELLAS.dynamism.duration.label"}}</label>
+				</div>
+				<div class="col-span-2">
+					<input type="text"
+						   class="width48"
+						   id="{{item._id}}.data.duration"
+						   name="data.duration"
+						   value="{{data.duration}}"
+						   data-dtype="String"
+						   title="{{localize "HELLAS.dynamism.duration.title"}}"/>
+				</div>
+			</div>
+		</div>
+
+		{{!-- Description Tab --}}
+		<div class="tab description" data-group="primary-tabs" data-tab="description">
+			{{editor content=data.notes target="data.notes" button=true owner=owner editable=editable}}
+		</div>
+	</section>
+</form>

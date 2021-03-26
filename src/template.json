@@ -135,10 +135,10 @@
     "dynamism": {
       "templates": ["common", "spell", "skilltype"],
       "attribute": "",
-      "level": {
-        "value": 0,
-        "max": 0
-      }
+      "dod": 0,
+      "range": "",
+      "tradition": "",
+      "duration": ""
     },
     "weapon": {
       "templates": ["common", "carriable", "sellable", "skilltype", "wearable"],

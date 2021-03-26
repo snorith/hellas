@@ -2,6 +2,10 @@
   "HELLAS.sheet.tabs.attributes": "Attributes/Skills",
   "HELLAS.sheet.tabs.personal": "Personal",
   "HELLAS.sheet.tabs.description": "Description",
+  "HELLAS.sheet.tabs.skill": "Skill",
+  "HELLAS.sheet.tabs.weapon": "Weapon",
+  "HELLAS.sheet.tabs.armor": "Armor",
+  "HELLAS.sheet.tabs.dynamism": "Dynamism",
   
   "HELLAS.section.attributes.title": "Attributes",
   "HELLAS.section.skills.title": "Skills",
@@ -488,5 +492,21 @@
   
   "HELLAS.armor.total.pr": "PR: {total}",
   "HELLAS.armor.total.dex": "DEX: {total}",
-  "HELLAS.armor.total.per": "PER: {total}"
+  "HELLAS.armor.total.per": "PER: {total}",
+
+  "HELLAS.item.dynamism.new": "New dynamism",
+
+  "HELLAS.dynamism.skillid.default.name": "Dynamism",
+  
+  "HELLAS.dynamism.skillid.label": "Skill",
+  "HELLAS.dynamism.dod.label": "DoD",
+  "HELLAS.dynamism.range.label": "Range",
+  "HELLAS.dynamism.tradition.label": "Tradition",
+  "HELLAS.dynamism.duration.label": "Duration",
+
+  "HELLAS.dynamism.skillid.title": "Skill used with this dynamism",
+  "HELLAS.dynamism.dod.title": "Degree of Difficulty (DoD):",
+  "HELLAS.dynamism.range.title": "Range",
+  "HELLAS.dynamism.tradition.title": "Tradition",
+  "HELLAS.dynamism.duration.title": "Duration"
 }
