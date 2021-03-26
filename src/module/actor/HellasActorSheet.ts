@@ -8,6 +8,7 @@ import {HellasSkillItem} from "../item/HellasSkillItem"
 import {HellasActor} from "./HellasActor"
 import {HellasWeaponItem} from "../item/HellasWeaponItem"
 import {ArmorItemDataType, HellasArmorItem} from "../item/HellasArmorItem"
+import {set} from "lodash-es"
 
 export const sortItemsByNameFunction = (a, b) => a.name < b.name ? -1 : a.name > b.name ? 1 : 0
 
@@ -84,13 +85,58 @@ export class HellasActorSheet extends ActorSheet {
 			}
 		});
 
-		// total armor PR
-		sheetData.data.totalpr = sheetData.data.items['armor'].reduce((acc: number, curr: HellasWeaponItem) => {
-			const data = curr.data as unknown as ArmorItemDataType
-			if (data.active)
-				return acc + data.pr
-			return acc
-		}, 0)
+		// ************************************************************
+		// run through the armor that's active and determine what modifiers are present
+		// ************************************************************
+
+		// character strength
+		const charStrength = sheetData.data.attributes['strength'].value
+
+		// running totals of armor modifiers
+		let totalpr = 0
+		let dexModifier = 0
+		let perModifier = 0
+		let parryModifier = 0
+
+		// the armor items
+		const armorItems = sheetData.data.items['armor']
+		for (let i = 0; i < armorItems.length; i++) {
+			const data = armorItems[i].data as unknown as ArmorItemDataType
+			if (data.active) {
+				// this item is active (ie: being worn)
+				totalpr += data.pr
+				perModifier += data.per
+				if (data.str > charStrength) {
+					// if armor's str requirement exceeds the character's strength then there is a dex modifier
+					dexModifier += Math.abs(data.str - charStrength)
+				}
+				parryModifier += data.parry
+			}
+		}
+
+		let updateData = {}
+		let updateNeeded = false
+		// check whether the totaled modifiers are different than what we have
+		// recorded already on the character
+		if (sheetData.data.modifiers?.armor?.dexterity !== -dexModifier) {
+			set(updateData, 'data.modifiers.armor.dexterity', -dexModifier)
+			updateNeeded = true
+		}
+		if (sheetData.data.modifiers?.armor?.perception !== perModifier) {
+			set(updateData, 'data.modifiers.armor.perception', perModifier)
+			updateNeeded = true
+		}
+		if (sheetData.data.modifiers?.armor?.parry !== parryModifier) {
+			set(updateData, 'data.modifiers.armor.parry', parryModifier)
+			updateNeeded = true
+		}
+		if (sheetData.data.modifiers?.armor?.pr !== totalpr) {
+			set(updateData, 'data.modifiers.armor.pr', totalpr)
+			updateNeeded = true
+		}
+		if (updateNeeded) {
+			this.actor.update(updateData).catch(reason => console.log(reason))
+		}
 	}
 
 	/* -------------------------------------------- */

@@ -228,7 +228,19 @@
 						</tbody>
 						<tfoot>
 						<tr>
-							<td colspan="6" class="text-center border-gray-500 border-solid">{{localize "HELLAS.armor.total.pr" total=data.totalpr}}</td>
+							<td colspan="6" class="bg-gray-500">
+								<div class="grid grid-cols-3 gap-1.5 text-white">
+									<div class="text-center">
+										{{localize "HELLAS.armor.total.pr" total=data.modifiers.armor.pr}}
+									</div>
+									<div class="text-center">
+										{{localize "HELLAS.armor.total.dex" total=data.modifiers.armor.dexterity}}
+									</div>
+									<div class="text-center">
+										{{localize "HELLAS.armor.total.per" total=data.modifiers.armor.perception}}
+									</div>
+								</div>
+							</td>
 						</tr>
 						</tfoot>
 					</table>

@@ -36,12 +36,17 @@ export class HellasActor extends Actor {
 	 * Handle clickable attr rolls.
 	 */
 	async attrRoll(attribute: string, rating: number): Promise<boolean> {
+		const actorData = this.data.data as any
+
+		let modifier = 0;
+		if (actorData.modifiers?.armor?.hasOwnProperty(attribute)) {
+			modifier = actorData.modifiers?.armor[attribute]
+		}
+
 		// get modifier data
-		const modifiers = await getRollModifiers()
+		const modifiers = await getRollModifiers(modifier)
 		if (modifiers.discriminator == "cancelled")
 			return false
-
-		const actorData = this.data.data as any
 
 		const rollData = mergeObject({
 			multipleactionspenalty: multipleActionPenalty(modifiers.multipleactionscount, actorData.attributes.speed.value),

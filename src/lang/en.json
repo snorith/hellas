@@ -436,7 +436,7 @@
   "HELLAS.armor.parry.title": "Parry skill modifier while using this item",
   "HELLAS.armor.pr.title": "(PR) Protection rating, damage soak amount",
   "HELLAS.armor.wt.title": "Weight",
-  "HELLAS.armor.md.title": "(MD) Maximum damage in a single attack before parry skill modifier reduced by -1",
+  "HELLAS.armor.md.title": "(MD) Maximum damage in a single attack this item can take before parry skill modifier reduced by -1",
   "HELLAS.armor.type.title": "Type, clothing, cuirass, helmet, shield, drone etc..",
   "HELLAS.armor.modifier.title": "Modifier, regular, energy, aether",
   "HELLAS.armor.active.title": "Active, currently worn or used by the character",
@@ -483,5 +483,10 @@
   "HELLAS.armor.modifier.short.aether": "Æ",
   "HELLAS.armor.modifier.short.holo": "𝒉",
   
-  "HELLAS.armor.total.pr": "Total PR = {total}"
+  "HELLAS.armor.roll.modifier.included": "Automatically included in modifiers to related rolls",
+  "HELLAS.armor.roll.modifier.excluded": "Not automatically included in modifiers to related rolls",
+  
+  "HELLAS.armor.total.pr": "PR: {total}",
+  "HELLAS.armor.total.dex": "DEX: {total}",
+  "HELLAS.armor.total.per": "PER: {total}"
 }

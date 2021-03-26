@@ -227,14 +227,26 @@ export class HellasSkillItem extends Item {
 		if (!this.actor)
 			return false
 
-		// get modifier data
-		const modifiers = await getRollModifiers()
-		if (modifiers.discriminator == "cancelled")
-			return false
-
 		const actorData = this.actor.data.data as any
 		const item = this.data as unknown as SkillItemType
 		const itemData = item.data
+
+		let modifierOverall = 0
+		// if we are rolling a 'parry' skill, check to see if there is
+		// armor modifiers for parrying (from shields etc...)
+		if (itemData.skill === 'parry') {
+			modifierOverall = actorData.modifiers.armor.parry
+		}
+		// if we are rolling a skill whose attribute is modified by armor
+		// then determine that modifier
+		if (actorData.modifiers.armor.hasOwnProperty(HELLAS.attributesShortToLong[itemData.attribute])) {
+			modifierOverall += actorData.modifiers.armor[HELLAS.attributesShortToLong[itemData.attribute]]
+		}
+
+		// get modifier data
+		const modifiers = await getRollModifiers(modifierOverall)
+		if (modifiers.discriminator == "cancelled")
+			return false
 
 		let rollData = mergeObject({
 			multipleactionspenalty: multipleActionPenalty(modifiers.multipleactionscount, actorData.attributes.speed.value)
