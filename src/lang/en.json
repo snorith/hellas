@@ -502,6 +502,7 @@
   "HELLAS.item.dynamism.roll": "Roll dynamism",
 
   "HELLAS.dynamism.skillid.default.name": "Dynamism",
+  "HELLAS.dynamism.skillid.unknown.name": "Unknown skill",
   
   "HELLAS.dynamism.skillid.label": "Skill",
   "HELLAS.dynamism.dod.label": "DoD",

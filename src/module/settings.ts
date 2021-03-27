@@ -18,6 +18,15 @@ export const registerSettings = function() {
 	})
 
 	/**
+	 * For a str, html escape it, and convert any line breaks into '<br>' tags
+	 */
+	Handlebars.registerHelper('breaklines', function (str: string) {
+		str = Handlebars.Utils.escapeExpression(str)
+		str = str.replace(/(\r\n|\n|\r)/gm, '<br>')
+		return new Handlebars.SafeString(str)
+	})
+
+	/**
 	 * Given an array of objects, return the first entry where the object's property named 'key' has the value 'value'
 	 */
 	Handlebars.registerHelper('findEntryByKeyValue', function (arr: object[], key: string, value: any, options): object {

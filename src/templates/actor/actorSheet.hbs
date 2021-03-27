@@ -450,6 +450,54 @@
 						</div>
 					</div>
 				{{/each}}
+				{{#each data.items.dynamism as |dynamism key|}}
+					<div id="tooltip_content_{{dynamism._id}}">
+						<img src="{{dynamism.img}}" title="{{dynamism.name}}" alt="{{dynamism.name}}" height="50"/>
+						<h1 style="display: inline; margin-left: 4px;">{{dynamism.name}}</h1>
+						<table style="max-width: 640px;">
+							<tbody>
+							<tr>
+								<td style="padding-right: 3px;">{{localize "HELLAS.dynamism.skillid.label"}}</td>
+								<td>{{#if (eq dynamism.data.skillid "dynamism")}}
+									{{localize "HELLAS.dynamism.skillid.default.name"}}
+								{{else}}
+									{{setVar "dynamismSkill" (findEntryByKeyValue @root.data.items.skills "_id" dynamism.data.skillid)}}
+									{{#if @root.dynamismSkill}}
+										{{@root.dynamismSkill.name}}
+									{{else}}
+										{{localize "HELLAS.dynamism.skillid.unknown.name"}}
+									{{/if}}
+								{{/if}}
+								</td>
+							</tr>
+							<tr>
+								<td style="padding-right: 3px;">{{localize "HELLAS.dynamism.dod.label"}}</td>
+								<td>{{dynamism.data.dod}}</td>
+							</tr>
+							<tr>
+								<td style="padding-right: 3px;">{{localize "HELLAS.dynamism.dodinfo.label"}}</td>
+								<td>{{breaklines dynamism.data.dodinfo}}</td>
+							</tr>
+							<tr>
+								<td style="padding-right: 3px;">{{localize "HELLAS.dynamism.range.label"}}</td>
+								<td>{{dynamism.data.range}}</td>
+							</tr>
+							<tr>
+								<td style="padding-right: 3px;">{{localize "HELLAS.dynamism.tradition.label"}}</td>
+								<td>{{dynamism.data.tradition}}</td>
+							</tr>
+							<tr>
+								<td style="padding-right: 3px;">{{localize "HELLAS.dynamism.duration.label"}}</td>
+								<td>{{dynamism.data.duration}}</td>
+							</tr>
+							</tbody>
+						</table>
+						<div style="max-width: 640px;">
+							{{!-- raw html output --}}
+							{{{dynamism.data.notes}}}
+						</div>
+					</div>
+				{{/each}}
 		</div>
 		</div>
 
