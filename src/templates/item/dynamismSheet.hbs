@@ -8,7 +8,7 @@
 
 	{{!-- Sheet Tab Navigation --}}
 	<nav class="sheet-tabs tabs" data-group="primary-tabs">
-		<a class="item" data-tab="weapon">{{localize "HELLAS.sheet.tabs.dynamism"}}</a>
+		<a class="item" data-tab="dynamism">{{localize "HELLAS.sheet.tabs.dynamism"}}</a>
 		<a class="item" data-tab="description">{{localize "HELLAS.sheet.tabs.description"}}</a>
 	</nav>
 
@@ -47,6 +47,15 @@
 						   data-dtype="Number"
 						   min="-100" oninput="this.value = Math.round(this.value|0);"
 						   title="{{localize "HELLAS.dynamism.dod.title"}}"/>
+				</div>
+
+				<div class="text-right">
+					<label for="{{item._id}}.data.dodinfo"
+						   class="align-middle"
+						   title="{{localize "HELLAS.dynamism.dodinfo.title"}}">{{localize "HELLAS.dynamism.dodinfo.label"}}</label>
+				</div>
+				<div class="col-span-2">
+					<textarea class="width48" name="data.dodinfo" rows="2">{{data.dodinfo}}</textarea>
 				</div>
 
 				<div class="text-right">

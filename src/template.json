@@ -134,8 +134,8 @@
     },
     "dynamism": {
       "templates": ["common", "spell", "skilltype"],
-      "attribute": "",
       "dod": 0,
+      "dodinfo": "",
       "range": "",
       "tradition": "",
       "duration": ""

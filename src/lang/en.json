@@ -1,4 +1,6 @@
 {
+  "HELLAS.dialog.really.delete": "Delete the item?",
+  
   "HELLAS.sheet.tabs.attributes": "Attributes/Skills",
   "HELLAS.sheet.tabs.personal": "Personal",
   "HELLAS.sheet.tabs.description": "Description",
@@ -11,6 +13,7 @@
   "HELLAS.section.skills.title": "Skills",
   "HELLAS.section.weapons.title": "Weapons",
   "HELLAS.section.armor.title": "Armor / Clothing / Shields",
+  "HELLAS.section.dynamism.title": "Dynamism",
   
   "HELLAS.character.status.dead.title": "Dead",
   
@@ -312,6 +315,7 @@
   "HELLAS.roll.modifiers.dialog.attribute.label": "Attribute Level",
   "HELLAS.roll.modifiers.dialog.dod.tooltip": "<table><colgroup><col style='padding: 3px;'><col style='padding: 3px;'></colgroup><thead><tr><td colspan='2' style='text-align: center;'>Degree of Difficulty</td></tr></thead><tbody><tr><td style='padding: 3px;'>No chance of failure</td><td style='padding: 3px;'>No need to roll</td></tr><tr><td>Any fool could do it</td><td>+10</td></tr><tr><td>Very Easy</td><td>+7</td></tr><tr><td>Easy</td><td>+5</td></tr><tr><td>Simple</td><td>+3</td></tr><tr><td>Routine</td><td>+0</td></tr><tr><td>Tricky</td><td>-3 to -6</td></tr><tr><td>Difficult</td><td>-7 to -10</td></tr><tr><td>Very Difficult</td><td>-11 to -15</td></tr><tr><td>Extreme</td><td>-16 to -20</td></tr><tr><td>Beyond Extreme</td><td>-21 or more</td></tr></tbody></table>",
 
+  "HELLAS.roll.chat.dynamism.title": "Rolling {skill} with {dynamism}",
   "HELLAS.roll.chat.weapon.title": "Rolling {skill} with {weapon}",
   "HELLAS.roll.chat.skill.title": "Rolling {title} ({attribute})",
   "HELLAS.roll.chat.attribute.title": "Rolling {attribute}",
@@ -495,18 +499,30 @@
   "HELLAS.armor.total.per": "PER: {total}",
 
   "HELLAS.item.dynamism.new": "New dynamism",
+  "HELLAS.item.dynamism.roll": "Roll dynamism",
 
   "HELLAS.dynamism.skillid.default.name": "Dynamism",
   
   "HELLAS.dynamism.skillid.label": "Skill",
   "HELLAS.dynamism.dod.label": "DoD",
+  "HELLAS.dynamism.dodinfo.label": "DoD Info",
   "HELLAS.dynamism.range.label": "Range",
   "HELLAS.dynamism.tradition.label": "Tradition",
   "HELLAS.dynamism.duration.label": "Duration",
 
   "HELLAS.dynamism.skillid.title": "Skill used with this dynamism",
   "HELLAS.dynamism.dod.title": "Degree of Difficulty (DoD):",
+  "HELLAS.dynamism.dodinfo.title": "DoD breakdown",
   "HELLAS.dynamism.range.title": "Range",
   "HELLAS.dynamism.tradition.title": "Tradition",
-  "HELLAS.dynamism.duration.title": "Duration"
+  "HELLAS.dynamism.duration.title": "Duration",
+
+  "HELLAS.dynamism.column.name": "Name",
+  "HELLAS.dynamism.column.dod": "DoD",
+  "HELLAS.dynamism.column.range": "Range",
+  "HELLAS.dynamism.column.duration": "Dur",
+
+  "HELLAS.dynamism.controls.add": "Add dynamism",
+  "HELLAS.dynamism.controls.edit": "Edit dynamism",
+  "HELLAS.dynamism.controls.delete": "Delete dynamism"
 }

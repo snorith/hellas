@@ -39,7 +39,7 @@ export class HellasDynamismItemSheet extends ItemSheet {
 
 		sheet.item['HELLAS'] = HELLAS
 		if (this.actor)
-			sheet.item['SKILLS'] = (this.actor as HellasActor).getSkillsBySkillIDPrefix("dynamism")
+			sheet.item['SKILLS'] = (this.actor as HellasActor).getSkillsBySkillIDPrefix("mode")
 		else
 			sheet.item['SKILLS'] = []
 

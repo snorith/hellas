@@ -9,6 +9,7 @@ import {HellasActor} from "./HellasActor"
 import {HellasWeaponItem} from "../item/HellasWeaponItem"
 import {ArmorItemDataType, HellasArmorItem} from "../item/HellasArmorItem"
 import {set} from "lodash-es"
+import {HellasDynamismItem} from "../item/HellasDynamismItem"
 
 export const sortItemsByNameFunction = (a, b) => a.name < b.name ? -1 : a.name > b.name ? 1 : 0
 
@@ -72,11 +73,12 @@ export class HellasActorSheet extends ActorSheet {
 		// @ts-ignore
 		const items = sheetData.data.items;
 
-		// filter out skills and sort them
+		// filter out items and sort them
 		Object.entries({
 			skills: HellasSkillItem.type,
 			weapons: HellasWeaponItem.type,
-			armor: HellasArmorItem.type
+			armor: HellasArmorItem.type,
+			dynamism: HellasDynamismItem.type
 		}).forEach(([val, type]) => {
 			// @ts-ignore
 			if (!sheetData.data.items[val])
@@ -175,6 +177,9 @@ export class HellasActorSheet extends ActorSheet {
 
 		// active/deactivate a piece of armor
 		html.find('.armor-active-checkbox').click(this._onArmorActiveClick.bind(this))
+
+		// roll a dynamism
+		html.find('.dynamism-roll').click(this._onDynamismRoll.bind(this))
 	}
 
 	_onArmorActiveClick(event) {
@@ -226,6 +231,21 @@ export class HellasActorSheet extends ActorSheet {
 		const itemID = element.dataset.itemId
 
 		const item = this.actor.getOwnedItem(itemID) as HellasWeaponItem
+		if (!item)
+			return false
+
+		item.roll().catch(reason => console.log(reason))
+
+		return false
+	}
+
+	_onDynamismRoll(event) {
+		event.preventDefault()
+
+		const element = event.currentTarget
+		const itemID = element.dataset.itemId
+
+		const item = this.actor.getOwnedItem(itemID) as HellasDynamismItem
 		if (!item)
 			return false
 
@@ -304,7 +324,7 @@ export class HellasActorSheet extends ActorSheet {
 	_onDeleteItem(event) {
 		event.preventDefault()
 
-		if (window.confirm('Delete the item?')) {
+		if (window.confirm(game.i18n.localize("HELLAS.dialog.really.delete"))) {
 			const td = $(event.currentTarget).parents(".item");
 			this.actor.deleteOwnedItem(td.data("itemId"));
 			td.slideUp(200, () => this.render(false));

@@ -138,6 +138,49 @@
 						{{/each}}
 						</tbody>
 					</table>
+
+					<table class="skills shadow-md border-gray-500 border-solid border-opacity-100 border-l border-r border-b">
+						<thead>
+						<tr>
+							<td colspan="7" class="hellas-titling text-center">{{localize "HELLAS.section.dynamism.title"}}</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td class="hellas-titling text-center">{{localize "HELLAS.dynamism.column.name"}}</td>
+							<td class="w-4"></td>
+							<td class="hellas-titling text-center">{{localize "HELLAS.dynamism.column.dod"}}</td>
+							<td class="hellas-titling text-center">{{localize "HELLAS.dynamism.column.range"}}</td>
+							<td class="hellas-titling text-center">{{localize "HELLAS.dynamism.column.duration"}}</td>
+							<td class="hellas-titling text-center items-center w-4">
+								<div class="item-controls w-auto">
+									<a class="item-control item-create" title="{{localize "HELLAS.dynamism.controls.add"}}" data-type="dynamism"><i class="fas fa-plus"></i></a>
+								</div>
+							</td>
+						</tr>
+						</thead>
+						<tbody>
+						{{#each data.items.dynamism as |dynamism key|}}
+							<tr class="item" data-item-id="{{dynamism._id}}">
+								<td class="pl-1">
+									<span class="tooltip" data-tooltip-content="#tooltip_content_{{dynamism._id}}"><i class="fas fa-info-circle"></i></span>
+								</td>
+								<td>{{dynamism.name}}</td>
+								<td class="text-center w-4">
+									<a class="item-control dynamism-roll" data-item-id="{{dynamism._id}}" title="{{localize "HELLAS.item.dynamism.roll"}}"><i class="fas fa-dice-d20"></i></a>
+								</td>
+								<td class="text-center">{{dynamism.data.dod}}</td>
+								<td class="text-center">{{dynamism.data.range}}</td>
+								<td class="text-center">{{dynamism.data.duration}}</td>
+								<td class="text-center align-middle w-4 pr-1">
+									<div class="item-controls w-auto">
+										<a class="item-control item-edit" title="{{localize "HELLAS.dynamism.controls.edit"}}"><i class="fas fa-edit"></i></a>
+										<a class="item-control item-delete" title="{{localize "HELLAS.dynamism.controls.delete"}}"><i class="fas fa-trash"></i></a>
+									</div>
+								</td>
+							</tr>
+						{{/each}}
+						</tbody>
+					</table>
 				</div>
 				<div>
 					<table class="skills shadow-md border-gray-500 border-solid border-opacity-100 border-l border-r">
