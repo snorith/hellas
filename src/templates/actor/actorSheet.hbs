@@ -530,7 +530,32 @@
 						</div>
 					</div>
 				{{/each}}
-		</div>
+				{{#each data.items.talents as |talent key|}}
+					<div id="tooltip_content_{{talent._id}}">
+						<img src="{{talent.img}}" title="{{talent.name}}" alt="{{talent.name}}" height="50"/>
+						<h1 style="display: inline; margin-left: 4px;">{{talent.name}}</h1>
+						<table style="max-width: 640px;">
+							<tbody>
+							<tr>
+								<td style="padding-right: 3px;">{{localize "HELLAS.talent.desc.label"}}</td>
+								<td>{{breaklines talent.data.desc}}</td>
+							</tr>
+							<tr>
+								<td colspan="2">
+									{{localize "HELLAS.talent.benefit.label"}}
+									<hr>
+									{{{talent.data.benefit}}}
+								</td>
+							</tr>
+							</tbody>
+						</table>
+						<div style="max-width: 640px;">
+							{{!-- raw html output --}}
+							{{{dynamism.data.notes}}}
+						</div>
+					</div>
+				{{/each}}
+			</div>
 		</div>
 
 		{{!-- Personal Tab --}}
