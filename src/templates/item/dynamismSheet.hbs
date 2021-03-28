@@ -15,7 +15,7 @@
 	{{!-- Sheet Body --}}
 	<section class="sheet-body">
 		{{!-- dynamism Tab --}}
-		<div class="tab weapon" data-group="primary-tabs" data-tab="dynamism">
+		<div class="tab dynamism" data-group="primary-tabs" data-tab="dynamism">
 			<div class="grid grid-cols-3 gap-2 mt-4 flex-none align-middle">
 				<div class="text-right">
 					<label for="{{item._id}}.data.skillid"
@@ -55,7 +55,7 @@
 						   title="{{localize "HELLAS.dynamism.dodinfo.title"}}">{{localize "HELLAS.dynamism.dodinfo.label"}}</label>
 				</div>
 				<div class="col-span-2">
-					<textarea class="width48" name="data.dodinfo" rows="2">{{data.dodinfo}}</textarea>
+					<textarea id="{{item._id}}.data.dodinfo" class="width60 text-base font-sans" name="data.dodinfo" rows="3">{{data.dodinfo}}</textarea>
 				</div>
 
 				<div class="text-right">

@@ -20,6 +20,13 @@
       "system": "hellas",
       "path": "./packs/system-skills.db",
       "entity": "Item"
+    },
+    {
+      "name": "systemTalents",
+      "label": "System Talents",
+      "system": "hellas",
+      "path": "./packs/system-talents.db",
+      "entity": "Item"
     }
   ],
 	"languages": [

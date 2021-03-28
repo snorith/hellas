@@ -61,4 +61,7 @@ form {
 	.width48 {
 		@apply w-48;
 	}
+	.width60 {
+		@apply w-60;
+	}
 }

@@ -10,6 +10,7 @@ import {HellasWeaponItem} from "../item/HellasWeaponItem"
 import {ArmorItemDataType, HellasArmorItem} from "../item/HellasArmorItem"
 import {set} from "lodash-es"
 import {HellasDynamismItem} from "../item/HellasDynamismItem"
+import {HellasTalentItem} from "../item/HellasTalentItem"
 
 export const sortItemsByNameFunction = (a, b) => a.name < b.name ? -1 : a.name > b.name ? 1 : 0
 
@@ -78,7 +79,8 @@ export class HellasActorSheet extends ActorSheet {
 			skills: HellasSkillItem.type,
 			weapons: HellasWeaponItem.type,
 			armor: HellasArmorItem.type,
-			dynamism: HellasDynamismItem.type
+			dynamism: HellasDynamismItem.type,
+			talents: HellasTalentItem.type
 		}).forEach(([val, type]) => {
 			// @ts-ignore
 			if (!sheetData.data.items[val])

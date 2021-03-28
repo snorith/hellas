@@ -1,0 +1,43 @@
+<form class="{{cssClass}} item" autocomplete="off" autocapitalize="off">
+	<header class="sheet-header">
+		<img class="profile-img" src="{{item.img}}" data-edit="img" {{#if item.name}}title="{{item.name}}"{{/if}}/>
+		<div class="header-fields">
+			<input class="charname" name="name" type="text" required value="{{item.name}}" data-dtype="String"/>
+		</div>
+	</header>
+
+	{{!-- Sheet Tab Navigation --}}
+	<nav class="sheet-tabs tabs" data-group="primary-tabs">
+		<a class="item" data-tab="talent">{{localize "HELLAS.sheet.tabs.talent"}}</a>
+		<a class="item" data-tab="description">{{localize "HELLAS.sheet.tabs.description"}}</a>
+	</nav>
+
+	{{!-- Sheet Body --}}
+	<section class="sheet-body">
+		{{!-- dynamism Tab --}}
+		<div class="tab talent" data-group="primary-tabs" data-tab="talent">
+			<div class="grid grid-cols-3 gap-2 mt-4 flex-none align-middle">
+				<div class="text-right">
+					<label for="{{item._id}}.data.desc"
+						   class="align-middle"
+						   title="{{localize "HELLAS.talent.desc.title"}}">{{localize "HELLAS.talent.desc.label"}}</label>
+				</div>
+				<div class="col-span-2">
+					<textarea id="{{item._id}}.data.desc" class="width60 text-base font-sans" name="data.desc" rows="4">{{data.desc}}</textarea>
+				</div>
+			</div>
+			<div>
+				<label for="{{item._id}}.data.benefit"
+					   class="align-middle"
+					   title="{{localize "HELLAS.talent.benefit.title"}}">{{localize "HELLAS.talent.benefit.label"}}</label>
+				<hr>
+			</div>
+			{{editor content=data.benefit target="data.benefit" button=true owner=owner editable=editable}}
+		</div>
+
+		{{!-- Description Tab --}}
+		<div class="tab description" data-group="primary-tabs" data-tab="description">
+			{{editor content=data.notes target="data.notes" button=true owner=owner editable=editable}}
+		</div>
+	</section>
+</form>

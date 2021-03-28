@@ -11,6 +11,8 @@ export const preloadTemplates = async function() {
 		`${systemBasePath}/templates/item/skillSheet.hbs`,
 		`${systemBasePath}/templates/item/weaponSheet.hbs`,
 		`${systemBasePath}/templates/item/armorSheet.hbs`,
+		`${systemBasePath}/templates/item/dynamismSheet.hbs`,
+		`${systemBasePath}/templates/item/talentSheet.hbs`,
 
 		// Roll modifier
 		`${systemBasePath}/templates/dialog/modifiers.hbs`,

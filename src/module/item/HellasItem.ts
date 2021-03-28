@@ -16,6 +16,7 @@ import {HellasSkillItem} from "./HellasSkillItem"
 import {HellasWeaponItem} from "./HellasWeaponItem"
 import {HellasArmorItem} from "./HellasArmorItem"
 import {HellasDynamismItem} from "./HellasDynamismItem"
+import {HellasTalentItem} from "./HellasTalentItem"
 
 export const HellasItem = new Proxy(function () {}, {
 
@@ -32,6 +33,8 @@ export const HellasItem = new Proxy(function () {}, {
 				return new HellasArmorItem(data, newTarget)
 			case HellasDynamismItem.type:
 				return new HellasDynamismItem(data, newTarget)
+			case HellasTalentItem.type:
+				return new HellasTalentItem(data, newTarget)
         }
     },
 
@@ -50,6 +53,8 @@ export const HellasItem = new Proxy(function () {}, {
 							return HellasArmorItem.create(data, options)
 						case HellasDynamismItem.type:
 							return HellasDynamismItem.create(data, options)
+						case HellasTalentItem.type:
+							return HellasTalentItem.create(data, options)
                     }
                 };
 
@@ -61,6 +66,7 @@ export const HellasItem = new Proxy(function () {}, {
 							HellasWeaponItem ||
 							HellasArmorItem ||
 							HellasDynamismItem ||
+							HellasTalentItem ||
                         	// other instanceof
                         false
                     );

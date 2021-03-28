@@ -23,6 +23,8 @@ import {HellasArmorItemSheet} from "./module/item/sheet/HellasArmorItemSheet"
 import {HellasArmorItem} from "./module/item/HellasArmorItem"
 import {HellasDynamismItem} from "./module/item/HellasDynamismItem"
 import {HellasDynamismItemSheet} from "./module/item/sheet/HellasDynamismItemSheet"
+import {HellasTalentItem} from "./module/item/HellasTalentItem"
+import {HellasTalentItemSheet} from "./module/item/sheet/HellasTalentItemSheet"
 
 /* ------------------------------------ */
 /* Initialize system					*/
@@ -38,7 +40,8 @@ Hooks.once('init', async function() {
 		HellasSkillAbilityItem: HellasSkillItem,
 		HellasWeaponItem: HellasWeaponItem,
 		HellasArmorItem: HellasArmorItem,
-		HellasDynamismItem: HellasDynamismItem
+		HellasDynamismItem: HellasDynamismItem,
+		HellasTalentItem: HellasTalentItem
 	}
 
 	game.HELLAS = HELLAS
@@ -59,6 +62,7 @@ Hooks.once('init', async function() {
 	Items.registerSheet(systemName, HellasWeaponItemSheet, { types: [HellasWeaponItem.type], makeDefault: true, label: "Hellas Weapon" });
 	Items.registerSheet(systemName, HellasArmorItemSheet, { types: [HellasArmorItem.type], makeDefault: true, label: "Hellas Armor" });
 	Items.registerSheet(systemName, HellasDynamismItemSheet, { types: [HellasDynamismItem.type], makeDefault: true, label: "Hellas Dynamism" });
+	Items.registerSheet(systemName, HellasTalentItemSheet, { types: [HellasTalentItem.type], makeDefault: true, label: "Hellas Talent" });
 
 	// Register custom system settings
 	registerSettings();

@@ -98,7 +98,7 @@
     }
   },
   "Item": {
-    "types": ["skill", "dynamism", "weapon", "armor"],
+    "types": ["skill", "dynamism", "weapon", "armor", "talent"],
     "templates": {
       "common": {
         "notes": "",
@@ -164,6 +164,11 @@
       "md": 0,
       "type": "clothingutility",
       "modifier": "regular"
+    },
+    "talent": {
+      "templates": ["common"],
+      "desc": "",
+      "benefit": ""
     }
   }
 }
