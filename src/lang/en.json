@@ -512,6 +512,7 @@
   "HELLAS.dynamism.range.label": "Range",
   "HELLAS.dynamism.tradition.label": "Tradition",
   "HELLAS.dynamism.duration.label": "Duration",
+  "HELLAS.dynamism.other.label": "Other",
 
   "HELLAS.dynamism.skillid.title": "Skill used with this dynamism",
   "HELLAS.dynamism.dod.title": "Degree of Difficulty (DoD):",
@@ -519,6 +520,7 @@
   "HELLAS.dynamism.range.title": "Range",
   "HELLAS.dynamism.tradition.title": "Tradition",
   "HELLAS.dynamism.duration.title": "Duration",
+  "HELLAS.dynamism.other.title": "Specific mode related details such as damage done, mass created, mass lifted etc...",
 
   "HELLAS.dynamism.column.name": "Name",
   "HELLAS.dynamism.column.dod": "DoD",

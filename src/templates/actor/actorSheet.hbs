@@ -254,7 +254,7 @@
 								<td class="pl-1">
 									<span class="tooltip" data-tooltip-content="#tooltip_content_{{armor._id}}"><i class="fas fa-info-circle"></i></span>
 								</td>
-								<td>{{armor.name}}</td>
+								<td>{{armor.name}}<br>{{armor.img}}</td>
 								<td class="text-center">
 									<a class="item-control armor-active-checkbox" data-item-id="{{armor._id}}" title="{{#if armor.data.active}}{{localize "HELLAS.armor.active.title"}}{{else}}{{localize "HELLAS.armor.inactive.title"}}{{/if}}">{{#if armor.data.active}}<i class="fas fa-check-square"></i>{{else}}<i class="far fa-square"></i>{{/if}}</a>
 								</td>
@@ -513,6 +513,10 @@
 							<tr>
 								<td style="padding-right: 3px;">{{localize "HELLAS.dynamism.range.label"}}</td>
 								<td>{{dynamism.data.range}}</td>
+							</tr>
+							<tr>
+								<td style="padding-right: 3px;">{{localize "HELLAS.dynamism.other.label"}}</td>
+								<td>{{dynamism.data.other}}</td>
 							</tr>
 							<tr>
 								<td style="padding-right: 3px;">{{localize "HELLAS.dynamism.tradition.label"}}</td>

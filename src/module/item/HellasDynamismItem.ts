@@ -12,7 +12,8 @@ export type DynamismItemDataType = {
 	dodinfo: string,			// how the dod breaks down
 	range: "",					// range of this dynamism
 	tradition: "",				// what dynamism traditions this is part of
-	duration: ""				// how long it lasts for
+	duration: "",				// how long it lasts for
+	other: ""
 }
 
 export type DynamismItemType = {
@@ -88,6 +89,11 @@ export class HellasDynamismItem extends Item {
 		const itemData = item.data || {} as DynamismItemDataType
 		const dod = itemData.dod
 
+		if (itemData.skillid === DEFAULT_DYNAMISM_SKILLID) {
+			ui.notifications.error(`You must first pick a specific dynamism skill for ${item.name}. Edit the dynamism and pick the correct skill mode.`)
+			return false
+		}
+
 		// get modifier data
 		const modifiers = await getRollModifiers(0, dod)
 		if (modifiers.discriminator == "cancelled")
@@ -95,20 +101,15 @@ export class HellasDynamismItem extends Item {
 
 		let baseLevel = 0
 		let skillName = ''
-		if (itemData.skillid === DEFAULT_DYNAMISM_SKILLID) {
-			baseLevel = actorData.attributes[DEFAULT_DYNAMISM_SKILLID].value
-			skillName = game.i18n.localize(`HELLAS.attributes.${DEFAULT_DYNAMISM_SKILLID}.name`)
+
+		const skill = this.actor.getOwnedItem(itemData.skillid) as HellasSkillItem
+		if (!skill) {
+			ui.notifications.error(`No associated skill found for ${item.name}`)
+			return false
 		}
-		else {
-			const skill = this.actor.getOwnedItem(itemData.skillid) as HellasSkillItem
-			if (!skill) {
-				ui.notifications.error(`No associated skill found for ${item.name}`)
-				return false
-			}
-			const skillData = skill.data as unknown as SkillItemType
-			baseLevel = skillData.data.level.max
-			skillName = skillData.name
-		}
+		const skillData = skill.data as unknown as SkillItemType
+		baseLevel = skillData.data.level.max
+		skillName = skillData.name
 
 		let rollData = mergeObject({
 			multipleactionspenalty: multipleActionPenalty(modifiers.multipleactionscount, actorData.attributes.speed.value),

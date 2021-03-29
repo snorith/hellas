@@ -138,7 +138,8 @@
       "dodinfo": "",
       "range": "",
       "tradition": "",
-      "duration": ""
+      "duration": "",
+      "other": ""
     },
     "weapon": {
       "templates": ["common", "carriable", "sellable", "skilltype", "wearable"],
