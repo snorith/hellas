@@ -27,6 +27,13 @@
       "system": "hellas",
       "path": "./packs/system-talents.db",
       "entity": "Item"
+    },
+    {
+      "name": "systemDynamisms",
+      "label": "System Dynamisms",
+      "system": "hellas",
+      "path": "./packs/system-dynamisms.db",
+      "entity": "Item"
     }
   ],
 	"languages": [
