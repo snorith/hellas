@@ -90,7 +90,7 @@ export class HellasDynamismItem extends Item {
 		const dod = itemData.dod
 
 		if (itemData.skillid === DEFAULT_DYNAMISM_SKILLID) {
-			ui.notifications.error(`You must first pick a specific dynamism skill for ${item.name}. Edit the dynamism and pick the correct skill mode.`)
+			ui.notifications.error(`You must first pick a specific dynamism skill for ${item.name}. Edit the dynamism and pick the correct mode skill.`)
 			return false
 		}
 
