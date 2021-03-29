@@ -24,6 +24,7 @@
   "HELLAS.character.race.name": "Race",
   "HELLAS.character.profession.name": "Profession",
   "HELLAS.character.deity.name": "Deity",
+  "HELLAS.character.xp.name": "XP",
 
   "HELLAS.character.race.choices.amazoran": "Amazoran",
   "HELLAS.character.race.choices.goregon": "Goregon",

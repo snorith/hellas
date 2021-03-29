@@ -10,39 +10,38 @@
 			</div>
 			<div class="flex-grow">
 				<h1><input name="name" class="text-2xl" type="text" value="{{actor.name}}" placeholder="{{localize "HELLAS.character.name.name"}}" data-dtype="String"></h1>
-				<div class="grid grid-cols-2 gap-1 align-middle">
-					<div>
-					<div class="flex flex-col mb-4 md:w-1/2">
-						<div class="flex flex-col mb-3 md:w-1/2">
+				<div class="flex flex-wrap">
+					<div class="mr-2 mb-2">
+						<div class="flex flex-col md:w-1/2">
 							<label for="data.epithet"
 								   class="mb-1"
 								   title="{{localize "HELLAS.character.epithet.name"}}">{{localize "HELLAS.character.epithet.name"}}</label>
 							<input type="text" class="width48" name="data.epithet" value="{{data.epithet}}" data-dtype="String">
 						</div>
-						<div class="flex flex-col mb-3 md:w-1/2">
+					</div>
+					<div class="mr-2 mb-2">
+						<div class="flex flex-col md:w-1/2">
 							<label for="data.race"
 								   class="mb-1"
 								   title="{{localize "HELLAS.character.race.name"}}">{{localize "HELLAS.character.race.name"}}</label>
 							<input type="text" class="width48" name="data.race" value="{{data.race}}" data-dtype="String">
 						</div>
 					</div>
-					</div>
-
-					<div>
-					<div class="flex flex-col mb-4 md:w-1/2">
-						<div class="flex flex-col mb-3 md:w-1/2">
+					<div class="mr-2 mb-2">
+						<div class="flex flex-col md:w-1/2">
 							<label for="data.profession"
 								   class="mb-1"
 								   title="{{localize "HELLAS.character.profession.name"}}">{{localize "HELLAS.character.profession.name"}}</label>
 							<input type="text" class="width48" name="data.profession" value="{{data.profession}}" data-dtype="String">
 						</div>
-						<div class="flex flex-col mb-3 md:w-1/2">
+					</div>
+					<div class="mr-2 mb-2">
+						<div class="flex flex-col md:w-1/2">
 							<label for="data.deity"
 								   class="mb-1"
 								   title="{{localize "HELLAS.character.deity.name"}}">{{localize "HELLAS.character.deity.name"}}</label>
 							<input type="text" class="width48" name="data.deity" value="{{data.deity}}" data-dtype="String">
 						</div>
-					</div>
 					</div>
 				</div>
 			</div>
@@ -85,32 +84,39 @@
 						</div>
 
 						<div class="flex flex-wrap justify-center items-center mb-1">
-							<div class="flex h-20 p-2 align-middle text-center items-center last:mr-0 mr-2 break-all border-2 border-opacity-70 border-solid border-gray-900 shadow-md aluminum-foil-bkgd">
+							<div class="flex h-20 p-2 align-middle text-center items-center last:mr-0 mr-2 mt-1 break-all border-2 border-opacity-70 border-solid border-gray-900 shadow-md aluminum-foil-bkgd">
 								<div>
 									<div class="hellas-titling uppercase font-bold align-middle overflow-ellipsis" title="{{localize "HELLAS.attributes.hitpoints.description"}}">{{localize "HELLAS.attributes.hitpoints.current.name"}}</div>
 									<div class="flex p-2 items-center justify-center">
-										<input class="rounded-full font-bold border-2 border-gray-900 w-1/2" type="number" name="data.attributes.hitpoints.value" value="{{data.attributes.hitpoints.value}}" min="-10" step="1" oninput="this.value = Math.round(this.value|0);" data-dtype="Number" title="{{localize "HELLAS.attributes.hitpoints.current.name"}}">
+										<input class="rounded-full font-bold border-2 border-gray-900 width20" type="number" name="data.attributes.hitpoints.value" value="{{data.attributes.hitpoints.value}}" min="-10" step="1" oninput="this.value = Math.round(this.value|0);" data-dtype="Number" title="{{localize "HELLAS.attributes.hitpoints.current.name"}}">
 									</div>
 								</div>
 								<div>
 									<div class="hellas-titling uppercase font-bold align-middle overflow-ellipsis" title="{{localize "HELLAS.attributes.hitpoints.description"}}">{{localize "HELLAS.attributes.hitpoints.max.name"}}</div>
 									<div class="flex p-2 items-center justify-center">
-										<input class="rounded-full font-bold border-2 border-gray-900 w-1/2" type="number" name="data.attributes.hitpoints.max" value="{{data.attributes.hitpoints.max}}" min="-10" step="1" oninput="this.value = Math.round(this.value|0);" data-dtype="Number" title="{{localize "HELLAS.attributes.hitpoints.max.name"}}">
+										<input class="rounded-full font-bold border-2 border-gray-900 width20" type="number" name="data.attributes.hitpoints.max" value="{{data.attributes.hitpoints.max}}" min="-10" step="1" oninput="this.value = Math.round(this.value|0);" data-dtype="Number" title="{{localize "HELLAS.attributes.hitpoints.max.name"}}">
 									</div>
 								</div>
 							</div>
 
-							<div class="h-20 p-2 align-middle text-center items-center last:mr-0 mr-2 border-2 border-opacity-70 border-solid border-gray-900 shadow-md break-all gold-foil-bkgd">
+							<div class="h-20 p-2 align-middle text-center items-center last:mr-0 mr-2 mt-1 border-2 border-opacity-70 border-solid border-gray-900 shadow-md break-all gold-foil-bkgd">
 								<div class="hellas-titling uppercase align-middle overflow-ellipsis" title="{{localize "HELLAS.attributes.glory.description"}}">{{localize "HELLAS.attributes.glory.name"}}</div>
 								<div class="flex p-3 items-center justify-center">
-									<input class="rounded-full w-1/2" type="number" name="data.attributes.glory.value" value="{{data.attributes.glory.value}}" min="-10" step="1" oninput="this.value = Math.round(this.value|0);" data-dtype="Number" title="{{localize "HELLAS.attributes.glory.name"}}">
+									<input class="rounded-full width20" type="number" name="data.attributes.glory.value" value="{{data.attributes.glory.value}}" min="-10" step="1" oninput="this.value = Math.round(this.value|0);" data-dtype="Number" title="{{localize "HELLAS.attributes.glory.name"}}">
 								</div>
 							</div>
 
-							<div class="h-20 p-2 align-middle text-center items-center last:mr-0 mr-2 border-2 border-opacity-70 border-solid border-gray-900 shadow-md break-all aluminum-foil-bkgd">
+							<div class="h-20 p-2 align-middle text-center items-center last:mr-0 mr-2 mt-1 border-2 border-opacity-70 border-solid border-gray-900 shadow-md break-all aluminum-foil-bkgd">
 								<div class="hellas-titling uppercase align-middle overflow-ellipsis" title="{{localize "HELLAS.attributes.heropoints.description"}}">{{localize "HELLAS.attributes.heropoints.name"}}</div>
 								<div class="flex p-3 items-center justify-center">
-									<input class="rounded-full w-1/2" type="number" name="data.attributes.heropoints.value" value="{{data.attributes.heropoints.value}}" min="-10" step="1" oninput="this.value = Math.round(this.value|0);" data-dtype="Number" title="{{localize "HELLAS.attributes.heropoints.name"}}">
+									<input class="rounded-full width20" type="number" name="data.attributes.heropoints.value" value="{{data.attributes.heropoints.value}}" min="-10" step="1" oninput="this.value = Math.round(this.value|0);" data-dtype="Number" title="{{localize "HELLAS.attributes.heropoints.name"}}">
+								</div>
+							</div>
+
+							<div class="h-20 p-2 align-middle text-center items-center last:mr-0 mr-2 mt-1 border-2 border-opacity-70 border-solid border-gray-900 shadow-md break-all aluminum-foil-bkgd">
+								<div class="hellas-titling uppercase align-middle overflow-ellipsis" title="{{localize "HELLAS.character.xp.name"}}">{{localize "HELLAS.character.xp.name"}} <span class="tooltip" data-tooltip-content="#tooltip_content_xp"><i class="fas fa-info-circle"></i></span></div>
+								<div class="flex p-3 items-center justify-center">
+									<input class="rounded-full width20" type="text" name="data.xp" value="{{data.xp}}" data-dtype="String" title="{{localize "HELLAS.character.xp.name"}}">
 								</div>
 							</div>
 						</div>
@@ -367,6 +373,57 @@
 
 			{{!-- Hidden tooltip HTML content --}}
 			<div class="hidden">
+				<div id="tooltip_content_xp">
+					<table style="max-width: 640px;">
+						<thead>
+						<tr>
+							<th>Spending Experience</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr>
+							<td>
+								<h3>Improving Existing Skills</h3>
+								<p>Cost to improve a skill after character creation = new skill level +1 XP</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<h3>Acquiring New Skills</h3>
+								<p>Purchasing skills after character creation = .5 XP x Training Period</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<h3>Gaining New Talents</h3>
+								<p>Purchasing Talents after character creation = 20 XP</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<h3>Improving Attributes</h3>
+								<p>Cost to improve an Attribute after character creation = new attribute level x5 XP</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<h3>Going Above Racial Maximum</h3>
+								<p>One thing that defines the Hero is his abilities beyond that of the normal Hellene. If a player
+									wants to increase his character’s Attributes beyond the racial maximum, he must spend
+									double the normal cost for the increase.
+								</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<h3>Increasing Combat Rating and Dynamism</h3>
+								<p>Cost to improve an CR or DYN after character creation = new attribute level x10 XP
+								</p>
+							</td>
+						</tr>
+						</tbody>
+					</table>
+				</div>
 				{{#each data.items.skills as |skill key|}}
 					<div id="tooltip_content_{{skill._id}}">
 						<img src="{{skill.img}}" title="{{skill.name}}" alt="{{skill.name}}" height="50"/>
