@@ -2,11 +2,50 @@
 	<div class="greek-meander-bkgd h-5 w-full mb-1"></div>
 
 	{{!-- Sheet Header --}}
-	<header class="sheet-header">
+	<header class="mb-1">
 		{{!-- header --}}
-		<img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" alt="{{actor.name}}" height="100" width="100"/>
-		<div class="header-fields">
-			<h1 class="char-name"><input name="name" type="text" value="{{actor.name}}" placeholder="{{localize "HELLAS.character.name.name"}}" data-dtype="String"></h1>
+		<div class="flex flex-row mr-1 ml-1">
+			<div>
+				<img class="box-100 mr-3" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" alt="{{actor.name}}" height="100" width="100"/>
+			</div>
+			<div class="flex-grow">
+				<h1><input name="name" class="text-2xl" type="text" value="{{actor.name}}" placeholder="{{localize "HELLAS.character.name.name"}}" data-dtype="String"></h1>
+				<div class="grid grid-cols-2 gap-1 align-middle">
+					<div>
+					<div class="flex flex-col mb-4 md:w-1/2">
+						<div class="flex flex-col mb-3 md:w-1/2">
+							<label for="data.epithet"
+								   class="mb-1"
+								   title="{{localize "HELLAS.character.epithet.name"}}">{{localize "HELLAS.character.epithet.name"}}</label>
+							<input type="text" class="width48" name="data.epithet" value="{{data.epithet}}" data-dtype="String">
+						</div>
+						<div class="flex flex-col mb-3 md:w-1/2">
+							<label for="data.race"
+								   class="mb-1"
+								   title="{{localize "HELLAS.character.race.name"}}">{{localize "HELLAS.character.race.name"}}</label>
+							<input type="text" class="width48" name="data.race" value="{{data.race}}" data-dtype="String">
+						</div>
+					</div>
+					</div>
+
+					<div>
+					<div class="flex flex-col mb-4 md:w-1/2">
+						<div class="flex flex-col mb-3 md:w-1/2">
+							<label for="data.profession"
+								   class="mb-1"
+								   title="{{localize "HELLAS.character.profession.name"}}">{{localize "HELLAS.character.profession.name"}}</label>
+							<input type="text" class="width48" name="data.profession" value="{{data.profession}}" data-dtype="String">
+						</div>
+						<div class="flex flex-col mb-3 md:w-1/2">
+							<label for="data.deity"
+								   class="mb-1"
+								   title="{{localize "HELLAS.character.deity.name"}}">{{localize "HELLAS.character.deity.name"}}</label>
+							<input type="text" class="width48" name="data.deity" value="{{data.deity}}" data-dtype="String">
+						</div>
+					</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</header>
 
