@@ -52,6 +52,7 @@
 	{{!-- Sheet Tab Navigation --}}
 	<nav class="sheet-tabs tabs" data-group="primary">
 		<a class="item" data-tab="attributes">{{localize "HELLAS.sheet.tabs.attributes"}}</a>
+		<a class="item" data-tab="disadvantages">{{localize "HELLAS.sheet.tabs.disadvantages"}}</a>
 		<a class="item" data-tab="personal">{{localize "HELLAS.sheet.tabs.personal"}}</a>
 		<a class="item" data-tab="description">{{localize "HELLAS.sheet.tabs.description"}}</a>
 	</nav>
@@ -365,8 +366,6 @@
 						{{/each}}
 						</tbody>
 					</table>
-
-					Disadvantages
 				</div>
 			</div>
 
@@ -746,6 +745,10 @@
 					</div>
 				{{/each}}
 			</div>
+		</div>
+
+		{{!-- Disadvantages Tab --}}
+		<div class="tab personal" data-group="primary" data-tab="disadvantages">
 		</div>
 
 		{{!-- Personal Tab --}}
