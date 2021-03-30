@@ -107,7 +107,7 @@
 							</div>
 
 							<div class="h-20 p-2 align-middle text-center items-center last:mr-0 mr-2 mt-1 border-2 border-opacity-70 border-solid border-gray-900 shadow-md break-all aluminum-foil-bkgd">
-								<div class="hellas-titling uppercase align-middle overflow-ellipsis" title="{{localize "HELLAS.attributes.heropoints.description"}}">{{localize "HELLAS.attributes.heropoints.name"}}</div>
+								<div class="hellas-titling uppercase align-middle overflow-ellipsis" title="{{localize "HELLAS.attributes.heropoints.description"}}">{{localize "HELLAS.attributes.heropoints.name"}} <span class="tooltip" data-tooltip-content="#tooltip_content_heropoints"><i class="fas fa-info-circle"></i></span></div>
 								<div class="flex p-3 items-center justify-center">
 									<input class="rounded-full width20" type="number" name="data.attributes.heropoints.value" value="{{data.attributes.heropoints.value}}" min="-10" step="1" oninput="this.value = Math.round(this.value|0);" data-dtype="Number" title="{{localize "HELLAS.attributes.heropoints.name"}}">
 								</div>
@@ -419,6 +419,96 @@
 								<h3>Increasing Combat Rating and Dynamism</h3>
 								<p>Cost to improve an CR or DYN after character creation = new attribute level x10 XP
 								</p>
+							</td>
+						</tr>
+						</tbody>
+					</table>
+				</div>
+				<div id="tooltip_content_heropoints">
+					<table style="max-width: 640px;">
+						<thead>
+						<tr>
+							<th>Spending Hero Points</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr>
+							<td>
+								<ul>
+									<li>
+										Players may spend Hero Points to increase a roll by +2. Hero Points may be spent after the
+										roll is made.
+									</li>
+									<li>
+										Hero Points may be used to negate a mishap or critical failure.
+									</li>
+									<li>
+										One Hero Point will add +4 to damage inflicted.
+									</li>
+									<li>
+										Hero Points may be spent to negate 4 points of damage per point spent. The Hero can spend
+										up to his maximum amount of Hero Points in this way
+										<blockquote>
+											Example: Iolaus is fighting a giant machina construct on the asteroid archipelago in the Myrtoum Solar Sea Expanse.
+											At his disposal are three Hero Points. The machina shoots a salvo of micro missiles at the nimble Hero,
+											hitting him for 30 points of damage! Iolaus is in the pursuit of a Diomedean bridle
+											(one of his Ambitions) and decides this would be a good time to use his Hero Points to negate the damage.
+											Iolaus&#39; player spends all three Hero Points and negates 12 points of damage
+										</blockquote>
+									</li>
+									<li>
+										Two points will give you one extra Action for one round of combat without any multi-action
+										penalty.
+									</li>
+									<li>
+										Two points can be spent to negate the unconsciousness effects of a critical hit. This takes a full
+										turn to complete.
+									</li>
+									<li>
+										A Hero may give any or all of his available Hero Points to another by clasping hands and wishing the other luck.
+										This takes one round and during this time the two Heroes may do nothing else other than reaffirm their friendship
+										and willingness to help one another. A Hero may only be &quot;gifted&quot; a number of Hero Points equal to 3 times his normal amount.
+										The Gifting Hero will not regain his normal amount until the &quot;gift&quot; is used or given back.
+									</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+							<td style="text-align: center;">
+								<table>
+									<thead>
+									<tr>
+										<td>Glory Score</td>
+										<td>Hero Point Max Per Action</td>
+									</tr>
+									</thead>
+									<tbody>
+									<tr>
+										<td>1–20</td>
+										<td>2</td>
+									</tr>
+									<tr>
+										<td>21–40</td>
+										<td>3</td>
+									</tr>
+									<tr>
+										<td>41–100</td>
+										<td>5</td>
+									</tr>
+									<tr>
+										<td>101–150</td>
+										<td>6</td>
+									</tr>
+									<tr>
+										<td>151–200</td>
+										<td>10</td>
+									</tr>
+									<tr>
+										<td>200+</td>
+										<td>Any</td>
+									</tr>
+									</tbody>
+								</table>
 							</td>
 						</tr>
 						</tbody>
