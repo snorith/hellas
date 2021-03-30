@@ -95,6 +95,98 @@
           "parry": 0,
           "pr": 0
         }
+      },
+      "disadvantages": {
+        "relationship": {
+          "level": 0,
+          "info": ""
+        },
+        "internal": {
+          "level": 0,
+          "info": ""
+        },
+        "external": {
+          "level": 0,
+          "info": ""
+        }
+      },
+      "ambitions": {
+        "1": {
+          "info": ""
+        },
+        "2": {
+          "info": ""
+        },
+        "3": {
+          "info": ""
+        }
+      },
+      "professions": {
+        "info": ""
+      },
+      "abilities": {
+        "info": ""
+      },
+      "personal": {
+        "tree": {
+          "house": "",
+          "mother": {
+            "grandmother": "",
+            "grandfather": "",
+            "name": ""
+          },
+          "father": {
+            "grandmother": "",
+            "grandfather": "",
+            "name": ""
+          },
+          "children": {
+            "1": "",
+            "2": "",
+            "3": "",
+            "4": "",
+            "5": "",
+            "6": ""
+          }
+        },
+        "birth": {
+          "age": "",
+          "month": "",
+          "year": "",
+          "planet": ""
+        },
+        "info": {
+          "socialstation": "",
+          "gift": "",
+          "mark": "",
+          "encounter": "",
+          "destiny": "",
+          "fate": "",
+          "deeds": "",
+          "familystatus": "",
+          "callings": {
+            "first": {
+              "years": "",
+              "notes": ""
+            },
+            "second": {
+              "years": "",
+              "notes": ""
+            },
+            "third": {
+              "years": "",
+              "notes": ""
+            },
+            "fourth": {
+              "years": "",
+              "notes": ""
+            },
+            "fifth": {
+              "years": "",
+              "notes": ""
+            }
+          }
+        }
       }
     }
   },
