@@ -23,7 +23,8 @@ export type hellasConfigType = {
 	dynamismMode: string,
 	weaponModifiers: string[],
 	armorModifiers: string[],
-	armorTypes: ObjectWStringArrayValues
+	armorTypes: ObjectWStringArrayValues,
+	childrenBorn: string[]
 }
 
 export type foundryAttributeValueMax = {
@@ -249,7 +250,15 @@ const HELLAS: hellasConfigType = {
 		"helmet": ["helmetlight", "helmetmedium", "helmetheavy"],
 		"shield": ["shieldlight", "shieldmedium", "shieldheavy", "shielddrone"],
 		"shroud": ["shroudclassa", "shroudclassb", "shroudclassc"]
-	}
+	},
+	childrenBorn: [
+		"firstborn",
+		"secondborn",
+		"thirdborn",
+		"fourthborn",
+		"fifthborn",
+		"sxithborn"
+	]
 }
 
 HELLAS.attributes = Object.keys(HELLAS.attributesWShortName)

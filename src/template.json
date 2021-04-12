@@ -141,12 +141,12 @@
             "name": ""
           },
           "children": {
-            "1": "",
-            "2": "",
-            "3": "",
-            "4": "",
-            "5": "",
-            "6": ""
+            "firstborn": "a",
+            "secondborn": "b",
+            "thirdborn": "c",
+            "fourthborn": "d",
+            "fifthborn": "e",
+            "sxithborn": "f"
           }
         },
         "birth": {
@@ -163,6 +163,7 @@
           "destiny": "",
           "fate": "",
           "deeds": "",
+          "notes": "",
           "familystatus": "",
           "callings": {
             "first": {

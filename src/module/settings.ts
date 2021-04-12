@@ -85,6 +85,13 @@ export const registerSettings = function() {
 		return str.toLowerCase()
 	})
 
+	Handlebars.registerHelper('numToStr', function(num: number) {
+		if (Number.isFinite(num)) {
+			return num.toString(10)
+		}
+		return ""
+	})
+
 	Handlebars.registerHelper("selected", value => value ? "selected" : "")
 	Handlebars.registerHelper("disabled", value => value ? "disabled" : "")
 

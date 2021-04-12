@@ -300,7 +300,7 @@
 								<td class="pl-1">
 									<span class="tooltip" data-tooltip-content="#tooltip_content_{{armor._id}}"><i class="fas fa-info-circle"></i></span>
 								</td>
-								<td>{{armor.name}}<br>{{armor.img}}</td>
+								<td>{{armor.name}}</td>
 								<td class="text-center">
 									<a class="item-control armor-active-checkbox" data-item-id="{{armor._id}}" title="{{#if armor.data.active}}{{localize "HELLAS.armor.active.title"}}{{else}}{{localize "HELLAS.armor.inactive.title"}}{{/if}}">{{#if armor.data.active}}<i class="fas fa-check-square"></i>{{else}}<i class="far fa-square"></i>{{/if}}</a>
 								</td>
@@ -753,6 +753,289 @@
 
 		{{!-- Personal Tab --}}
 		<div class="tab personal" data-group="primary" data-tab="personal">
+			<div class="grid grid-cols-2 gap-2">
+				<div>
+					<fieldset class="mb-1">
+						<h3 class="hellas-titling">Family</h3>
+						<div class="mr-2 mb-2">
+							<div class="flex flex-col">
+								<label for="data.personal.tree.house"
+									   class="mb-1"
+									   title="The House Of">The House Of</label>
+								<input type="text" id="data.personal.tree.house" name="data.personal.tree.house" value="{{data.personal.tree.house}}" data-dtype="String">
+							</div>
+						</div>
+						<div class="mr-2 mb-2">
+							<div class="flex flex-col">
+								<label for="data.personal.info.socialstation"
+									   class="mb-1"
+									   title="Parent's Social Station">Parent's Social Station</label>
+								<input type="text" id="data.personal.info.socialstation" name="data.personal.info.socialstation" value="{{data.personal.info.socialstation}}" data-dtype="String">
+							</div>
+						</div>
+						<div class="mr-2 mb-2">
+							<div class="flex flex-col">
+								<label for="data.personal.info.familystatus"
+									   class="mb-1"
+									   title="Family Status">Family Status</label>
+								<input type="text" id="data.personal.info.familystatus" name="data.personal.info.familystatus" value="{{data.personal.info.familystatus}}" data-dtype="String">
+							</div>
+						</div>
+
+						<fieldset class="mb-1">
+							<h4 class="hellas-titling">Maternal</h4>
+							<div class="mr-2 mb-2">
+								<div class="flex flex-col">
+									<label for="data.personal.tree.mother.grandmother"
+										   class="mb-1"
+										   title="Grandmother">Grandmother</label>
+									<input type="text" id="data.personal.tree.mother.grandmother" name="data.personal.tree.mother.grandmother" value="{{data.personal.tree.mother.grandmother}}" data-dtype="String">
+								</div>
+							</div>
+							<div class="mr-2 mb-2">
+								<div class="flex flex-col">
+									<label for="data.personal.tree.mother.grandfather"
+										   class="mb-1"
+										   title="Grandfather">Grandfather</label>
+									<input type="text" id="data.personal.tree.mother.grandfather" name="data.personal.tree.mother.grandfather" value="{{data.personal.tree.mother.grandfather}}" data-dtype="String">
+								</div>
+							</div>
+							<div class="mr-2 mb-2">
+								<div class="flex flex-col">
+									<label for="data.personal.tree.mother.name"
+										   class="mb-1"
+										   title="Mother">Mother</label>
+									<input type="text" id="data.personal.tree.mother.name" name="data.personal.tree.mother.name" value="{{data.personal.tree.mother.name}}" data-dtype="String">
+								</div>
+							</div>
+						</fieldset>
+
+						<fieldset class="mb-1">
+							<h4 class="hellas-titling">Paternal</h4>
+							<div class="mr-2 mb-2">
+								<div class="flex flex-col">
+									<label for="data.personal.tree.father.grandmother"
+										   class="mb-1"
+										   title="Grandmother">Grandmother</label>
+									<input type="text" id="data.personal.tree.father.grandmother" name="data.personal.tree.father.grandmother" value="{{data.personal.tree.father.grandmother}}" data-dtype="String">
+								</div>
+							</div>
+							<div class="mr-2 mb-2">
+								<div class="flex flex-col">
+									<label for="data.personal.tree.father.grandfather"
+										   class="mb-1"
+										   title="Grandfather">Grandfather</label>
+									<input type="text" id="data.personal.tree.father.grandfather" name="data.personal.tree.father.grandfather" value="{{data.personal.tree.father.grandfather}}" data-dtype="String">
+								</div>
+							</div>
+							<div class="mr-2 mb-2">
+								<div class="flex flex-col">
+									<label for="data.personal.tree.father.name"
+										   class="mb-1"
+										   title="Father">Father</label>
+									<input type="text" id="data.personal.tree.father.name" name="data.personal.tree.father.name" value="{{data.personal.tree.father.name}}" data-dtype="String">
+								</div>
+							</div>
+						</fieldset>
+
+						<fieldset class="mb-1">
+							<h4 class="hellas-titling">Children</h4>
+							{{#each actor.HELLAS.childrenBorn as |childOrder|}}
+								<div class="mr-2 mb-2">
+									<div class="flex flex-col">
+										<label for="data.personal.tree.children.{{childOrder}}"
+											   class="mb-1"
+											   title="Child {{@index}}">Child {{@index}}</label>
+										<input type="text" id="data.personal.tree.children.{{childOrder}}" name="data.personal.tree.children.{{childOrder}}" value="{{lookup @root.data.personal.tree.children childOrder}}" data-dtype="String">
+									</div>
+								</div>
+							{{/each}}
+						</fieldset>
+					</fieldset>
+
+					<fieldset class="mb-1">
+						<h3 class="hellas-titling">Birth</h3>
+						<div class="mr-2 mb-2">
+							<div class="flex flex-col">
+								<label for="data.personal.birth.age"
+									   class="mb-1"
+									   title="Age">Age</label>
+								<input type="text" id="data.personal.birth.age" name="data.personal.birth.age" value="{{data.personal.birth.age}}" data-dtype="String">
+							</div>
+							<div class="flex flex-col">
+								<label for="data.personal.birth.month"
+									   class="mb-1"
+									   title="Month">Month</label>
+								<input type="text" id="data.personal.birth.month" name="data.personal.birth.month" value="{{data.personal.birth.month}}" data-dtype="String">
+							</div>
+							<div class="flex flex-col">
+								<label for="data.personal.birth.year"
+									   class="mb-1"
+									   title="Year">Year</label>
+								<input type="text" id="data.personal.birth.year" name="data.personal.birth.year" value="{{data.personal.birth.year}}" data-dtype="String">
+							</div>
+							<div class="flex flex-col">
+								<label for="data.personal.birth.planet"
+									   class="mb-1"
+									   title="Planet">Planet</label>
+								<input type="text" id="data.personal.birth.planet" name="data.personal.birth.planet" value="{{data.personal.birth.planet}}" data-dtype="String">
+							</div>
+						</div>
+					</fieldset>
+
+					<fieldset class="mb-1">
+						<h3 class="hellas-titling">Notes</h3>
+						<textarea rows="10" id="data.personal.info.notes" name="data.personal.info.notes" data-dtype="String">{{data.personal.info.notes}}</textarea>
+					</fieldset>
+				</div>
+				<div>
+					<fieldset class="mb-1">
+						<div class="mr-2 mb-2">
+							<div class="flex flex-col">
+								<label for="data.personal.info.gift"
+									   class="mb-1 font-bold"
+									   title="Special Gift">Special Gift</label>
+								<small>As a child I inherited a gift that I now hold dear.</small>
+								<input type="text" id="data.personal.info.gift" name="data.personal.info.gift" value="{{data.personal.info.gift}}" data-dtype="String">
+							</div>
+						</div>
+						<div class="mr-2 mb-2">
+							<div class="flex flex-col">
+								<label for="data.personal.info.mark"
+									   class="mb-1 font-bold"
+									   title="Divine Mark">Divine Mark</label>
+								<small>My divinity is self evident.</small>
+								<textarea rows="2" id="data.personal.info.mark" name="data.personal.info.mark" data-dtype="String">{{data.personal.info.mark}}</textarea>
+							</div>
+						</div>
+						<div class="mr-2 mb-2">
+							<div class="flex flex-col">
+								<label for="data.personal.info.encounter"
+									   class="mb-1 font-bold"
+									   title="Childhood Encounter">Childhood Encounter</label>
+								<small>As a child something changed my life forever.</small>
+								<textarea rows="2" id="data.personal.info.encounter" name="data.personal.info.encounter" data-dtype="String">{{data.personal.info.encounter}}</textarea>
+						</div>
+						</div>
+						<div class="mr-2 mb-2">
+							<div class="flex flex-col">
+								<label for="data.personal.info.destiny"
+									   class="mb-1 font-bold"
+									   title="My Destiny">My Destiny</label>
+								<small>It has been made clear what my path to immortality will be.</small>
+								<textarea rows="2" id="data.personal.info.destiny" name="data.personal.info.destiny" data-dtype="String">{{data.personal.info.destiny}}</textarea>
+							</div>
+						</div>
+						<div class="mr-2 mb-2">
+							<div class="flex flex-col">
+								<label for="data.personal.info.fate"
+									   class="mb-1 font-bold"
+									   title="My Fate">My Fate</label>
+								<small>I walk a narrow path to my destiny; if I stray my fate is clear.</small>
+								<textarea rows="2" id="data.personal.info.fate" name="data.personal.info.fate" data-dtype="String">{{data.personal.info.fate}}</textarea>
+							</div>
+						</div>
+						<div class="mr-2 mb-2">
+							<div class="flex flex-col">
+								<label for="data.personal.info.deeds"
+									   class="mb-1 font-bold"
+									   title="Completed Deeds">Completed Deeds</label>
+								<small>I gain Glory and my Legend grows.</small>
+								<textarea rows="3" id="data.personal.info.deeds" name="data.personal.info.deeds" data-dtype="String">{{data.personal.info.deeds}}</textarea>
+							</div>
+						</div>
+					</fieldset>
+					<fieldset class="mb-1">
+						<h3 class="hellas-titling">The Callings</h3>
+						<p>In my life I have been many things to many people; I have traveled far and seen much, and I am the sum of these paths:</p>
+						<fieldset class="mb-1">
+							<h3 class="hellas-titling">My First Path</h3>
+							<div class="mr-2 mb-2">
+								<div class="flex flex-col">
+									<label for="data.personal.info.callings.first.years"
+										   class="mb-1"
+										   title="Total years">Total years</label>
+									<input type="text" id="data.personal.info.callings.first.years" name="data.personal.info.callings.first.years" value="{{data.personal.info.callings.first.years}}" data-dtype="String">
+								</div>
+								<div class="flex flex-col">
+									<label for="data.personal.info.callings.first.notes"
+										   class="mb-1 font-bold"
+										   title="Notes">Notes</label>
+									<textarea rows="3" id="data.personal.info.callings.first.notes" name="data.personal.info.callings.first.notes" data-dtype="String">{{data.personal.info.callings.first.notes}}</textarea>
+								</div>
+							</div>
+						</fieldset>
+						<fieldset class="mb-1">
+							<h3 class="hellas-titling">My Second Path</h3>
+							<div class="mr-2 mb-2">
+								<div class="flex flex-col">
+									<label for="data.personal.info.callings.second.years"
+										   class="mb-1"
+										   title="Total years">Total years</label>
+									<input type="text" id="data.personal.info.callings.second.years" name="data.personal.info.callings.second.years" value="{{data.personal.info.callings.second.years}}" data-dtype="String">
+								</div>
+								<div class="flex flex-col">
+									<label for="data.personal.info.callings.second.notes"
+										   class="mb-1 font-bold"
+										   title="Notes">Notes</label>
+									<textarea rows="3" id="data.personal.info.callings.second.notes" name="data.personal.info.callings.second.notes" data-dtype="String">{{data.personal.info.callings.second.notes}}</textarea>
+								</div>
+							</div>
+						</fieldset>
+						<fieldset class="mb-1">
+							<h3 class="hellas-titling">My Third Path</h3>
+							<div class="mr-2 mb-2">
+								<div class="flex flex-col">
+									<label for="data.personal.info.callings.third.years"
+										   class="mb-1"
+										   title="Total years">Total years</label>
+									<input type="text" id="data.personal.info.callings.third.years" name="data.personal.info.callings.third.years" value="{{data.personal.info.callings.third.years}}" data-dtype="String">
+								</div>
+								<div class="flex flex-col">
+									<label for="data.personal.info.callings.second.notes"
+										   class="mb-1 font-bold"
+										   title="Notes">Notes</label>
+									<textarea rows="3" id="data.personal.info.third.second.notes" name="data.personal.info.callings.third.notes" data-dtype="String">{{data.personal.info.callings.third.notes}}</textarea>
+								</div>
+							</div>
+						</fieldset>
+						<fieldset class="mb-1">
+							<h3 class="hellas-titling">My Fourth Path</h3>
+							<div class="mr-2 mb-2">
+								<div class="flex flex-col">
+									<label for="data.personal.info.callings.fourth.years"
+										   class="mb-1"
+										   title="Total years">Total years</label>
+									<input type="text" id="data.personal.info.callings.fourth.years" name="data.personal.info.callings.fourth.years" value="{{data.personal.info.callings.fourth.years}}" data-dtype="String">
+								</div>
+								<div class="flex flex-col">
+									<label for="data.personal.info.callings.fourth.notes"
+										   class="mb-1 font-bold"
+										   title="Notes">Notes</label>
+									<textarea rows="3" id="data.personal.info.callings.fourth.notes" name="data.personal.info.callings.fourth.notes" data-dtype="String">{{data.personal.info.callings.fourth.notes}}</textarea>
+								</div>
+							</div>
+						</fieldset>
+						<fieldset class="mb-1">
+							<h3 class="hellas-titling">My Fifth Path</h3>
+							<div class="mr-2 mb-2">
+								<div class="flex flex-col">
+									<label for="data.personal.info.callings.fifth.years"
+										   class="mb-1"
+										   title="Total years">Total years</label>
+									<input type="text" id="data.personal.info.callings.fifth.years" name="data.personal.info.callings.fifth.years" value="{{data.personal.info.callings.fifth.years}}" data-dtype="String">
+								</div>
+								<div class="flex flex-col">
+									<label for="data.personal.info.callings.fifth.notes"
+										   class="mb-1 font-bold"
+										   title="Notes">Notes</label>
+									<textarea rows="3" id="data.personal.info.callings.fifth.notes" name="data.personal.info.callings.fifth.notes" data-dtype="String">{{data.personal.info.callings.fifth.notes}}</textarea>
+								</div>
+							</div>
+						</fieldset>
+					</fieldset>
+				</div>
+			</div>
 		</div>
 
 		{{!-- Biography Tab --}}
