@@ -8,6 +8,7 @@ const rollup = require("rollup");
 const commonjs = require('@rollup/plugin-commonjs');
 const typescript = require('@rollup/plugin-typescript');
 const resolve = require('@rollup/plugin-node-resolve');
+const uglify = require('rollup-plugin-uglify');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const advancedVars = require("postcss-advanced-variables");
@@ -75,14 +76,21 @@ function buildTS() {
 	const nameTS = `./src/${name}.ts`;
 	const nameJS = `./dist/${name}.js`;
 
+	const rollupPlugins = [
+		typescript(),
+		resolve.nodeResolve({ browser: true }),
+		commonjs(),
+	];
+
+	if (profilemode.production()) {
+		process.env.env = 'production';
+		rollupPlugins.push(uglify());
+	}
+
 	return rollup
 		.rollup({
 			input: nameTS,
-			plugins: [
-				typescript(),
-				resolve.nodeResolve({ browser: true }),
-				commonjs(),
-			]
+			plugins: rollupPlugins
 		})
 		.then(bundle => {
 			if (profilemode.production()) {
@@ -90,6 +98,7 @@ function buildTS() {
 					file: nameJS,
 					format: "esm",
 					name: manifest.file.name,
+					sourcemap: false
 				});
 			}
 
@@ -97,7 +106,7 @@ function buildTS() {
 				file: nameJS,
 				format: "esm",
 				name: manifest.file.name,
-				sourcemap: !profilemode.production()
+				sourcemap: true
 			});
 		});
 }
