@@ -29,6 +29,9 @@ form {
 	.width20 {
 		@apply w-20;
 	}
+	.width40 {
+		@apply w-40;
+	}
 	.width48 {
 		@apply w-48;
 	}
