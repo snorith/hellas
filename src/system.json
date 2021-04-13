@@ -1,7 +1,7 @@
 {
 	"name": "hellas",
 	"title": "Hellas",
-	"description": "Fan contributed support for the Hellas rpg in FoundryVTT",
+	"description": "Fan contributed support for the Hellas RPG in FoundryVTT",
 	"version": "0.1.6",
 	"author": "snorith (Stephen Smith)",
 	"scripts": [
