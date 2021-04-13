@@ -2,11 +2,11 @@
 	"name": "hellas",
 	"title": "Hellas",
 	"description": "Fan contributed support for the Hellas RPG in FoundryVTT",
-	"version": "0.1.6",
+	"version": "0.2.0",
 	"author": "snorith (Stephen Smith)",
 	"scripts": [
 		"lib/tooltipster/tooltipster.bundle.min.js",
-    "lib/tooltipster-scrollabletip/tooltipster-scrollableTip.min.js"
+		"lib/tooltipster-scrollabletip/tooltipster-scrollableTip.min.js"
 	],
 	"esmodules": ["hellas.js"],
 	"styles": [
@@ -14,28 +14,28 @@
 		"lib/tooltipster/tooltipster.bundle.min.css"
 	],
 	"packs": [
-    {
-      "name": "systemSkills",
-      "label": "System Skills",
-      "system": "hellas",
-      "path": "./packs/system-skills.db",
-      "entity": "Item"
-    },
-    {
-      "name": "systemTalents",
-      "label": "System Talents",
-      "system": "hellas",
-      "path": "./packs/system-talents.db",
-      "entity": "Item"
-    },
-    {
-      "name": "systemDynamisms",
-      "label": "System Dynamisms",
-      "system": "hellas",
-      "path": "./packs/system-dynamisms.db",
-      "entity": "Item"
-    }
-  ],
+		{
+			"name": "systemSkills",
+			"label": "System Skills",
+			"system": "hellas",
+			"path": "./packs/system-skills.db",
+			"entity": "Item"
+		},
+		{
+			"name": "systemTalents",
+			"label": "System Talents",
+			"system": "hellas",
+			"path": "./packs/system-talents.db",
+			"entity": "Item"
+		},
+		{
+			"name": "systemDynamisms",
+			"label": "System Dynamisms",
+			"system": "hellas",
+			"path": "./packs/system-dynamisms.db",
+			"entity": "Item"
+		}
+	],
 	"languages": [
 		{
 			"lang": "en",
@@ -49,7 +49,7 @@
 	"compatibleCoreVersion": "0.7.9",
 	"url": "https://github.com/snorith/hellas.git",
 	"manifest": "https://raw.githubusercontent.com/snorith/hellas/master/src/system.json",
-	"download": "https://raw.githubusercontent.com/snorith/hellas/v0.1.6/package/hellas-v0.1.6.zip",
+	"download": "https://raw.githubusercontent.com/snorith/hellas/v0.2.0/package/hellas-v0.2.0.zip",
 	"license": "LICENSE",
 	"readme": "https://github.com/snorith/hellas#readme",
 	"bugs": "https://github.com/snorith/hellas/issues",
