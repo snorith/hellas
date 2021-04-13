@@ -749,6 +749,65 @@
 
 		{{!-- Disadvantages Tab --}}
 		<div class="tab personal" data-group="primary" data-tab="disadvantages">
+			<div class="grid grid-cols-2 gap-2">
+				<div>
+					<fieldset class="mb-1">
+						<h3 class="hellas-titling">Disadvantages</h3>
+						<fieldset class="mb-1">
+							<h4 class="hellas-titling">Relationship</h4>
+							<div class="mr-2 mb-2">
+								<div class="flex flex-col">
+									<label>Rating: <input type="text" class="width40" id="data.disadvantages.relationship.level" name="data.disadvantages.relationship.level" value="{{data.disadvantages.relationship.level}}" data-dtype="Number"></label>
+									<textarea rows="4" class="mt-1" id="data.disadvantages.relationship.info" name="data.disadvantages.relationship.info" data-dtype="String">{{data.disadvantages.relationship.info}}</textarea>
+								</div>
+							</div>
+						</fieldset>
+
+						<fieldset class="mb-1">
+							<h4 class="hellas-titling">Internal</h4>
+							<div class="mr-2 mb-2">
+								<div class="flex flex-col">
+									<label>Rating: <input type="text" class="width40 mb-1" id="data.disadvantages.internal.level" name="data.disadvantages.internal.level" value="{{data.disadvantages.internal.level}}" data-dtype="Number"></label>
+									<textarea rows="4" class="mt-1" id="data.disadvantages.internal.info" name="data.disadvantages.internal.info" data-dtype="String">{{data.disadvantages.internal.info}}</textarea>
+								</div>
+							</div>
+						</fieldset>
+
+						<fieldset class="mb-1">
+							<h4 class="hellas-titling">External</h4>
+							<div class="mr-2 mb-2">
+								<div class="flex flex-col">
+									<label>Rating: <input type="text" class="width40 mb-1" id="data.disadvantages.external.level" name="data.disadvantages.external.level" value="{{data.disadvantages.external.level}}" data-dtype="Number"></label>
+									<textarea rows="4" class="mt-1" id="data.disadvantages.external.info" name="data.disadvantages.external.info" data-dtype="String">{{data.disadvantages.external.info}}</textarea>
+								</div>
+							</div>
+						</fieldset>
+					</fieldset>
+
+					<fieldset class="mb-1">
+						<h3 class="hellas-titling">Possessions</h3>
+						<textarea class="mb-1" rows="5" id="data.possessions.info" name="data.possessions.info" data-dtype="String">{{data.possessions.info}}</textarea>
+					</fieldset>
+				</div>
+				<div>
+					<fieldset class="mb-1">
+						<h3 class="hellas-titling">Special Abilities &amp; Divine Favors</h3>
+						<textarea class="mb-1" rows="10" id="data.abilities.info" name="data.abilities.info" data-dtype="String">{{data.abilities.info}}</textarea>
+					</fieldset>
+
+					<fieldset class="mb-1">
+						<h3 class="hellas-titling">Ambitions</h3>
+						<div class="mr-2 mb-2">
+							<div class="flex flex-col">
+								<textarea class="mb-1" rows="5" id="data.ambitions.1.info" name="data.ambitions.1.info" data-dtype="String">{{data.ambitions.1.info}}</textarea>
+								<textarea class="mb-1" rows="5" id="data.ambitions.2.info" name="data.ambitions.2.info" data-dtype="String">{{data.ambitions.2.info}}</textarea>
+								<textarea class="mb-1" rows="5" id="data.ambitions.3.info" name="data.ambitions.3.info" data-dtype="String">{{data.ambitions.3.info}}</textarea>
+								<textarea class="mb-1" rows="5" id="data.ambitions.4.info" name="data.ambitions.4.info" data-dtype="String">{{data.ambitions.4.info}}</textarea>
+							</div>
+						</div>
+					</fieldset>
+				</div>
+			</div>
 		</div>
 
 		{{!-- Personal Tab --}}
