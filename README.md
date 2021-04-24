@@ -19,6 +19,18 @@ You must own the HELLAS rpg in order to play this game.
   * Talents with full descriptions
   * Dynamisms that are predefined in the core rules with full descriptions
   
+## How To:
+
+1. Create a character
+2. Drag skills, talents and example dynamisms from the compendiums onto your character. Dragged skills for instance include a full description of the skill.
+   * Skills come in two types: (Each skill includes a note when you view the skill details on whether you get all or only one variation, also, refer to the skill description tab for more information)
+      1. _Specific skills_. These are skills that have variations, but you must buy each variation separately. You only get one specific variation for each point buy during character creation.
+         * Examples include 'Drive' where you must specify which vehicle you have a drive skill with, or 'Instinct' which will come as a variation for Initiative or Intuition but not both unless you buy each separately. Or 'Handicraft' where you only get one handicraft per skill buy.
+         * Each Dynamism mode is a separate skill. You must buy each one separately during character creation.
+      2. _Non-specific skills_. There as skills that may have variations but you get all of them when you buy the skill during character creation. 
+         * Examples include Athletics, where you get all of Balancing, Climbing, Endurance, Flying, Jumping, Rope Climbing, Running, Strength Feat and Swimming variations. These are separate skills in the system because each has a separate attribute associated with it. For this reason add all of the skills to your sheet but set each one to the same Skill Level. 
+3. Fill out your character as desired.
+
 ## Examples
 
 ### Character sheet with skill compendium
