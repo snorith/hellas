@@ -84,7 +84,7 @@ function buildTS() {
 
 	if (profilemode.production()) {
 		process.env.env = 'production';
-		rollupPlugins.push(uglify());
+		rollupPlugins.push(uglify);
 	}
 
 	return rollup
