@@ -1,12 +1,12 @@
 # HELLAS RPG by [Khepera Publishing](https://kheperapublishing.com/)
 ## System support for [FoundryVTT](https://foundryvtt.com/)
 
-This Foundry system contains text and image content from the HELLAS rpg under arrangement with Khepera Publishing. All such text and images are copyright of their respective owners.
+This Foundry system contains text content from the HELLAS RPG under arrangement with Khepera Publishing. All such text and images are copyright of their respective owners.
 You must own the HELLAS rpg in order to play this game.
 
 > ⚔️ This is an _unofficial_, fan created system and is not supported by Khepera Publishing
 
-**This game system provides a character sheet and dice rolling to play the HELLAS 2nd ed. rpg**
+**This game system provides a character sheet and dice rolling to play the HELLAS 2nd ed. RPG**
 
 ## Features
 
@@ -69,7 +69,7 @@ https://raw.githubusercontent.com/snorith/hellas/master/src/system.json
 
 The HELLAS RPG is TM and © 2012 Khepera Publishing  The Khepera Scarab and the HELLAS logo are ® Khepera Publishing
 
-For further information about other Khepera Publishing products check out their website and forums at https://kheperapublishing.com/
+For further information about Khepera Publishing products check out their website and forums at https://kheperapublishing.com/
 
 Content in this system or associated files derived from Khepera Publishing is used as fan material and should not be construed as a challenge to those trademarks or copyrights.
 

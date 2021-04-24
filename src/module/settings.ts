@@ -4,6 +4,19 @@ export const systemBasePath = `systems/${systemName}`
 export const registerSettings = function() {
 	// Register any custom system settings here
 
+	game.settings.register(systemName, "trademarkNotice", {
+		name: "Trademark Notice",
+		hint: "The HELLAS RPG is TM and © 2012 Khepera Publishing\n" +
+			"The Khepera Scarab and the HELLAS logo are ® Khepera Publishing. \n" +
+			"For further information about Khepera Publishing products check out their website and forums at https://kheperapublishing.com \n\n" +
+			"Content in this system or associated files derived from Khepera Publishing is used as fan material and should not be construed as a challenge to those trademarks or copyrights.\n" +
+			"The contents of this site are for personal, non-commercial use only. Khepera Publishing is not responsible for this site or system or any of the content.",
+		scope: "world",
+		config: true,
+		type: null,
+		default: null
+	});
+
 	// Register custom Handlebar helpers
 
 	// concatenate some number of strings passed as parameters
