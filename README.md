@@ -28,7 +28,8 @@ You must own the HELLAS rpg in order to play this game.
          * Examples include 'Drive' where you must specify which vehicle you have a drive skill with, or 'Instinct' which will come as a variation for Initiative or Intuition but not both unless you buy each separately. Or 'Handicraft' where you only get one handicraft per skill buy.
          * Each Dynamism mode is a separate skill. You must buy each one separately during character creation.
       2. _Non-specific skills_. There as skills that may have variations but you get all of them when you buy the skill during character creation. 
-         * Examples include Athletics, where you get all of Balancing, Climbing, Endurance, Flying, Jumping, Rope Climbing, Running, Strength Feat and Swimming variations. These are separate skills in the system because each has a separate attribute associated with it. For this reason add all of the skills to your sheet but set each one to the same Skill Level. 
+         * Examples include Athletics, where you get all of Balancing, Climbing, Endurance, Flying, Jumping, Rope Climbing, Running, Strength Feat and Swimming variations. These are separate skills in the system because each has a separate attribute associated with it. For this reason add all of the skills to your sheet but set each one to the same Skill Level.
+3. Dynamisms are predefined applications of a dynamism mode. The core rules include examples of pre-created mode uses, you can use these (included in a compendium) or create your own.
 3. Fill out your character as desired.
 
 ## Examples
