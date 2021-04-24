@@ -26,6 +26,8 @@ import {HellasDynamismItemSheet} from "./module/item/sheet/HellasDynamismItemShe
 import {HellasTalentItem} from "./module/item/HellasTalentItem"
 import {HellasTalentItemSheet} from "./module/item/sheet/HellasTalentItemSheet"
 
+export const INITIATIVE_FORMULA = "1d20 + @attributes.speed.value + @initiative.modifiers.first + (@attributes.speed.value / 100)"
+
 /* ------------------------------------ */
 /* Initialize system					*/
 /* ------------------------------------ */
@@ -45,6 +47,16 @@ Hooks.once('init', async function() {
 	}
 
 	game.HELLAS = HELLAS
+
+	/**
+	 * Set an initiative formula for the system
+	 * @type {String}
+	 */
+	// @ts-ignore
+	CONFIG.Combat.initiative = {
+		formula: INITIATIVE_FORMULA,
+		decimals: 2,
+	};
 
 	// define custom entity classes
 	// @ts-ignore

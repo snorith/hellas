@@ -188,6 +188,12 @@
             }
           }
         }
+      },
+      "initiative": {
+        "modifiers": {
+          "first": 0,
+          "following": 0
+        }
       }
     }
   },

@@ -17,6 +17,7 @@
   "HELLAS.section.armor.title": "Armor / Clothing / Shields",
   "HELLAS.section.dynamism.title": "Dynamisms",
   "HELLAS.section.talent.title": "Talents",
+  "HELLAS.section.initiative.title": "Initiative",
   
   "HELLAS.character.status.dead.title": "Dead",
   
@@ -418,6 +419,20 @@
   "HELLAS.weapon.ismissile.title": "Is a missile weapon: minimum STR penalty is -4 * Δ rather than -2 * Δ",
   "HELLAS.weapon.active.title": "Active, currently worn or used by the character",
 
+  "HELLAS.initiative.column.firstround.title": "First Round",
+  "HELLAS.initiative.column.followingrounds.title": "Following Rounds",
+
+  "HELLAS.initiative.column.firstround.label": "First round initiative",
+  "HELLAS.initiative.column.followingrounds.label": "Following rounds initiative",
+
+  "HELLAS.initiative.modifiers.firstround.roll": "Roll first round initiative",
+  "HELLAS.initiative.modifiers.followingrounds.roll": "Roll following rounds initiative",
+  
+  "HELLAS.roll.chat.initiative.first.title": "Roll first round initiative",
+  "HELLAS.roll.chat.initiative.following.title": "Roll following round initiative",
+  "HELLAS.roll.chat.modifiers.initiative.speed.label": "Speed",
+  "HELLAS.roll.chat.modifiers.modifier.label": "Modifier",
+  
   "HELLAS.item.armor.new": "New armor",
 
   "HELLAS.armor.column.name": "Name",

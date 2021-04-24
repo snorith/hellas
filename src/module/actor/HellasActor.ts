@@ -9,6 +9,8 @@ import {systemBasePath} from "../settings"
 import {HellasSkillItem, SkillItemType} from "../item/HellasSkillItem"
 import {sortItemsByNameFunction} from "./HellasActorSheet"
 
+export type initiativeT = 'first' | 'following'
+
 export class HellasActor extends Actor {
 	prepareData() {
 		super.prepareData();
@@ -30,6 +32,45 @@ export class HellasActor extends Actor {
 
 		this.data['HELLAS'] = HELLAS
 		this.data['SPECIFY_SUBTYPE'] = SPECIFY_SUBTYPE
+	}
+
+	/**
+	 * Roll initiative for the character, either first round initiative or following round
+	 * initiative (as they may have different modifiers)
+	 *
+	 * @param initiative 'first' || 'following' round initiative
+	 */
+	async initiativeRoll(initiative: initiativeT): Promise<boolean> {
+		const actorData = this.data.data as any
+
+		let modifier = 0;
+		if (actorData.initiative?.modifiers?.hasOwnProperty(initiative)) {
+			modifier = actorData.initiative?.modifiers[initiative]
+		}
+
+		const speedAttr = actorData.attributes.speed
+
+		const rollData = {
+			modifier,
+			speedAttr
+		}
+
+		const roll = new Roll('d20 + @speedAttr.value + @modifier', rollData).roll()
+		const outcome = roll.total
+
+		const template = `${systemBasePath}/templates/chat/initiativeroll.hbs`
+		const html = await renderTemplate(template, {
+			initiative,
+			outcome: outcome,
+			data: rollData,
+		})
+
+		await roll.toMessage({
+			speaker: ChatMessage.getSpeaker({ actor: this }),
+			flavor: html
+		}, {rollMode: CONFIG.Dice.rollModes.PUBLIC})
+
+		return true
 	}
 
 	/**

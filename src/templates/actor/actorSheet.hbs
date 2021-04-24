@@ -279,6 +279,34 @@
 					<table class="skills shadow-md border-gray-500 border-solid border-opacity-100 border-l border-r border-b">
 						<thead>
 						<tr>
+							<td colspan="4" class="hellas-titling text-center">{{localize "HELLAS.section.initiative.title"}}</td>
+						</tr>
+						<tr>
+							<td colspan="2" class="hellas-titling text-center">{{localize "HELLAS.initiative.column.firstround.title"}}</td>
+							<td colspan="2" class="hellas-titling text-center">{{localize "HELLAS.initiative.column.followingrounds.title"}}</td>
+						</tr>
+						</thead>
+						<tbody>
+						<tr>
+							<td class="text-center w-4">
+								<a class="item-control initiative-roll ml-1 mr-1" data-item-id="first" title="{{localize "HELLAS.initiative.modifiers.firstround.roll"}}"><i class="fas fa-dice-d20"></i></a>
+							</td>
+							<td>
+								<input type="number" name="data.initiative.modifiers.first" value="{{data.initiative.modifiers.first}}" data-dtype="Number" aria-label="{{localize "HELLAS.initiative.column.firstround.label"}}">
+							</td>
+							<td class="text-center w-4">
+								<a class="item-control initiative-roll ml-1 mr-1" data-item-id="following" title="{{localize "HELLAS.initiative.modifiers.followingrounds.roll"}}"><i class="fas fa-dice-d20"></i></a>
+							</td>
+							<td>
+								<input type="number"class="mr-1" name="data.initiative.modifiers.following" value="{{data.initiative.modifiers.following}}" data-dtype="Number" aria-label="{{localize "HELLAS.initiative.column.followingrounds.label"}}">
+							</td>
+						</tr>
+						</tbody>
+					</table>
+
+					<table class="skills shadow-md border-gray-500 border-solid border-opacity-100 border-l border-r border-b">
+						<thead>
+						<tr>
 							<td colspan="6" class="hellas-titling text-center">{{localize "HELLAS.section.armor.title"}}</td>
 						</tr>
 						<tr>

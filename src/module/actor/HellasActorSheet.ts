@@ -182,6 +182,22 @@ export class HellasActorSheet extends ActorSheet {
 
 		// roll a dynamism
 		html.find('.dynamism-roll').click(this._onDynamismRoll.bind(this))
+
+		// roll initiative
+		html.find('.initiative-roll').click(this._onInitiativeRoll.bind(this))
+	}
+
+	_onInitiativeRoll(event) {
+		event.preventDefault()
+
+		const element = event.currentTarget
+		const initiative = element.dataset.itemId
+
+		const actor = this.actor as HellasActor
+
+		actor.initiativeRoll(initiative).catch(reason => console.log(reason))
+
+		return false
 	}
 
 	_onArmorActiveClick(event) {

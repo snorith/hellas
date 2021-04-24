@@ -47,7 +47,7 @@
 	"gridUnits": "",
 	"minimumCoreVersion": "0.7.0",
 	"compatibleCoreVersion": "0.7.9",
-	"url": "https://github.com/snorith/hellas.git",
+	"url": "https://github.com/snorith/hellas",
 	"manifest": "https://raw.githubusercontent.com/snorith/hellas/master/src/system.json",
 	"download": "https://raw.githubusercontent.com/snorith/hellas/v0.2.0/package/hellas-v0.2.0.zip",
 	"license": "LICENSE",
