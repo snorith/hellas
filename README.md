@@ -25,7 +25,7 @@ You must own the HELLAS rpg in order to play this game.
 ![character-sheet-with-compendium](https://user-images.githubusercontent.com/1318926/115969303-4624b980-a50a-11eb-9f97-eed1d4357bf9.png)
 
 ### Skill tooltip example
-![skill-tooltip-example](https://user-images.githubusercontent.com/1318926/115969309-49b84080-a50a-11eb-9710-d41865f24d60.png)
+![skill-tooltip-example](https://user-images.githubusercontent.com/1318926/115969724-6bb2c280-a50c-11eb-8b5d-7b39116c8b14.png)
 
 ### Roll modifier dialog
 Here the skill 'Disable Mechanism' is being rolled, which relies on the attribute 'Dexterity'. The currently equipped armor provides a DEX modifier penalty which is automatically included as the 'Other Modifier'
