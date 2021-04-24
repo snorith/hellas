@@ -1,14 +1,12 @@
-# This is a work in progress
-
-# HELLAS by [Khepera Publishing](https://kheperapublishing.com/)
+# HELLAS RPG by [Khepera Publishing](https://kheperapublishing.com/)
 ## System support for [FoundryVTT](https://foundryvtt.com/)
 
-This version contains text and image content from the HELLAS rpg under arrangement from Khepera Publishing. All such text and images are copyright of their respective owners.
+This Foundry system contains text and image content from the HELLAS rpg under arrangement with Khepera Publishing. All such text and images are copyright of their respective owners.
 You must own the HELLAS rpg in order to play this game.
 
 > ⚔️ This is an _unofficial_, fan created system and is not supported by Khepera Publishing
 
-**This game system provides a character sheet and basic dice rolling to play the HELLAS 2nd ed. rpg**
+**This game system provides a character sheet and dice rolling to play the HELLAS 2nd ed. rpg**
 
 ## Features
 
@@ -49,6 +47,8 @@ The contents of this site are for personal, non-commercial use only. Khepera Pub
 **Sheet background image credit:**
 
 Photo by [Augustine Wong](https://unsplash.com/@augustinewong?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/marble-texture?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText)
+
+---
 
 **Game-Icons.net credit**
 
