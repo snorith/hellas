@@ -1,7 +1,7 @@
 {
 	"private": true,
 	"name": "hellas",
-	"version": "0.3.5",
+	"version": "0.3.6",
 	"description": "Fan contributed support for the Hellas RPG in FoundryVTT",
 	"scripts": {
 		"package": "gulp package",
