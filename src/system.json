@@ -2,7 +2,7 @@
 	"name": "hellas",
 	"title": "Hellas",
 	"description": "Fan contributed support for the Hellas RPG in FoundryVTT",
-	"version": "0.3.2",
+	"version": "0.3.5",
 	"author": "snorith (Stephen Smith)",
 	"scripts": [
 		"lib/tooltipster/tooltipster.bundle.min.js",
@@ -49,7 +49,7 @@
 	"compatibleCoreVersion": "0.7.9",
 	"url": "https://github.com/snorith/hellas.git",
 	"manifest": "https://raw.githubusercontent.com/snorith/hellas/master/src/system.json",
-	"download": "https://raw.githubusercontent.com/snorith/hellas/v0.3.2/package/hellas-v0.3.2.zip",
+	"download": "https://raw.githubusercontent.com/snorith/hellas/v0.3.5/package/hellas-v0.3.5.zip",
 	"license": "LICENSE",
 	"readme": "https://github.com/snorith/hellas#readme",
 	"bugs": "https://github.com/snorith/hellas/issues",

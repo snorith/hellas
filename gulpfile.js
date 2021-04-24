@@ -8,7 +8,7 @@ const rollup = require("rollup");
 const commonjs = require('@rollup/plugin-commonjs');
 const typescript = require('@rollup/plugin-typescript');
 const resolve = require('@rollup/plugin-node-resolve');
-const uglify = require('rollup-plugin-uglify');
+const terser = require('rollup-plugin-terser');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const advancedVars = require("postcss-advanced-variables");
@@ -84,7 +84,7 @@ function buildTS() {
 
 	if (profilemode.production()) {
 		process.env.env = 'production';
-		rollupPlugins.push(uglify);
+		rollupPlugins.push(terser.terser());
 	}
 
 	return rollup
