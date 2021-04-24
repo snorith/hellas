@@ -11,6 +11,44 @@ You must own the HELLAS rpg in order to play this game.
 ## Features
 
 * Sheets for character
+  * Rolling of attributes, skills and weapons 
+  * Automatic calculation of armor modifiers to skills and attributes
+  * Descriptions for usage of Hero Points and XP
+* Compendiums. These can be dragged into the character sheet for easy reference, tooltips will be available to read the descriptions within the sheet
+  * Skills with full descriptions
+  * Talents with full descriptions
+  * Dynamisms that are predefined in the core rules with full descriptions
+  
+## Examples
+
+### Character sheet with skill compendium
+![character-sheet-with-compendium](https://user-images.githubusercontent.com/1318926/115969303-4624b980-a50a-11eb-9f97-eed1d4357bf9.png)
+
+### Skill tooltip example
+![skill-tooltip-example](https://user-images.githubusercontent.com/1318926/115969309-49b84080-a50a-11eb-9710-d41865f24d60.png)
+
+### Roll modifier dialog
+Here the skill 'Disable Mechanism' is being rolled, which relies on the attribute 'Dexterity'. The currently equipped armor provides a DEX modifier penalty which is automatically included as the 'Other Modifier'
+![roll-modifier-dialog](https://user-images.githubusercontent.com/1318926/115969307-491faa00-a50a-11eb-8a4c-c0a958905703.png)
+
+# Armour section
+Provides the ability to activate armour and automatic calculation of the total armour modifiers
+![armor-with-active-calcuation](https://user-images.githubusercontent.com/1318926/115969652-fcd56980-a50b-11eb-8384-934d639253ce.png)
+
+### Armour detail
+![armor-details](https://user-images.githubusercontent.com/1318926/115969299-44f38c80-a50a-11eb-8bfc-adeb44f20010.png)
+
+### Dynamism detail
+![dynamism-details](https://user-images.githubusercontent.com/1318926/115969306-48871380-a50a-11eb-9088-8f60250a320a.png)
+
+### Skill detail
+![skill-detail](https://user-images.githubusercontent.com/1318926/115969308-491faa00-a50a-11eb-8178-5fc6fa58d7b2.png)
+
+### Talent detail
+![talent-detail](https://user-images.githubusercontent.com/1318926/115969310-4a50d700-a50a-11eb-903a-44b6fada46a4.png)
+
+### Weapon detail
+![weapon-detail](https://user-images.githubusercontent.com/1318926/115969311-4a50d700-a50a-11eb-9e36-6560b5391d46.png)
 
 ## Installation
 
@@ -20,6 +58,7 @@ https://raw.githubusercontent.com/snorith/hellas/master/src/system.json
 
 ## Thanks
 
+* Khepera Publishing for agreeing to the inclusion and usage of various descriptions from the rules
 * based on the [Foundry Project Creator](https://gitlab.com/foundry-projects/foundry-pc/create-foundry-project) by Nick v. Oosten
 * partially based on the [Boilerplate System](https://gitlab.com/asacolips-projects/foundry-mods/boilerplate) by Asacolips.
 * suggestions from [Numenera-FoundryVTT](https://github.com/SolarBear/Numenera-FoundryVTT) by SolarBear
