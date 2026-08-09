@@ -1,5 +1,7 @@
 # Phase 9a implementation plan — pre-v0.4.0 best-practice updates
 
+Status: IMPLEMENTED (4 commits: 9a-3, 9a-2, 9a-1, 9a-4) — impl review pending.
+
 Target branch: v13-rewrite. Scope: the four Phase-9a items from
 z/phase-9-plan.md. Invariants for every item: system stays bootable;
 `node tools/audit.mjs && node tools/test-migrations.mjs` green; no behavioral

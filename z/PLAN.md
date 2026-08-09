@@ -19,7 +19,7 @@ removed in Phase 8.
 | 6 | CSS on v13 theme variables | z/phase-6-plan.md | ✅ done |
 | 7 | Verification (static audit + manual checklist) | z/phase-7-plan.md | ✅ audit clean · manual checklist → z/CHECKLIST.md |
 | 8 | Release workflow + docs | z/phase-8-plan.md | ✅ done (ship sequence pending human steps) |
-| 9 | Best-practices updates (9a pre-tag · 9b post-release) | z/phase-9-plan.md | 📋 planned — 9a awaits go-ahead + 2 Stephen inputs |
+| 9 | Best-practices updates (9a pre-tag · 9b post-release) | z/phase-9-plan.md | 🔶 9a implemented (impl review running) · 9b queued |
 
 Each phase ends with the system bootable (create world → open sheets → no console errors).
 

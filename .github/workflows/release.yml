@@ -61,3 +61,32 @@ jobs:
             hellas-${{ github.ref_name }}.zip
           fail_on_unmatched_files: true
           generate_release_notes: true
+
+      # Pushes the release to the foundryvtt.com package listing. Skipped
+      # (not failed) until the package is registered there and the
+      # FOUNDRY_PACKAGE_TOKEN repo secret exists. Guarded inside the shell
+      # deliberately: reviewers disagreed on whether a step's own env is
+      # visible to its `if:`, and the shell guard is correct either way.
+      # Per the Package Release API docs the manifest URL must be the
+      # VERSION-SPECIFIC asset, not the latest channel.
+      - name: Publish to foundryvtt.com package listing
+        env:
+          FOUNDRY_PACKAGE_TOKEN: ${{ secrets.FOUNDRY_PACKAGE_TOKEN }}
+          TAG: ${{ github.ref_name }}
+          REPO: ${{ github.repository }}
+        run: |
+          if [ -z "$FOUNDRY_PACKAGE_TOKEN" ]; then
+            echo "FOUNDRY_PACKAGE_TOKEN not set - skipping foundryvtt.com publish"
+            exit 0
+          fi
+          VERSION="${TAG#v}"
+          MIN=$(jq -er '.compatibility.minimum // empty' system.json)
+          VER=$(jq -er '.compatibility.verified // empty' system.json)
+          BODY=$(jq -n --arg v "$VERSION" --arg min "$MIN" --arg ver "$VER" \
+            --arg manifest "https://github.com/${REPO}/releases/download/${TAG}/system.json" \
+            --arg notes "https://github.com/${REPO}/releases/tag/${TAG}" \
+            '{id: "hellas", release: {version: $v, manifest: $manifest, notes: $notes, compatibility: {minimum: $min, verified: $ver, maximum: ""}}}')
+          curl -sS --fail-with-body -X POST "https://foundryvtt.com/_api/packages/release_version/" \
+            -H "Content-Type: application/json" \
+            -H "Authorization: $FOUNDRY_PACKAGE_TOKEN" \
+            -d "$BODY"
