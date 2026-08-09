@@ -19,6 +19,7 @@ removed in Phase 8.
 | 6 | CSS on v13 theme variables | z/phase-6-plan.md | ✅ done |
 | 7 | Verification (static audit + manual checklist) | z/phase-7-plan.md | ✅ audit clean · manual checklist → z/CHECKLIST.md |
 | 8 | Release workflow + docs | z/phase-8-plan.md | ✅ done (ship sequence pending human steps) |
+| 9 | Best-practices updates (9a pre-tag · 9b post-release) | z/phase-9-plan.md | 📋 planned — 9a awaits go-ahead + 2 Stephen inputs |
 
 Each phase ends with the system bootable (create world → open sheets → no console errors).
 
@@ -115,3 +116,12 @@ The review ledger's converged state holds."
 Logistics: first droid dispatch failed on expired Factory auth (user re-logged
 in); retry ran clean. Round NOT counted as clean (three folds) → droid round 2
 confirmation pending.
+
+### rev 5 — commit 572797c, droid round 2 — **CONVERGED (all three families)**
+
+"All three folds confirmed sound; the fresh sweep found nothing new of
+significance. No defects to tag." Droid also cross-checked every factual claim
+in z/BEST-PRACTICES.md against the shipped code and found no contradictions.
+With rev 3 (codex+devin) and rev 5 (droid), all three model families have
+reached nothing-significant on the current state. Remaining open item stays
+D4 (execution-gated, manual checklist §H).
