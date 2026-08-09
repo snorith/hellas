@@ -7,8 +7,23 @@
  * light/dark theme (which would produce light-on-light text in dark mode).
  */
 
-@import url('https://fonts.googleapis.com/css2?family=Martel:wght@400;800&family=Roboto:wght@300;400;500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Caesar+Dressing&display=swap');
+/* Fonts are bundled locally (fonts/) so sheets render fully offline; see
+   fonts/LICENSE-*.txt and the README credits. Roboto ships as a variable
+   font covering the 300-500 weights the sheets use. */
+@font-face {
+	font-family: "Roboto";
+	src: url("../fonts/roboto.woff2") format("woff2");
+	font-weight: 300 500;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: "Caesar Dressing";
+	src: url("../fonts/caesar-dressing-400.woff2") format("woff2");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
 
 .application.hellas {
 	--hellas-font-primary: "Roboto", sans-serif;

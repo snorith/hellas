@@ -236,6 +236,11 @@ if ( manifest.background ) {
 	const p = manifest.background.replace(/^systems\/hellas\//, "");
 	if ( !existsSync(p) ) { fail(`manifest background missing: ${manifest.background}`); manBad++; }
 }
+const css = read("styles/hellas.css");
+for ( const m of css.matchAll(/url\("\.\.\/(fonts\/[^"]+)"\)/g) ) {
+	if ( !existsSync(m[1]) ) { fail(`font file missing: ${m[1]}`); manBad++; }
+}
+if ( /googleapis|gstatic/.test(css) ) { fail("styles/hellas.css still references Google Fonts"); manBad++; }
 const dt = manifest.documentTypes;
 if ( !dt?.Actor?.character || Object.keys(dt?.Item ?? {}).length !== 5 ) { fail("documentTypes incomplete"); manBad++; }
 if ( !manBad ) ok("manifest: esmodules/styles/languages/pack sources/documentTypes all present");

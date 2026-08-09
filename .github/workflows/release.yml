@@ -49,7 +49,7 @@ jobs:
           TAG: ${{ github.ref_name }}
         run: |
           zip -r "hellas-${TAG}.zip" \
-            system.json hellas.mjs module templates styles lang assets packs \
+            system.json hellas.mjs module templates styles lang assets packs fonts \
             LICENSE README.md CHANGELOG.md \
             -x "packs/_source/*"
 

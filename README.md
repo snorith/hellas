@@ -118,6 +118,12 @@ Photo by [Augustine Wong](https://unsplash.com/@augustinewong?utm_source=unsplas
 
 ---
 
+**Font credits**
+
+Bundled fonts (see `fonts/` for license texts): [Roboto](https://fonts.google.com/specimen/Roboto) © The Roboto Project Authors and [Caesar Dressing](https://fonts.google.com/specimen/Caesar+Dressing) © Open Window, both under the SIL Open Font License 1.1.
+
+---
+
 **Game-Icons.net credit**
 
 Several game icons have been included from [Game-Icons.net](https://game-icons.net)
