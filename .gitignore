@@ -173,7 +173,6 @@ $RECYCLE.BIN/
 # custom
 node_modules
 foundryconfig.json
-/src/assets/images/red-marble.afphoto
 
 # rewrite: compiled LevelDB packs (built from packs/_source by tools/build-packs.mjs)
 /packs/system-skills/
