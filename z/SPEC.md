@@ -371,7 +371,7 @@ Editability: legacy gated ALL listeners on `options.editable` — observers coul
 - **F16** modifiers dialog embeds `<script>` with jQuery/tooltipster (CSP-hostile). Rewrite: DialogV2 + `data-tooltip-html`, autofocus via render callback.
 - **F17** Actor sheet `_onItemCreate` copies the whole HTML `dataset` into item source. Create with `{name, type}` only.
 - **F18** `sortItemsByNameFunction` is case/locale-naive. Use `localeCompare` (behavioral change accepted: saner ordering).
-- **F19** Legacy skillSheet.hbs referenced i18n key `HELLAS.skill.specifier.custom.title` which never existed in en.json (tooltip silently showed the raw key). Key added. (en.json also carries a stray `HELLAS.skill.specifier.title.label` = "Custom" — kept, unused.)
+- **F19** Legacy skillSheet.hbs referenced i18n key `HELLAS.skill.specifier.custom.title` which never existed in en.json (tooltip silently showed the raw key). Key added. (The stray `HELLAS.skill.specifier.title.label` was initially kept — then REMOVED after live v13 testing: it collides with `HELLAS.skill.specifier.title` under v13's dotted-key expansion, aborting the whole language file load. The audit now detects this class.)
 - **F20** (found by devin, review rev 2) Legacy fate-points label tooltip formatted `current`/`max` into `HELLAS.attributes.fatepoints.description`, which has no placeholders; the purpose-built `HELLAS.attributes.fatepoints.title` ("Fate points {current} of {max}") was never referenced. Rewrite uses `.title`.
 
 ## 11. Assets & styling notes (input to Phase 6)

@@ -125,3 +125,10 @@ in z/BEST-PRACTICES.md against the shipped code and found no contradictions.
 With rev 3 (codex+devin) and rev 5 (droid), all three model families have
 reached nothing-significant on the current state. Remaining open item stays
 D4 (execution-gated, manual checklist §H).
+
+### Manual testing round 1 (Stephen, live Foundry v13, 2026-08-09)
+
+| # | Finding | Disposition |
+|---|---------|-------------|
+| MT1 | EVERY string rendered as its raw i18n key — the entire language file failed to load | **Root-caused + folded**: en.json carried both `HELLAS.skill.specifier.title` (string) and the stray `HELLAS.skill.specifier.title.label` — v13 expands dotted keys via setProperty, and assigning a property onto a string throws in strict mode, aborting the whole translation merge. Stray key removed (supersedes the F19 "kept, unused" call); tools/audit.mjs now fails on ANY dotted-key expansion collision so the class cannot return. |
+| MT2 | System-select tile background reads as blank | The white-marble media image washes out at tile size; setup media switched to brushed-gold.jpg (login `background` keeps the marble). Cosmetic; revisit with real art if desired. |

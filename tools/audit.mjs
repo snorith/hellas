@@ -102,6 +102,22 @@ const flatWalk = (o, p, out) => {
 };
 flatWalk(lang, "", langKeys);
 
+// v13 expands dotted keys into nested objects when merging translations: a
+// key that is both a string AND a prefix of another key aborts the load of
+// the ENTIRE language file (every string then renders as its raw key).
+{
+	const flat = new Set(Object.keys(lang));
+	let collisions = 0;
+	for ( const k of flat ) {
+		const parts = k.split(".");
+		for ( let i = 1; i < parts.length; i++ ) {
+			const prefix = parts.slice(0, i).join(".");
+			if ( flat.has(prefix) ) { fail(`i18n expansion collision: "${prefix}" is both a string and a prefix of "${k}"`); collisions++; }
+		}
+	}
+	if ( !collisions ) ok("i18n: no dotted-key expansion collisions");
+}
+
 const has = k => langKeys.has(k);
 let i18nBad = 0;
 const requireKey = (k, why) => { if ( !has(k) ) { i18nBad++; fail(`i18n missing: ${k} (${why})`); } };
