@@ -1,0 +1,25 @@
+{
+	"_id": "tQq7y1zFK77qv3cb",
+	"_key": "!items!tQq7y1zFK77qv3cb",
+	"name": "Torture - *",
+	"type": "skill",
+	"img": "systems/hellas/assets/icons/flail.svg",
+	"system": {
+		"skill": "torture",
+		"attribute": "DEX",
+		"specifier": "specify",
+		"specifierCustom": "",
+		"level": {
+			"value": 0,
+			"max": 0
+		},
+		"notes": "<h1>Torture (*)</h1>\n<p><strong>Training Time (TT): 6 weeks</strong></p>\n<p>Ability to acquire information by unsubtle, usually physical methods. Failure can result in accidental death of individual being tortured. Depending on how the victim is tortured the Hero may use DEX, INT, or sheer STR to bilk information from the target. This skill is normally opposed by a character's WIL.</p>"
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

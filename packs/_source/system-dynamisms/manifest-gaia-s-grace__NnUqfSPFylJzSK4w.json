@@ -1,0 +1,24 @@
+{
+	"_id": "NnUqfSPFylJzSK4w",
+	"_key": "!items!NnUqfSPFylJzSK4w",
+	"name": "Manifest - Gaia’s Grace",
+	"type": "dynamism",
+	"img": "icons/svg/lightning.svg",
+	"system": {
+		"skillid": "dynamism",
+		"dod": -10,
+		"dodinfo": "Base -8 level\n-2 for Duration",
+		"range": "20 m",
+		"tradition": "Whisperer, Manifest",
+		"duration": "30 rounds (3 minutes)",
+		"other": "Mass produced: 40 liters of water",
+		"notes": "<p>Singing to Gaia, a Whisperer can call forth a small spring of water (fresh or saline as required). The spring will produce enough water to sustain three individuals for one day. Many Nymphas rely upon such blessings when traveling far from their territories or ocean homes. The spring will continue to bubble for about three minutes before exhausting itself. Water not consumed will seep back into the ground.</p>"
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

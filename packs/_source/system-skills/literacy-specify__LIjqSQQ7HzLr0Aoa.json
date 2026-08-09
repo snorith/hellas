@@ -1,0 +1,25 @@
+{
+	"_id": "LIjqSQQ7HzLr0Aoa",
+	"_key": "!items!LIjqSQQ7HzLr0Aoa",
+	"name": "Literacy - Specify",
+	"type": "skill",
+	"img": "icons/svg/book.svg",
+	"system": {
+		"skill": "literacy",
+		"attribute": "INT",
+		"specifier": "specify",
+		"specifierCustom": "",
+		"level": {
+			"value": 0,
+			"max": 0
+		},
+		"notes": "<h1>Literacy (specific)</h1>\n<p><strong>Training Time (TT): 30 weeks</strong></p>\n<p>A character may fluently read and write any one language that they speak for every +5 ranks in literacy. A character who is fluent or better in a particular written language (see Speak Language skill) will generally have little difficulty reading any but the most in-depth tomes on a particular topic. A character is literate in his native language.</p>"
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

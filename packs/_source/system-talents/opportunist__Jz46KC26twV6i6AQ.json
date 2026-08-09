@@ -1,0 +1,19 @@
+{
+	"_id": "Jz46KC26twV6i6AQ",
+	"_key": "!items!Jz46KC26twV6i6AQ",
+	"name": "Opportunist",
+	"type": "talent",
+	"img": "icons/svg/sun.svg",
+	"system": {
+		"desc": "The ability to turn any situation to one’s own advantage.",
+		"benefit": "<p>Any time an opponent misses a melee attack against the character, he may make an immediate counterattack. This attack is out of sequence and still counts as an action taken.</p>\n<p>For example, if the character had already attacked (or taken another action) this round, the counterattack is at the normal -5 penalty for multiple actions.</p>",
+		"notes": ""
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

@@ -1,0 +1,24 @@
+{
+	"_id": "wCpZzwQE16xO4wHM",
+	"_key": "!items!wCpZzwQE16xO4wHM",
+	"name": "Influence - Mind Trick",
+	"type": "dynamism",
+	"img": "icons/svg/lightning.svg",
+	"system": {
+		"skillid": "dynamism",
+		"dod": -16,
+		"dodinfo": "Base -12 level\n-4 for Duration",
+		"range": "–",
+		"tradition": "Delphoian, Influence",
+		"duration": "5 rounds",
+		"other": "Resistance WIL -6",
+		"notes": "<p>With a focusing of will and a flash of lightning in the eyes, a Dynamist can use the power of their words to influence and direct others. Speaking in a subtle tone, moving a hand to distract the the target from the telltale sign of Dynamism in the Legionnaire's irises, it is possible to direct the target's attention elsewhere for a short period of time.</p>"
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

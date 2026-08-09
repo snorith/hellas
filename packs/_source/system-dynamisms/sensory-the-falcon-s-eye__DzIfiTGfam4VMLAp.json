@@ -1,0 +1,24 @@
+{
+	"_id": "DzIfiTGfam4VMLAp",
+	"_key": "!items!DzIfiTGfam4VMLAp",
+	"name": "Sensory - The Falcon’s Eye",
+	"type": "dynamism",
+	"img": "icons/svg/lightning.svg",
+	"system": {
+		"skillid": "dynamism",
+		"dod": -7,
+		"dodinfo": "Base -8 level\n-5 for Range\n+6 for Tradition",
+		"range": "35 m",
+		"tradition": "Shamanism, Sensory",
+		"duration": "10 rounds (1 minute)",
+		"other": "PER Mod +8",
+		"notes": "<p>Tracking a dangerous predator through the jungle requires that one be a better predator and that can often mean being aware of your surroundings and finding your prey before it finds you. Goregon shamans &ldquo;borrow&rdquo; the powerful vision of Halcyon falcons, sharpening their sight. Though the increased sight is only truly good for things within 35 meters, the Goregon is preternaturally aware of what happens within that range, receiving a +8 to their PER rolls.</p>"
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

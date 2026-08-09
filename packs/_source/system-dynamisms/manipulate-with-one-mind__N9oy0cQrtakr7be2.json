@@ -1,0 +1,24 @@
+{
+	"_id": "N9oy0cQrtakr7be2",
+	"_key": "!items!N9oy0cQrtakr7be2",
+	"name": "Manipulate - With One Mind",
+	"type": "dynamism",
+	"img": "icons/svg/lightning.svg",
+	"system": {
+		"skillid": "dynamism",
+		"dod": -20,
+		"dodinfo": "Base -12 level\n-4 for Duration\n-4 for Subjects",
+		"range": "Self and up to 4 other individuals all touching one another",
+		"tradition": "Delphoian, Manipulate",
+		"duration": "50 rounds (5 minutes)",
+		"other": "",
+		"notes": "<p>Legionnaires sometimes find themselves hard-pressed by numerous foes. With this effect, led by a Dynamist, a group of five Legionnnaires can find their martial ability far increased. Standing in a circle, all of them touch their weapons together and concentrate. Arcs of light play across their weapons and limbs and for the next five minutes they fight as a fiercely cohesive unit. Each gets +4 to their CR.</p>"
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

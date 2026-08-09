@@ -1,0 +1,25 @@
+{
+	"_id": "jDj8q2IhEDg6NxKL",
+	"_key": "!items!jDj8q2IhEDg6NxKL",
+	"name": "Tracking/Shadowing - Shadowing",
+	"type": "skill",
+	"img": "systems/hellas/assets/icons/domino-mask.svg",
+	"system": {
+		"skill": "trackingshadowing",
+		"attribute": "DEX",
+		"specifier": "shadowing",
+		"specifierCustom": "",
+		"level": {
+			"value": 0,
+			"max": 0
+		},
+		"notes": "<h1>Tracking/Shadowing (*)</h1>\n<p><strong>Training Time (TT): 10 weeks</strong></p>\n<p>Tracking is the ability to read and follow tracks and traces left by creatures or beings. A tracker can identify and estimate the age of such tracks and often determine under what conditions (flight, exhaustion, heavy encumbrance, etc.) they were made. The surrounding terrain and the age and overall condition of the traces affect the Degree of Difficulty for this skill. Tracking is more difficult to use outside a natural environment, and in urban areas the DoD is much greater.</p>\n<p>Shadowing is used when following a target undetected (DEX). With a successful roll (DoD determined using the target's PER), the Hero may follow a target undetected. Note that using this skill in an unfamiliar environment may entail a penalty of -1 to -10, based on the DoD involved (GM's ruling).</p>"
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

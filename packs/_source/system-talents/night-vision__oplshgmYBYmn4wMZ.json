@@ -1,0 +1,19 @@
+{
+	"_id": "oplshgmYBYmn4wMZ",
+	"_key": "!items!oplshgmYBYmn4wMZ",
+	"name": "Night Vision",
+	"type": "talent",
+	"img": "icons/svg/sun.svg",
+	"system": {
+		"desc": "Your eyes see better in the dark than most people.",
+		"benefit": "<p>The Hero never suffers more than a -3 penalty to a PER checks at night.</p>",
+		"notes": ""
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

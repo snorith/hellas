@@ -1,0 +1,24 @@
+{
+	"_id": "sEwpttff4xims6OT",
+	"_key": "!items!sEwpttff4xims6OT",
+	"name": "Shield - Hedge",
+	"type": "dynamism",
+	"img": "icons/svg/lightning.svg",
+	"system": {
+		"skillid": "dynamism",
+		"dod": -30,
+		"dodinfo": "Base -9 level\n-3 for Tradition\n-9 for Duration\n-9 for Area",
+		"range": "5 meter radius circle",
+		"tradition": "Whisperer, Shield",
+		"duration": "100 rounds (10 minutes)",
+		"other": "PR 3",
+		"notes": "<p>With a pleading cry, the Whisperer can cause the natural plants, rocks, and soil in an area to spring upwards, forming a protective wall around her. The hedge might be passed off as a natural tangle of trees, briars, and brambles from a distance in heavy foliage, but a close inspection reveals that the plants actually coil and writhe like serpents or drifting seaweed. The barrier helps to conceal the Nymphas within, as well as provide a modicum of protection from weapons (PR 3). Too, the wall encloses such an area that the Nymphas has plenty of room to hide and rest while the barrier persists.</p>"
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

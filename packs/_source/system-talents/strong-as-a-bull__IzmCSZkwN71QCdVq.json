@@ -1,0 +1,19 @@
+{
+	"_id": "IzmCSZkwN71QCdVq",
+	"_key": "!items!IzmCSZkwN71QCdVq",
+	"name": "Strong as a Bull",
+	"type": "talent",
+	"img": "icons/svg/sun.svg",
+	"system": {
+		"desc": "A life of hard, manual labor or training has sculpted you into a strong individual.",
+		"benefit": "<p>The Hero receives triple her STR (minimum of +3) for the purposes of strength feats, encumbrance, and carrying capacity. She may also throw an item twice the normal distance.</p>",
+		"notes": ""
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

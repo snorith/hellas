@@ -1,0 +1,19 @@
+{
+	"_id": "4DpQeNEMU8RDU5L1",
+	"_key": "!items!4DpQeNEMU8RDU5L1",
+	"name": "Mounted Stride",
+	"type": "talent",
+	"img": "icons/svg/sun.svg",
+	"system": {
+		"desc": "The ability to get the best long-range speed out of a mount.",
+		"benefit": "<p>The character may double the distance traveled in one day while mounted and in reasonably good terrain.</p>",
+		"notes": ""
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

@@ -1,0 +1,25 @@
+{
+	"_id": "IpMwjOlMcy6bvxsU",
+	"_key": "!items!IpMwjOlMcy6bvxsU",
+	"name": "Influence",
+	"type": "skill",
+	"img": "systems/hellas/assets/icons/convince.svg",
+	"system": {
+		"skill": "influence",
+		"attribute": "CHA",
+		"specifier": "",
+		"specifierCustom": "",
+		"level": {
+			"value": 0,
+			"max": 0
+		},
+		"notes": "<h1>Influence</h1>\n<p><strong>Training Time (TT): 16 weeks</strong></p>\n<p>Ability to influence by charm, seduction, suggestion, fast talk, and sex appeal. This is the ability to convince someone to allow you to have what you want. The skill can legitimately be used to get someone to give you a ride to the market as well as a supply you with a night of carousing. Influence can be used in place of Deception or Etiquette in certain situations.</p>"
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

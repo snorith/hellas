@@ -1,0 +1,24 @@
+{
+	"_id": "FNVgr9VqF6hRf1PM",
+	"_key": "!items!FNVgr9VqF6hRf1PM",
+	"name": "Illusion - Paramour’s Mask",
+	"type": "dynamism",
+	"img": "icons/svg/lightning.svg",
+	"system": {
+		"skillid": "dynamism",
+		"dod": -10,
+		"dodinfo": "Level -1 base\n-3 for Motion features\n-3 for Details\n-3 for Sound",
+		"range": "Self or Target within 20m",
+		"tradition": "Sorcery, Illusion",
+		"duration": "10 rounds (1 minute)",
+		"other": "",
+		"notes": "<p>Stories say that the Zorans developed this Dynamistic effect to sneak into the boudoirs of their partners undetected by guards, wives, or husbands. Using this effect causes the Dynamist's facial features and voice to perfectly mimic that of another individual for the duration of the effect. Efforts to prove otherwise have a -10 penalty. However, normally a sign of the patron Titanoi is visible somewhere, either as a birthmark, a tattoo, or a symbol hidden about the clothing, for the Titanoi are nothing if not proud.</p>"
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

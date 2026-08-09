@@ -1,0 +1,24 @@
+{
+	"_id": "ygO8yUdZUI83G0lC",
+	"_key": "!items!ygO8yUdZUI83G0lC",
+	"name": "Manifest - Tooth and Claw",
+	"type": "dynamism",
+	"img": "icons/svg/lightning.svg",
+	"system": {
+		"skillid": "dynamism",
+		"dod": -19,
+		"dodinfo": "Base -10 level\n-4 for Duration\n-5 for Range",
+		"range": "35m",
+		"tradition": "Shamanism, Dematerialize",
+		"duration": "50 rounds (5 minutes)",
+		"other": "Mass Affected 50 kg",
+		"notes": "<p>The Goregons value individual strength and prowess, particularly the shamans who emulate beasts from the wilds. This dynamistic effect ensures a level playing field by instantly stripping an opponent of armor and weapons, leaving them to fight with only their straining muscles and natural abilities. By pointing at a target within range and blowing a puff of herbal smoke in their direction, the shaman causes up to 50 kg of gear to suddenly become immaterial for five minutes &mdash; usually time enough for a fight between two individuals to end. The vanished gear lingers as smoke on the victim, reappearing when the smoke finally dissipates.</p>"
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

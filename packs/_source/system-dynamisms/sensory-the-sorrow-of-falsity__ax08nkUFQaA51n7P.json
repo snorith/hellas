@@ -1,0 +1,24 @@
+{
+	"_id": "ax08nkUFQaA51n7P",
+	"_key": "!items!ax08nkUFQaA51n7P",
+	"name": "Sensory - The Sorrow of Falsity",
+	"type": "dynamism",
+	"img": "icons/svg/lightning.svg",
+	"system": {
+		"skillid": "dynamism",
+		"dod": -10,
+		"dodinfo": "Base -10 level",
+		"range": "20 m",
+		"tradition": "Sorcery, Sensory",
+		"duration": "10 rounds (1 minute)",
+		"other": "PER Mod +10",
+		"notes": "<p>With this sorcerous arcana activated, a Zoran can more easily discern truth from lies. By paying attention to any speaker within range, the Zoran can attempt to tell if the speaker&rsquo;s words are true, receiving a +10 bonus to their PER + Deduce Motive roll. If the speaker willingly utters what they know to be a falsehood, the sorcerer sheds tears of blood, revealing the lie to all who are nearby.&nbsp;</p>"
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

@@ -1,0 +1,24 @@
+{
+	"_id": "x53xvEF9MzI6pAjD",
+	"_key": "!items!x53xvEF9MzI6pAjD",
+	"name": "Influence - Nemean Roar",
+	"type": "dynamism",
+	"img": "icons/svg/lightning.svg",
+	"system": {
+		"skillid": "dynamism",
+		"dod": -21,
+		"dodinfo": "Base -10 level\n-3 for Tradition\n-4 for Duration\n-4 for Area",
+		"range": "5 targets within line of sight",
+		"tradition": "Shamanism, Influence",
+		"duration": "5 rounds",
+		"other": "Resistance WIL -5",
+		"notes": "<p>Summoning and internalizing the wrath and majesty of the Nemean lions, the shaman can let out an imposing roar that strikes fear into the hearts of those who hear it. Five targets within the shaman&rsquo;s sight are struck by the danger he imposes if they fail a WIL roll at a -5 penalty. Those that fail flee for 5 rounds, unable to do anything but run. Those who partially succeed may still defend themselves, but are gripped by fear.&nbsp;</p>"
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

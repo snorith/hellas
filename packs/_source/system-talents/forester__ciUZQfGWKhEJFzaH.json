@@ -1,0 +1,19 @@
+{
+	"_id": "ciUZQfGWKhEJFzaH",
+	"_key": "!items!ciUZQfGWKhEJFzaH",
+	"name": "Forester",
+	"type": "talent",
+	"img": "icons/svg/sun.svg",
+	"system": {
+		"desc": "You are at home amongst the trees and undergrowth of the forests, and find it more welcoming than the cities of men.",
+		"benefit": "<p>The Hero may pass through heavy undergrowth at triple his SPD (minimum of +3) and suffers only half the movement penalties.</p>",
+		"notes": ""
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

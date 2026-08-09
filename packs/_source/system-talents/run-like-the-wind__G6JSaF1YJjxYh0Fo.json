@@ -1,0 +1,19 @@
+{
+	"_id": "G6JSaF1YJjxYh0Fo",
+	"_key": "!items!G6JSaF1YJjxYh0Fo",
+	"name": "Run Like the Wind",
+	"type": "talent",
+	"img": "icons/svg/sun.svg",
+	"system": {
+		"desc": "The ability to run swiftly for a distance.",
+		"benefit": "<p>For the purpose of moving only, the Hero receives triple his SPD (minimum of +3). This applies if the character is moving under his own power (i.e. not mounted) and on reasonably level and clear terrain.</p>",
+		"notes": ""
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

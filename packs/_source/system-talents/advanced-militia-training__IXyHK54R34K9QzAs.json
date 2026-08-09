@@ -1,0 +1,19 @@
+{
+	"_id": "IXyHK54R34K9QzAs",
+	"_key": "!items!IXyHK54R34K9QzAs",
+	"name": "Advanced Militia Training",
+	"type": "talent",
+	"img": "icons/svg/sun.svg",
+	"system": {
+		"desc": "This training improves upon the basic training that all hoplites/warriors receive concerning personal defensive techniques.",
+		"benefit": "<p>The Hero may double his STR (minimum of +2) when determining armor penalties because of weight. This talent does not make the Hero stronger; just able to wear heavier armor with less penalty.</p>\n<blockquote>Example: A Hero with a STR +1 is wearing a suit of armor with a STR minimum of +3. Normally the Hero would have a -2 to his DEX. With Advanced Militia Training, the Hero has an effective STR of +2 and his DEX penalty is only a -1.</blockquote>",
+		"notes": ""
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

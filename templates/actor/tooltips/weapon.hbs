@@ -1,0 +1,19 @@
+<img src="{{img}}" alt="{{name}}" height="50"/>
+<h1 class="hellas-tooltip-name">{{name}}</h1>
+<table class="hellas-tooltip-table">
+	<tbody>
+	<tr><td>{{localize "HELLAS.weapon.skillid.label"}}</td><td>{{skillName}}</td></tr>
+	<tr><td>{{localize "HELLAS.weapon.acc.label"}}</td><td>{{system.acc}}</td></tr>
+	<tr><td>{{localize "HELLAS.weapon.dr.label"}}</td><td>{{system.dr}}</td></tr>
+	<tr><td>{{localize "HELLAS.weapon.modifier.label"}}</td><td>{{modifierName}}</td></tr>
+	{{#if modifierDesc}}<tr><td colspan="2">{{{modifierDesc}}}</td></tr>{{/if}}
+	<tr><td>{{localize "HELLAS.weapon.wt.label"}}</td><td>{{system.wt}}</td></tr>
+	<tr><td>{{localize "HELLAS.weapon.str.label"}}</td><td>{{system.str}}</td></tr>
+	<tr><td>{{localize "HELLAS.weapon.rof.label"}}</td><td>{{system.rof}}</td></tr>
+	<tr><td>{{localize "HELLAS.weapon.ammo.label"}}</td><td>{{system.ammo}}</td></tr>
+	<tr><td>{{localize "HELLAS.weapon.rng.label"}}</td><td>{{system.rng}}</td></tr>
+	<tr><td>{{localize "HELLAS.weapon.ismissile.label"}}</td><td>{{#if system.ismissile}}<i class="fas fa-check-square"></i>{{/if}}</td></tr>
+	<tr><td>{{localize "HELLAS.weapon.price.label"}}</td><td>{{system.price}}</td></tr>
+	</tbody>
+</table>
+<div class="hellas-tooltip-notes">{{{system.notes}}}</div>

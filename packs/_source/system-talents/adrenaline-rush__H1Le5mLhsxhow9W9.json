@@ -1,0 +1,19 @@
+{
+	"_id": "H1Le5mLhsxhow9W9",
+	"_key": "!items!H1Le5mLhsxhow9W9",
+	"name": "Adrenaline Rush",
+	"type": "talent",
+	"img": "icons/svg/sun.svg",
+	"system": {
+		"desc": "You are able to summon an inner strength and energy when the going gets tough.",
+		"benefit": "<p>Once per day the Hero may add triple his CON (minimum of +3) to his STR, suffering a -2 penalty to DEX. The effects of Adrenaline Rush last for minutes equal to his CON (minimum of 1 minute).</p>",
+		"notes": ""
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

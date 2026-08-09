@@ -1,0 +1,25 @@
+{
+	"_id": "UIV9ktUxuI6s2TvS",
+	"_key": "!items!UIV9ktUxuI6s2TvS",
+	"name": "Athletics - Running",
+	"type": "skill",
+	"img": "systems/hellas/assets/icons/run.svg",
+	"system": {
+		"skill": "athletics",
+		"attribute": "SPD",
+		"specifier": "running",
+		"specifierCustom": "",
+		"level": {
+			"value": 0,
+			"max": 0
+		},
+		"notes": "<h1>Athletics (*)</h1>\n<p><strong>Training Time (TT): 24 weeks</strong></p>\n<p>This skill covers general physical activity ranging from a game of ball to rock climbing. The Attribute used varies depending on the type of athletic activity selected. The Hero uses Athletics when swimming (SPD), climbing (DEX), balancing (DEX), flying (SPD), jumping (STR), rope climbing (DEX), running (SPD), or with strength feats (STR). CON is used when a test of endurance is needed, such as holding one&rsquo;s breath, or running over long distances.</p>"
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

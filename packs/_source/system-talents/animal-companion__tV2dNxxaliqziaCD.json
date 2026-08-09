@@ -1,0 +1,19 @@
+{
+	"_id": "tV2dNxxaliqziaCD",
+	"_key": "!items!tV2dNxxaliqziaCD",
+	"name": "Animal Companion",
+	"type": "talent",
+	"img": "icons/svg/sun.svg",
+	"system": {
+		"desc": "Your affinity for animals has garnered you a natural ally.",
+		"benefit": "<p>You receive a loyal companion in the form of an animal. This animal companion will always be of the highest possible ability level for its type.</p>",
+		"notes": ""
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

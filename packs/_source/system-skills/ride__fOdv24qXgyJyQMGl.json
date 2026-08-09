@@ -1,0 +1,25 @@
+{
+	"_id": "fOdv24qXgyJyQMGl",
+	"_key": "!items!fOdv24qXgyJyQMGl",
+	"name": "Ride",
+	"type": "skill",
+	"img": "systems/hellas/assets/icons/horse-head.svg",
+	"system": {
+		"skill": "ride",
+		"attribute": "DEX",
+		"specifier": "specify",
+		"specifierCustom": "",
+		"level": {
+			"value": 0,
+			"max": 0
+		},
+		"notes": "<h1>Ride</h1>\n<p><strong>Training Time (TT): 8 weeks</strong></p>\n<p>Ability to ride a steed, such as a horse or camel. This skill does not allow a character to take advantage of a steed&rsquo;s abilities in combat, which is covered under Mounted Combat.</p>"
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

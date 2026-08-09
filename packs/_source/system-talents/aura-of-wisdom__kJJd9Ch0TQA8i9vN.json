@@ -1,0 +1,19 @@
+{
+	"_id": "kJJd9Ch0TQA8i9vN",
+	"_key": "!items!kJJd9Ch0TQA8i9vN",
+	"name": "Aura of Wisdom",
+	"type": "talent",
+	"img": "icons/svg/sun.svg",
+	"system": {
+		"desc": "You have gained the respect of others for your perceived wisdom.",
+		"benefit": "<p>The Hero adds triple his INT (minimum of +3) to CHA when determining Reaction Rolls.</p>",
+		"notes": ""
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

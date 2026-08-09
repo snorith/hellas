@@ -1,0 +1,19 @@
+{
+	"_id": "PwRRdUq87KF2XM2p",
+	"_key": "!items!PwRRdUq87KF2XM2p",
+	"name": "Scavenger",
+	"type": "talent",
+	"img": "icons/svg/sun.svg",
+	"system": {
+		"desc": "You have a knack for finding items you need in the most unlikely places.",
+		"benefit": "<p>The Hero receives triple his PER (minimum of +3) to rolls when scavenging for food, water, or other equipment in ruins, garbage dumps, rubble piles, and similar environments.</p>",
+		"notes": ""
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

@@ -1,0 +1,10 @@
+<img src="{{img}}" alt="{{name}}" height="50"/>
+<h1 class="hellas-tooltip-name">{{name}}</h1>
+<table class="hellas-tooltip-table">
+	<tbody>
+	<tr><td>{{localize "HELLAS.talent.desc.label"}}</td><td>{{{descHtml}}}</td></tr>
+	<tr><td colspan="2">{{localize "HELLAS.talent.benefit.label"}}<hr>{{{system.benefit}}}</td></tr>
+	</tbody>
+</table>
+{{!-- F9 fixed: the legacy template rendered dynamism notes here --}}
+<div class="hellas-tooltip-notes">{{{system.notes}}}</div>

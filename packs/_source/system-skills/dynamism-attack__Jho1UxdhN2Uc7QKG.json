@@ -1,0 +1,25 @@
+{
+	"_id": "Jho1UxdhN2Uc7QKG",
+	"_key": "!items!Jho1UxdhN2Uc7QKG",
+	"name": "Dynamism - Attack",
+	"type": "skill",
+	"img": "icons/svg/lightning.svg",
+	"system": {
+		"skill": "mode",
+		"attribute": "DYN",
+		"specifier": "attack",
+		"specifierCustom": "skill",
+		"level": {
+			"value": 0,
+			"max": 0
+		},
+		"notes": "<h1>Dynamism Mode: Attack (*)</h1>\n<p><strong>Training Time (TT): 24 weeks</strong></p>\n<p><strong>Damage</strong>: 1 Hit Point per Dynamism level.</p>\n<p><strong>Range</strong>: 20 meters (-1 to activation roll per additional 3 meters).</p>\n<p><strong>Duration</strong>: Instant / 1 round per level (no range).</p>\n<p><strong>Area</strong>: -3 to activation per meter of radius.</p>\n<p><strong>PR Resistanc</strong>e: -1 for each point of PR the Dynamism overcomes.</p>\n<p><strong>Attack Bonus</strong>: -1 for each +1 bonus on attack rolls.</p>\n<p>The Mode of Attack is a literal unleashing of destructive Dynamism energy to harm or destroy another being or object. Once used, Attack Dynamism Powers have an instant duration and their Hit Point damage amounts are equal to the level of the Dynamism Power being used (e.g. a level-4 Attack Dynamism Power inflicts 4 Hit Points of damage).</p>\n<p>Most Attack effects are ranged attacks and are subject to the modifiers and adjustments based on the range and position of the intended target (see Ranged Attacks in the Combat Chapter).</p>\n<p>Attack Dynamism is dodged normally, whether it's a ranged attack or a melee/close attack. The Hero uses his CR + Mode skill versus a DoD equal to the target's DEX + Evade skill to hit.</p>\n<blockquote>\n<p><strong>Example</strong>: Alcmene wants to hit an opponent with a bolt of pure light as the battle rages around her. She has the Attack Mode at level 12 and wants to hit her opponent who is 12m away for 10 points of damage. She must first cast the Dynamism and has a DoD equal to the level of the Dynamism, which is -10. She rolls a success and the Dynamism is now ready to throw at her opponent. She rolls her CR + Attack Mode to hit her opponent who uses his DEX + Evade as the DOD to hit.</p>\n</blockquote>\n<p>Close-combat Dynamisms are also within the purview of this Mode, such as Dynamist-generated melee weapons made from pure energy. These effects last for a number of rounds equal to the effect level, and inflict the same amount of damage as a ranged Attack Dynamism of the same level. When using such Dynamisms in combat, the Dynamist applies his CR + Pankration or Melee skill versus the target's DEX + Evade skill to hit.</p>\n<p>Area-effect Attack Dynamisms can also be created with this Mode, (windstorms, fiery explosions, etc.), and deliver damage equivalent to a standard ranged Dynamism of the same level. Every one meter of effect radius counts as -3 to the activation roll.</p>\n<p><strong>Example Uses of the Attack Mode</strong></p>\n<blockquote>\n<p>\"I channel arcane energy in the form of a screeching flayed skull to inflict harm upon my attackers.\"</p>\n<p>\"I speak Words of Power and throw handfuls of liquid flame to splash over my enemies.\"</p>\n<p>\"I hurl a bolt of pure divine energy to destroy the undead creature that dares return to the world of living.\"</p>\n<p>\"I cast a powerful sense of agony in his mind, hoping the pain will render him unconscious long enough for me to make my escape.\"</p>\n</blockquote>\n<p>&nbsp;</p>"
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

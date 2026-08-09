@@ -1,0 +1,19 @@
+{
+	"_id": "TXk8jFQHmxVQ9JxL",
+	"_key": "!items!TXk8jFQHmxVQ9JxL",
+	"name": "Improvised Weapon",
+	"type": "talent",
+	"img": "icons/svg/sun.svg",
+	"system": {
+		"desc": "You can use almost anything at hand as an effective weapon.",
+		"benefit": "<p>The Hero suffers no penalty when using an improvised weapon and only a -2 when using weapons she is not proficient with (has no skill ranks in). When using improvised weapons the Hero may add his INT (minimum of +1) to the DR.</p>",
+		"notes": ""
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

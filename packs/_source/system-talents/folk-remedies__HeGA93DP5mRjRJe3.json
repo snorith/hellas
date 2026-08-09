@@ -1,0 +1,19 @@
+{
+	"_id": "HeGA93DP5mRjRJe3",
+	"_key": "!items!HeGA93DP5mRjRJe3",
+	"name": "Folk Remedies",
+	"type": "talent",
+	"img": "icons/svg/sun.svg",
+	"system": {
+		"desc": "The knowledge of various folk remedies and charms were passed down to you by your elders.",
+		"benefit": "<p>By spending 10-INT hours gathering common ingredients and carefully preparing them, the Hero may make a potion, tincture, or salve that will cure a specific disease, cure a specific poison, or make a medicine to heal Hit Point damage. When used to cure diseases and poison, the remedy will add double the Hero's INT (minimum of +2) to the patient's CON for resistance purposes. When used to make a healing salve/potion the Hero can make one dose in the allotted time that heals a number of Hit Points equal to double the Hero's INT (minimum of +2).</p>",
+		"notes": ""
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

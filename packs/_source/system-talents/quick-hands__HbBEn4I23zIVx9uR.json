@@ -1,0 +1,19 @@
+{
+	"_id": "HbBEn4I23zIVx9uR",
+	"_key": "!items!HbBEn4I23zIVx9uR",
+	"name": "Quick Hands",
+	"type": "talent",
+	"img": "icons/svg/sun.svg",
+	"system": {
+		"desc": "Those from urban environments often find the need to steal in order to survive. From an early age, many learn to quickly pocket small items when others are distracted.",
+		"benefit": "<p>The Hero receives triple his DEX (minimum of +3) to rolls pertaining to quick or sleight of hand movements. The Hero may also reroll failed rolls of this type a number of times per game equal to his DEX (minimum of 3).</p>",
+		"notes": ""
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

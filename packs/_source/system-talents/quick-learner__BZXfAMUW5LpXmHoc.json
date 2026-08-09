@@ -1,0 +1,19 @@
+{
+	"_id": "BZXfAMUW5LpXmHoc",
+	"_key": "!items!BZXfAMUW5LpXmHoc",
+	"name": "Quick Learner",
+	"type": "talent",
+	"img": "icons/svg/sun.svg",
+	"system": {
+		"desc": "You are a quick study and learn faster than your peers.",
+		"benefit": "<p>Learning new skills takes the Hero half the time as others. A Hero may learn a skill in half the normal time and gains 1 additional skill point in any new skill learned.</p>",
+		"notes": ""
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

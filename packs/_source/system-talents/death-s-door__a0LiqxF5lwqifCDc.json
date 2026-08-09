@@ -1,0 +1,19 @@
+{
+	"_id": "a0LiqxF5lwqifCDc",
+	"_key": "!items!a0LiqxF5lwqifCDc",
+	"name": "Death’s Door",
+	"type": "talent",
+	"img": "icons/svg/sun.svg",
+	"system": {
+		"desc": "Your talent at the healing arts is exceptional.",
+		"benefit": "<p>So long as a person has not been dead longer than a number of minutes equal to their CON rating (minimum of one minute), the Hero may make a heal roll with a DoD -10. A full success will revive the person, bringing their Hit Point total to 1. A critical success will see the person revived and having a total of 5 Hit Points.</p>",
+		"notes": ""
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

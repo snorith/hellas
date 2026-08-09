@@ -1,0 +1,37 @@
+<section class="tab {{tab.cssClass}}" data-group="{{tab.group}}" data-tab="{{tab.id}}">
+	<div class="hellas-two-col">
+		<div>
+			<fieldset class="hellas-panel">
+				<h3 class="hellas-titling">{{localize "HELLAS.sheet.disadvantages.title"}}</h3>
+				{{#each disadvantageRows}}
+					<fieldset class="hellas-subpanel">
+						<h4 class="hellas-titling">{{localize this.nameKey}}</h4>
+						<label>{{localize "HELLAS.sheet.disadvantages.rating"}}
+							<input type="number" step="1" name="system.disadvantages.{{this.key}}.level"
+								   value="{{this.level}}" {{#unless @root.editable}}disabled{{/unless}}>
+						</label>
+						<textarea rows="4" name="system.disadvantages.{{this.key}}.info"
+								  {{#unless @root.editable}}disabled{{/unless}}>{{this.info}}</textarea>
+					</fieldset>
+				{{/each}}
+			</fieldset>
+			<fieldset class="hellas-panel">
+				<h3 class="hellas-titling">{{localize "HELLAS.sheet.possessions.title"}}</h3>
+				<textarea rows="10" name="system.possessions.info" {{#unless editable}}disabled{{/unless}}>{{system.possessions.info}}</textarea>
+			</fieldset>
+		</div>
+		<div>
+			<fieldset class="hellas-panel">
+				<h3 class="hellas-titling">{{localize "HELLAS.sheet.abilities.title"}}</h3>
+				<textarea rows="10" name="system.abilities.info" {{#unless editable}}disabled{{/unless}}>{{system.abilities.info}}</textarea>
+			</fieldset>
+			<fieldset class="hellas-panel">
+				<h3 class="hellas-titling">{{localize "HELLAS.sheet.ambitions.title"}}</h3>
+				{{#each ambitionSlots}}
+					<textarea rows="5" name="system.ambitions.{{this.key}}.info"
+							  {{#unless @root.editable}}disabled{{/unless}}>{{this.value}}</textarea>
+				{{/each}}
+			</fieldset>
+		</div>
+	</div>
+</section>

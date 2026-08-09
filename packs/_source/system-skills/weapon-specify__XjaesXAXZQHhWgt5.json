@@ -1,0 +1,25 @@
+{
+	"_id": "XjaesXAXZQHhWgt5",
+	"_key": "!items!XjaesXAXZQHhWgt5",
+	"name": "Weapon - Specify",
+	"type": "skill",
+	"img": "icons/svg/sword.svg",
+	"system": {
+		"skill": "weapon",
+		"attribute": "CR",
+		"specifier": "specify",
+		"specifierCustom": "",
+		"level": {
+			"value": 0,
+			"max": 0
+		},
+		"notes": "<h1>Weapon (specific)</h1>\n<p><strong>Training Time (TT):&nbsp;</strong><strong>20 weeks for the first weapon and 4 weeks for additional weapons</strong></p>\n<p>Proficiency with any single category of weapon. Weapon skills are used for both attack and defense. Game Masters are free to create new or unique weapon groups as required by their campaigns. For example, unique and exotic weapons may be weapons groups unto themselves.</p>\n<p>There are many Weapon skill sub-categories. Some examples follow:</p>\n<ul>\n<li>Melee (sword, knives, spears, maces, clubs)</li>\n<li>Ranged (longbows, short bows, slings, slingshots)</li>\n<li>Heavy Weapons (machine guns, missile launchers)&nbsp;</li>\n<li>Guns (pistols, submachine guns, assault rifles)</li>\n<li>Thrown (knives, axes, rocks, grenades, spears)</li>\n<li>Vehicle Weapons (any weapon mounted or controlled by a vehicle)</li>\n</ul>"
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

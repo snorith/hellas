@@ -1,0 +1,16 @@
+<section class="tab {{tab.cssClass}}" data-group="{{tab.group}}" data-tab="{{tab.id}}">
+	<div class="hellas-item-grid">
+		<label for="{{item.id}}-desc" title="{{localize "HELLAS.talent.desc.title"}}">{{localize "HELLAS.talent.desc.label"}}</label>
+		<textarea id="{{item.id}}-desc" name="system.desc" rows="4" {{#unless editable}}disabled{{/unless}}>{{system.desc}}</textarea>
+	</div>
+	<div>
+		<label title="{{localize "HELLAS.talent.benefit.title"}}">{{localize "HELLAS.talent.benefit.label"}}</label>
+		<hr>
+	</div>
+	{{#if editable}}
+		<prose-mirror name="system.benefit" data-document-uuid="{{item.uuid}}"
+					  value="{{system.benefit}}" toggled="true">{{{enrichedBenefit}}}</prose-mirror>
+	{{else}}
+		{{{enrichedBenefit}}}
+	{{/if}}
+</section>

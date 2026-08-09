@@ -1,0 +1,19 @@
+{
+	"_id": "h6sSXUg63ODlDkh9",
+	"_key": "!items!h6sSXUg63ODlDkh9",
+	"name": "Eyes of the Hunter",
+	"type": "talent",
+	"img": "icons/svg/sun.svg",
+	"system": {
+		"desc": "You are skilled in following a trail.",
+		"benefit": "<p>The Hero receives triple his PER (minimum of +3) to Tracking rolls.</p>",
+		"notes": ""
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

@@ -1,0 +1,19 @@
+{
+	"_id": "6lKuPHM74TRWmpAa",
+	"_key": "!items!6lKuPHM74TRWmpAa",
+	"name": "Nasty Reputation",
+	"type": "talent",
+	"img": "icons/svg/sun.svg",
+	"system": {
+		"desc": "You have gained a reputation for being fearsome, coldhearted, or otherwise of a nasty disposition.",
+		"benefit": "<p>The Hero receives triple his CHA (minimum of +3) to rolls involving Intimidation.</p>",
+		"notes": ""
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

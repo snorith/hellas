@@ -1,0 +1,19 @@
+{
+	"_id": "xMz0DkcVJIZmlo0u",
+	"_key": "!items!xMz0DkcVJIZmlo0u",
+	"name": "Inconspicuous",
+	"type": "talent",
+	"img": "icons/svg/sun.svg",
+	"system": {
+		"desc": "You can pass unnoticed in most situations.",
+		"benefit": "<p>The Hero receives triple his PER (minimum of +3) to rolls involving the Stealth skill. When being pursued through a crowd the Hero may add twice his INT (minimum +2) to his SPD to lose his pursuers.</p>",
+		"notes": ""
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

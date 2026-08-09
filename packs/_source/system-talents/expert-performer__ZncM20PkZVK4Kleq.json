@@ -1,0 +1,19 @@
+{
+	"_id": "ZncM20PkZVK4Kleq",
+	"_key": "!items!ZncM20PkZVK4Kleq",
+	"name": "Expert Performer",
+	"type": "talent",
+	"img": "icons/svg/sun.svg",
+	"system": {
+		"desc": "You are highly skilled in one particular style of the performing arts.",
+		"benefit": "<p>The Hero receives a bonus of triple their CHA (minimum of +3) to all Omni Table rolls when using a skill to perform in front of an audience.</p>",
+		"notes": ""
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

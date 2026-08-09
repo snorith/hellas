@@ -1,0 +1,140 @@
+<section class="tab {{tab.cssClass}}" data-group="{{tab.group}}" data-tab="{{tab.id}}">
+	<div class="hellas-two-col">
+		<div>
+			<fieldset class="hellas-panel">
+				<h3 class="hellas-titling">{{localize "HELLAS.sheet.personal.family.title"}}</h3>
+				<div class="form-group">
+					<label for="hellas-house">{{localize "HELLAS.sheet.personal.house"}}</label>
+					<input type="text" id="hellas-house" name="system.personal.tree.house" value="{{system.personal.tree.house}}" {{#unless editable}}disabled{{/unless}}>
+				</div>
+				<div class="form-group">
+					<label for="hellas-socialstation">{{localize "HELLAS.sheet.personal.socialstation"}}</label>
+					<input type="text" id="hellas-socialstation" name="system.personal.info.socialstation" value="{{system.personal.info.socialstation}}" {{#unless editable}}disabled{{/unless}}>
+				</div>
+				<div class="form-group">
+					<label for="hellas-familystatus">{{localize "HELLAS.sheet.personal.familystatus"}}</label>
+					<input type="text" id="hellas-familystatus" name="system.personal.info.familystatus" value="{{system.personal.info.familystatus}}" {{#unless editable}}disabled{{/unless}}>
+				</div>
+
+				<fieldset class="hellas-subpanel">
+					<h4 class="hellas-titling">{{localize "HELLAS.sheet.personal.maternal"}}</h4>
+					<div class="form-group">
+						<label for="hellas-m-grandmother">{{localize "HELLAS.sheet.personal.grandmother"}}</label>
+						<input type="text" id="hellas-m-grandmother" name="system.personal.tree.mother.grandmother" value="{{system.personal.tree.mother.grandmother}}" {{#unless editable}}disabled{{/unless}}>
+					</div>
+					<div class="form-group">
+						<label for="hellas-m-grandfather">{{localize "HELLAS.sheet.personal.grandfather"}}</label>
+						<input type="text" id="hellas-m-grandfather" name="system.personal.tree.mother.grandfather" value="{{system.personal.tree.mother.grandfather}}" {{#unless editable}}disabled{{/unless}}>
+					</div>
+					<div class="form-group">
+						<label for="hellas-m-name">{{localize "HELLAS.sheet.personal.mother"}}</label>
+						<input type="text" id="hellas-m-name" name="system.personal.tree.mother.name" value="{{system.personal.tree.mother.name}}" {{#unless editable}}disabled{{/unless}}>
+					</div>
+				</fieldset>
+
+				<fieldset class="hellas-subpanel">
+					<h4 class="hellas-titling">{{localize "HELLAS.sheet.personal.paternal"}}</h4>
+					<div class="form-group">
+						<label for="hellas-f-grandmother">{{localize "HELLAS.sheet.personal.grandmother"}}</label>
+						<input type="text" id="hellas-f-grandmother" name="system.personal.tree.father.grandmother" value="{{system.personal.tree.father.grandmother}}" {{#unless editable}}disabled{{/unless}}>
+					</div>
+					<div class="form-group">
+						<label for="hellas-f-grandfather">{{localize "HELLAS.sheet.personal.grandfather"}}</label>
+						<input type="text" id="hellas-f-grandfather" name="system.personal.tree.father.grandfather" value="{{system.personal.tree.father.grandfather}}" {{#unless editable}}disabled{{/unless}}>
+					</div>
+					<div class="form-group">
+						<label for="hellas-f-name">{{localize "HELLAS.sheet.personal.father"}}</label>
+						<input type="text" id="hellas-f-name" name="system.personal.tree.father.name" value="{{system.personal.tree.father.name}}" {{#unless editable}}disabled{{/unless}}>
+					</div>
+				</fieldset>
+
+				<fieldset class="hellas-subpanel">
+					<h4 class="hellas-titling">{{localize "HELLAS.sheet.personal.children.title"}}</h4>
+					{{#each children}}
+						<div class="form-group">
+							<label for="hellas-child-{{this.key}}">{{this.label}}</label>
+							<input type="text" id="hellas-child-{{this.key}}" name="system.personal.tree.children.{{this.key}}" value="{{this.value}}" {{#unless @root.editable}}disabled{{/unless}}>
+						</div>
+					{{/each}}
+				</fieldset>
+			</fieldset>
+
+			<fieldset class="hellas-panel">
+				<h3 class="hellas-titling">{{localize "HELLAS.sheet.personal.birth.title"}}</h3>
+				<div class="form-group">
+					<label for="hellas-birth-age">{{localize "HELLAS.sheet.personal.birth.age"}}</label>
+					<input type="text" id="hellas-birth-age" name="system.personal.birth.age" value="{{system.personal.birth.age}}" {{#unless editable}}disabled{{/unless}}>
+				</div>
+				<div class="form-group">
+					<label for="hellas-birth-month">{{localize "HELLAS.sheet.personal.birth.month"}}</label>
+					<input type="text" id="hellas-birth-month" name="system.personal.birth.month" value="{{system.personal.birth.month}}" {{#unless editable}}disabled{{/unless}}>
+				</div>
+				<div class="form-group">
+					<label for="hellas-birth-year">{{localize "HELLAS.sheet.personal.birth.year"}}</label>
+					<input type="text" id="hellas-birth-year" name="system.personal.birth.year" value="{{system.personal.birth.year}}" {{#unless editable}}disabled{{/unless}}>
+				</div>
+				<div class="form-group">
+					<label for="hellas-birth-planet">{{localize "HELLAS.sheet.personal.birth.planet"}}</label>
+					<input type="text" id="hellas-birth-planet" name="system.personal.birth.planet" value="{{system.personal.birth.planet}}" {{#unless editable}}disabled{{/unless}}>
+				</div>
+			</fieldset>
+
+			<fieldset class="hellas-panel">
+				<h3 class="hellas-titling">{{localize "HELLAS.sheet.personal.notes.title"}}</h3>
+				<textarea rows="10" name="system.personal.info.notes" {{#unless editable}}disabled{{/unless}}>{{system.personal.info.notes}}</textarea>
+			</fieldset>
+		</div>
+		<div>
+			<fieldset class="hellas-panel">
+				<div class="form-group hellas-stacked">
+					<label for="hellas-gift" class="hellas-bold">{{localize "HELLAS.sheet.personal.gift.label"}}</label>
+					<small>{{localize "HELLAS.sheet.personal.gift.blurb"}}</small>
+					<input type="text" id="hellas-gift" name="system.personal.info.gift" value="{{system.personal.info.gift}}" {{#unless editable}}disabled{{/unless}}>
+				</div>
+				<div class="form-group hellas-stacked">
+					<label for="hellas-mark" class="hellas-bold">{{localize "HELLAS.sheet.personal.mark.label"}}</label>
+					<small>{{localize "HELLAS.sheet.personal.mark.blurb"}}</small>
+					<textarea rows="2" id="hellas-mark" name="system.personal.info.mark" {{#unless editable}}disabled{{/unless}}>{{system.personal.info.mark}}</textarea>
+				</div>
+				<div class="form-group hellas-stacked">
+					<label for="hellas-encounter" class="hellas-bold">{{localize "HELLAS.sheet.personal.encounter.label"}}</label>
+					<small>{{localize "HELLAS.sheet.personal.encounter.blurb"}}</small>
+					<textarea rows="2" id="hellas-encounter" name="system.personal.info.encounter" {{#unless editable}}disabled{{/unless}}>{{system.personal.info.encounter}}</textarea>
+				</div>
+				<div class="form-group hellas-stacked">
+					<label for="hellas-destiny" class="hellas-bold">{{localize "HELLAS.sheet.personal.destiny.label"}}</label>
+					<small>{{localize "HELLAS.sheet.personal.destiny.blurb"}}</small>
+					<textarea rows="2" id="hellas-destiny" name="system.personal.info.destiny" {{#unless editable}}disabled{{/unless}}>{{system.personal.info.destiny}}</textarea>
+				</div>
+				<div class="form-group hellas-stacked">
+					<label for="hellas-fate" class="hellas-bold">{{localize "HELLAS.sheet.personal.fate.label"}}</label>
+					<small>{{localize "HELLAS.sheet.personal.fate.blurb"}}</small>
+					<textarea rows="2" id="hellas-fate" name="system.personal.info.fate" {{#unless editable}}disabled{{/unless}}>{{system.personal.info.fate}}</textarea>
+				</div>
+				<div class="form-group hellas-stacked">
+					<label for="hellas-deeds" class="hellas-bold">{{localize "HELLAS.sheet.personal.deeds.label"}}</label>
+					<small>{{localize "HELLAS.sheet.personal.deeds.blurb"}}</small>
+					<textarea rows="3" id="hellas-deeds" name="system.personal.info.deeds" {{#unless editable}}disabled{{/unless}}>{{system.personal.info.deeds}}</textarea>
+				</div>
+			</fieldset>
+
+			<fieldset class="hellas-panel">
+				<h3 class="hellas-titling">{{localize "HELLAS.sheet.personal.callings.title"}}</h3>
+				<p>{{localize "HELLAS.sheet.personal.callings.intro"}}</p>
+				{{#each callings}}
+					<fieldset class="hellas-subpanel">
+						<h4 class="hellas-titling">{{localize this.labelKey}}</h4>
+						<div class="form-group">
+							<label for="hellas-calling-{{this.key}}-years">{{localize "HELLAS.sheet.personal.callings.years"}}</label>
+							<input type="text" id="hellas-calling-{{this.key}}-years" name="system.personal.info.callings.{{this.key}}.years" value="{{this.years}}" {{#unless @root.editable}}disabled{{/unless}}>
+						</div>
+						<div class="form-group hellas-stacked">
+							<label for="hellas-calling-{{this.key}}-notes">{{localize "HELLAS.sheet.personal.callings.notes"}}</label>
+							<textarea rows="3" id="hellas-calling-{{this.key}}-notes" name="system.personal.info.callings.{{this.key}}.notes" {{#unless @root.editable}}disabled{{/unless}}>{{this.notes}}</textarea>
+						</div>
+					</fieldset>
+				{{/each}}
+			</fieldset>
+		</div>
+	</div>
+</section>

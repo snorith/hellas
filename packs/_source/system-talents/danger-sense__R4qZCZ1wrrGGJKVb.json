@@ -1,0 +1,19 @@
+{
+	"_id": "R4qZCZ1wrrGGJKVb",
+	"_key": "!items!R4qZCZ1wrrGGJKVb",
+	"name": "Danger Sense",
+	"type": "talent",
+	"img": "icons/svg/sun.svg",
+	"system": {
+		"desc": "You have the ability to sense when something is going to go badly — possibly a vague premonition of impending danger, or even just a studied knowledge of where things are likely to happen. This Talent is invaluable.",
+		"benefit": "<p>Adds triple the Hero's PER (minimum o f+3) to the Initiative roll at the beginning of any encounter and the Hero is never surprised.</p>",
+		"notes": ""
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

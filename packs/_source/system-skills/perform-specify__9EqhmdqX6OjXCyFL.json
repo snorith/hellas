@@ -1,0 +1,25 @@
+{
+	"_id": "9EqhmdqX6OjXCyFL",
+	"_key": "!items!9EqhmdqX6OjXCyFL",
+	"name": "Perform - Specify",
+	"type": "skill",
+	"img": "systems/hellas/assets/icons/sing.svg",
+	"system": {
+		"skill": "perform",
+		"attribute": "DEX",
+		"specifier": "singing",
+		"specifierCustom": "aura",
+		"level": {
+			"value": 0,
+			"max": 0
+		},
+		"notes": "<h1>Perform (specific)</h1>\n<p><strong>Training Time (TT): 8 &ndash; 52 weeks</strong></p>\n<p>You can impress audiences with your talent and skill. Like Handicraft and Lore, Perform is actually comprised of several sub-skills. The various sub-skills are: Dance (DEX), Musicianship (drum, harp, flute, etc.) (DEX), Juggling (DEX), Acting (acting, mime, etc.) (CHA), Oratory (CHA), and Singing (CHA).</p>\n<p>&nbsp;</p>"
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

@@ -1,0 +1,25 @@
+{
+	"_id": "VDqEUY9qnsHAf5LW",
+	"_key": "!items!VDqEUY9qnsHAf5LW",
+	"name": "Instinct - Intuition",
+	"type": "skill",
+	"img": "systems/hellas/assets/icons/awareness.svg",
+	"system": {
+		"skill": "instinct",
+		"attribute": "PER",
+		"specifier": "intuition",
+		"specifierCustom": "",
+		"level": {
+			"value": 0,
+			"max": 0
+		},
+		"notes": "<h1>Instinct (specific)</h1>\n<p><strong>Training Time (TT): 8 weeks</strong></p>\n<p>Instinct allows a Hero to make a leap of faith in situations, acting on a hunch or a belief to take action. This skill is very useful in social situations where the Hero must make a snap judgment about a person or in a problem-solving situation where the answer is not always clear. In combat, the skill is used to determine who goes first in a given conflict and allows him to act with greater clarity, giving her a better chance at survival. There are two sub-skills of Instinct: Intuition (PER), and Initiative (SPD). The player chooses at character creation.</p>"
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

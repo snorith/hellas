@@ -1,0 +1,469 @@
+/**
+ * HELLAS system styles (v13+). Plain CSS with native nesting; no build step.
+ *
+ * The HELLAS sheets deliberately commit to their marble-paper look in BOTH core
+ * themes: the sheet paints its own light background, so all foreground colors
+ * and field styles are set explicitly rather than inherited from the core
+ * light/dark theme (which would produce light-on-light text in dark mode).
+ */
+
+/* Fonts are bundled locally (fonts/) so sheets render fully offline; see
+   fonts/LICENSE-*.txt and the README credits. Roboto ships as a variable
+   font covering the 300-500 weights the sheets use. */
+@font-face {
+	font-family: "Roboto";
+	src: url("../fonts/roboto.woff2") format("woff2");
+	font-weight: 300 500;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: "Caesar Dressing";
+	src: url("../fonts/caesar-dressing-400.woff2") format("woff2");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+.application.hellas {
+	--hellas-font-primary: "Roboto", sans-serif;
+	--hellas-font-titles: "Caesar Dressing", cursive;
+	--hellas-ink: #191813;
+	--hellas-ink-muted: #4a4740;
+	--hellas-border: rgba(25, 24, 19, 0.7);
+	--hellas-field-bg: rgba(255, 255, 255, 0.55);
+	--hellas-field-bg-strong: rgba(255, 255, 255, 0.8);
+	--hellas-panel-bg: rgba(229, 231, 235, 0.7);
+	--hellas-table-head: rgba(107, 114, 128, 0.25);
+	--hellas-footer-bg: #6b7280;
+
+	.window-content {
+		/* Photo by Augustine Wong on Unsplash (see README credits) */
+		background: url("../assets/images/augustine-wong-li0iC0rjvvg-unsplash.jpg") repeat;
+		color: var(--hellas-ink);
+		font-family: var(--hellas-font-primary);
+		/* Fixed chrome (header/meander/tab nav), scrolling tab body: */
+		display: flex;
+		flex-direction: column;
+		overflow: hidden;
+	}
+
+	/* The active tab section takes the remaining window height and scrolls.
+	   (PARTS' scrollable [""] only PRESERVES scroll position across
+	   re-renders — the overflow behavior itself is ours to provide.) */
+	section.tab {
+		flex: 1;
+		min-height: 0;
+		overflow-y: auto;
+		padding-right: 4px;
+	}
+
+	/* Fields keep dark-on-light regardless of the core theme. */
+	input, select, textarea, prose-mirror {
+		color: var(--hellas-ink);
+		background: var(--hellas-field-bg);
+		border: 1px solid var(--hellas-border);
+	}
+
+	/* v13 renders checkboxes as icon-font glyphs whose states are illegible on
+	   our ground (unchecked showed as a solid dark block). Take full control:
+	   suppress core's glyph pseudo-elements and draw the box + check ourselves. */
+	input[type="checkbox"] {
+		appearance: none;
+		-webkit-appearance: none;
+		width: 18px;
+		height: 18px;
+		flex: 0 0 18px;
+		display: inline-grid;
+		place-content: center;
+		background: var(--hellas-field-bg-strong);
+		border: 1px solid var(--hellas-border);
+		border-radius: 3px;
+		cursor: pointer;
+	}
+	input[type="checkbox"]::before,
+	input[type="checkbox"]::after {
+		content: none;
+	}
+	input[type="checkbox"]:checked::before {
+		content: "✔";
+		font-family: var(--hellas-font-primary);
+		font-size: 13px;
+		font-weight: bold;
+		line-height: 1;
+		color: var(--hellas-ink);
+	}
+	input[type="checkbox"]:disabled {
+		opacity: 0.5;
+		cursor: not-allowed;
+	}
+	input:disabled, select:disabled, textarea:disabled {
+		color: var(--hellas-ink-muted);
+	}
+	option, optgroup {
+		color: var(--hellas-ink);
+		background: #f3f1ea;
+	}
+	a { color: var(--hellas-ink); }
+	a:hover { text-shadow: 0 0 6px var(--color-shadow-primary, #ff6400); }
+
+	/* Core's dark theme colors headings pale cream for dark grounds — on our
+	   marble they vanish. All headings take the sheet ink explicitly. */
+	h1, h2, h3, h4, .charname {
+		color: var(--hellas-ink);
+	}
+
+	/* Core's default document icons are white-line SVGs for dark grounds. A
+	   dark chip behind the image keeps them visible; raster portraits cover
+	   it entirely (object-fit: cover). */
+	.profile-img {
+		background: #3a3733;
+	}
+
+	.hellas-titling {
+		font-family: var(--hellas-font-titles);
+		text-transform: uppercase;
+	}
+
+	.tabs {
+		font-family: var(--hellas-font-titles);
+		border-top: 1px solid #aaa;
+		border-bottom: 1px solid #aaa;
+		gap: 1rem;
+
+		> [data-tab] {
+			font-weight: bold;
+			color: var(--hellas-ink);
+			&.active { text-decoration: underline; text-shadow: none; }
+		}
+	}
+
+	.text-center { text-align: center; }
+	.hellas-disabled { opacity: 0.3; pointer-events: none; }
+}
+
+/* ---------------------------------------- */
+/* Decorative backgrounds (legacy classes)  */
+/* ---------------------------------------- */
+
+.application.hellas {
+	.greek-meander-bkgd {
+		height: 20px;
+		background: url("../assets/images/meander.svg") repeat-x;
+		background-size: 20px 20px;
+		margin: 4px 0;
+	}
+	.gold-foil-bkgd { background: url("../assets/images/brushed-gold.jpg") repeat; }
+	.aluminum-foil-bkgd { background: url("../assets/images/brushed-aluminum.jpg") repeat; }
+	.marble-bkgd { background: url("../assets/images/red-marble.jpg") repeat-x; }
+	.fatepoints-line-bkgd {
+		background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+w8AAREBB+S8V2IAAAAASUVORK5CYII=);
+		background-repeat: repeat-x;
+		background-position: left center;
+	}
+}
+
+/* ---------------------------------------- */
+/* Actor sheet                              */
+/* ---------------------------------------- */
+
+.application.hellas.actor {
+	.hellas-actor-header { flex: none; }
+	.hellas-bold { font-weight: bold; }
+
+	.hellas-header-row {
+		display: flex;
+		gap: 0.75rem;
+		margin: 0 4px;
+
+		.profile-img {
+			width: 100px;
+			height: 100px;
+			object-fit: cover;
+			border: 1px solid var(--hellas-border);
+			cursor: pointer;
+			flex: 0 0 100px;
+		}
+	}
+	.hellas-header-fields {
+		flex: 1;
+
+		h1 { margin: 0 0 0.25rem; border: none; }
+		h1 input {
+			width: 100%;
+			font-size: 1.5rem;
+			font-family: var(--hellas-font-titles);
+		}
+	}
+	.hellas-header-details {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+
+		.form-group {
+			display: flex;
+			flex-direction: column;
+			margin: 0;
+
+			label { margin-bottom: 2px; font-size: var(--font-size-12, 12px); }
+			input { width: 10rem; }
+		}
+	}
+
+	.hellas-attr-grid {
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+		gap: 0.5rem;
+		margin-bottom: 0.5rem;
+	}
+	.hellas-attr-tile {
+		border: 2px solid var(--hellas-border);
+		border-radius: 1rem;
+		padding: 0.5rem;
+		text-align: center;
+		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+		overflow-wrap: anywhere;
+
+		.hellas-attr-controls {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 0.5rem;
+			padding-top: 0.5rem;
+
+			input { width: 50%; border-radius: 999px; text-align: center; }
+		}
+	}
+
+	.hellas-resources {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: stretch;
+		gap: 0.5rem;
+		margin-bottom: 0.5rem;
+
+		.hellas-resource {
+			display: flex;
+			gap: 0.5rem;
+			align-items: center;
+			text-align: center;
+			padding: 0.5rem;
+			border: 2px solid var(--hellas-border);
+			box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+
+			input {
+				width: 5rem;
+				border-radius: 999px;
+				text-align: center;
+				font-weight: bold;
+				background: var(--hellas-field-bg-strong);
+			}
+		}
+	}
+
+	.hellas-fate-row {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		gap: 0.75rem;
+		padding: 0.4rem;
+		margin-bottom: 0.5rem;
+
+		.hellas-fate-label { cursor: pointer; }
+		.hellas-fate-dots {
+			display: inline-flex;
+			align-items: center;
+			gap: 0.5rem;
+			padding: 0 0.5rem;
+		}
+		.hellas-fate-dot {
+			width: 1.5rem;
+			height: 1.5rem;
+			border-radius: 999px;
+			border: 1px solid var(--hellas-border);
+			background: url("../assets/images/red-marble.jpg") repeat-x;
+			box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+			cursor: pointer;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+
+			&.filled {
+				background: #374151;
+				border-color: #f3f4f6;
+				i { color: #f9fafb; }
+			}
+		}
+	}
+
+	.hellas-two-col {
+		display: grid;
+		/* minmax(0, …): grid children default to min-width auto, so unbreakable
+		   content would otherwise push the second column past the window edge */
+		grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+		gap: 0.5rem;
+		align-items: start;
+	}
+
+	.hellas-table {
+		width: 100%;
+		border-collapse: collapse;
+		border: 1px solid #6b7280;
+		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+		margin: 0;
+		/* Paint the table's own ground explicitly: core's dark theme styles
+		   table/thead/tr backgrounds, and a translucent tint over that reads
+		   as a dark slab on the marble sheet. */
+		background: rgba(255, 255, 255, 0.35);
+		color: var(--hellas-ink);
+
+		thead, tbody, tr { background: transparent; }
+		thead td {
+			background: var(--hellas-table-head);
+			padding: 2px 4px;
+		}
+		td { padding: 2px 4px; }
+		tbody tr.item:nth-child(even) { background: rgba(255, 255, 255, 0.25); }
+		tbody tr.item:hover { background: rgba(255, 255, 255, 0.5); }
+
+		tfoot td { background: var(--hellas-footer-bg); color: #fff; }
+		.hellas-armor-totals {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 0.4rem;
+			text-align: center;
+		}
+	}
+
+	.hellas-panel {
+		background: var(--hellas-panel-bg);
+		border: 1px solid var(--hellas-border);
+		border-radius: 4px;
+		padding: 0.5rem;
+		margin: 0.25rem 0;
+
+		legend, h3 { margin: 0 0 0.25rem; }
+		textarea { width: 100%; font-family: var(--hellas-font-primary); }
+	}
+	.hellas-subpanel {
+		border: 1px solid var(--hellas-border);
+		border-radius: 4px;
+		padding: 0.5rem;
+		margin-bottom: 0.5rem;
+	}
+	.form-group.hellas-stacked {
+		display: flex;
+		flex-direction: column;
+		align-items: stretch;
+
+		label { font-weight: bold; }
+		small { color: var(--hellas-ink-muted); font-style: italic; }
+	}
+}
+
+/* ---------------------------------------- */
+/* Item sheets                              */
+/* ---------------------------------------- */
+
+.application.hellas.item {
+	.sheet-header {
+		display: flex;
+		gap: 0.75rem;
+		align-items: center;
+		margin-bottom: 0.5rem;
+
+		.profile-img {
+			width: 100px;
+			height: 100px;
+			object-fit: cover;
+			border: 1px solid var(--hellas-border);
+			cursor: pointer;
+			flex: 0 0 100px;
+		}
+		.header-fields { flex: 1; }
+		.charname {
+			width: 100%;
+			font-family: var(--hellas-font-titles);
+			font-size: 1.4rem;
+			margin: 0;
+			border: none;
+		}
+		input.charname { border: 1px solid var(--hellas-border); }
+	}
+
+	.hellas-item-grid {
+		display: grid;
+		grid-template-columns: 1fr 2fr;
+		gap: 0.5rem;
+		align-items: center;
+		margin-top: 1rem;
+
+		label { text-align: right; }
+		input[type="number"] { width: 6rem; }
+		input[type="checkbox"] { justify-self: start; }
+
+		/* Field + hint cells (armor sheet): hint sits in its own column
+		   beside the input and wraps there, never underneath the box. */
+		> span {
+			display: flex;
+			align-items: center;
+			gap: 0.5rem;
+
+			input { flex: 0 0 auto; }
+			small {
+				flex: 1;
+				min-width: 0;
+				color: var(--hellas-ink-muted);
+				line-height: 1.2;
+			}
+		}
+	}
+
+	.hellas-skill-guidance {
+		margin: 1rem;
+
+		h2 { font-size: 1.1rem; }
+		p { color: var(--hellas-ink-muted); }
+	}
+
+	prose-mirror { min-height: 200px; }
+}
+
+/* ---------------------------------------- */
+/* Chat cards, dialogs, tooltips, apps      */
+/* ---------------------------------------- */
+
+.hellas-roll-outcome {
+	text-align: center;
+	font-size: 140%;
+	font-weight: bold;
+}
+
+/* Rich item tooltips are injected into the core #tooltip element. */
+#tooltip .hellas-tooltip-name,
+.locked-tooltip .hellas-tooltip-name {
+	display: inline;
+	margin-left: 4px;
+	font-size: 1.2em;
+}
+#tooltip .hellas-tooltip-table,
+.locked-tooltip .hellas-tooltip-table,
+#tooltip .hellas-tooltip-rules,
+.locked-tooltip .hellas-tooltip-rules {
+	max-width: 640px;
+
+	td { padding-right: 3px; vertical-align: top; }
+}
+#tooltip .hellas-tooltip-notes,
+.locked-tooltip .hellas-tooltip-notes {
+	max-width: 640px;
+	text-align: left;
+}
+
+.hellas-trademark-notice {
+	padding: 0.5rem;
+
+	p { margin: 0.4rem 0; }
+}

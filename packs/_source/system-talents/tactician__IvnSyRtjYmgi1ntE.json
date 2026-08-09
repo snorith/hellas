@@ -1,0 +1,19 @@
+{
+	"_id": "IvnSyRtjYmgi1ntE",
+	"_key": "!items!IvnSyRtjYmgi1ntE",
+	"name": "Tactician",
+	"type": "talent",
+	"img": "icons/svg/sun.svg",
+	"system": {
+		"desc": "You have studied the tactics and strategies of the battlefield.",
+		"benefit": "<p>The Hero receives his PER (minimum of +1) to augment his side&rsquo;s Initiative rolls. If the Hero spends an action for the round he may also coordinate attacks against a foe and all under his command (using the Command skill with a DoD equal to the target&rsquo;s Evade Skill Rating) receive a +2 to all attack or defense rolls (chosen when the skill is used and may be changed from round to round). All under his command must go on his Initiative or after to gain this bonus.</p>",
+		"notes": ""
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

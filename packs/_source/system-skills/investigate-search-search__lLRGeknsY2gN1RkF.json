@@ -1,0 +1,25 @@
+{
+	"_id": "lLRGeknsY2gN1RkF",
+	"_key": "!items!lLRGeknsY2gN1RkF",
+	"name": "Investigate/Search - Search",
+	"type": "skill",
+	"img": "systems/hellas/assets/icons/magnifying-glass.svg",
+	"system": {
+		"skill": "investigatesearch",
+		"attribute": "PER",
+		"specifier": "search",
+		"specifierCustom": "",
+		"level": {
+			"value": 0,
+			"max": 0
+		},
+		"notes": "<h1>Investigate/Search (*)</h1>\n<p><strong>Training Time (TT): 8 weeks</strong></p>\n<p>Proficiency in the time-honored art of acquiring information. The Investigate skill is used in place of PER for rolls to listen in on conversations, gather rumors and innuendo, and otherwise quietly acquire information about a specific topic. A Partial Success will get you general information about a person, place, or commonly known news and trivia. A full or critical success is required for more detailed information. The detail of the information sought, how common the knowledge is, and whether having this information is dangerous will all affect the Degree of Difficulty.</p>\n<p>&nbsp;</p>\n<p>Search is the practiced and studied use of Perception. Search is used when carefully looking for traps, secret doors, and other details that may be hidden or concealed. You generally must be within 3 meters of the object or surface to be searched.</p>"
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

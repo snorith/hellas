@@ -1,0 +1,24 @@
+{
+	"_id": "w9A6uoNwBqx0l9T3",
+	"_key": "!items!w9A6uoNwBqx0l9T3",
+	"name": "Influence - Gaia’s Charms",
+	"type": "dynamism",
+	"img": "icons/svg/lightning.svg",
+	"system": {
+		"skillid": "dynamism",
+		"dod": -21,
+		"dodinfo": "Base -15 level\n+3 for Tradition\n-9 for Duration",
+		"range": "Line of sight",
+		"tradition": "Whisperer, Influence",
+		"duration": "10 rounds (1 minute)",
+		"other": "",
+		"notes": "<p>The Nymphas are known already for their ability to sway the minds of others, but through this Dynamistic effect they are better able to use their natural talents. With a whisper and a brush of hemlock over an image of the victim, the target finds their ability to resist further attempts at seduction or intimidation drastically lessened as their WIL drops by -5.&nbsp;</p>"
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

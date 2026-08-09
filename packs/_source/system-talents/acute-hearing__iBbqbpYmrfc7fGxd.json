@@ -1,0 +1,19 @@
+{
+	"_id": "iBbqbpYmrfc7fGxd",
+	"_key": "!items!iBbqbpYmrfc7fGxd",
+	"name": "Acute Hearing",
+	"type": "talent",
+	"img": "icons/svg/sun.svg",
+	"system": {
+		"desc": "You have a trained ear or an exceptional natural sense of hearing.",
+		"benefit": "<p>The Hero may add triple her PER (minimum +3) to Perception checks as they relate to sound.</p>",
+		"notes": ""
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}
