@@ -1,0 +1,19 @@
+{
+	"_id": "siQK1aF6KhAWvsGX",
+	"_key": "!items!siQK1aF6KhAWvsGX",
+	"name": "Well Traveled",
+	"type": "talent",
+	"img": "icons/svg/sun.svg",
+	"system": {
+		"desc": "You have traveled the Known Worlds on business and errands for your family, business, or lord.",
+		"benefit": "<p>The Hero receives triple his INT (minimum of +3) to any Lore (Regions) roll. The Hero may also have intimate knowledge of places or cultures (GM&rsquo;s discretion).</p>",
+		"notes": ""
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

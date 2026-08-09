@@ -1,0 +1,19 @@
+{
+	"_id": "Bifu0seebcaeUc46",
+	"_key": "!items!Bifu0seebcaeUc46",
+	"name": "Linguistics",
+	"type": "talent",
+	"img": "icons/svg/sun.svg",
+	"system": {
+		"desc": "You have a natural affinity for languages and may learn new languages much faster than others.",
+		"benefit": "<p>The Hero receives triple his INT (minimum of +3) ranks in any language they know or learn in the future, i.e. if the player buys at least one rank in a language, they automatically advance to the Fluent level.</p>",
+		"notes": ""
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

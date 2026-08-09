@@ -1,0 +1,24 @@
+{
+	"_id": "eNXTbHe9wh1LeuOy",
+	"_key": "!items!eNXTbHe9wh1LeuOy",
+	"name": "Attack - The Titan’s Wrath",
+	"type": "dynamism",
+	"img": "icons/svg/lightning.svg",
+	"system": {
+		"skillid": "dynamism",
+		"dod": -15,
+		"dodinfo": "Level-6 base\n-9 for Area",
+		"range": "20m",
+		"tradition": "Sorcery, Attack",
+		"duration": "Instant",
+		"other": "Area 3 meter radius",
+		"notes": "<p>The strange beings that the Zorans worship and appease are a fickle lot, but when properly addressed they will intercede on behalf of their worshippers. Those who are of a martial mind can call upon the Titanoi, beseeching them for aid. If the Titanoi responds, a huge rush of wind and a bellowing roar can be heard before everything in a 10-meter circle is blasted with wracking pain [DR 6].</p>"
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

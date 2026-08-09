@@ -1,0 +1,19 @@
+{
+	"_id": "LCsdUVYGpHEHAG2S",
+	"_key": "!items!LCsdUVYGpHEHAG2S",
+	"name": "Elusive Target",
+	"type": "talent",
+	"img": "icons/svg/sun.svg",
+	"system": {
+		"desc": "You have the ability to move while under fire in such a way that reduces your chances of being hit.",
+		"benefit": "<p>Any attempt to hit the Hero while moving will receive a penalty equal to the Hero's DEX + 2 (minimum of -2) above the normal penalties associated with firing on a moving target.</p>",
+		"notes": ""
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

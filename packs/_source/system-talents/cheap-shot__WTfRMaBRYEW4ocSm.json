@@ -1,0 +1,19 @@
+{
+	"_id": "WTfRMaBRYEW4ocSm",
+	"_key": "!items!WTfRMaBRYEW4ocSm",
+	"name": "Cheap Shot",
+	"type": "talent",
+	"img": "icons/svg/sun.svg",
+	"system": {
+		"desc": "You have learned how to hit someone where it hurts. Not a particularly honorable type of attack, such as a kidney punch or a knee to the groin, but nonetheless effective.",
+		"benefit": "<p>A successful Cheap Shot causes all actions taken by the victim to be at a penalty equal to the Hero's PER+3 (minimum -3) for two rounds. A Critical Success doubles the duration. The Hero must make a successful attack on his opponent (partials do not receive the benefit of this talent). This ability may only affect an opponent once per combat.</p>",
+		"notes": ""
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

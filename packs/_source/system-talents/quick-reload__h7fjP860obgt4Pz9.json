@@ -1,0 +1,19 @@
+{
+	"_id": "h7fjP860obgt4Pz9",
+	"_key": "!items!h7fjP860obgt4Pz9",
+	"name": "Quick Reload",
+	"type": "talent",
+	"img": "icons/svg/sun.svg",
+	"system": {
+		"desc": "Through training and practice, the character has learned how to efficiently reload his ranged weapons faster than normal.",
+		"benefit": "<p>You may effectively use a bow, sling, or other single-shot missile weapon twice per round without incurring the normal multiple action penalty.</p>",
+		"notes": ""
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

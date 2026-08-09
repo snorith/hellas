@@ -1,0 +1,19 @@
+{
+	"_id": "OEhTmdS5ARl1P2NZ",
+	"_key": "!items!OEhTmdS5ARl1P2NZ",
+	"name": "Two-Weapon Fighting",
+	"type": "talent",
+	"img": "icons/svg/sun.svg",
+	"system": {
+		"desc": "The character has mastered the rudiments of two-weapon fighting.",
+		"benefit": "<p>He may make an additional attack during the round with the second weapon with a bonus equal to the Hero&rsquo;s DEX+1. This bonus is used to mitigate the penalty for multiple actions.&nbsp;</p>\n<blockquote>\n<p>Example: A Hero with a DEX+3 is using a sword and a dagger. He makes one normal attack with the sword and an additional attack with the dagger in the same round. The sword suffers no multi-action penalty but the dagger suffers a -5. The -5 penalty is reduced to -1 because of the talent.</p>\n</blockquote>",
+		"notes": ""
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

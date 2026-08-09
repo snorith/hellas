@@ -1,0 +1,25 @@
+{
+	"_id": "Lpd4Ocx9uHQ1KtF5",
+	"_key": "!items!Lpd4Ocx9uHQ1KtF5",
+	"name": "Dynamism - Kinetic",
+	"type": "skill",
+	"img": "icons/svg/lightning.svg",
+	"system": {
+		"skill": "mode",
+		"attribute": "DYN",
+		"specifier": "kinetic",
+		"specifierCustom": "kinetic",
+		"level": {
+			"value": 0,
+			"max": 0
+		},
+		"notes": "<h1>Dynamism Mode: Kinetic</h1>\n<p><strong>Training Time (TT): 24 weeks</strong></p>\n<p><strong>STR</strong>: +0 (50 kilograms) (+1 STR and 50kg per 3 Dynamism levels).</p>\n<p><strong>Range</strong>: 20 meters (-1 to casting roll for every 3 meters of extra range).</p>\n<p><strong>SPD</strong>: base SPD-4 (10 meters per round) (-3 to casting roll for each +1 SPD rating).</p>\n<p><strong>Area</strong>: 0&rsquo; radius (-1 to casting roll per foot of radius).</p>\n<p><strong>Duration</strong>: 5 rounds (-1 to casting roll per additional round of duration).</p>\n<p>This is the Mode for any Dynamism Power effects that move, levitate, or manipulate objects and beings without the Dynamism user physically touching the target. Levitation, telekinetic movement, and all similar effects made possible by the Kinetic Mode require the Dynamism user's full attention and concentration to maintain. It is not possible to use other Dynamism Powers while levitating upward or while manipulating a target, though it is possible to leave the item or being suspended motionless in the air without canceling the Dynamism Power while the Dynamism user turns his or her attentions to creating another effect.</p>\n<p>A Kinetic Dynamism Power at level 1 can affect up to 50kg (STR +0), and allows the Dynamism Power user to control the target range up to 20 meters. For each 3 levels of the Dynamism Power (starting at level 3) the effect gains a +1 STR rating, and adds 50kg to the total weight allowance. Objects or creatures manipulated with this Mode travel at a default SPD of -4 and can be moved anywhere within the Dynamism Power's effective range. The focus of the power can be made to move faster by increasing the SPD level of the dynamism. For every +3 difficulty the SPD increases by +1.</p>\n<blockquote>\n<p><strong>Example</strong>: Alcmene is escaping the symposium across a rooftop with a group of guards and an angry corrupt noble in pursuit. She comes to the edge of a building and needs to make it across to the next. Alcmene is a slightly built Nymphas and weighs only 50kg, so there is no penalty for her weight. However, she wants to move quickly across and at a SPD of +0 instead of the standard SPD-4; this is a&nbsp;-12 to the roll. The total DoD for the Dynamism roll is -12.</p>\n<p>The Dynamist causes the air under her to solidify as she moves across to safety.</p>\n</blockquote>\n<p>The STR rating of any Kinetic effect must be divided between holding and lifting the target. For example, the Dynamism user may wish to prevent a foe from fleeing his presence. A level-9 Dynamism Power would allow the Dynamism user to hold his opponent with a STR rating of +3. If the Hero also wished to levitate the target off the ground, he would have to add 6 more power levels for a lifting STR of +2 (enough to lift 75kg).</p>\n<blockquote>\n<p><strong>Example</strong>: In the mountains above the town later that day Alcmene finds the kidnapped peasant and flees with him. While escaping the corrupt noble, the peasant falls into a chasm and Alcmene uses her Dynamism to catch and pull him up. The peasant is a large boy weighing 100kg (DoD-3 for the additional 50kg), and additional -6 DoD for the STR+2 to lift the young man back up. If she wanted to make him move faster, she could also add -6 to increase the SPD from -4 to -2.</p>\n</blockquote>\n<p><strong>Grappling Attack</strong></p>\n<p>An action to grapple an opponent from a distance is possible using the Kinetic Mode. The Hero must first make a CR + Kinetic attack to hit the opponent, and if successful the level of the power being used acts as the STR and the DoD to later break the grapple. While grappled the target is rendered immobile or moves at a SPD of -4.</p>\n<p>Distant manipulations are certainly possible, such as pulling a lever from across the room or slamming and bolting a door from several meters away. These actions use the same rules for STR Rating as lifting or otherwise manipulating targets, and can also be used to wield a weapon or employ a physical ability such as juggling or writing. In this case, the Dynamism user's skills or Attributes are used to determine the success or failure of the manipulation.</p>\n<blockquote>\n<p><strong>Example</strong>: A Dynamist using a Kinetic effect to unlock a door must make a Disable Mechanism roll after the Dynamism Power is activated.</p>\n</blockquote>"
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

@@ -1,0 +1,24 @@
+{
+	"_id": "aqikqHxxtqu2MxNI",
+	"_key": "!items!aqikqHxxtqu2MxNI",
+	"name": "Shield - Steadfast",
+	"type": "dynamism",
+	"img": "icons/svg/lightning.svg",
+	"system": {
+		"skillid": "dynamism",
+		"dod": -19,
+		"dodinfo": "Base -15 level\n-4 for Duration",
+		"range": "Single target",
+		"tradition": "Sorcery, Shield",
+		"duration": "50 rounds (5 minutes)",
+		"other": "",
+		"notes": "<p>The Zorans are a passionate people, willing to throw themselves into pursuits of intensity with little notice. But, when going about their patron Titanoi&rsquo;s business, losing focus can be disastrous. With this complex charm, a sorcerer bellows his presence to the universe. For a short time thereafter, he is immune to the dissuading charms of the Influence mode. Those attempting to use Influence against him find their manipulations suffering a -30 penalty.</p>"
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

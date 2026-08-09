@@ -1,0 +1,19 @@
+{
+	"_id": "8f9wwKTaA5WynDaY",
+	"_key": "!items!8f9wwKTaA5WynDaY",
+	"name": "Memory Training",
+	"type": "talent",
+	"img": "icons/svg/sun.svg",
+	"system": {
+		"desc": "The Hero has trained her memory to be as exact and precise.",
+		"benefit": "<p>If Hero commits to memorizing something, she can recite it, without error, at any later date. It generally takes three times as long to memorize a passage than it does to simply read it. This discipline also helps when manipulating the energies of the universe. Dynamism Mental Fatigue penalties are reduced by the Hero&rsquo;s INT (minimum -3).</p>",
+		"notes": ""
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

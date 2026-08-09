@@ -1,0 +1,26 @@
+<section class="tab {{tab.cssClass}}" data-group="{{tab.group}}" data-tab="{{tab.id}}">
+	<div class="hellas-item-grid">
+		<label for="{{item.id}}-skillid" title="{{localize "HELLAS.dynamism.skillid.title"}}">{{localize "HELLAS.dynamism.skillid.label"}}</label>
+		<select id="{{item.id}}-skillid" name="system.skillid" title="{{localize "HELLAS.dynamism.skillid.title"}}" {{#unless editable}}disabled{{/unless}}>
+			{{selectOptions skillidChoices selected=system.skillid}}
+		</select>
+
+		<label for="{{item.id}}-dod" title="{{localize "HELLAS.dynamism.dod.title"}}">{{localize "HELLAS.dynamism.dod.label"}}</label>
+		<input type="number" id="{{item.id}}-dod" name="system.dod" value="{{system.dod}}" step="1" title="{{localize "HELLAS.dynamism.dod.title"}}" {{#unless editable}}disabled{{/unless}}/>
+
+		<label for="{{item.id}}-dodinfo" title="{{localize "HELLAS.dynamism.dodinfo.title"}}">{{localize "HELLAS.dynamism.dodinfo.label"}}</label>
+		<textarea id="{{item.id}}-dodinfo" name="system.dodinfo" rows="3" {{#unless editable}}disabled{{/unless}}>{{system.dodinfo}}</textarea>
+
+		<label for="{{item.id}}-range" title="{{localize "HELLAS.dynamism.range.title"}}">{{localize "HELLAS.dynamism.range.label"}}</label>
+		<input type="text" id="{{item.id}}-range" name="system.range" value="{{system.range}}" title="{{localize "HELLAS.dynamism.range.title"}}" {{#unless editable}}disabled{{/unless}}/>
+
+		<label for="{{item.id}}-other" title="{{localize "HELLAS.dynamism.other.title"}}">{{localize "HELLAS.dynamism.other.label"}}</label>
+		<input type="text" id="{{item.id}}-other" name="system.other" value="{{system.other}}" title="{{localize "HELLAS.dynamism.other.title"}}" {{#unless editable}}disabled{{/unless}}/>
+
+		<label for="{{item.id}}-tradition" title="{{localize "HELLAS.dynamism.tradition.title"}}">{{localize "HELLAS.dynamism.tradition.label"}}</label>
+		<input type="text" id="{{item.id}}-tradition" name="system.tradition" value="{{system.tradition}}" title="{{localize "HELLAS.dynamism.tradition.title"}}" {{#unless editable}}disabled{{/unless}}/>
+
+		<label for="{{item.id}}-duration" title="{{localize "HELLAS.dynamism.duration.title"}}">{{localize "HELLAS.dynamism.duration.label"}}</label>
+		<input type="text" id="{{item.id}}-duration" name="system.duration" value="{{system.duration}}" title="{{localize "HELLAS.dynamism.duration.title"}}" {{#unless editable}}disabled{{/unless}}/>
+	</div>
+</section>

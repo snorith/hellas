@@ -1,0 +1,19 @@
+{
+	"_id": "A8bXMdyqTGHXk4xE",
+	"_key": "!items!A8bXMdyqTGHXk4xE",
+	"name": "Weapon Focus (Specific)",
+	"type": "talent",
+	"img": "icons/svg/sun.svg",
+	"system": {
+		"desc": "The studied and practiced use of a class of weapon.",
+		"benefit": "<p>The Hero receives a +3 bonus to all attack rolls with the type of weapon selected.</p>",
+		"notes": ""
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

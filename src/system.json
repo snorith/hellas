@@ -1,59 +1,27 @@
 {
 	"name": "hellas",
+	"id": "hellas",
 	"title": "Hellas",
-	"description": "Fan contributed support for the Hellas RPG in FoundryVTT",
-	"version": "0.3.6",
+	"description": "Fan contributed support for the Hellas RPG in FoundryVTT. NOTE: from v0.4.0 the system requires Foundry VTT v13+ and is distributed via GitHub Releases; this file exists only to point legacy installs at the new update channel.",
+	"version": "0.4.0",
 	"author": "snorith (Stephen Smith)",
-	"scripts": [
-		"lib/tooltipster/tooltipster.bundle.min.js",
-		"lib/tooltipster-scrollabletip/tooltipster-scrollableTip.min.js"
-	],
-	"esmodules": ["hellas.js"],
-	"styles": [
-		"hellas.css",
-		"lib/tooltipster/tooltipster.bundle.min.css"
-	],
-	"packs": [
+	"authors": [
 		{
-			"name": "systemSkills",
-			"label": "System Skills",
-			"system": "hellas",
-			"path": "./packs/system-skills.db",
-			"entity": "Item"
-		},
-		{
-			"name": "systemTalents",
-			"label": "System Talents",
-			"system": "hellas",
-			"path": "./packs/system-talents.db",
-			"entity": "Item"
-		},
-		{
-			"name": "systemDynamisms",
-			"label": "System Dynamisms",
-			"system": "hellas",
-			"path": "./packs/system-dynamisms.db",
-			"entity": "Item"
+			"name": "snorith (Stephen Smith)",
+			"url": "https://github.com/snorith"
 		}
 	],
-	"languages": [
-		{
-			"lang": "en",
-			"name": "English",
-			"path": "lang/en.json"
-		}
-	],
-	"gridDistance": 1,
-	"gridUnits": "",
-	"minimumCoreVersion": "0.7.0",
-	"compatibleCoreVersion": "0.7.9",
-	"url": "https://github.com/snorith/hellas.git",
-	"manifest": "https://raw.githubusercontent.com/snorith/hellas/master/src/system.json",
-	"download": "https://raw.githubusercontent.com/snorith/hellas/v0.3.6/package/hellas-v0.3.6.zip",
+	"minimumCoreVersion": "13",
+	"compatibleCoreVersion": "14",
+	"compatibility": {
+		"minimum": "13.347",
+		"verified": "14"
+	},
+	"url": "https://github.com/snorith/hellas",
+	"manifest": "https://github.com/snorith/hellas/releases/latest/download/system.json",
+	"download": "https://github.com/snorith/hellas/releases/download/v0.4.0/hellas-v0.4.0.zip",
 	"license": "LICENSE",
 	"readme": "https://github.com/snorith/hellas#readme",
 	"bugs": "https://github.com/snorith/hellas/issues",
-	"changelog": "https://github.com/snorith/hellas#changelog",
-	"primaryTokenAttribute": "attributes.hitpoints",
-	"secondaryTokenAttribute": "attributes.fatepoints"
+	"changelog": "https://github.com/snorith/hellas#changelog"
 }

@@ -1,0 +1,24 @@
+{
+	"_id": "bzZWXQmv35Lhjd9h",
+	"_key": "!items!bzZWXQmv35Lhjd9h",
+	"name": "Manipulate - Wrath of the Razor Hound",
+	"type": "dynamism",
+	"img": "icons/svg/lightning.svg",
+	"system": {
+		"skillid": "dynamism",
+		"dod": -17,
+		"dodinfo": "Base -15 level\n-2 for Duration",
+		"range": "Self",
+		"tradition": "Shamanism, Manipulate",
+		"duration": "30 rounds (3 minutes)",
+		"other": "",
+		"notes": "<p>Entering a trance-like state and rubbing razor hound fur over their hands, a Goregon shaman can tap into the rage and sorrow of a Spartan Razor Hound that has lost its sibling. The shaman&rsquo;s muscles ripple and bulge, tears flow freely from her eyes, and her hair stiffens and stands on end. While in this state, the shaman&rsquo;s skill with a single weapon (usually the Goregon poleax, but some shamans favor other weapons) increases by +15.</p>"
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

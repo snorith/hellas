@@ -1,0 +1,25 @@
+{
+	"_id": "JCTaxieoBfMd5vEk",
+	"_key": "!items!JCTaxieoBfMd5vEk",
+	"name": "Research",
+	"type": "skill",
+	"img": "icons/svg/book.svg",
+	"system": {
+		"skill": "research",
+		"attribute": "PER",
+		"specifier": "specify",
+		"specifierCustom": "",
+		"level": {
+			"value": 0,
+			"max": 0
+		},
+		"notes": "<h1>Research</h1>\n<p><strong>Training Time (TT): 2 weeks</strong></p>\n<p><span lang=\"EN-US\">The ability to search for specific information in a systematic, efficient manner. This skill can be invaluable for any student, scholar, or scribe. A mishap on a Research check might indicate the researcher locates incorrect or flawed information, skewing their report or the results of any further research into that subject. A partial success could mean the researcher is on the right track and, with additional time spent on research, should find the information they seek. The time required to do research depends on the available resources.</span></p>\n<p>&nbsp;</p>"
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

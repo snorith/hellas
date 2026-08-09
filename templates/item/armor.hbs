@@ -1,0 +1,55 @@
+<section class="tab {{tab.cssClass}}" data-group="{{tab.group}}" data-tab="{{tab.id}}">
+	<div class="hellas-item-grid">
+		<label for="{{item.id}}-type" title="{{localize "HELLAS.armor.type.title"}}">{{localize "HELLAS.armor.type.label"}}</label>
+		<select id="{{item.id}}-type" name="system.type" title="{{localize "HELLAS.armor.type.title"}}" {{#unless editable}}disabled{{/unless}}>
+			{{#each typeGroups}}
+				<optgroup label="{{this.label}}">
+					{{#each this.options}}
+						<option value="{{this.value}}" {{#if this.selected}}selected{{/if}}>{{this.label}}</option>
+					{{/each}}
+				</optgroup>
+			{{/each}}
+		</select>
+
+		<label for="{{item.id}}-modifier" title="{{localize "HELLAS.armor.modifier.title"}}">{{localize "HELLAS.armor.modifier.label"}}</label>
+		<select id="{{item.id}}-modifier" name="system.modifier" title="{{localize "HELLAS.armor.modifier.title"}}" {{#unless editable}}disabled{{/unless}}>
+			{{selectOptions modifierChoices selected=system.modifier}}
+		</select>
+
+		<label for="{{item.id}}-pr" title="{{localize "HELLAS.armor.pr.title"}}">{{localize "HELLAS.armor.pr.label"}}</label>
+		<input type="number" id="{{item.id}}-pr" name="system.pr" value="{{system.pr}}" step="1" title="{{localize "HELLAS.armor.pr.title"}}" {{#unless editable}}disabled{{/unless}}/>
+
+		<label for="{{item.id}}-str" title="{{localize "HELLAS.armor.str.title"}}">{{localize "HELLAS.armor.str.label"}}</label>
+		<span>
+			<input type="number" id="{{item.id}}-str" name="system.str" value="{{system.str}}" step="1" title="{{localize "HELLAS.armor.str.title"}}" {{#unless editable}}disabled{{/unless}}/>
+			<small>{{localize "HELLAS.armor.roll.modifier.included"}}</small>
+		</span>
+
+		<label for="{{item.id}}-parry" title="{{localize "HELLAS.armor.parry.title"}}">{{localize "HELLAS.armor.parry.label"}}</label>
+		<span>
+			<input type="number" id="{{item.id}}-parry" name="system.parry" value="{{system.parry}}" step="1" title="{{localize "HELLAS.armor.parry.title"}}" {{#unless editable}}disabled{{/unless}}/>
+			<small>{{localize "HELLAS.armor.roll.modifier.included"}}</small>
+		</span>
+
+		<label for="{{item.id}}-md" title="{{localize "HELLAS.armor.md.title"}}">{{localize "HELLAS.armor.md.label"}}</label>
+		<input type="number" id="{{item.id}}-md" name="system.md" value="{{system.md}}" step="1" title="{{localize "HELLAS.armor.md.title"}}" {{#unless editable}}disabled{{/unless}}/>
+
+		<label for="{{item.id}}-per" title="{{localize "HELLAS.armor.per.title"}}">{{localize "HELLAS.armor.per.label"}}</label>
+		<span>
+			<input type="number" id="{{item.id}}-per" name="system.per" value="{{system.per}}" step="1" title="{{localize "HELLAS.armor.per.title"}}" {{#unless editable}}disabled{{/unless}}/>
+			<small>{{localize "HELLAS.armor.roll.modifier.included"}}</small>
+		</span>
+
+		<label for="{{item.id}}-cha" title="{{localize "HELLAS.armor.cha.title"}}">{{localize "HELLAS.armor.cha.label"}}</label>
+		<span>
+			<input type="number" id="{{item.id}}-cha" name="system.cha" value="{{system.cha}}" step="1" title="{{localize "HELLAS.armor.cha.title"}}" {{#unless editable}}disabled{{/unless}}/>
+			<small>{{localize "HELLAS.armor.roll.modifier.excluded"}}</small>
+		</span>
+
+		<label for="{{item.id}}-wt" title="{{localize "HELLAS.armor.wt.title"}}">{{localize "HELLAS.armor.wt.label"}}</label>
+		<input type="number" id="{{item.id}}-wt" name="system.wt" value="{{system.wt}}" step="1" title="{{localize "HELLAS.armor.wt.title"}}" {{#unless editable}}disabled{{/unless}}/>
+
+		<label for="{{item.id}}-price" title="{{localize "HELLAS.armor.price.title"}}">{{localize "HELLAS.armor.price.label"}}</label>
+		<input type="number" id="{{item.id}}-price" name="system.price" value="{{system.price}}" step="1" title="{{localize "HELLAS.armor.price.title"}}" {{#unless editable}}disabled{{/unless}}/>
+	</div>
+</section>

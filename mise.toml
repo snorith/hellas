@@ -1,0 +1,4 @@
+# Node is used only for release tooling (pack compilation via foundryvtt-cli,
+# migration smoke tests). The system itself has zero build steps.
+[tools]
+node = "22"

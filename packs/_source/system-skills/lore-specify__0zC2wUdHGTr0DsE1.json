@@ -1,0 +1,25 @@
+{
+	"_id": "0zC2wUdHGTr0DsE1",
+	"_key": "!items!0zC2wUdHGTr0DsE1",
+	"name": "Lore - Specify",
+	"type": "skill",
+	"img": "systems/hellas/assets/icons/gift-of-knowledge.svg",
+	"system": {
+		"skill": "lore",
+		"attribute": "INT",
+		"specifier": "specify",
+		"specifierCustom": "",
+		"level": {
+			"value": 0,
+			"max": 0
+		},
+		"notes": "<h1>Lore (specific)</h1>\n<p><strong>Training Time (TT): 8 weeks</strong></p>\n<p>Like Handicraft, Lore actually comprises a number of sub-skills. Lore skills cover academic knowledge and information on a specific topic.</p>\n<p>There are myriad potential Lore skills. Some examples follow:</p>\n<ul>\n<li>Agriculture: planting, producing, and harvesting various crops and livestock</li>\n<li>Arcane Arts: priestly orders, ancient lore, arcane symbols</li>\n<li>Engineering: construction techniques, architecture, aqueducts, bridges, fortifications</li>\n<li>Folklore: myths, folk beliefs, and legends</li>\n<li>Forgery: the ability to make and identify counterfeit documents</li>\n<li>Gambling: the ability to play and win at games of chance</li>\n<li>Heraldry: armorial bearings, genealogy</li>\n<li>Herb Lore: medicinal, edible, and poisonous plants</li>\n<li>Geography: cartography, physical geography</li>\n<li>History: conflicts, historic figures, major battles</li>\n<li>Law: laws and customs of at least one land</li>\n<li>Local: customs and important figures and places in a given locality</li>\n<li>Mining: mining techniques, metallurgy, gem-craft, etc.</li>\n<li>Nature: flora and fauna, weather patterns, seasonal cycles, etc.</li>\n<li>Region: like Local but an overview of a particular village, trade routes, major towns, or nation</li>\n<li>Streetwise: urban culture, local underworld personalities and events</li>\n<li>Tactics: tactical and strategic theories of warfare</li>\n</ul>\n<p>General knowledge in a particular sub-skill requires only a partial success in most cases. More obscure knowledge could require a better Results Table result. GMs are encouraged to create their own lore skills as required by their campaigns.</p>"
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

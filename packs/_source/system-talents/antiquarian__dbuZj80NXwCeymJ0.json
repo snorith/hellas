@@ -1,0 +1,19 @@
+{
+	"_id": "dbuZj80NXwCeymJ0",
+	"_key": "!items!dbuZj80NXwCeymJ0",
+	"name": "Antiquarian",
+	"type": "talent",
+	"img": "icons/svg/sun.svg",
+	"system": {
+		"desc": "You are very knowledgeable about ancient artifacts and relics.",
+		"benefit": "<p>The Hero may add triple his INT (minimum of +3) to any Trading skill checks when attempting to appraise the value of an ancient object or to all cryptography checks when deciphering ancient scripts.</p>",
+		"notes": ""
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

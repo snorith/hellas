@@ -1,0 +1,19 @@
+{
+	"_id": "ZTt20wP84c6ZTSsd",
+	"_key": "!items!ZTt20wP84c6ZTSsd",
+	"name": "Advanced Firearms Training",
+	"type": "talent",
+	"img": "icons/svg/sun.svg",
+	"system": {
+		"desc": "You have advanced training in the effective use of various types of firearms.",
+		"benefit": "<p>The Hero receives a bonus equal to his PER (minimum of +1) to rolls involving ranged combat using pistols and rifles</p>\n<p>.</p>",
+		"notes": ""
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

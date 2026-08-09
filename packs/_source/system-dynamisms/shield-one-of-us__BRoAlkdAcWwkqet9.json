@@ -1,0 +1,24 @@
+{
+	"_id": "BRoAlkdAcWwkqet9",
+	"_key": "!items!BRoAlkdAcWwkqet9",
+	"name": "Shield - One of Us",
+	"type": "dynamism",
+	"img": "icons/svg/lightning.svg",
+	"system": {
+		"skillid": "dynamism",
+		"dod": -15,
+		"dodinfo": "Base -10 level\n-5 for Duration",
+		"range": "Single target",
+		"tradition": "Shamanism, Shield",
+		"duration": "60 rounds (6 minutes)",
+		"other": "PR 20",
+		"notes": "<p>Crushing a fistful of tago root and howling out in an animalistic roar, the shaman marks himself as a natural predator and part of the pack. If he should be challenged by a predator, the closeness of the shaman&rsquo;s spirit to the predator&rsquo;s own serves to turn aside or lessen the predator&rsquo;s attacks. Attacks that are made are defended against with a PR of 20. Damage in excess of 20 lowers the PR by the same amount. The first 20 points of damage to pass the shield in this way are also absorbed by the shaman&rsquo;s dynamism.&nbsp;</p>"
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

@@ -1,0 +1,19 @@
+{
+	"_id": "2nStHsLuYi92Kxs9",
+	"_key": "!items!2nStHsLuYi92Kxs9",
+	"name": "Mounted Evade",
+	"type": "talent",
+	"img": "icons/svg/sun.svg",
+	"system": {
+		"desc": "You are skilled at guiding your mount to avoid the blows of others.",
+		"benefit": "<p>The Hero receives triple his PER (minimum of +3) to his Mounted Combat skill for the purposes of defense only.</p>",
+		"notes": ""
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

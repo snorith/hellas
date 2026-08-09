@@ -1,0 +1,25 @@
+{
+	"_id": "bMdlIRAwqwZ09xxG",
+	"_key": "!items!bMdlIRAwqwZ09xxG",
+	"name": "Deduce Motive",
+	"type": "skill",
+	"img": "systems/hellas/assets/icons/puzzle.svg",
+	"system": {
+		"skill": "deducemotive",
+		"attribute": "PER",
+		"specifier": "",
+		"specifierCustom": "",
+		"level": {
+			"value": 0,
+			"max": 0
+		},
+		"notes": "<h1>Deduce Motive</h1>\n<p><strong>Training Time (TT): 8 weeks</strong></p>\n<p>This skill is used to sense whether someone is being truthful, bluffing, or to notice hidden meaning and innuendo in a conversation. A successful check lets you avoid being bluffed (see the Deception skill). You can also use this skill to determine when something odd is going on or to assess someone&rsquo;s trustworthiness.</p>"
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

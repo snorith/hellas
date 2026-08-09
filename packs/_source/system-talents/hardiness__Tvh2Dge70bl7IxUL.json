@@ -1,0 +1,19 @@
+{
+	"_id": "Tvh2Dge70bl7IxUL",
+	"_key": "!items!Tvh2Dge70bl7IxUL",
+	"name": "Hardiness",
+	"type": "talent",
+	"img": "icons/svg/sun.svg",
+	"system": {
+		"desc": "You are tougher than most of your peers.",
+		"benefit": "<p>The Hero may add 5 + Triple his CON Hit Points at Character Creation. This talent may be selected up to 3 times.</p>",
+		"notes": ""
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

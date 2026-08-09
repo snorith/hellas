@@ -1,0 +1,24 @@
+{
+	"_id": "qyE0bdxYtyaq9rgv",
+	"_key": "!items!qyE0bdxYtyaq9rgv",
+	"name": "Manifest - Unbar the Way",
+	"type": "dynamism",
+	"img": "icons/svg/lightning.svg",
+	"system": {
+		"skillid": "dynamism",
+		"dod": -5,
+		"dodinfo": "Base-5 level",
+		"range": "20m",
+		"tradition": "Sorcery, Dematerialize",
+		"duration": "10 rounds (1 minute)",
+		"other": "Mass Affected 25 kg and 150 cm³",
+		"notes": "<p>In Zoran mythology it is said that little can bar the Titanoi from their chosen paths. This application of sorcery mimics those lessons, allowing a Zoran sorcerer to cause a door, a set of shackles, or a lock to vanish temporarily. This is usually accompanied by a resounding crash as the offending material is suddenly blasted away only to return with another boom a minute later.</p>"
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

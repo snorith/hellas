@@ -1,0 +1,19 @@
+{
+	"_id": "ZvddU6Wj9lOkGCUa",
+	"_key": "!items!ZvddU6Wj9lOkGCUa",
+	"name": "Coordinate",
+	"type": "talent",
+	"img": "icons/svg/sun.svg",
+	"system": {
+		"desc": "You have a knack for getting people to work together.",
+		"benefit": "<p>Whenever the Hero spends at least one round coordinating his companions, he grants them a bonus equal to his triple his CHA or INT (minimum of +3) any one non-combat skill roll. You may coordinate a number of companions up to five times your CHA score (minimum of 5).</p>",
+		"notes": ""
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

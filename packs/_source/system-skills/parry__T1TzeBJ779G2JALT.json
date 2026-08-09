@@ -1,0 +1,25 @@
+{
+	"_id": "T1TzeBJ779G2JALT",
+	"_key": "!items!T1TzeBJ779G2JALT",
+	"name": "Parry",
+	"type": "skill",
+	"img": "icons/svg/sword.svg",
+	"system": {
+		"skill": "parry",
+		"attribute": "CR",
+		"specifier": "shield",
+		"specifierCustom": "aura",
+		"level": {
+			"value": 0,
+			"max": 0
+		},
+		"notes": "<h1>Parry</h1>\n<p><strong>Training Time (TT): 6 weeks</strong></p>\n<p>You are trained in multiple methods of deflecting an attack. Some item is required to effectively use the Parry skill, be it a shield, another weapon, or a specialized parrying weapon.</p>\n<p>&nbsp;</p>"
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

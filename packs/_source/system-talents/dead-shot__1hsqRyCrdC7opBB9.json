@@ -1,0 +1,19 @@
+{
+	"_id": "1hsqRyCrdC7opBB9",
+	"_key": "!items!1hsqRyCrdC7opBB9",
+	"name": "Dead Shot",
+	"type": "talent",
+	"img": "icons/svg/sun.svg",
+	"system": {
+		"desc": "Your skill at striking a target with a thrown weapon is exceptional.",
+		"benefit": "<p>When the Hero aims for at least one action, he may add triple his PER (minimum +3) to any one attack roll. The Hero may aim in round one and use the bonus in the next round.</p>",
+		"notes": ""
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

@@ -1,0 +1,24 @@
+{
+	"_id": "qV6nidCqr0R8XCHG",
+	"_key": "!items!qV6nidCqr0R8XCHG",
+	"name": "Kinetic - Apollon’s Hold",
+	"type": "dynamism",
+	"img": "icons/svg/lightning.svg",
+	"system": {
+		"skillid": "dynamism",
+		"dod": -20,
+		"dodinfo": "Base -15 level\n-5 for Duration",
+		"range": "20m",
+		"tradition": "Delphoian, Kinetic",
+		"duration": "10 rounds (1 minute)",
+		"other": "STR +5 (750 kg) SPD -4",
+		"notes": "<p>Commonly manifested with a shouted imprecation to halt in Apollon&rsquo;s name, the Dynamist causes a group of five bands of shimmering light to suddenly appear, binding a target at the ankles, knees, waist, chest, and head. The Dynamist must succeed in an attack roll (CR + Kinetic) to successfully target the victim. If successful, the victim can try to break free as if held by a grappler with a STR of +5 and a +15 Pankration Rating. The victim can shuffle along (SPD -4), but is otherwise immobile.&nbsp;</p>"
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

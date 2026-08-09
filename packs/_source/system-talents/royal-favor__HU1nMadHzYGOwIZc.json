@@ -1,0 +1,19 @@
+{
+	"_id": "HU1nMadHzYGOwIZc",
+	"_key": "!items!HU1nMadHzYGOwIZc",
+	"name": "Royal Favor",
+	"type": "talent",
+	"img": "icons/svg/sun.svg",
+	"system": {
+		"desc": "Because of your connections, you can call upon favors from those more powerful than yourself.",
+		"benefit": "<p>The Hero may make a CHA roll with a DoD determined by the type of favor:</p>\n<ul>\n<li>trivial +1 (buy a new cloak)</li>\n<li>big -8 (lend a warship)</li>\n<li>legendary -20 (raise an army and go to war in his name).</li>\n</ul>\n<p>This favor can be anything from a night&rsquo;s lodging to a small monetary loan or the use of a sturdy mount. The Hero may ask for another favor in a number of weeks equal to 2+ the previous favor&rsquo;s difficulty.&nbsp;</p>\n<blockquote>\n<p>Example: A Hero asks a king for the use of his warship (DoD-8). He may ask for another favor in 10 weeks.</p>\n</blockquote>",
+		"notes": ""
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

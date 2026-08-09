@@ -1,0 +1,19 @@
+{
+	"_id": "t8VXdnHIqOMjj4yT",
+	"_key": "!items!t8VXdnHIqOMjj4yT",
+	"name": "Enchanting Beauty",
+	"type": "talent",
+	"img": "icons/svg/sun.svg",
+	"system": {
+		"desc": "You have been gifted by the gods with exceptional beauty.",
+		"benefit": "<p>The Hero receives a bonus of triple their CHA (minimum of +3) to all Omni Table rolls pertaining to social rolls including Diplomacy and Influence when dealing with someone who would normally be attracted to you, man or woman.</p>",
+		"notes": ""
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

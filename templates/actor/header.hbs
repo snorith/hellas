@@ -1,0 +1,30 @@
+<header class="hellas-actor-header">
+	<div class="greek-meander-bkgd"></div>
+	<div class="hellas-header-row">
+		<img class="profile-img" src="{{actor.img}}" data-action="onEditImage"
+			 title="{{actor.name}}" alt="{{actor.name}}" width="100" height="100"/>
+		<div class="hellas-header-fields">
+			<h1><input name="name" type="text" value="{{actor.name}}"
+					   placeholder="{{localize "HELLAS.character.name.name"}}" {{#unless editable}}disabled{{/unless}}></h1>
+			<div class="hellas-header-details">
+				<div class="form-group">
+					<label for="hellas-epithet" title="{{localize "HELLAS.character.epithet.name"}}">{{localize "HELLAS.character.epithet.name"}}</label>
+					<input type="text" id="hellas-epithet" name="system.epithet" value="{{system.epithet}}" {{#unless editable}}disabled{{/unless}}>
+				</div>
+				<div class="form-group">
+					<label for="hellas-race" title="{{localize "HELLAS.character.race.name"}}">{{localize "HELLAS.character.race.name"}}</label>
+					<input type="text" id="hellas-race" name="system.race" value="{{system.race}}" {{#unless editable}}disabled{{/unless}}>
+				</div>
+				<div class="form-group">
+					<label for="hellas-profession" title="{{localize "HELLAS.character.profession.name"}}">{{localize "HELLAS.character.profession.name"}}</label>
+					<input type="text" id="hellas-profession" name="system.profession" value="{{system.profession}}" {{#unless editable}}disabled{{/unless}}>
+				</div>
+				<div class="form-group">
+					<label for="hellas-deity" title="{{localize "HELLAS.character.deity.name"}}">{{localize "HELLAS.character.deity.name"}}</label>
+					<input type="text" id="hellas-deity" name="system.deity" value="{{system.deity}}" {{#unless editable}}disabled{{/unless}}>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="greek-meander-bkgd"></div>
+</header>

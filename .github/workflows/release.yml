@@ -1,0 +1,63 @@
+name: Release
+
+# Tag push (v*) → build compendium packs → stamp version/download in
+# system.json → zip the system → GitHub release with system.json + zip
+# attached. The install manifest URL is the stable
+# releases/latest/download/system.json channel.
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install pack tooling
+        working-directory: tools
+        run: npm ci || npm install --no-fund --no-audit
+
+      - name: Build compendium packs
+        run: node tools/build-packs.mjs
+
+      - name: Stamp manifest version + download URL
+        env:
+          TAG: ${{ github.ref_name }}
+        run: |
+          VERSION="${TAG#v}"
+          jq --arg version "$VERSION" \
+             --arg download "https://github.com/${{ github.repository }}/releases/download/${TAG}/hellas-${TAG}.zip" \
+             '.version = $version | .download = $download' \
+             system.json > system.json.tmp
+          mv system.json.tmp system.json
+
+      - name: Static audit + migration smoke tests
+        run: node tools/audit.mjs && node tools/test-migrations.mjs
+
+      - name: Build system archive
+        env:
+          TAG: ${{ github.ref_name }}
+        run: |
+          zip -r "hellas-${TAG}.zip" \
+            system.json hellas.mjs module templates styles lang assets packs \
+            LICENSE README.md \
+            -x "packs/_source/*"
+
+      - name: Create release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            system.json
+            hellas-${{ github.ref_name }}.zip
+          fail_on_unmatched_files: true
+          generate_release_notes: true

@@ -1,0 +1,85 @@
+{
+	"id": "hellas",
+	"title": "Hellas",
+	"description": "Fan contributed support for the HELLAS RPG (2nd ed.) by Khepera Publishing in FoundryVTT. This Foundry system contains text content from the HELLAS RPG under arrangement with Khepera Publishing. All such text and images are copyright of their respective owners. You must own the HELLAS RPG in order to play this game. The HELLAS RPG is TM and © 2012 Khepera Publishing. The Khepera Scarab and the HELLAS logo are ® Khepera Publishing.",
+	"version": "0.4.0",
+	"compatibility": {
+		"minimum": "13.347",
+		"verified": "14"
+	},
+	"authors": [
+		{
+			"name": "snorith (Stephen Smith)",
+			"url": "https://github.com/snorith"
+		}
+	],
+	"esmodules": ["hellas.mjs"],
+	"styles": ["styles/hellas.css"],
+	"documentTypes": {
+		"Actor": {
+			"character": {
+				"htmlFields": ["biography"]
+			}
+		},
+		"Item": {
+			"skill": {
+				"htmlFields": ["notes"]
+			},
+			"dynamism": {
+				"htmlFields": ["notes"]
+			},
+			"weapon": {
+				"htmlFields": ["notes"]
+			},
+			"armor": {
+				"htmlFields": ["notes"]
+			},
+			"talent": {
+				"htmlFields": ["notes", "benefit"]
+			}
+		}
+	},
+	"packs": [
+		{
+			"name": "systemSkills",
+			"label": "System Skills",
+			"system": "hellas",
+			"path": "packs/system-skills",
+			"type": "Item"
+		},
+		{
+			"name": "systemTalents",
+			"label": "System Talents",
+			"system": "hellas",
+			"path": "packs/system-talents",
+			"type": "Item"
+		},
+		{
+			"name": "systemDynamisms",
+			"label": "System Dynamisms",
+			"system": "hellas",
+			"path": "packs/system-dynamisms",
+			"type": "Item"
+		}
+	],
+	"languages": [
+		{
+			"lang": "en",
+			"name": "English",
+			"path": "lang/en.json"
+		}
+	],
+	"grid": {
+		"distance": 1,
+		"units": ""
+	},
+	"primaryTokenAttribute": "attributes.hitpoints",
+	"secondaryTokenAttribute": "attributes.fatepoints",
+	"url": "https://github.com/snorith/hellas",
+	"manifest": "https://github.com/snorith/hellas/releases/latest/download/system.json",
+	"download": "https://github.com/snorith/hellas/releases/download/v0.4.0/hellas-v0.4.0.zip",
+	"license": "LICENSE",
+	"readme": "https://github.com/snorith/hellas#readme",
+	"bugs": "https://github.com/snorith/hellas/issues",
+	"changelog": "https://github.com/snorith/hellas#changelog"
+}

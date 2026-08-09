@@ -1,0 +1,19 @@
+{
+	"_id": "9kfzxt49EFuSFX93",
+	"_key": "!items!9kfzxt49EFuSFX93",
+	"name": "Deep Breath",
+	"type": "talent",
+	"img": "icons/svg/sun.svg",
+	"system": {
+		"desc": "You have an extraordinary ability to hold your breath. You may hold your breath while underwater or when attempting to avoid the effects of noxious gases for twice as long as most people.",
+		"benefit": "<p>The Hero may hold his breath for up to triple his CON in minutes (minimum of 3 minutes).</p>",
+		"notes": ""
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

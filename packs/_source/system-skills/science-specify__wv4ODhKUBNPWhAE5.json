@@ -1,0 +1,25 @@
+{
+	"_id": "wv4ODhKUBNPWhAE5",
+	"_key": "!items!wv4ODhKUBNPWhAE5",
+	"name": "Science - Specify",
+	"type": "skill",
+	"img": "systems/hellas/assets/icons/materials-science.svg",
+	"system": {
+		"skill": "science",
+		"attribute": "INT",
+		"specifier": "specify",
+		"specifierCustom": "",
+		"level": {
+			"value": 0,
+			"max": 0
+		},
+		"notes": "<h1>Science (specific)</h1>\n<p><strong>Training Time (TT): 50 weeks</strong></p>\n<p>Knowledge of one or more of the physical sciences. Like Handicraft and Lore, the Science skill consists of a number of sub-skills. These include: Astronomy, Biology, Botany, Chemistry, Geology, Mathematics, Medicine, Metallurgy, Physics, Xenobiology, Theology, Zoology, etc.</p>"
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

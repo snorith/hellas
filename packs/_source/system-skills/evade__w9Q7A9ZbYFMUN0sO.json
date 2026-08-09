@@ -1,0 +1,25 @@
+{
+	"_id": "w9Q7A9ZbYFMUN0sO",
+	"_key": "!items!w9Q7A9ZbYFMUN0sO",
+	"name": "Evade",
+	"type": "skill",
+	"img": "systems/hellas/assets/icons/evasion.svg",
+	"system": {
+		"skill": "evade",
+		"attribute": "DEX",
+		"specifier": "swimming",
+		"specifierCustom": "",
+		"level": {
+			"value": 0,
+			"max": 0
+		},
+		"notes": "<h1>Evade</h1>\n<p><strong>Training Time (TT): 6 weeks</strong></p>\n<p>Evade is the ability to avoid being struck by an attack, such as a blow from a handheld weapon, arrow, bullet, or a fire bolt.</p>"
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

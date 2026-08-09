@@ -1,0 +1,19 @@
+{
+	"_id": "TgD7b2kWf5zeaFbv",
+	"_key": "!items!TgD7b2kWf5zeaFbv",
+	"name": "Negotiator",
+	"type": "talent",
+	"img": "icons/svg/sun.svg",
+	"system": {
+		"desc": "You are skilled at the fine art of negotiation, be that in obtaining the best price for your wares or in talking your way out of a difficult situation.",
+		"benefit": "<p>The Hero receives triple his CHA (minimum of +3) to rolls pertaining to Trading, Diplomacy, or Deduce Motive skills.</p>",
+		"notes": ""
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

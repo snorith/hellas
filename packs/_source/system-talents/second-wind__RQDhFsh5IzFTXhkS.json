@@ -1,0 +1,19 @@
+{
+	"_id": "RQDhFsh5IzFTXhkS",
+	"_key": "!items!RQDhFsh5IzFTXhkS",
+	"name": "Second Wind",
+	"type": "talent",
+	"img": "icons/svg/sun.svg",
+	"system": {
+		"desc": "Used to long days toiling in the sun, you can reach into your soul for reserves of energy.",
+		"benefit": "<p>Once per day, the Hero may recover a number of Hit Points equal to triple his CON (minimum 3 Hit Points). This talent will not increase the Hero&rsquo;s Hit Points beyond his full normal total.</p>",
+		"notes": ""
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

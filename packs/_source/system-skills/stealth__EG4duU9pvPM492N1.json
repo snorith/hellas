@@ -1,0 +1,25 @@
+{
+	"_id": "EG4duU9pvPM492N1",
+	"_key": "!items!EG4duU9pvPM492N1",
+	"name": "Stealth",
+	"type": "skill",
+	"img": "icons/svg/cowled.svg",
+	"system": {
+		"skill": "stealth",
+		"attribute": "DEX",
+		"specifier": "specify",
+		"specifierCustom": "",
+		"level": {
+			"value": 0,
+			"max": 0
+		},
+		"notes": "<h1>Stealth</h1>\n<p><strong>Training Time (TT): 12 weeks</strong></p>\n<p>The ability to move silently, hide in shadows, and otherwise avoid detection. Normally Stealth is opposed by a character&rsquo;s PER roll. Note that using this skill in an unfamiliar environment may entail a penalty of -1 to -10, based on the DoD involved (GM&rsquo;s ruling).</p>\n<p>&nbsp;</p>"
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

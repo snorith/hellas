@@ -65,9 +65,24 @@ Provides the ability to activate armour and automatic calculation of the total a
 
 ## Installation
 
-To install and use HELLAS for FoundryVTT, paste the following URL into the Install System dialog in the setup menu of the application.
+Requires Foundry VTT **v13 or later** (verified with v14). To install and use HELLAS for FoundryVTT, paste the following URL into the Install System dialog in the setup menu of the application.
 
-https://raw.githubusercontent.com/snorith/hellas/master/src/system.json
+https://github.com/snorith/hellas/releases/latest/download/system.json
+
+> Installs of v0.3.6 and earlier (Foundry 0.7.x) will be offered the new version through their existing update channel; the new version requires Foundry v13+.
+
+## Development
+
+The repository root is the system directory — no build step. Symlink it into your Foundry data folder as `Data/systems/hellas`, then build the compendium packs once:
+
+```shell
+cd tools && npm install && cd ..
+node tools/build-packs.mjs   # compiles packs/_source/* into LevelDB packs/
+node tools/audit.mjs         # static cross-reference audit
+node tools/test-migrations.mjs
+```
+
+Releases are produced by GitHub Actions on a `v*` tag push.
 
 ## Thanks
 

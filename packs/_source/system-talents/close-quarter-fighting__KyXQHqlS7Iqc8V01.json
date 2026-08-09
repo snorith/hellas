@@ -1,0 +1,19 @@
+{
+	"_id": "KyXQHqlS7Iqc8V01",
+	"_key": "!items!KyXQHqlS7Iqc8V01",
+	"name": "Close Quarter Fighting",
+	"type": "talent",
+	"img": "icons/svg/sun.svg",
+	"system": {
+		"desc": "You have learned to fight effectively while in tight confines or in tightly packed spaces.",
+		"benefit": "<p>Allows the Hero to use a small handheld weapon while grappled and larger weapons in tight confines without penalty. When using small weapons the Hero gains a bonus to his Initiative equal to his twice his DEX (minimum of +2).</p>",
+		"notes": ""
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

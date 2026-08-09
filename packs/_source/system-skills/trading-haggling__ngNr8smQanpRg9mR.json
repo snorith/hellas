@@ -1,0 +1,25 @@
+{
+	"_id": "ngNr8smQanpRg9mR",
+	"_key": "!items!ngNr8smQanpRg9mR",
+	"name": "Trading - Haggling",
+	"type": "skill",
+	"img": "icons/svg/hanging-sign.svg",
+	"system": {
+		"skill": "trading",
+		"attribute": "CHA",
+		"specifier": "haggling",
+		"specifierCustom": "",
+		"level": {
+			"value": 0,
+			"max": 0
+		},
+		"notes": "<h1>Trading (*)</h1>\n<p><strong>Training Time (TT): 10 weeks</strong></p>\n<p>The ability to haggle for and appraise goods. When used in a marketplace the haggler is attempting to get the best price and the DoD of haggling is the Trading skill of the other party involved.</p>\n<p>You can appraise common objects with a partial success or greater. Appraising a rare or unfamiliar item requires a full success or higher. If the check is successful, you estimate the value correctly; a failure means you are unable to even venture a guess at the item's value or you err and value the item at 50% to 150% of its actual value.</p>"
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

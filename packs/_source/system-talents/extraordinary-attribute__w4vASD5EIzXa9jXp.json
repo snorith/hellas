@@ -1,0 +1,19 @@
+{
+	"_id": "w4vASD5EIzXa9jXp",
+	"_key": "!items!w4vASD5EIzXa9jXp",
+	"name": "Extraordinary Attribute",
+	"type": "talent",
+	"img": "icons/svg/sun.svg",
+	"system": {
+		"desc": "You have an Attribute that exceeds the racial norm.",
+		"benefit": "<p>The Hero may increase an Attribute beyond his racial norm. Once the Attribute is \"unlocked\" it may be increased with no upper limit.</p>",
+		"notes": ""
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

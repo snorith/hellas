@@ -1,0 +1,25 @@
+{
+	"_id": "vmn2evx1z5WeFQyh",
+	"_key": "!items!vmn2evx1z5WeFQyh",
+	"name": "Navigate",
+	"type": "skill",
+	"img": "systems/hellas/assets/icons/sextant.svg",
+	"system": {
+		"skill": "navigate",
+		"attribute": "PER",
+		"specifier": "shield",
+		"specifierCustom": "aura",
+		"level": {
+			"value": 0,
+			"max": 0
+		},
+		"notes": "<h1>Navigate</h1>\n<p><strong>Training Time (TT): 12 weeks</strong></p>\n<p>The Navigate skill is used by a character to find his or her way to a distant location without directions or other specific guidance. Generally, a character does not need to make a check to find a local street or other common urban site, or to follow an accurate map. However, the character might make a check to wind his or her way through a dense forest, a labyrinth of underground caverns, the service ducts of a ship, or the sewers of a major city.</p>"
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

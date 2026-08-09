@@ -1,0 +1,24 @@
+{
+	"_id": "2wEbrT6i4wVvFtrL",
+	"_key": "!items!2wEbrT6i4wVvFtrL",
+	"name": "Sensory - The Oracle’s Sight",
+	"type": "dynamism",
+	"img": "icons/svg/lightning.svg",
+	"system": {
+		"skillid": "dynamism",
+		"dod": -20,
+		"dodinfo": "Base -5 level\n-14 for Range\n-1 for Duration",
+		"range": "15 km",
+		"tradition": "Delphoian, Sensory",
+		"duration": "20 rounds (2 minutes)",
+		"other": "1 hour into the future",
+		"notes": "<p>With an effort of will, the air around the Dynamist seems to come alive with electricity. While this occurs, the Dynamist can look into the future. Usually they look for a specific event, seeking out a potential outcome. Finding the specific event from the sudden in-rush of overwhelming information requires a PER roll at +5.</p>\n<p>GMs can handle this future sight by letting players move their Heroes through the next hour as long as they remain within the area of effect, seeing the results of their actions and when the time limit of the spell expires, the GM can rewind the action to the end of the spell&rsquo;s duration with the caster having just told his compatriots what might happen. The Hero&rsquo;s success on the PER roll can be used to adjust the Ability Level of any challenges: if a player does not get a full success, modify the Ability Level of any challenges up or down.</p>"
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

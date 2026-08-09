@@ -1,0 +1,25 @@
+{
+	"_id": "sl2UJofXtT3JyshS",
+	"_key": "!items!sl2UJofXtT3JyshS",
+	"name": "Heal",
+	"type": "skill",
+	"img": "systems/hellas/assets/icons/healing.svg",
+	"system": {
+		"skill": "heal",
+		"attribute": "INT",
+		"specifier": "",
+		"specifierCustom": "",
+		"level": {
+			"value": 0,
+			"max": 0
+		},
+		"notes": "<h1>Heal</h1>\n<p><strong>Training Time (TT): 8 weeks</strong></p>\n<p>Skilled in the arts of basic medicine and first aid. Characters with this skill are able to identify and utilize common remedies, provide aid and comfort to sick and wounded individuals, and serve as midwives. A successful Heal check will restore up to twice INT (minimum of two) Hit Points (half with Partial Success) to a character if performed shortly after the damage is received. More thorough restoration of lost Hit Points or curing of diseases requires the use of the Medicine skill.</p>"
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

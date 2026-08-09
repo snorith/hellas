@@ -1,0 +1,19 @@
+{
+	"_id": "NZLe9FpFn2qj99ef",
+	"_key": "!items!NZLe9FpFn2qj99ef",
+	"name": "Bred to the Saddle",
+	"type": "talent",
+	"img": "icons/svg/sun.svg",
+	"system": {
+		"desc": "You were taught to ride at an early age and have kept up the practice.",
+		"benefit": "<p>The Hero adds triple his DEX (minimum of +3) to the Ride skill and to your skill rating in the Animal Training skill as it pertains to one particular mount.</p>",
+		"notes": ""
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

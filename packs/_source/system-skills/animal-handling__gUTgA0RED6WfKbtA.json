@@ -1,0 +1,25 @@
+{
+	"_id": "gUTgA0RED6WfKbtA",
+	"_key": "!items!gUTgA0RED6WfKbtA",
+	"name": "Animal Handling",
+	"type": "skill",
+	"img": "systems/hellas/assets/icons/horse-head.svg",
+	"system": {
+		"skill": "animalhandling",
+		"attribute": "WIL",
+		"specifier": "",
+		"specifierCustom": "",
+		"level": {
+			"value": 0,
+			"max": 0
+		},
+		"notes": "<h1>Animal Handling</h1>\n<p><strong>Training Time (TT): 5 weeks</strong></p>\n<p>Ability to capture, tame, train, and/or breed domestic animals or wild beasts. Taming takes one week per every three Ability Levels of the creature; training to perform a single task on command, such as carrying a rider, attacking, or guarding, requires an additional four weeks, or longer if the beast is particularly fierce or stubborn in nature. The Intelligence of a beast typically determines the limits as to how much a creature can learn.</p>"
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

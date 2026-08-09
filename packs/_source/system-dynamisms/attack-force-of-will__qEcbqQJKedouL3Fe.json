@@ -1,0 +1,24 @@
+{
+	"_id": "qEcbqQJKedouL3Fe",
+	"_key": "!items!qEcbqQJKedouL3Fe",
+	"name": "Attack - Force of Will",
+	"type": "dynamism",
+	"img": "icons/svg/lightning.svg",
+	"system": {
+		"skillid": "dynamism",
+		"dod": -5,
+		"dodinfo": "Level-5 base",
+		"range": "20m",
+		"tradition": "Delphoian, Attack",
+		"duration": "Instant",
+		"other": "",
+		"notes": "<p>Force of Will is a basic offensive spell that most every Legionnaire who is capable learns. By focusing their will, the Legionnaire is capable of firing off a blast of electrical energy at a target within 20 meters. For most, this blast comes from an outstretched hand, but some in the Legion have been known to fire blasts from Dynamistic-glowing eyes. The blast does 5 DR to a single target within range.</p>"
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

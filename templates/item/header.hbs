@@ -1,0 +1,12 @@
+<header class="sheet-header">
+	<img class="profile-img" src="{{item.img}}" data-action="onEditImage"
+		 title="{{item.name}}" alt="{{item.name}}" width="100" height="100"/>
+	<div class="header-fields">
+		{{#if (eq item.type "skill")}}
+			<h1 class="charname">{{system.fullName}}</h1>
+		{{else}}
+			<input class="charname" name="name" type="text" required value="{{item.name}}"
+				   {{#unless editable}}disabled{{/unless}}/>
+		{{/if}}
+	</div>
+</header>

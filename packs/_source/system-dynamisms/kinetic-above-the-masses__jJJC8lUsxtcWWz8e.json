@@ -1,0 +1,24 @@
+{
+	"_id": "jJJC8lUsxtcWWz8e",
+	"_key": "!items!jJJC8lUsxtcWWz8e",
+	"name": "Kinetic - Above the Masses",
+	"type": "dynamism",
+	"img": "icons/svg/lightning.svg",
+	"system": {
+		"skillid": "dynamism",
+		"dod": -21,
+		"dodinfo": "Base -4 level\n- 5 for Duration\n-12 for SPD",
+		"range": "Self or one target within 20m",
+		"tradition": "Sorcery, Kinetic",
+		"duration": "10 rounds (1 minute)",
+		"other": "STR +1 (100 kg) SPD +0",
+		"notes": "<p>The Titanoi do not merely tread the base earth like common creatures, and why should their favored servants? With this sorcerous effect, a Zoran is capable of striding upon the winds as if they were solid ground. The sorcerer can only walk at a stately pace as he moves above the common earth as running is unbecoming to a master of men.</p>"
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}
