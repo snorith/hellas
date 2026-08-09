@@ -98,3 +98,20 @@ every rejected finding carries a reason. **Review loop terminal state reached.**
 Still open (execution-gated, NOT reviewer-resolvable): D4 — whether a 0.7.x
 core refuses the tombstone's `minimumCoreVersion: "13"` — carried to
 z/CHECKLIST.md §H alongside the rest of the manual Foundry verification.
+
+### rev 4 — third model family: droid (GLM-5.2, read-only), round 1
+
+Droid verified the full v13 API surface (every namespace/signature/option
+shape), the data-prep ordering (no stale reads or circularity), the roll
+pipeline, all templates, tools, and both manifests. "No blockers or majors.
+The review ledger's converged state holds."
+
+| # | Reviewer | Finding | Disposition |
+|---|----------|---------|-------------|
+| R1 | droid | Minor: weapon STR-shortfall arithmetic uses bare `w.str` while the guard uses `w.str ?? 0`; claimed NaN → false "critsuccess" when str is null and strength negative | **Scenario disproven by execution** (`null - (-1) === 1`; JS coerces null to 0, and the schema yields number-or-null, never undefined — outcomes identical). **Folded anyway** as a defensive-clarity one-liner (`minStr` used in both guard and arithmetic). |
+| R2 | droid | Nit: dead `\|\| true` condition in tools/audit.mjs specifier loop | **Folded**: vestigial condition removed. |
+| R3 | droid | Nit: three unused legacy i18n keys (`HELLAS.attributes.{relationship,internal,external}.short.name`) all carried the wrong value "Fate Points" | **Folded**: values corrected (keys remain unused; wrong data removed). |
+
+Logistics: first droid dispatch failed on expired Factory auth (user re-logged
+in); retry ran clean. Round NOT counted as clean (three folds) → droid round 2
+confirmation pending.

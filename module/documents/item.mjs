@@ -161,8 +161,9 @@ export default class HellasItem extends Item {
 		// STR shortfall: −2 per point short, −4 for missile weapons; plus ACC.
 		let baseModifier = w.acc ?? 0;
 		const strength = actorSystem.attributes.strength.value;
-		if ( strength < (w.str ?? 0) ) {
-			baseModifier += (w.str - strength) * (w.ismissile ? -4 : -2);
+		const minStr = w.str ?? 0;
+		if ( strength < minStr ) {
+			baseModifier += (minStr - strength) * (w.ismissile ? -4 : -2);
 		}
 
 		let baseLevel;

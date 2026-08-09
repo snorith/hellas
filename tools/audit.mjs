@@ -128,7 +128,7 @@ for ( const a of HELLAS.characterAttributes ) {
 for ( const s of HELLAS.skills ) requireKey(`HELLAS.skills.${s}.name`, "skill name");
 const allSpecifiers = new Set(Object.values(HELLAS.skillSpecificsBreakdown).flat());
 for ( const sp of allSpecifiers ) {
-	if ( HELLAS.dynamismModes.includes(sp) || true ) requireKey(`HELLAS.skills.specifics.${sp}`, "specifier");
+	requireKey(`HELLAS.skills.specifics.${sp}`, "specifier");
 }
 const allModeTypes = new Set(Object.values(HELLAS.dynamismModesSpecificBreakdowns).flat());
 for ( const mt of allModeTypes ) requireKey(`HELLAS.skills.mode.${mt}`, "mode type");
