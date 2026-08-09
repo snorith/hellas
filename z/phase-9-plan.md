@@ -107,5 +107,4 @@ Explicitly out of scope (documented divergences, z/BEST-PRACTICES.md):
 manual `@layer`, choices on skill selectors, edit/play sheet modes, AE
 automation, pack folders/art mapping.
 
-Status: plan written · 9a pending go-ahead (two items need Stephen inputs:
-author contact, foundryvtt.com package token) · 9b queued post-release
+Status: 9a ✅ implemented + reviewed to convergence (see z/phase-9a-impl-plan.md; author-contact and package-token human steps still open) · 9b queued post-release

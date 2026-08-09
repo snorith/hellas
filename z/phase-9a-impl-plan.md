@@ -1,6 +1,6 @@
 # Phase 9a implementation plan — pre-v0.4.0 best-practice updates
 
-Status: IMPLEMENTED (4 commits: 9a-3, 9a-2, 9a-1, 9a-4) — impl review pending.
+Status: ✅ COMPLETE — implemented and externally reviewed to convergence (plan: 2 rounds; impl: 2 rounds).
 
 Target branch: v13-rewrite. Scope: the four Phase-9a items from
 z/phase-9-plan.md. Invariants for every item: system stays bootable;
@@ -268,3 +268,13 @@ behavior, hotReload manifest shape.
 | ID2 | devin | Unverified: does deleting `effects` from a {diff:false} full-source payload PRESERVE embedded effects (vs deleting them)? | **Reasoned + execution-gated**: absent embedded-collection keys are untouched by Document#update (deletion requires explicit deleteEmbeddedDocuments; diff:false affects field diffing, not embedded collections) — the standard dnd5e migration pattern relies on this. Added as an explicit z/CHECKLIST.md §H row so it is confirmed by execution before release rather than asserted. |
 
 devin verdict otherwise: "Implementation is faithful to the converged plan. No blockers or majors." — every planned element verified file-by-file. Confirmation round pending.
+
+### impl rev 2 — commit 48c9ce3, confirmation — **CONVERGED**
+
+codex: "The manifest hot-reload configuration is valid... the revised font URL
+matcher correctly accepts quoted and unquoted CSS url() values." devin: "Both
+folds are sound; nothing new is significant in those files" — with the
+checklist row and ledger accuracy also verified. Gate 4 satisfied. Remaining
+execution-gated items live in z/CHECKLIST.md (§H migration rows incl. effects
+preservation, §K offline fonts) and the two human steps (author contact,
+foundryvtt.com package registration + FOUNDRY_PACKAGE_TOKEN).
