@@ -240,7 +240,9 @@
 
 	.hellas-two-col {
 		display: grid;
-		grid-template-columns: 1fr 1fr;
+		/* minmax(0, …): grid children default to min-width auto, so unbreakable
+		   content would otherwise push the second column past the window edge */
+		grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
 		gap: 0.5rem;
 		align-items: start;
 	}
@@ -251,7 +253,13 @@
 		border: 1px solid #6b7280;
 		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 		margin: 0;
+		/* Paint the table's own ground explicitly: core's dark theme styles
+		   table/thead/tr backgrounds, and a translucent tint over that reads
+		   as a dark slab on the marble sheet. */
+		background: rgba(255, 255, 255, 0.35);
+		color: var(--hellas-ink);
 
+		thead, tbody, tr { background: transparent; }
 		thead td {
 			background: var(--hellas-table-head);
 			padding: 2px 4px;
