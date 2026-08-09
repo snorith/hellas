@@ -73,9 +73,10 @@ https://github.com/snorith/hellas/releases/latest/download/system.json
 
 ## Development
 
-The repository root is the system directory — no build step. Symlink it into your Foundry data folder as `Data/systems/hellas`, then build the compendium packs once:
+The repository root is the system directory — no build step. Symlink it into your Foundry data folder as `Data/systems/hellas`, then build the compendium packs once. Node (for the release tooling only) is pinned via [mise](https://mise.jdx.dev) — run `mise install` once:
 
 ```shell
+mise install
 cd tools && npm install && cd ..
 node tools/build-packs.mjs   # compiles packs/_source/* into LevelDB packs/
 node tools/audit.mjs         # static cross-reference audit

@@ -1,4 +1,5 @@
 # Node is used only for release tooling (pack compilation via foundryvtt-cli,
-# migration smoke tests). The system itself has zero build steps.
+# migration smoke tests, the static audit). The system itself has zero build
+# steps. Run `mise install` once, then `node tools/...` as usual.
 [tools]
-node = "22"
+node = "24"
