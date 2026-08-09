@@ -42,6 +42,20 @@
 		background: url("../assets/images/augustine-wong-li0iC0rjvvg-unsplash.jpg") repeat;
 		color: var(--hellas-ink);
 		font-family: var(--hellas-font-primary);
+		/* Fixed chrome (header/meander/tab nav), scrolling tab body: */
+		display: flex;
+		flex-direction: column;
+		overflow: hidden;
+	}
+
+	/* The active tab section takes the remaining window height and scrolls.
+	   (PARTS' scrollable [""] only PRESERVES scroll position across
+	   re-renders — the overflow behavior itself is ours to provide.) */
+	section.tab {
+		flex: 1;
+		min-height: 0;
+		overflow-y: auto;
+		padding-right: 4px;
 	}
 
 	/* Fields keep dark-on-light regardless of the core theme. */
