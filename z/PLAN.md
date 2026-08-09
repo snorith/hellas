@@ -82,4 +82,19 @@ nothing new); G3 executed for D6 (guide + docs) and D10 (en.json values); G4 NOT
 clean — a major (D6) was folded → rev 3 confirmation round required. All static
 checks green after folds.
 
-### rev 3 — pending (confirmation of D6/D8/D10/C2 folds)
+### rev 3 — commit 0576f86, reviewers: codex (review --commit) + devin (read-only) — **CONVERGED**
+
+- codex: "…do not introduce a concrete regression." No findings.
+- devin: "All four folds are sound; the brief fresh sweep found no new
+  significant defects." Verified D6 (inputs reachable via button.form.elements,
+  no nested form), C2 (Number() edge cases: "" → 0, "1e2" → 100, "3.7" → 4,
+  missing → 0), D8 (nothing depended on stale selectors), D10 (.title key +
+  placeholders + template binding).
+
+Gate 4: all selected reviewers report nothing significant across two model
+families; quantifier recounts done (rev 1); outward sweeps done (revs 1–3);
+every rejected finding carries a reason. **Review loop terminal state reached.**
+
+Still open (execution-gated, NOT reviewer-resolvable): D4 — whether a 0.7.x
+core refuses the tombstone's `minimumCoreVersion: "13"` — carried to
+z/CHECKLIST.md §H alongside the rest of the manual Foundry verification.
