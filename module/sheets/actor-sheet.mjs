@@ -276,6 +276,7 @@ export default class HellasActorSheet extends api.HandlebarsApplicationMixin(she
 
 	/** @this {HellasActorSheet} */
 	static async #onItemEdit(event, target) {
+		if ( !this.isEditable ) return;
 		const item = this.actor.items.get(target.dataset.itemId);
 		item?.sheet.render({ force: true });
 	}

@@ -32,8 +32,9 @@ export default class HellasItem extends Item {
 		const updates = {};
 		if ( !data.img && (this.type in DEFAULT_ICONS) ) updates.img = DEFAULT_ICONS[this.type];
 
-		// Skills carry a derived display name (F5 — legacy synced it with DB
-		// writes during prepareData; we sync it at create/update time instead).
+		// Skills persist normalized selectors and a derived display name (F5 —
+		// legacy synced these with DB writes during prepareData; we do it at
+		// create/update time, where the full document context is available).
 		if ( this.type === "skill" ) {
 			const d = normalizeSkillSelectors({
 				skill: this.system.skill ?? "",
@@ -41,6 +42,7 @@ export default class HellasItem extends Item {
 				specifier: this.system.specifier ?? "",
 				specifierCustom: this.system.specifierCustom ?? ""
 			});
+			updates.system = d;
 			if ( d.skill ) updates.name = skillFullName(d, !!this.actor);
 		}
 
@@ -51,19 +53,26 @@ export default class HellasItem extends Item {
 	async _preUpdate(changed, options, user) {
 		if ( (await super._preUpdate(changed, options, user)) === false ) return false;
 
-		// Re-derive the skill name when a selector field changes and the update
-		// doesn't already rename explicitly. Presence-guarded: unrelated updates
-		// are left untouched.
+		// When a selector field changes, persist the FULL normalized selector
+		// set (merged against the current document) and re-derive the display
+		// name, so stored source never drifts from the derived state. Guarded on
+		// the selector fields being present in the delta: unrelated updates are
+		// left untouched. Normalization lives here — NOT in migrateData — because
+		// it needs whole-document context that update deltas don't carry.
 		const sys = changed.system;
-		if ( (this.type === "skill") && sys && !("name" in changed)
-			&& SKILL_NAME_FIELDS.some(f => f in sys) ) {
+		if ( (this.type === "skill") && sys && SKILL_NAME_FIELDS.some(f => f in sys) ) {
 			const d = normalizeSkillSelectors({
 				skill: ("skill" in sys) ? (sys.skill ?? "") : this.system.skill,
 				attribute: ("attribute" in sys) ? (sys.attribute ?? "") : this.system.attribute,
 				specifier: ("specifier" in sys) ? (sys.specifier ?? "") : this.system.specifier,
 				specifierCustom: ("specifierCustom" in sys) ? (sys.specifierCustom ?? "") : this.system.specifierCustom
 			});
-			if ( d.skill ) changed.name = skillFullName(d, !!this.actor);
+			Object.assign(sys, d);
+			if ( !("name" in changed) ) {
+				changed.name = d.skill
+					? skillFullName(d, !!this.actor)
+					: game.i18n.localize("HELLAS.item.skill.new");
+			}
 		}
 	}
 

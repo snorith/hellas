@@ -357,7 +357,7 @@ Editability: legacy gated ALL listeners on `options.editable` — observers coul
 - **F2** Actor sheet renders `ambitions.4.info` but template.json declared only 1–3. Declare 4 in schema.
 - **F3** `personal.tree.children` defaults are junk ("a".."f"). New defaults "".
 - **F4** `price` typed as string "0" in template but edited as Number in sheets. Schema: NumberField, migrate strings.
-- **F5** Skill item wrote to the DB during `prepareData` (name, skillid, level.max, specifier normalizations via updateOwnedItem) — write-during-prepare loop risk. Rewrite: pure derived data; persisted normalization only in `_preUpdate`.
+- **F5** Skill item wrote to the DB during `prepareData` (name, skillid, level.max, specifier normalizations via updateOwnedItem) — write-during-prepare loop risk. Rewrite: skillid/level.max/fullName are pure derived data; selector normalization + name are PERSISTED in `_preCreate`/`_preUpdate` (full-document context), never in prepare and never in migrateData (deltas lack the context — see review ledger rev 1, devin D1).
 - **F6** Actor sheet wrote armor totals to DB during `getData` (update-during-render). Rewrite: derived in prepareDerivedData, never stored.
 - **F7** `.attr-roll` passes `data-rating`, `attrRoll(attribute, rating)` ignores `rating`. Drop it.
 - **F8** Fate-point clicks never persisted (mutated prepared data + re-render only; reverted on next data refresh). Rewrite: `actor.update({"system.attributes.fatepoints.value": n})`.

@@ -43,6 +43,22 @@ Each phase ends with the system bootable (create world → open sheets → no co
 External review loop (codex/droid/devin) runs after implementation, before tagging.
 Every finding gets recorded here as **folded** or **rejected (reason)**.
 
+### rev 1 — commit 06a9109, reviewers: codex (GPT-5.6, review --commit) + devin (SWE-1.7, read-only)
+
 | # | Reviewer | Finding | Disposition |
 |---|----------|---------|-------------|
-| — | — | — | — |
+| C1 | codex | [P1] `scrollable: [""]` in PARTS is an invalid CSS selector; sheets fail to render | **Rejected**: official v13 API docs (HandlebarsTemplatePart.scrollable) — "A blank string is used to denote that the root level of the part is scrollable"; same idiom in core apps, dnd5e, community tabs guide. Codex found nothing else. |
+| D1 | devin | **Major**: skill selector normalization derived-only; `_preUpdate` synced only `name`, so stored `specifier`/`attribute` can go stale vs the document name (and vs SPEC §5.1/F5 text); clearing `skill` didn't reset name | **Folded** (item.mjs): `_preCreate` now persists the normalized selector set via `updateSource`; `_preUpdate` writes the full normalized set into `changed.system` (merged with current doc, still presence-guarded on selector fields) and resets the name to "New Skill" when skill is empty. SPEC F5 wording corrected. **Sub-recommendation rejected**: calling `normalizeSkillSelectors` from `migrateSkillData` — migrateData runs on partial deltas without whole-document context; a delta touching only `specifier` would be mis-normalized against an absent `skill` (exactly the rule-2 corruption class). Legacy docs normalize in memory on prepare and persist on first edit instead. |
+| D2 | devin | **Minor**: `#onItemEdit` was the one actor-sheet action not `isEditable`-gated, contradicting the stated all-actions rule and legacy parity | **Folded**: guard added. 9/9 actions now gated (recounted per Gate 1). |
+| D3 | devin | Unverified: does `NumberField({integer:true})` reject legacy floats? | **Closed by verification**: fvtt-types (mirrors core JSDoc) — `NumberField#_cleanType` "Applies `integer`, `min`, `max`, and `step`" during cleaning, i.e. rounds; it does not reject. |
+| D4 | devin | Unverified: do 0.7.x cores refuse a manifest with `minimumCoreVersion: "13"`? | **Open — deliberate design risk**, carried to the manual checklist (§H). Worst case a 0.7 client updates and gets a nonfunctional system; mitigations noted in z/phase-8-plan.md. |
+| D5 | devin | Note: tools/audit.mjs doesn't verify compiled packs/ dirs, only _source | **Accepted as-is**: release.yml builds packs before the audit runs; local dev builds them via tools/build-packs.mjs. Coverage note, not a defect. |
+
+Gates: G1 recounted ("all actions gated" was false → fixed → 9/9); G2 outward pass
+(CSS asset URL resolution, Google-Fonts import, settings-menu title localization)
+found nothing new; G3 executed for C1 (docs) and D3 (fvtt-types); G4 NOT clean —
+one major folded → rev 2 round required. Devin logistics: run 1 hit the
+workspace-trust gate, run 2 blocked on `git ls-tree`, run 3 blocked on
+`web_search`; run 4 succeeded with shell+network tools forbidden in the prompt.
+
+### rev 2 — pending (re-review of the folded state)
