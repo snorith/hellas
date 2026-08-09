@@ -25,8 +25,10 @@ export async function getRollModifiers(baseModifier = 0, dod = 0) {
 
 	const read = form => {
 		const int = name => {
-			const v = parseInt(form.elements.namedItem(name)?.value, 10);
-			return Number.isFinite(v) ? v : 0;
+			// Number(), not parseInt: number inputs accept exponent forms like
+			// "1e2", which parseInt would truncate to 1 (codex rev-2 P3).
+			const v = Number(form.elements.namedItem(name)?.value);
+			return Number.isFinite(v) ? Math.round(v) : 0;
 		};
 		return {
 			dod: int("dod"),

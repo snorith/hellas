@@ -96,7 +96,9 @@ export default class HellasActorSheet extends api.HandlebarsApplicationMixin(she
 		context.fate = {
 			value: fate.value,
 			max: fate.max,
-			title: game.i18n.format("HELLAS.attributes.fatepoints.description", {
+			// F20: legacy formatted current/max into .description (which has no
+			// placeholders); the purpose-built .title key was never used.
+			title: game.i18n.format("HELLAS.attributes.fatepoints.title", {
 				current: fate.value, max: fate.max
 			}),
 			dots: Array.fromRange(fate.max, 1).map(num => ({

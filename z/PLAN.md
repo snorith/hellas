@@ -61,4 +61,25 @@ one major folded → rev 2 round required. Devin logistics: run 1 hit the
 workspace-trust gate, run 2 blocked on `git ls-tree`, run 3 blocked on
 `web_search`; run 4 succeeded with shell+network tools forbidden in the prompt.
 
-### rev 2 — pending (re-review of the folded state)
+### rev 2 — commit f096fcd + parseInt fix, reviewers: codex (ask, focused) + devin (read-only)
+
+Both reviewers confirmed the rev-1 folds sound (devin: "correct and safe for
+normal sheet / full-form / submitOnChange / drag-copy flows"; codex: "the folded
+rev-1 fixes are sound", no P1/P2).
+
+| # | Reviewer | Finding | Disposition |
+|---|----------|---------|-------------|
+| C2 | codex | P3: `parseInt` truncates exponent-form number-input values ("1e2" → 1) in the modifier dialog | **Folded**: `Number()` + `Math.round` + finite guard in roll-modifiers.mjs. |
+| D6 | devin | **Major**: explicit `<form>` nested inside DialogV2 content — DialogV2 supplies its own form; a nested form risks `button.form` not seeing the inputs (silent zeros or throw) | **Folded**: modifiers.hbs wrapper is now a `<div>`. Corroborated by the AppV2 conversion guide ("never `<form>` inside a form") and DialogV2 docs examples, which pass formless content. |
+| D7 | devin | Minor: `_preUpdate` ships the full normalized selector set, so a concurrent edit of a different selector field by another client gets clobbered | **Accepted as designed**: normalization requires writing a consistent set; concurrent same-item selector edits are an edge case; legacy persisted full normalized sets too. Recorded, not changed. |
+| D8 | devin | Minor: clearing `skill` left stale `attribute`/`specifier`/`specifierCustom` persisted (feeding the rating) | **Folded**: `normalizeSkillSelectors` now clears the dependent selectors when `skill` is empty. |
+| D9 | devin | Nit: programmatic `Item.create({type:"skill"})` without a name leaves name unset while fullName says "New Skill" | **Rejected**: core `BaseItem` requires `name` at creation — a nameless programmatic create fails core validation before our hook matters; every real flow supplies a name. |
+| D10 | devin | Minor: fate label tooltip used `HELLAS.attributes.fatepoints.description` (no placeholders) with format args | **Folded** + logged as new legacy bug **F20**: the never-used `HELLAS.attributes.fatepoints.title` ("Fate points {current} of {max}") is the correct key — verified in en.json. Legacy had the same bug. |
+
+Gates: G1 no new quantifier claims; G2 outward pass (devin swept item-sheet
+context prep, attributes.hbs bindings, settings menu, CSS selector coverage —
+nothing new); G3 executed for D6 (guide + docs) and D10 (en.json values); G4 NOT
+clean — a major (D6) was folded → rev 3 confirmation round required. All static
+checks green after folds.
+
+### rev 3 — pending (confirmation of D6/D8/D10/C2 folds)

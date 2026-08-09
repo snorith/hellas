@@ -14,7 +14,14 @@ import { migrateSkillData } from "./migrations.mjs";
 export function normalizeSkillSelectors(d) {
 	if ( d.skill && !HELLAS.skills.includes(d.skill) ) d.skill = HELLAS.skills[0];
 	const skill = d.skill;
-	if ( !skill ) return d;
+	if ( !skill ) {
+		// "New skill" state: dependent selectors are meaningless — clear them so
+		// nothing stale persists or feeds the rating (devin rev-2 D8).
+		d.specifier = "";
+		d.specifierCustom = "";
+		d.attribute = "";
+		return d;
+	}
 
 	if ( HELLAS.skillsWSpecifics.includes(skill) ) {
 		const specifiers = HELLAS.skillSpecificsBreakdown[skill];

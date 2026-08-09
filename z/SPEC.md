@@ -372,6 +372,7 @@ Editability: legacy gated ALL listeners on `options.editable` — observers coul
 - **F17** Actor sheet `_onItemCreate` copies the whole HTML `dataset` into item source. Create with `{name, type}` only.
 - **F18** `sortItemsByNameFunction` is case/locale-naive. Use `localeCompare` (behavioral change accepted: saner ordering).
 - **F19** Legacy skillSheet.hbs referenced i18n key `HELLAS.skill.specifier.custom.title` which never existed in en.json (tooltip silently showed the raw key). Key added. (en.json also carries a stray `HELLAS.skill.specifier.title.label` = "Custom" — kept, unused.)
+- **F20** (found by devin, review rev 2) Legacy fate-points label tooltip formatted `current`/`max` into `HELLAS.attributes.fatepoints.description`, which has no placeholders; the purpose-built `HELLAS.attributes.fatepoints.title` ("Fate points {current} of {max}") was never referenced. Rewrite uses `.title`.
 
 ## 11. Assets & styling notes (input to Phase 6)
 
