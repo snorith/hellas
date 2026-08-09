@@ -1,0 +1,40 @@
+<section class="tab {{tab.cssClass}}" data-group="{{tab.group}}" data-tab="{{tab.id}}">
+	<div class="hellas-item-grid">
+		<label for="{{item.id}}-skillid" title="{{localize "HELLAS.weapon.skillid.title"}}">{{localize "HELLAS.weapon.skillid.label"}}</label>
+		<select id="{{item.id}}-skillid" name="system.skillid" title="{{localize "HELLAS.weapon.skillid.title"}}" {{#unless editable}}disabled{{/unless}}>
+			{{selectOptions skillidChoices selected=system.skillid}}
+		</select>
+
+		<label for="{{item.id}}-acc" title="{{localize "HELLAS.weapon.acc.title"}}">{{localize "HELLAS.weapon.acc.label"}}</label>
+		<input type="number" id="{{item.id}}-acc" name="system.acc" value="{{system.acc}}" step="1" title="{{localize "HELLAS.weapon.acc.title"}}" {{#unless editable}}disabled{{/unless}}/>
+
+		<label for="{{item.id}}-dr" title="{{localize "HELLAS.weapon.dr.title"}}">{{localize "HELLAS.weapon.dr.label"}}</label>
+		<input type="number" id="{{item.id}}-dr" name="system.dr" value="{{system.dr}}" step="1" title="{{localize "HELLAS.weapon.dr.title"}}" {{#unless editable}}disabled{{/unless}}/>
+
+		<label for="{{item.id}}-modifier" title="{{localize "HELLAS.weapon.modifier.title"}}">{{localize "HELLAS.weapon.modifier.label"}}</label>
+		<select id="{{item.id}}-modifier" name="system.modifier" title="{{localize "HELLAS.weapon.modifier.title"}}" {{#unless editable}}disabled{{/unless}}>
+			{{selectOptions modifierChoices selected=system.modifier}}
+		</select>
+
+		<label for="{{item.id}}-wt" title="{{localize "HELLAS.weapon.wt.title"}}">{{localize "HELLAS.weapon.wt.label"}}</label>
+		<input type="number" id="{{item.id}}-wt" name="system.wt" value="{{system.wt}}" step="1" title="{{localize "HELLAS.weapon.wt.title"}}" {{#unless editable}}disabled{{/unless}}/>
+
+		<label for="{{item.id}}-str" title="{{localize "HELLAS.weapon.str.title"}}">{{localize "HELLAS.weapon.str.label"}}</label>
+		<input type="number" id="{{item.id}}-str" name="system.str" value="{{system.str}}" step="1" title="{{localize "HELLAS.weapon.str.title"}}" {{#unless editable}}disabled{{/unless}}/>
+
+		<label for="{{item.id}}-rof" title="{{localize "HELLAS.weapon.rof.title"}}">{{localize "HELLAS.weapon.rof.label"}}</label>
+		<input type="number" id="{{item.id}}-rof" name="system.rof" value="{{system.rof}}" step="1" title="{{localize "HELLAS.weapon.rof.title"}}" {{#unless editable}}disabled{{/unless}}/>
+
+		<label for="{{item.id}}-ammo" title="{{localize "HELLAS.weapon.ammo.title"}}">{{localize "HELLAS.weapon.ammo.label"}}</label>
+		<input type="text" id="{{item.id}}-ammo" name="system.ammo" value="{{system.ammo}}" title="{{localize "HELLAS.weapon.ammo.title"}}" {{#unless editable}}disabled{{/unless}}/>
+
+		<label for="{{item.id}}-rng" title="{{localize "HELLAS.weapon.rng.title"}}">{{localize "HELLAS.weapon.rng.label"}}</label>
+		<input type="text" id="{{item.id}}-rng" name="system.rng" value="{{system.rng}}" title="{{localize "HELLAS.weapon.rng.title"}}" {{#unless editable}}disabled{{/unless}}/>
+
+		<label for="{{item.id}}-ismissile" title="{{localize "HELLAS.weapon.ismissile.title"}}">{{localize "HELLAS.weapon.ismissile.label"}}</label>
+		<input type="checkbox" id="{{item.id}}-ismissile" name="system.ismissile" {{checked system.ismissile}} title="{{localize "HELLAS.weapon.ismissile.title"}}" {{#unless editable}}disabled{{/unless}}/>
+
+		<label for="{{item.id}}-price" title="{{localize "HELLAS.weapon.price.title"}}">{{localize "HELLAS.weapon.price.label"}}</label>
+		<input type="number" id="{{item.id}}-price" name="system.price" value="{{system.price}}" step="1" title="{{localize "HELLAS.weapon.price.title"}}" {{#unless editable}}disabled{{/unless}}/>
+	</div>
+</section>

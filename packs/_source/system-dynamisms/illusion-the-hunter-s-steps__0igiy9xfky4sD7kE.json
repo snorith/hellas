@@ -1,0 +1,24 @@
+{
+	"_id": "0igiy9xfky4sD7kE",
+	"_key": "!items!0igiy9xfky4sD7kE",
+	"name": "Illusion - The Hunter’s Steps",
+	"type": "dynamism",
+	"img": "icons/svg/lightning.svg",
+	"system": {
+		"skillid": "dynamism",
+		"dod": -27,
+		"dodinfo": "Level -1 base\n-3 for Scent\n-3 for Sound\n-5 for Range\n-15 for Duration",
+		"range": "35m",
+		"tradition": "Shamanism, Illusion",
+		"duration": "25 rounds (2.5 minutes)",
+		"other": "",
+		"notes": "<p>Goregons often hunt dangerous prey, and in order that they not become hunted themselves, they sometimes turn to their shamans for aid. A Goregon shaman, chewing taba root and moving at the back of a group of hunters, can endow them all with preternatural stealth in the jungle. While in this trance-like state, the passage of the hunters is obscured from sight, sound, even scent in an effort to throw any active pursuers off the trail of the hunting party. Those following take a -7 to their roll to track the shaman&rsquo;s group.</p>"
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

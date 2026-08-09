@@ -1,0 +1,56 @@
+<section class="tab {{tab.cssClass}}" data-group="{{tab.group}}" data-tab="{{tab.id}}">
+	<div class="hellas-item-grid">
+		<label for="{{item.id}}-skill" title="{{localize "HELLAS.skill.skill.title"}}">{{localize "HELLAS.skill.skill.label"}}</label>
+		<select id="{{item.id}}-skill" name="system.skill" title="{{localize "HELLAS.skill.skill.title"}}" {{#unless editable}}disabled{{/unless}}>
+			{{selectOptions skillChoices selected=system.skill blank=skillBlank}}
+		</select>
+
+		{{#if isMode}}
+			<label for="{{item.id}}-specifier" title="{{localize "HELLAS.skill.mode.title"}}">{{localize "HELLAS.skill.mode.label"}}</label>
+		{{else}}
+			<label for="{{item.id}}-specifier" class="{{#unless hasSpecifics}}hellas-disabled{{/unless}}"
+				   title="{{localize "HELLAS.skill.specifier.title"}}">{{localize "HELLAS.skill.specifier.label"}}</label>
+		{{/if}}
+		<select id="{{item.id}}-specifier" name="system.specifier"
+				{{#unless hasSpecifics}}disabled{{/unless}} {{#unless editable}}disabled{{/unless}}>
+			{{selectOptions specifierChoices selected=system.specifier}}
+		</select>
+
+		{{#if isMode}}
+			<label for="{{item.id}}-specifierCustom" class="{{#if modeTypeDisabled}}hellas-disabled{{/if}}"
+				   title="{{localize "HELLAS.skill.type.title"}}">{{localize "HELLAS.skill.type.label"}}</label>
+			<select id="{{item.id}}-specifierCustom" name="system.specifierCustom"
+					{{#if modeTypeDisabled}}disabled{{/if}} {{#unless editable}}disabled{{/unless}}>
+				{{selectOptions modeTypeChoices selected=system.specifierCustom}}
+			</select>
+		{{else}}
+			<label for="{{item.id}}-specifierCustom" class="{{#if customDisabled}}hellas-disabled{{/if}}"
+				   title="{{localize "HELLAS.skill.specifier.custom.title"}}">{{localize "HELLAS.skill.specifier.custom.label"}}</label>
+			<input type="text" id="{{item.id}}-specifierCustom" name="system.specifierCustom"
+				   value="{{system.specifierCustom}}" title="{{localize "HELLAS.skill.specifier.custom.title"}}"
+				   {{#if customDisabled}}disabled{{/if}} {{#unless editable}}disabled{{/unless}}/>
+		{{/if}}
+
+		<label for="{{item.id}}-attribute" class="{{#unless hasAttributes}}hellas-disabled{{/unless}}"
+			   title="{{localize "HELLAS.skill.attribute.title"}}">{{localize "HELLAS.skill.attribute.label"}}</label>
+		<select id="{{item.id}}-attribute" name="system.attribute"
+				{{#unless hasAttributes}}disabled{{/unless}} {{#unless editable}}disabled{{/unless}}>
+			{{selectOptions attributeChoices selected=system.attribute}}
+		</select>
+
+		<label for="{{item.id}}-level" title="{{localize "HELLAS.skill.level.title"}}">{{localize "HELLAS.skill.level.label"}}</label>
+		<input type="number" id="{{item.id}}-level" name="system.level.value" value="{{system.level.value}}"
+			   step="1" title="{{localize "HELLAS.skill.level.title"}}" {{#unless editable}}disabled{{/unless}}/>
+	</div>
+
+	{{#if showGuidance}}
+		<div class="hellas-skill-guidance">
+			<h2>{{localize "HELLAS.item.skill.modification.note"}}</h2>
+			{{#each guidanceNotes}}
+				<p>{{localize this}}</p>
+			{{else}}
+				<p>{{localize "HELLAS.item.skill.modification.na"}}</p>
+			{{/each}}
+		</div>
+	{{/if}}
+</section>

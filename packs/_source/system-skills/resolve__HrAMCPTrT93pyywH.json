@@ -1,0 +1,25 @@
+{
+	"_id": "HrAMCPTrT93pyywH",
+	"_key": "!items!HrAMCPTrT93pyywH",
+	"name": "Resolve",
+	"type": "skill",
+	"img": "icons/svg/statue.svg",
+	"system": {
+		"skill": "resolve",
+		"attribute": "WIL",
+		"specifier": "specify",
+		"specifierCustom": "",
+		"level": {
+			"value": 0,
+			"max": 0
+		},
+		"notes": "<h1>Resolve</h1>\n<p><strong>Training Time (TT): 6 weeks</strong></p>\n<p><span lang=\"EN-US\">Resolve is the ability to withstand psychic assaults such as intimidate, torture, or other attempts at influencing the Hero. Resolve + WIL is used as the passive mental defense.</span></p>\n<p>&nbsp;</p>"
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

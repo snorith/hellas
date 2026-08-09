@@ -1,0 +1,19 @@
+{
+	"_id": "9933SXLJZ0GAL39L",
+	"_key": "!items!9933SXLJZ0GAL39L",
+	"name": "Voice of Command",
+	"type": "talent",
+	"img": "icons/svg/sun.svg",
+	"system": {
+		"desc": "Your position in society means you are used to being obeyed.",
+		"benefit": "<p>The Hero receives triple his CHA (minimum of +3) to commanding a group of followers, or making a speech of significance.</p>",
+		"notes": ""
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

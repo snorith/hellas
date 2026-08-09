@@ -1,0 +1,19 @@
+{
+	"_id": "4JHtWKwZiRggSZNf",
+	"_key": "!items!4JHtWKwZiRggSZNf",
+	"name": "Rally",
+	"type": "talent",
+	"img": "icons/svg/sun.svg",
+	"system": {
+		"desc": "You are skilled in giving rousing speeches or otherwise encouraging your companions and underlings to push their limits.",
+		"benefit": "<p>The Hero receives triple his CHA (minimum of +3) to augment all companions&rsquo; rolls when resisting fear (WIL checks) or Attack rolls. This counts as an action for the Hero who does the rally and he must be free to speak or act in a heroic manner.</p>",
+		"notes": ""
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

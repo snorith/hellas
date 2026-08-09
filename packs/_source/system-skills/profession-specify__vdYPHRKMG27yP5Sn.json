@@ -1,0 +1,25 @@
+{
+	"_id": "vdYPHRKMG27yP5Sn",
+	"_key": "!items!vdYPHRKMG27yP5Sn",
+	"name": "Profession - Specify",
+	"type": "skill",
+	"img": "systems/hellas/assets/icons/teacher.svg",
+	"system": {
+		"skill": "profession",
+		"attribute": "PER",
+		"specifier": "specify",
+		"specifierCustom": "",
+		"level": {
+			"value": 0,
+			"max": 0
+		},
+		"notes": "<h1>Profession (specific)</h1>\n<p><strong>Training Time (TT): 52 weeks</strong></p>\n<p>This skill covers a variety of sub-skills much like the Handicraft, Lore, or Perform skills. A Profession skill reflects a character&rsquo;s ability to perform the various tasks required of a particular profession. Other skills may be required to do the job, but this skill covers all the other esoteric knowledge one must have to perform the duties and tasks required. The Profession skills are the combination of a Lore and an Etiquette skill for one&rsquo;s job.</p>\n<blockquote>\n<p>Example: A warrior with the soldier Profession would have to take certain Weapon skills to attack, but the Profession skill would give him other small abilities that a Weapons skill doesn&rsquo;t cover. A soldier would know when and who to salute, what certain terms mean, and where the biggest military installations are. A Hero with the Athletic profession would know the rules to the games, what is needed to play the game, and where other athletes usually train.&nbsp;</p>\n</blockquote>\n<p>Characters with a Profession skill may earn a set amount of wealth per game month not spent adventuring. This amount is determined by the Game Master and is dependent on a number of specific factors. Example professions include: carpenter, laborer, miner, clerk, lawyer, salesman, etc.</p>\n<p>&nbsp;</p>"
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

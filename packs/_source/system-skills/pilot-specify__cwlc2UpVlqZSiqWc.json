@@ -1,0 +1,25 @@
+{
+	"_id": "cwlc2UpVlqZSiqWc",
+	"_key": "!items!cwlc2UpVlqZSiqWc",
+	"name": "Pilot - Specify",
+	"type": "skill",
+	"img": "systems/hellas/assets/icons/ship-wheel.svg",
+	"system": {
+		"skill": "pilot",
+		"attribute": "DEX",
+		"specifier": "specify",
+		"specifierCustom": "",
+		"level": {
+			"value": 0,
+			"max": 0
+		},
+		"notes": "<h1>Perform (specific)</h1>\n<p><strong>Training Time (TT): 50 weeks</strong></p>\n<p>Ability to operate an air-, sea-, or spacecraft of some type. This ability does not include Navigation skills or other detailed knowledge, which may be covered under a Lore skill or Navigate.&nbsp;</p>"
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

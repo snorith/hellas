@@ -1,0 +1,25 @@
+{
+	"_id": "XUusQg2xBK8KO53J",
+	"_key": "!items!XUusQg2xBK8KO53J",
+	"name": "Dynamism - Influence",
+	"type": "skill",
+	"img": "icons/svg/lightning.svg",
+	"system": {
+		"skill": "mode",
+		"attribute": "DYN",
+		"specifier": "influence",
+		"specifierCustom": "ranged",
+		"level": {
+			"value": 0,
+			"max": 0
+		},
+		"notes": "<h1>Dynamism Mode: Influence</h1>\n<p><strong>Training Time (TT): 24 weeks</strong></p>\n<p><strong>Range</strong>: Line of sight.</p>\n<p><strong>Area</strong>: Single target (-1 per extra target).</p>\n<p><strong>Duration</strong>: 1 round (-1 to activation roll for each additional round).</p>\n<p><strong>Resistance</strong>: WIL roll &ndash; &frac12; Dynamism level.</p>\n<p><strong>Mental Attributes</strong>: +1/-1 per 3 Dynamism levels.</p>\n<p>Dynamism Powers that affect and manipulate a being's thoughts and emotions fall within the sphere of the Influence Mode. The subject of an Influence effect will obey a single command from the Dynamism user, such as \"Halt where you are,\" \"Sleep,\" or \"Tell me your name.\" The command is sent into the subject's mind, and need not be spoken aloud unless the Dynamism user so desires. The subject will attempt to carry out the instruction to the best of its ability until the duration of the Dynamism Power elapses.</p>\n<p>No subject can be ordered to accomplish an instruction that contradicts its basic nature or abilities; for example, a person cannot be commanded to fly. Dangerous actions, such as attacking an enemy, can be commanded and obeyed, but blatantly harmful or suicidal actions will suffer penalties (at GM's discretion). This includes instructions to attack a being many times more powerful than the subject; commanding an unarmed civilian to attack an armored patrol might warrant a -10 penalty, while an experienced soldier would do so at only -1.</p>\n<p>The target of an Influence effect can resist being controlled by making a Resolve skill roll. For every 2 power levels, the target takes a -1 penalty to WIL.</p>\n<blockquote>\n<p><strong>Example</strong>: Alcmene is at a symposium investigating a corrupt noble there. She shadows him to his private room and confronts the guards outside. As she walks past the guard she waves her hand and tells the guard \"You did not see me.\" Alcmene decided that the Dynamism level will be 12 and makes her roll, getting a success. The guard now has a DoD-6 to resist the Dynamism.</p>\n</blockquote>\n<p>Additionally, a Dynamism user may alter a target's scores in any mental- or social-type skill or Attribute. For example, a Dynamism Power that would see the target become forgetful or scared might have the same effect of lowering the target's INT or WIL ratings.</p>\n<blockquote>\n<p><strong>Example</strong>: Later, in the corrupt noble's room, Alcmene confronts the noble and asks where he is keeping the daughters of the peasants he is holding hostage. He refuses to answer but once again Alcmene uses her Dynamism power to loosen his tongue. She reduces his WIL by three points. The DoD of this is -9. She is again successful and the noble's resolve erodes and his tongue starts to wag.</p>\n</blockquote>\n<p>The subject of an Influence effect recalls the events that occurred while under the Dynamism Power's control. If the Dynamism user attains a Critical Success on the Dynamism Power roll, the target will believe the actions undertaken were his own idea and not suspect the influence of Dynamism, no matter how strange or uncharacteristic the deeds were.</p>\n<p><strong>Example Uses of the Influence Mode</strong></p>\n<blockquote>\n<p>\"I psychically weaken his desire to search everywhere in the room, hoping I can convince him not to check the barrel where the bloodstained sword is hidden.\"</p>\n<p>\"I speak words of arcane commanding to the ghost, and demand that it serve me.\"</p>\n<p>&ldquo;I alter the summoned beast&rsquo;s rage so that it desires only to attack my foes.&rdquo;</p>\n</blockquote>"
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

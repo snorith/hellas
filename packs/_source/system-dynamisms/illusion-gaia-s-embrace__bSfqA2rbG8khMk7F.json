@@ -1,0 +1,24 @@
+{
+	"_id": "bSfqA2rbG8khMk7F",
+	"_key": "!items!bSfqA2rbG8khMk7F",
+	"name": "Illusion - Gaia’s Embrace",
+	"type": "dynamism",
+	"img": "icons/svg/lightning.svg",
+	"system": {
+		"skillid": "dynamism",
+		"dod": -10,
+		"dodinfo": "Level -1 base\n-3 for Scent\n-3 for Touch\n-3 for Details",
+		"range": "20m",
+		"tradition": "Whisperer, Illusion",
+		"duration": "10 rounds (1 minute)",
+		"other": "",
+		"notes": "<p>By remaining perfectly still, the Nymphas can draw the warmth of Gaia around her, masking her from view. For the duration of the effect, she will appear as an example of whatever native plant life is indigenous to the area she is currently in. Attempts to discern the Nymphas as something other than a natural plant have a -10 penalty.</p>"
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

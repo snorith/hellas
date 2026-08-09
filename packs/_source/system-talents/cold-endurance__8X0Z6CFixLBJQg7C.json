@@ -1,0 +1,19 @@
+{
+	"_id": "8X0Z6CFixLBJQg7C",
+	"_key": "!items!8X0Z6CFixLBJQg7C",
+	"name": "Cold Endurance",
+	"type": "talent",
+	"img": "icons/svg/sun.svg",
+	"system": {
+		"desc": "Because of a natural trait or experience working and living in colder climes you have a superior endurance to the cold.",
+		"benefit": "<p>Reduces damage from exposure to extreme cold by the Hero's CON (minimum of 1) and provides a natural Protection Rating (PR) to cold-based attacks equal to triple his CON (minimum of PR3).</p>",
+		"notes": ""
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

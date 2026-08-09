@@ -1,0 +1,19 @@
+{
+	"_id": "ftKWG0e4nSqiPlL8",
+	"_key": "!items!ftKWG0e4nSqiPlL8",
+	"name": "Aura of Nobility",
+	"type": "talent",
+	"img": "icons/svg/sun.svg",
+	"system": {
+		"desc": "The Hero has gained the respect and/or fear of others for his perceived nobility and rank in society.",
+		"benefit": "<p>The Hero adds triple his CHA (minimum of +3) for Reaction Rolls where a social rank plays a factor.</p>",
+		"notes": ""
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

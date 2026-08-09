@@ -1,0 +1,25 @@
+{
+	"_id": "vY8LcvT4ojN9xRok",
+	"_key": "!items!vY8LcvT4ojN9xRok",
+	"name": "Etiquette - Specify w. Intelligence",
+	"type": "skill",
+	"img": "systems/hellas/assets/icons/spoon.svg",
+	"system": {
+		"skill": "etiquette",
+		"attribute": "INT",
+		"specifier": "specify",
+		"specifierCustom": "Specify w. Intelligence",
+		"level": {
+			"value": 0,
+			"max": 0
+		},
+		"notes": "<h1>Etiquette (specific, but both attributes)</h1>\n<p><strong>Training Time (TT): 12 weeks</strong></p>\n<p>Knowledge of proper protocol and custom for specific situations within a given culture.</p>\n<p>Characters may use their Etiquette skill rather than their CHA rating when rolling for reaction from those of similar cultures. Etiquette is normally only used in genteel society and it is up to the GM to determine the appropriate penalties to the Degree of Difficulty when attempting to use it in foreign cultures.</p>"
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

@@ -1,0 +1,25 @@
+{
+	"_id": "jOi4vEaXYMARLV4x",
+	"_key": "!items!jOi4vEaXYMARLV4x",
+	"name": "Disable Mechanism",
+	"type": "skill",
+	"img": "icons/svg/clockwork.svg",
+	"system": {
+		"skill": "disablemechanism",
+		"attribute": "DEX",
+		"specifier": "",
+		"specifierCustom": "",
+		"level": {
+			"value": 0,
+			"max": 0
+		},
+		"notes": "<h1>Disable Mechanism</h1>\n<p><strong>Training Time (TT): 12 weeks</strong></p>\n<p>The ability to foil locks, traps, vehicles, electronic systems, and other simple or complex mechanisms, typically with the use of some type of tools.</p>\n<p>&nbsp;</p>\n<p>Characters may spend more than one round attempting to open a particular lock or otherwise disable a device; for each additional minute (specified in advance), add a +1 modifier (up to a maximum of +10). On the subject of lock-picking (likely the most common use of this skill), characters can attempt to open a lock that they have previously failed to open, with a -5 modifier for each previous failed attempt.</p>\n<p>&nbsp;</p>\n<p>This skill may also be used to design and install lock mechanisms, traps, secret doors or passage ways, etc., although the Handicraft (artificer) skill is required to construct such mechanisms.</p>"
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

@@ -1,0 +1,25 @@
+{
+	"_id": "exb4OW2g9Dj5F49r",
+	"_key": "!items!exb4OW2g9Dj5F49r",
+	"name": "Speak Language - Specify",
+	"type": "skill",
+	"img": "systems/hellas/assets/icons/talk.svg",
+	"system": {
+		"skill": "speaklanguage",
+		"attribute": "INT",
+		"specifier": "specify",
+		"specifierCustom": "",
+		"level": {
+			"value": 0,
+			"max": 0
+		},
+		"notes": "<h1>Speak Language (specific)</h1>\n<p><strong>Training Time (TT): 12 weeks</strong></p>\n<p>The ability to understand and be understood in a certain language. Characters are rated in their proficiency with a language on a four-tiered scale, as follows:</p>\n<ul>\n<li>Advanced</li>\n<li>Native</li>\n<li>Fluent</li>\n<li>Basic</li>\n</ul>\n<p>A speaker who is at least +10 (Native) on this scale can pass himself off as a native. Below are examples of languages</p>\n<ul>\n<li>Atlantean (archaic, usually spoken by scholars)</li>\n<li>Goregon</li>\n<li>Zoran</li>\n<li>Nymphas, etc.</li>\n</ul>\n<p><strong>Skill Rating Language Proficiency</strong></p>\n<ul>\n<li>+0 to +3 Basic</li>\n<li>+4 to +9 Fluent</li>\n<li>+10 or greater Native</li>\n</ul>\n<p>&nbsp;</p>"
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

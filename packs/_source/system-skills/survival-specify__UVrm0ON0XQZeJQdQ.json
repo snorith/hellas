@@ -1,0 +1,25 @@
+{
+	"_id": "UVrm0ON0XQZeJQdQ",
+	"_key": "!items!UVrm0ON0XQZeJQdQ",
+	"name": "Survival - Specify",
+	"type": "skill",
+	"img": "systems/hellas/assets/icons/forest-camp.svg",
+	"system": {
+		"skill": "survival",
+		"attribute": "CON",
+		"specifier": "specify",
+		"specifierCustom": "",
+		"level": {
+			"value": 0,
+			"max": 0
+		},
+		"notes": "<h1>Survival (specific)</h1>\n<p><strong>Training Time (TT): 30 weeks</strong></p>\n<p>Ability to forage for food and water, navigate, and find or construct suitable shelter in the wilds. Also includes knowledge of the flora and fauna of a given region, including techniques for hunting, capturing, and using their remains. Each different terrain is a different Survival skill. The different sub-skills include: Savannah, Forest, Jungle, Desert, Arctic, Swamp, Alpine, Aquatic, and Urban. GMs are encouraged to add any other terrain types they deem required for their game world.</p>"
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

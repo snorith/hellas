@@ -1,0 +1,24 @@
+{
+	"_id": "XxtBNFUJ6ujadxT7",
+	"_key": "!items!XxtBNFUJ6ujadxT7",
+	"name": "Attack - Lernean Claws",
+	"type": "dynamism",
+	"img": "icons/svg/lightning.svg",
+	"system": {
+		"skillid": "dynamism",
+		"dod": -20,
+		"dodinfo": "Level -7 base\n-3 for Tradition\n-2 for PR reduction\n-3 for Attack Bonus",
+		"range": "Personal",
+		"tradition": "Shamanism, Attack",
+		"duration": "7 rounds",
+		"other": "",
+		"notes": "<p>Goregon shamans learn the ways of the Lernean Hydra to devastating effect. Chewing taga root soaked in Hydra blood, the Goregon is filled with primal force. Claws burst from his hands [DR7 + Str]. So strong are they that simple armors are no match for their strength [subtract 2 from any PR the opponent has].</p>\n<p>Additionally, the shaman is filled with the ferocity of the Hydra and gains a bonus to their hand-to-hand attacks [+3 to Pankration skill].&nbsp;</p>"
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

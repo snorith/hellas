@@ -1,0 +1,24 @@
+{
+	"_id": "yXoGwKq66foJnt5m",
+	"_key": "!items!yXoGwKq66foJnt5m",
+	"name": "Manipulate - Gentle Breeze",
+	"type": "dynamism",
+	"img": "icons/svg/lightning.svg",
+	"system": {
+		"skillid": "dynamism",
+		"dod": -7,
+		"dodinfo": "Base -10 level\n+3 for Tradition",
+		"range": "Self or Touch",
+		"tradition": "Whisperer, Manipulate",
+		"duration": "–",
+		"other": "",
+		"notes": "<p>With a few whispered words and a gentle caressing touch, the Whisperer causes a feeling of stillness and peace to wash over someone (or themselves). The effect of this calming moment is the restoration of 10 HP.</p>"
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

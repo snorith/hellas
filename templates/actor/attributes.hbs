@@ -1,0 +1,249 @@
+<section class="tab {{tab.cssClass}}" data-group="{{tab.group}}" data-tab="{{tab.id}}">
+	{{!-- Attribute grid --}}
+	<div class="hellas-attr-grid">
+		{{#each attributeTiles}}
+			<div class="hellas-attr-tile">
+				<div class="hellas-titling" data-tooltip="{{localize this.descriptionKey}}">{{localize this.nameKey}}</div>
+				<div class="hellas-attr-controls">
+					<a data-action="attrRoll" data-attribute="{{this.key}}" title="{{localize "HELLAS.attribute.roll"}}"><i class="fas fa-dice-d20"></i></a>
+					<input type="number" step="1" name="system.attributes.{{this.key}}.value" value="{{this.value}}"
+						   title="{{localize this.nameKey}}" {{#unless @root.editable}}disabled{{/unless}}>
+				</div>
+			</div>
+		{{/each}}
+	</div>
+
+	{{!-- Resources --}}
+	<div class="hellas-resources">
+		<div class="hellas-resource aluminum-foil-bkgd">
+			<div>
+				<div class="hellas-titling" data-tooltip="{{localize "HELLAS.attributes.hitpoints.description"}}">{{localize "HELLAS.attributes.hitpoints.current.name"}}</div>
+				<input type="number" step="1" name="system.attributes.hitpoints.value" value="{{system.attributes.hitpoints.value}}" title="{{localize "HELLAS.attributes.hitpoints.current.name"}}" {{#unless editable}}disabled{{/unless}}>
+			</div>
+			<div>
+				<div class="hellas-titling" data-tooltip="{{localize "HELLAS.attributes.hitpoints.description"}}">{{localize "HELLAS.attributes.hitpoints.max.name"}}</div>
+				<input type="number" step="1" name="system.attributes.hitpoints.max" value="{{system.attributes.hitpoints.max}}" title="{{localize "HELLAS.attributes.hitpoints.max.name"}}" {{#unless editable}}disabled{{/unless}}>
+			</div>
+		</div>
+		<div class="hellas-resource gold-foil-bkgd">
+			<div class="hellas-titling" data-tooltip="{{localize "HELLAS.attributes.glory.description"}}">{{localize "HELLAS.attributes.glory.name"}}</div>
+			<input type="number" step="1" name="system.attributes.glory.value" value="{{system.attributes.glory.value}}" title="{{localize "HELLAS.attributes.glory.name"}}" {{#unless editable}}disabled{{/unless}}>
+		</div>
+		<div class="hellas-resource aluminum-foil-bkgd">
+			<div class="hellas-titling" data-tooltip="{{localize "HELLAS.attributes.heropoints.description"}}">{{localize "HELLAS.attributes.heropoints.name"}} <i class="fas fa-info-circle" data-tooltip-html="{{heropointsTooltip}}"></i></div>
+			<input type="number" step="1" name="system.attributes.heropoints.value" value="{{system.attributes.heropoints.value}}" title="{{localize "HELLAS.attributes.heropoints.name"}}" {{#unless editable}}disabled{{/unless}}>
+		</div>
+		<div class="hellas-resource aluminum-foil-bkgd">
+			<div class="hellas-titling">{{localize "HELLAS.character.xp.name"}} <i class="fas fa-info-circle" data-tooltip-html="{{xpTooltip}}"></i></div>
+			<input type="text" name="system.xp" value="{{system.xp}}" title="{{localize "HELLAS.character.xp.name"}}" {{#unless editable}}disabled{{/unless}}>
+		</div>
+	</div>
+
+	{{!-- Fate points --}}
+	<div class="hellas-fate-row">
+		<span class="hellas-titling hellas-fate-label" data-action="fateSet" data-value="0" title="{{fate.title}}">{{localize "HELLAS.attributes.fatepoints.name"}}</span>
+		<div class="fatepoints-line-bkgd hellas-fate-dots">
+			{{#each fate.dots}}
+				<span class="hellas-fate-dot {{#if this.filled}}filled{{/if}}" data-action="fateSet" data-value="{{this.num}}">
+					{{~#if this.last}}<i class="fas fa-skull-crossbones" title="{{localize "HELLAS.character.status.dead.title"}}"></i>{{/if~}}
+				</span>
+			{{/each}}
+		</div>
+	</div>
+
+	<div class="greek-meander-bkgd"></div>
+
+	<div class="hellas-two-col">
+		<div>
+			{{!-- Skills --}}
+			<table class="hellas-table skills">
+				<thead>
+				<tr><td colspan="7" class="hellas-titling text-center">{{localize "HELLAS.section.skills.title"}}</td></tr>
+				<tr>
+					<td></td>
+					<td class="hellas-titling text-center">{{localize "HELLAS.skill.column.name"}}</td>
+					<td></td>
+					<td class="hellas-titling text-center">{{localize "HELLAS.skill.column.level"}}</td>
+					<td class="hellas-titling text-center">{{localize "HELLAS.skill.column.attr"}}</td>
+					<td class="hellas-titling text-center">{{localize "HELLAS.skill.column.rating"}}</td>
+					<td class="text-center"><a data-action="itemCreate" data-type="skill" title="{{localize "HELLAS.skills.controls.add"}}"><i class="fas fa-plus"></i></a></td>
+				</tr>
+				</thead>
+				<tbody>
+				{{#each skills}}
+					<tr class="item draggable" data-item-id="{{this.id}}">
+						<td>{{#if this.hasNotes}}<i class="fas fa-info-circle" data-tooltip-html="{{this.tooltip}}"></i>{{else}}<i class="fas fa-info-circle hellas-disabled"></i>{{/if}}</td>
+						<td>{{this.name}}</td>
+						<td class="text-center"><a data-action="itemRoll" data-item-id="{{this.id}}" title="{{localize "HELLAS.item.skill.roll"}}"><i class="fas fa-dice-d20"></i></a></td>
+						<td class="text-center">{{this.system.level.value}}</td>
+						<td class="text-center">{{this.system.attribute}}</td>
+						<td class="text-center">{{this.system.level.max}}</td>
+						<td class="text-center">
+							<a data-action="itemEdit" data-item-id="{{this.id}}" title="{{localize "HELLAS.skills.controls.edit"}}"><i class="fas fa-edit"></i></a>
+							<a data-action="itemDelete" data-item-id="{{this.id}}" title="{{localize "HELLAS.skills.controls.delete"}}"><i class="fas fa-trash"></i></a>
+						</td>
+					</tr>
+				{{/each}}
+				</tbody>
+			</table>
+
+			{{!-- Dynamisms --}}
+			<table class="hellas-table">
+				<thead>
+				<tr><td colspan="7" class="hellas-titling text-center">{{localize "HELLAS.section.dynamism.title"}}</td></tr>
+				<tr>
+					<td></td>
+					<td class="hellas-titling text-center">{{localize "HELLAS.dynamism.column.name"}}</td>
+					<td></td>
+					<td class="hellas-titling text-center">{{localize "HELLAS.dynamism.column.dod"}}</td>
+					<td class="hellas-titling text-center">{{localize "HELLAS.dynamism.column.range"}}</td>
+					<td class="hellas-titling text-center">{{localize "HELLAS.dynamism.column.duration"}}</td>
+					<td class="text-center"><a data-action="itemCreate" data-type="dynamism" title="{{localize "HELLAS.dynamism.controls.add"}}"><i class="fas fa-plus"></i></a></td>
+				</tr>
+				</thead>
+				<tbody>
+				{{#each dynamisms}}
+					<tr class="item draggable" data-item-id="{{this.id}}">
+						<td><i class="fas fa-info-circle" data-tooltip-html="{{this.tooltip}}"></i></td>
+						<td>{{this.name}}</td>
+						<td class="text-center"><a data-action="itemRoll" data-item-id="{{this.id}}" title="{{localize "HELLAS.item.dynamism.roll"}}"><i class="fas fa-dice-d20"></i></a></td>
+						<td class="text-center">{{this.system.dod}}</td>
+						<td class="text-center">{{this.system.range}}</td>
+						<td class="text-center">{{this.system.duration}}</td>
+						<td class="text-center">
+							<a data-action="itemEdit" data-item-id="{{this.id}}" title="{{localize "HELLAS.dynamism.controls.edit"}}"><i class="fas fa-edit"></i></a>
+							<a data-action="itemDelete" data-item-id="{{this.id}}" title="{{localize "HELLAS.dynamism.controls.delete"}}"><i class="fas fa-trash"></i></a>
+						</td>
+					</tr>
+				{{/each}}
+				</tbody>
+			</table>
+		</div>
+		<div>
+			{{!-- Weapons --}}
+			<table class="hellas-table">
+				<thead>
+				<tr><td colspan="9" class="hellas-titling text-center">{{localize "HELLAS.section.weapons.title"}}</td></tr>
+				<tr>
+					<td></td>
+					<td class="hellas-titling text-center">{{localize "HELLAS.weapon.column.name"}}</td>
+					<td></td>
+					<td class="hellas-titling text-center">{{localize "HELLAS.weapon.column.acc"}}</td>
+					<td class="hellas-titling text-center">{{localize "HELLAS.weapon.column.dr"}}</td>
+					<td class="hellas-titling text-center">{{localize "HELLAS.weapon.column.rof"}}</td>
+					<td class="hellas-titling text-center">{{localize "HELLAS.weapon.column.ammo"}}</td>
+					<td class="hellas-titling text-center">{{localize "HELLAS.weapon.column.rng"}}</td>
+					<td class="text-center"><a data-action="itemCreate" data-type="weapon" title="{{localize "HELLAS.weapons.controls.add"}}"><i class="fas fa-plus"></i></a></td>
+				</tr>
+				</thead>
+				<tbody>
+				{{#each weapons}}
+					<tr class="item draggable" data-item-id="{{this.id}}">
+						<td><i class="fas fa-info-circle" data-tooltip-html="{{this.tooltip}}"></i></td>
+						<td>{{this.name}}</td>
+						<td class="text-center"><a data-action="itemRoll" data-item-id="{{this.id}}" title="{{localize "HELLAS.item.weapon.roll"}}"><i class="fas fa-dice-d20"></i></a></td>
+						<td class="text-center">{{this.system.acc}}</td>
+						<td class="text-center">{{this.system.dr}}{{this.drSuffix}}</td>
+						<td class="text-center">{{this.system.rof}}</td>
+						<td class="text-center">{{this.system.ammo}}</td>
+						<td class="text-center">{{this.system.rng}}</td>
+						<td class="text-center">
+							<a data-action="itemEdit" data-item-id="{{this.id}}" title="{{localize "HELLAS.weapons.controls.edit"}}"><i class="fas fa-edit"></i></a>
+							<a data-action="itemDelete" data-item-id="{{this.id}}" title="{{localize "HELLAS.weapons.controls.delete"}}"><i class="fas fa-trash"></i></a>
+						</td>
+					</tr>
+				{{/each}}
+				</tbody>
+			</table>
+
+			{{!-- Initiative --}}
+			<table class="hellas-table">
+				<thead>
+				<tr><td colspan="4" class="hellas-titling text-center">{{localize "HELLAS.section.initiative.title"}}</td></tr>
+				<tr>
+					<td colspan="2" class="hellas-titling text-center">{{localize "HELLAS.initiative.column.firstround.title"}}</td>
+					<td colspan="2" class="hellas-titling text-center">{{localize "HELLAS.initiative.column.followingrounds.title"}}</td>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<td class="text-center"><a data-action="initiativeRoll" data-initiative="first" title="{{localize "HELLAS.initiative.modifiers.firstround.roll"}}"><i class="fas fa-dice-d20"></i></a></td>
+					<td><input type="number" step="1" name="system.initiative.modifiers.first" value="{{system.initiative.modifiers.first}}" aria-label="{{localize "HELLAS.initiative.column.firstround.label"}}" {{#unless editable}}disabled{{/unless}}></td>
+					<td class="text-center"><a data-action="initiativeRoll" data-initiative="following" title="{{localize "HELLAS.initiative.modifiers.followingrounds.roll"}}"><i class="fas fa-dice-d20"></i></a></td>
+					<td><input type="number" step="1" name="system.initiative.modifiers.following" value="{{system.initiative.modifiers.following}}" aria-label="{{localize "HELLAS.initiative.column.followingrounds.label"}}" {{#unless editable}}disabled{{/unless}}></td>
+				</tr>
+				</tbody>
+			</table>
+
+			{{!-- Armor --}}
+			<table class="hellas-table">
+				<thead>
+				<tr><td colspan="6" class="hellas-titling text-center">{{localize "HELLAS.section.armor.title"}}</td></tr>
+				<tr>
+					<td></td>
+					<td class="hellas-titling text-center">{{localize "HELLAS.armor.column.name"}}</td>
+					<td class="hellas-titling text-center">{{localize "HELLAS.armor.column.active"}}</td>
+					<td class="hellas-titling text-center">{{localize "HELLAS.armor.column.pr"}}</td>
+					<td class="hellas-titling text-center">{{localize "HELLAS.armor.column.parry"}}</td>
+					<td class="text-center"><a data-action="itemCreate" data-type="armor" title="{{localize "HELLAS.armor.controls.add"}}"><i class="fas fa-plus"></i></a></td>
+				</tr>
+				</thead>
+				<tbody>
+				{{#each armor}}
+					<tr class="item draggable" data-item-id="{{this.id}}">
+						<td><i class="fas fa-info-circle" data-tooltip-html="{{this.tooltip}}"></i></td>
+						<td>{{this.name}}</td>
+						<td class="text-center">
+							<a data-action="armorToggle" data-item-id="{{this.id}}"
+							   title="{{#if this.system.active}}{{localize "HELLAS.armor.active.title"}}{{else}}{{localize "HELLAS.armor.inactive.title"}}{{/if}}">
+								{{#if this.system.active}}<i class="fas fa-check-square"></i>{{else}}<i class="far fa-square"></i>{{/if}}
+							</a>
+						</td>
+						<td class="text-center">{{this.system.pr}}{{this.prSuffix}}</td>
+						<td class="text-center">{{this.system.parry}}</td>
+						<td class="text-center">
+							<a data-action="itemEdit" data-item-id="{{this.id}}" title="{{localize "HELLAS.armor.controls.edit"}}"><i class="fas fa-edit"></i></a>
+							<a data-action="itemDelete" data-item-id="{{this.id}}" title="{{localize "HELLAS.armor.controls.delete"}}"><i class="fas fa-trash"></i></a>
+						</td>
+					</tr>
+				{{/each}}
+				</tbody>
+				<tfoot>
+				<tr>
+					<td colspan="6">
+						<div class="hellas-armor-totals">
+							<div>{{localize "HELLAS.armor.total.pr" total=armorTotals.pr}}</div>
+							<div>{{localize "HELLAS.armor.total.dex" total=armorTotals.dexterity}}</div>
+							<div>{{localize "HELLAS.armor.total.per" total=armorTotals.perception}}</div>
+						</div>
+					</td>
+				</tr>
+				</tfoot>
+			</table>
+
+			{{!-- Talents --}}
+			<table class="hellas-table">
+				<thead>
+				<tr><td colspan="3" class="hellas-titling text-center">{{localize "HELLAS.section.talent.title"}}</td></tr>
+				<tr>
+					<td></td>
+					<td class="hellas-titling text-center">{{localize "HELLAS.talent.column.name"}}</td>
+					<td class="text-center"><a data-action="itemCreate" data-type="talent" title="{{localize "HELLAS.talent.controls.add"}}"><i class="fas fa-plus"></i></a></td>
+				</tr>
+				</thead>
+				<tbody>
+				{{#each talents}}
+					<tr class="item draggable" data-item-id="{{this.id}}">
+						<td><i class="fas fa-info-circle" data-tooltip-html="{{this.tooltip}}"></i></td>
+						<td>{{this.name}}</td>
+						<td class="text-center">
+							<a data-action="itemEdit" data-item-id="{{this.id}}" title="{{localize "HELLAS.talent.controls.edit"}}"><i class="fas fa-edit"></i></a>
+							<a data-action="itemDelete" data-item-id="{{this.id}}" title="{{localize "HELLAS.talent.controls.delete"}}"><i class="fas fa-trash"></i></a>
+						</td>
+					</tr>
+				{{/each}}
+				</tbody>
+			</table>
+		</div>
+	</div>
+</section>

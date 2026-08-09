@@ -1,0 +1,19 @@
+{
+	"_id": "X1rX7Xue5tuxGBEY",
+	"_key": "!items!X1rX7Xue5tuxGBEY",
+	"name": "Improved Range (Specific)",
+	"type": "talent",
+	"img": "icons/svg/sun.svg",
+	"system": {
+		"desc": "Through long practice, you have improved the range of one of your ranged weapons.",
+		"benefit": "<p>The Hero suffers only half the penalties when using a personal ranged weapon.</p>",
+		"notes": ""
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

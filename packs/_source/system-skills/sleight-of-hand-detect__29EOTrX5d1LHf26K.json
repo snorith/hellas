@@ -1,0 +1,25 @@
+{
+	"_id": "29EOTrX5d1LHf26K",
+	"_key": "!items!29EOTrX5d1LHf26K",
+	"name": "Sleight of Hand - Detect",
+	"type": "skill",
+	"img": "systems/hellas/assets/icons/misdirection.svg",
+	"system": {
+		"skill": "sleightofhand",
+		"attribute": "PER",
+		"specifier": "detect",
+		"specifierCustom": "",
+		"level": {
+			"value": 0,
+			"max": 0
+		},
+		"notes": "<h1>Slight of Hand (*)</h1>\n<p><strong>Training Time (TT): 12 weeks</strong></p>\n<p>Ability to perform various tricks and legerdemain, including card tricks, palming (concealing small objects in the hand), passing or switching small objects without being detected, picking pockets, and so on. Individuals with this talent can employ it to cheat or &ldquo;fix&rdquo; games of chance (DEX) or to detect cheaters (PER). Knowledge of the game to fix is required.</p>"
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

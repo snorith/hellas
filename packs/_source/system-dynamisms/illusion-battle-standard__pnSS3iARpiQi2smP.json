@@ -1,0 +1,24 @@
+{
+	"_id": "pnSS3iARpiQi2smP",
+	"_key": "!items!pnSS3iARpiQi2smP",
+	"name": "Illusion - Battle Standard",
+	"type": "dynamism",
+	"img": "icons/svg/lightning.svg",
+	"system": {
+		"skillid": "dynamism",
+		"dod": -36,
+		"dodinfo": "Level -1 base\n-3 for Sound\n-10 for Range\n-10 for Duration\n-12 for Magnitude",
+		"range": "60m",
+		"tradition": "Delphoian, Illusion",
+		"duration": "20 rounds (2 minutes)",
+		"other": "",
+		"notes": "<p>In ages past, the Legionnaires were a military force to be reckoned with. In those days this Dynamistic effect was used to rally forces from around an entire battlefield to a central location. By focusing their will, the Legionnaire can create the image of a huge battle standard in the sky, 60 meters above their location. The standard, usually a glowing golden Monad, is as large as personal starship. In addition, the Legionnaire&rsquo;s voice is amplified to be as loud as thunder, so that they might issue orders to everyone in the area.</p>"
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

@@ -1,0 +1,19 @@
+{
+	"_id": "VuYIGvjiya5iXJlL",
+	"_key": "!items!VuYIGvjiya5iXJlL",
+	"name": "Blend In (Specific)",
+	"type": "talent",
+	"img": "icons/svg/sun.svg",
+	"system": {
+		"desc": "You are especially adept at hiding in a particular environment.",
+		"benefit": "<p>Benefit: The Hero adds triple his INT (minimum of +3) to Stealth checks in one of the following environments: forests, mountains, steppes, swamps, desert, tundra, or urban.</p>\n<p><strong>Note</strong>: This Talent may be selected more than once. Each time it applies to a different terrain type.</p>",
+		"notes": ""
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

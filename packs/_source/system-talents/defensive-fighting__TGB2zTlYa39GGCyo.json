@@ -1,0 +1,19 @@
+{
+	"_id": "TGB2zTlYa39GGCyo",
+	"_key": "!items!TGB2zTlYa39GGCyo",
+	"name": "Defensive Fighting",
+	"type": "talent",
+	"img": "icons/svg/sun.svg",
+	"system": {
+		"desc": "You have mastered the art of making yourself hard to hit in combat.",
+		"benefit": "<p>For each -1 taken on the Attack roll, the character's Defense is enhanced by +1, up to a maximum of double the Hero's CR.</p>",
+		"notes": ""
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

@@ -1,0 +1,24 @@
+{
+	"_id": "LHkTc3fo4M71UYMk",
+	"_key": "!items!LHkTc3fo4M71UYMk",
+	"name": "Manifest - Always Prepared",
+	"type": "dynamism",
+	"img": "icons/svg/lightning.svg",
+	"system": {
+		"skillid": "dynamism",
+		"dod": -5,
+		"dodinfo": "Base -1 level\n-4 for Duration",
+		"range": "20m",
+		"tradition": "Delphoian, Manifest",
+		"duration": "50 rounds (5 minutes)",
+		"other": "Mass Produced 5 kg",
+		"notes": "<p>Those Legionnaires who are able to learn Dynamism are often taught to always be prepared, and always be sure of themselves, even when unarmed. By concentrating, a spear or sword comprised of glowing energy forms in their hands or the hands of any chosen target within range. The weapon is functionally the same as a Hoplite Infantry Xiphos (DR 10) or a Spartan Infantry Spear (DR 7).</p>"
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

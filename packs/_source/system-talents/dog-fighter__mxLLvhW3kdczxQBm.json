@@ -1,0 +1,19 @@
+{
+	"_id": "mxLLvhW3kdczxQBm",
+	"_key": "!items!mxLLvhW3kdczxQBm",
+	"name": "Dog Fighter",
+	"type": "talent",
+	"img": "icons/svg/sun.svg",
+	"system": {
+		"desc": "You are perfectly at home in the cockpit of a fighter craft and revel in the excitement of air combat.",
+		"benefit": "<p>The Hero receives a +2 bonus to Pilot and Aerial Combat Omni Table Rolls. Additionally, she may take up to 2 actions in a turn while engaged in air combat without the usual penalty for the second action.</p>",
+		"notes": ""
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

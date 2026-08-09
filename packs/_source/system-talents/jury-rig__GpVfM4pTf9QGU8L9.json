@@ -1,0 +1,19 @@
+{
+	"_id": "GpVfM4pTf9QGU8L9",
+	"_key": "!items!GpVfM4pTf9QGU8L9",
+	"name": "Jury Rig",
+	"type": "talent",
+	"img": "icons/svg/sun.svg",
+	"system": {
+		"desc": "You have a special knack for repairing objects with whatever spare parts or materials might be at hand.",
+		"benefit": "<p>The Hero receives triple his INT (minimum of +3) to rolls when repairing a mechanical or electronic object.</p>",
+		"notes": ""
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

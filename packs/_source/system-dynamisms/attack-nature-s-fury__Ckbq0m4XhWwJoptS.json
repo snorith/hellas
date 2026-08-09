@@ -1,0 +1,24 @@
+{
+	"_id": "Ckbq0m4XhWwJoptS",
+	"_key": "!items!Ckbq0m4XhWwJoptS",
+	"name": "Attack - Nature’s Fury",
+	"type": "dynamism",
+	"img": "icons/svg/lightning.svg",
+	"system": {
+		"skillid": "dynamism",
+		"dod": -35,
+		"dodinfo": "Level -12 base\n-3 for Tradition\n-5 for Range\n-15 for Area",
+		"range": "35m",
+		"tradition": "Whisperer, Attack",
+		"duration": "Instant",
+		"other": "Area 5 meter radius",
+		"notes": "<p>This Dynamistic effect is occasionally used by Nymphas to defend their territories. When unleashed, a large area of the local vegetation and soil turn against those within it to devastating effect: branches whip, thorns pierce, jagged rocks suddenly dash upwards. Often, the Whisperer will set a delay upon the effect, creating a dangerous snare for those who may be pursuing them.&nbsp;</p>"
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

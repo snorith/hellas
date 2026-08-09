@@ -1,0 +1,19 @@
+{
+	"_id": "Uq9JmttfgPrtckmp",
+	"_key": "!items!Uq9JmttfgPrtckmp",
+	"name": "Haggle",
+	"type": "talent",
+	"img": "icons/svg/sun.svg",
+	"system": {
+		"desc": "You are adept at the fine art of haggling.",
+		"benefit": "<p>The Hero gains a bonus equal to triple his CHA (minimum of +3) to Trading when used in a mercantile situation. Additionally, whenever she rolls a full success using Trading to buy or sell goods, she receives a +/- 20% to the value of the goods sold/bought. A critical success means she may buy or sell the goods at +/- 50% of their normal value.</p>",
+		"notes": ""
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

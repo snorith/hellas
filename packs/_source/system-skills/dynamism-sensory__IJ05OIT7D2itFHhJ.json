@@ -1,0 +1,25 @@
+{
+	"_id": "IJ05OIT7D2itFHhJ",
+	"_key": "!items!IJ05OIT7D2itFHhJ",
+	"name": "Dynamism - Sensory",
+	"type": "skill",
+	"img": "icons/svg/lightning.svg",
+	"system": {
+		"skill": "mode",
+		"attribute": "PER",
+		"specifier": "sensory",
+		"specifierCustom": "perception",
+		"level": {
+			"value": 0,
+			"max": 0
+		},
+		"notes": "<h1>Dynamism Mode: Sensory (*)</h1>\n<p><strong>Training Time (TT): 24 weeks</strong></p>\n<p><strong>Range</strong>: 20 meters (-1 to activation roll per extra 3 meters of range).</p>\n<p><strong>PER</strong> : +1/-1 per level.</p>\n<p><strong>Scrying Range</strong>: 1 kilometer (-1 to activation roll per extra kilometer of range).</p>\n<p><strong>Scrying Time Range</strong>: 1 hour into past or future (-1 to activation roll per hour either way).</p>\n<p><strong>Duration</strong>: 1 minute (-1 to activation roll per additional minute).</p>\n<h2>Perception</h2>\n<p>The Hero uses this mode to enhance his or others' Perception abilities. Perception is not limited to what the Hero can see, hear, smell, or touch, but could also be used to enhance a person's empathy, allowing him to discern how a person is feeling or if they are telling the truth. The level of the Dynamism is added to the Hero's PER when trying to sense.</p>\n<blockquote>\n<p><strong>Example</strong>: Alcmene knows that she is talking to a liar and wants to get at the truth. She uses her Sensory mode to detect lies. She successfully cast the Dynamism at level 10 and may now add +10 to her PER + Deduce Motive when trying to root out the lie.</p>\n<p><strong>Example</strong>: Alcmene is in a dark cave and has a sight penalty of -6 to any sightbased actions. She uses her Sensory Mode to enhance her night vision, giving +6 to negate the darkness penalty.</p>\n</blockquote>\n<h2>Locate Object/Person</h2>\n<p>The Sense Mode is used to divine the location of specific people, objects, and creatures. The Hero uses his Dynamism to add to his PER in order to find a person, place, or thing.</p>\n<blockquote>\n<p><strong>Example</strong>: Alcmene is in a forest looking for an entrance to an underground waterway. The GM decides that the metal grate is hidden under a pile of leaves 25m away and gives Alcmene a DoD-8 to find it. She reaches out with her Sensory ability with a range of 32m and an enhancement of +10 PER. The total DoD to cast the Dynamism is -14. Since the grate is within range, the GM allows her to roll her PER+10 versus the DoD-8. If the grate had been 50m away she would not be able to use her bonus since it was outside her range.</p>\n</blockquote>\n<h2>Scrying</h2>\n<p>Perhaps the most useful Sensory effect is clairvoyance &mdash; the ability to see into other locations via Dynamistic vision. The range of a clairvoyant Dynamism Power is limited to one kilometer per power level. Only the five standard senses are effective within a clairvoyant Dynamism Power.</p>\n<h2>Reverse: Obscure</h2>\n<p>The reverse of the Sensory Mode is Obscure, and it conceals objects, beings, and locations from both Dynamist and mundane detection.</p>\n<p>Use the Obscure Dynamism Power as the Difficulty Modifier against any attempts to divine what is being hidden. Obscure effects cannot be deployed to make anything truly invisible, rather they make them go unnoticed.</p>\n<blockquote>\n<p><strong>Example</strong>: Alcmene has the stolen amulet and is trying to get past a checkpoint where guards are searching travelers' belongings. Alcmene uses the Sensory Mode to obfuscate the amulet with a penalty of -8. When the guards search her things, they have a -8 penalty to do so.</p>\n<p><strong>Example</strong>: Alcmene is lying to the guard about where she is headed but doesn't trust her own abilities at hiding the truth. She uses the Sensory Mode to add a penalty of -6 to the guard's ability to deduce her motives.</p>\n</blockquote>"
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

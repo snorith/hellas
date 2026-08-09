@@ -1,0 +1,25 @@
+{
+	"_id": "jMHSRxh8FwyYzdjC",
+	"_key": "!items!jMHSRxh8FwyYzdjC",
+	"name": "Computers - Specify",
+	"type": "skill",
+	"img": "systems/hellas/assets/icons/computing.svg",
+	"system": {
+		"skill": "computers",
+		"attribute": "INT",
+		"specifier": "specify",
+		"specifierCustom": "",
+		"level": {
+			"value": 0,
+			"max": 0
+		},
+		"notes": "<h1>Computers (Specific)</h1>\n<p><strong>Training Time (TT): 24 weeks</strong></p>\n<p>This skill is used whenever a character needs to use or obtain data from a computer or computer-like device, write or modify computer code, or to bypass computer-controlled devices. Each sub-skill covers a major type of computer system such as personal computers and laptops, mainframe computers, or starship systems (life support, communications, engineering, etc.).</p>"
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

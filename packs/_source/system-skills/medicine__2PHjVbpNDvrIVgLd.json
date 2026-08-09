@@ -1,0 +1,25 @@
+{
+	"_id": "2PHjVbpNDvrIVgLd",
+	"_key": "!items!2PHjVbpNDvrIVgLd",
+	"name": "Medicine",
+	"type": "skill",
+	"img": "icons/svg/heal.svg",
+	"system": {
+		"skill": "medicine",
+		"attribute": "INT",
+		"specifier": "swimming",
+		"specifierCustom": "",
+		"level": {
+			"value": 0,
+			"max": 0
+		},
+		"notes": "<h1>Medicine</h1>\n<p><strong>Training Time (TT): 40 weeks</strong></p>\n<p>The skill needed to properly treat the ill and injured. While the Heal skill covers basic first aid, those with the Medicine skill may effectively diagnose and treat more severe injuries and diseases, and may even perform surgery when required and when the proper facilities and equipment are available. The proper use of the Medicine skill will restore up to twice the Skill Rating to wounded characters, providing the physician has sufficient equipment, medicines, and time. A full Medicine skill check requires 12-skill level hours of time. The skill also has the added benefit of increasing a patient&rsquo;s natural healing rate by +3 Hit Points per day with a successful skill roll versus a DoD-5 (those reduced to 75% HP), -10 (for those reduced 50%), or -15 (for those reduced 75% or more).</p>"
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

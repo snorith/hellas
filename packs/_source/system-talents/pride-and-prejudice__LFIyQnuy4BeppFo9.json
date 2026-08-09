@@ -1,0 +1,19 @@
+{
+	"_id": "LFIyQnuy4BeppFo9",
+	"_key": "!items!LFIyQnuy4BeppFo9",
+	"name": "Pride and Prejudice",
+	"type": "talent",
+	"img": "icons/svg/sun.svg",
+	"system": {
+		"desc": "Your family, clan, tribe, or nation has a long-standing antipathy or bigotry for another such group.",
+		"benefit": "<p>Select a family, clan, or culture from your own or a neighboring realm. Driven by your hatred of this rival, the Hero may add triple his WIL (minimum of +3) to his CR when fighting a member or agents of this rival group. The Hero may do this a number of times during combat equal to WIL+1 (minimum of once).</p>",
+		"notes": ""
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

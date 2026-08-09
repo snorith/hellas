@@ -1,0 +1,25 @@
+{
+	"_id": "mGxOBGTtmHJi9MZL",
+	"_key": "!items!mGxOBGTtmHJi9MZL",
+	"name": "Pankration",
+	"type": "skill",
+	"img": "systems/hellas/assets/icons/punch.svg",
+	"system": {
+		"skill": "pankration",
+		"attribute": "CR",
+		"specifier": "shield",
+		"specifierCustom": "aura",
+		"level": {
+			"value": 0,
+			"max": 0
+		},
+		"notes": "<h1>Prankration</h1>\n<p><strong>Training Time (TT): 45 weeks</strong></p>\n<p>Proficiency in Pankration, a style of weaponless combat. Basic moves include punches, snap kicks, double leaping-kicks (employed versus two opponents at close range, with no penalty for two attacks), head-butts, throws, and various disabling blows.</p>\n<p>An unarmed stylist inflicts a Damage Rating of 4 while unarmed (+STR). Targets struck with a critical success must make a CON roll (minus the attacker's STR) or be stunned for 2+STR rounds (minimum of 2 rounds). Stunned characters suffer as per the stun rules.</p>\n<p>&nbsp;</p>"
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

@@ -1,0 +1,24 @@
+{
+	"_id": "xYFzvrDJvLKh351T",
+	"_key": "!items!xYFzvrDJvLKh351T",
+	"name": "Sensory - The Sheltering Green",
+	"type": "dynamism",
+	"img": "icons/svg/lightning.svg",
+	"system": {
+		"skillid": "dynamism",
+		"dod": -14,
+		"dodinfo": "Base -10 level\n-4 for Duration",
+		"range": "–",
+		"tradition": "Whisperer, Obscure",
+		"duration": "50 rounds (5 minutes)",
+		"other": "PER Mod -10",
+		"notes": "<p>Humming a soft song to Gaia, the Whisperer can wrap a cloak of green around himself, drawing the native local plant life closer to him, hiding him from view. Anyone attempting to spot the Nymphas has an additional -10 penalty to do so.</p>"
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

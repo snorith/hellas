@@ -1,0 +1,25 @@
+{
+	"_id": "KgPUG6O1vaAF0r4I",
+	"_key": "!items!KgPUG6O1vaAF0r4I",
+	"name": "Mounted",
+	"type": "skill",
+	"img": "systems/hellas/assets/icons/horse-head.svg",
+	"system": {
+		"skill": "mounted",
+		"attribute": "CR",
+		"specifier": "shield",
+		"specifierCustom": "aura",
+		"level": {
+			"value": 0,
+			"max": 0
+		},
+		"notes": "<h1>Mounted Combat</h1>\n<p><strong>Training Time (TT): 20 weeks</strong></p>\n<p>Ability to fight from the back of a mount (such as a horse, camel, or motorcycle) without penalty. Mounted combat enables a character to direct a mount to take an action in combat without incurring a multiple action penalty to the character's own actions. Steeds can be directed to move at their normal SPD, or to attack or evade attacks at their Ability Level.</p>\n<p>Characters can, alternatively, engage in a charging attack, adding the mount's STR and SPD as damage modifiers in place of the character's own STR. When attacking from a mount, use the lesser of the weapon skill and the Mounted Combat skill to resolve the action.</p>\n<blockquote>\n<p>Example: A warrior with a Weapon skill of +6 and a Mounted Combat skill of +4 would attack from a mount at +4.&nbsp;</p>\n</blockquote>\n<p>Riding or Drive is a prerequisite for Mounted Combat, but the Mounted Combat Skill Rating may be substituted for Ride at no penalty.</p>"
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

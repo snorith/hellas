@@ -1,0 +1,25 @@
+{
+	"_id": "lCqtIn1Ly7qIjpkU",
+	"_key": "!items!lCqtIn1Ly7qIjpkU",
+	"name": "Diplomacy",
+	"type": "skill",
+	"img": "systems/hellas/assets/icons/shaking-hands.svg",
+	"system": {
+		"skill": "diplomacy",
+		"attribute": "CHA",
+		"specifier": "",
+		"specifierCustom": "",
+		"level": {
+			"value": 0,
+			"max": 0
+		},
+		"notes": "<h1>Diplomacy</h1>\n<p><strong>Training Time (TT): 16 weeks</strong></p>\n<p>Knowledge of the finer points of protocol, oratory, and negotiation. Individuals with this talent may seek positions as ambassadors, mercantile representatives, public officials, and so forth. The Diplomacy skill is used to change the attitudes of others, including negotiations of all types. Debates and arguments are resolved using opposed Diplomacy checks. Changing another&rsquo;s attitude using Diplomacy takes at least one minute to accomplish (usually longer).</p>"
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

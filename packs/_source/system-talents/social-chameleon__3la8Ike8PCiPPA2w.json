@@ -1,0 +1,19 @@
+{
+	"_id": "3la8Ike8PCiPPA2w",
+	"_key": "!items!3la8Ike8PCiPPA2w",
+	"name": "Social Chameleon",
+	"type": "talent",
+	"img": "icons/svg/sun.svg",
+	"system": {
+		"desc": "You are well versed in the etiquette of various cultures and social circles.",
+		"benefit": "<p>The Hero receives triple his PER (minimum of +3) to rolls pertaining to social etiquette, morays, or taboos.</p>",
+		"notes": ""
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

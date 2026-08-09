@@ -1,0 +1,19 @@
+{
+	"_id": "w02UaIK5Aza5hXF0",
+	"_key": "!items!w02UaIK5Aza5hXF0",
+	"name": "Wealthy",
+	"type": "talent",
+	"img": "icons/svg/sun.svg",
+	"system": {
+		"desc": "You have either been blessed by being born into a wealthy family or shrewd business dealings.",
+		"benefit": "<p>If taken at Character Creation the Hero begins play with 10 times the normal starting currency. During the game, the Hero may request additional funds from his source of wealth (family, business, treasure trove, etc.). To do so, the Hero makes CHA roll with a DoD-1 per 500dm.&nbsp;</p>\n<p>If successful, the Hero receives the requested funds between 1 and 48 hours later. A partial success means liquid cash is tight and he receives only half the request. The Hero may ask for another advance in a number of weeks equal to 4 + the previous wealth difficulty.&nbsp;</p>\n<blockquote>\n<p>Example: A Hero wants a cash advance of 2,000dm. He must make a CHA roll with a difficulty of -4. If successful, the money arrives with 48 hours. He may make another withdrawal in 8 weeks.</p>\n</blockquote>\n<p><strong>NOTE</strong>: The talent may be purchased multiple times. Each purchase of the talent after the first adds +3 to the Hero&rsquo;s CHA roll for the sake of making the roll.&nbsp;</p>\n<p>&nbsp;</p>",
+		"notes": ""
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

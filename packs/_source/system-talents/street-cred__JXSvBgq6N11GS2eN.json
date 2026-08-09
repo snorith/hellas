@@ -1,0 +1,19 @@
+{
+	"_id": "JXSvBgq6N11GS2eN",
+	"_key": "!items!JXSvBgq6N11GS2eN",
+	"name": "Street Cred",
+	"type": "talent",
+	"img": "icons/svg/sun.svg",
+	"system": {
+		"desc": "You have earned a respected reputation amongst those who live on the underbelly of society.",
+		"benefit": "<p>The Hero receives triple his CHA (minimum of +3) to rolls as it pertains to street people, hustlers, prostitutes, and petty criminals of a particular city.</p>",
+		"notes": ""
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

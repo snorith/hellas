@@ -1,0 +1,19 @@
+{
+	"_id": "ysJ7zh6HbrYHnvWz",
+	"_key": "!items!ysJ7zh6HbrYHnvWz",
+	"name": "Animal Magnetism",
+	"type": "talent",
+	"img": "icons/svg/sun.svg",
+	"system": {
+		"desc": "You have a natural way with animals.",
+		"benefit": "<p>The Hero adds triple his CHA (minimum of +3) to rolls pertaining to Animal Training and Ride skills.</p>",
+		"notes": ""
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

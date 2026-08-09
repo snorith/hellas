@@ -1,0 +1,19 @@
+{
+	"_id": "gDfi0jLfNyc2VpIx",
+	"_key": "!items!gDfi0jLfNyc2VpIx",
+	"name": "Brutal Throw",
+	"type": "talent",
+	"img": "icons/svg/sun.svg",
+	"system": {
+		"desc": "When attacking unarmed, you may make a particularly damaging throw.",
+		"benefit": "<p>After making a successful grapple attack, the character may throw his opponent as normal but this throw has a chance of stunning the thrown opponent. The individual thrown must succeed in a CON roll with a DoD equal to the thrower's STR or be stunned and unable to act or defend himself for rounds equal to the thrower's STR+3.</p>",
+		"notes": ""
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

@@ -1,0 +1,19 @@
+{
+	"_id": "ssdAeufhQLDDoq9C",
+	"_key": "!items!ssdAeufhQLDDoq9C",
+	"name": "Two-Weapon Defense",
+	"type": "talent",
+	"img": "icons/svg/sun.svg",
+	"system": {
+		"desc": "The character has learned how to use two weapons to his defensive advantage while fighting.",
+		"benefit": "<p>When the character is fighting with a weapon in either hand, he may use the second weapon in a defensive manner, in which case his defense is increased by +2. If the character uses his second weapon to make an attack his defense reverts to normal for that round.</p>",
+		"notes": ""
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

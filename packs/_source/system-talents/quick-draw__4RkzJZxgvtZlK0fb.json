@@ -1,0 +1,19 @@
+{
+	"_id": "4RkzJZxgvtZlK0fb",
+	"_key": "!items!4RkzJZxgvtZlK0fb",
+	"name": "Quick Draw",
+	"type": "talent",
+	"img": "icons/svg/sun.svg",
+	"system": {
+		"desc": "The ability to draw a weapon with startling swiftness.",
+		"benefit": "<p>A Hero may draw his weapon as a free action and does not suffer a multiple action penalty. When drawing a weapon the Hero receives a bonus equal to triple his SPD (Minimum of +3) to Initiative rolls. This bonus only applies to the first round of combat.</p>",
+		"notes": ""
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

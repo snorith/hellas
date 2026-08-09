@@ -1,0 +1,19 @@
+{
+	"_id": "Ub9FiEdWlaDXTEJU",
+	"_key": "!items!Ub9FiEdWlaDXTEJU",
+	"name": "Acute Vision",
+	"type": "talent",
+	"img": "icons/svg/sun.svg",
+	"system": {
+		"desc": "You have exceptional eyesight and see much better than most.",
+		"benefit": "<p>The Hero may add triple her PER (minimum +3) to Perception checks as they relate to vision.</p>",
+		"notes": ""
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

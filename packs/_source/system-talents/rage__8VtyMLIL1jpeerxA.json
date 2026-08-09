@@ -1,0 +1,19 @@
+{
+	"_id": "8VtyMLIL1jpeerxA",
+	"_key": "!items!8VtyMLIL1jpeerxA",
+	"name": "Rage",
+	"type": "talent",
+	"img": "icons/svg/sun.svg",
+	"system": {
+		"desc": "The ability to channel one’s anger in combat.",
+		"benefit": "<p>The Hero may choose to take a penalty on her attack roll to increase the damage dealt. For each -1 penalty taken to the attack roll, +1DR is dealt on a successful hit (up to a maximum of +5DR). The player must state his intention to use this talent before the roll to attack.</p>",
+		"notes": ""
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

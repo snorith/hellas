@@ -1,0 +1,24 @@
+{
+	"_id": "L07WJJVrFaRSsMNI",
+	"_key": "!items!L07WJJVrFaRSsMNI",
+	"name": "Manipulate - The Titans’ Trick",
+	"type": "dynamism",
+	"img": "icons/svg/lightning.svg",
+	"system": {
+		"skillid": "dynamism",
+		"dod": -19,
+		"dodinfo": "Base -10 level\n-9 for Duration",
+		"range": "Self",
+		"tradition": "Sorcery, Manipulate",
+		"duration": "100 rounds (10 minutes)",
+		"other": "",
+		"notes": "<p>The Titanoi are mysterious and inscrutable beings, and so too can Zoran sorcerers be. This sorcerous effect causes the Zoran&rsquo;s body to twist and shift and alter, transforming them completely into a Hellene for a small span of time. Their mental and physical Attributes do not change, but for the duration of the effect, they are a Hellene completely and totally. It is said that Zoran spies often use such sorcery to fool unwitting guards. But the Titanoi are fickle patrons; sorcerers who botch this effect have been known to be transformed into all manner of different shapes and find it difficult to return to their true form.</p>"
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

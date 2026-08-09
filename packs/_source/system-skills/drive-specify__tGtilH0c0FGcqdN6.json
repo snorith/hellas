@@ -1,0 +1,25 @@
+{
+	"_id": "tGtilH0c0FGcqdN6",
+	"_key": "!items!tGtilH0c0FGcqdN6",
+	"name": "Drive - Specify",
+	"type": "skill",
+	"img": "systems/hellas/assets/icons/steering-wheel.svg",
+	"system": {
+		"skill": "drive",
+		"attribute": "DEX",
+		"specifier": "specify",
+		"specifierCustom": "",
+		"level": {
+			"value": 0,
+			"max": 0
+		},
+		"notes": "<h1>Drive (specific)</h1>\n<p><strong>Training Time (TT): 4 weeks</strong></p>\n<p>Ability to operate a single type of land or simple waterborne conveyance, such as a cart, coach, automobile, motorcycle, rowboat, and so forth. This ability does not include navigation skills or other detailed knowledge, which is covered under Lore (Geography) or Navigate.</p>"
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

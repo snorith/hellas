@@ -1,0 +1,25 @@
+{
+	"_id": "bJFQCPPnrdUr3cit",
+	"_key": "!items!bJFQCPPnrdUr3cit",
+	"name": "Command",
+	"type": "skill",
+	"img": "icons/svg/direction.svg",
+	"system": {
+		"skill": "command",
+		"attribute": "CHA",
+		"specifier": "",
+		"specifierCustom": "",
+		"level": {
+			"value": 0,
+			"max": 0
+		},
+		"notes": "<h1>Command</h1>\n<p><strong>Training Time (TT): 20 weeks</strong></p>\n<p>Ability to organize, coordinate, and direct groups of trained NPC combatants. Individuals with this skill can personally command up to 10 combatants or one lower-level sub-commander per level of ability. Each sub-commander can in turn direct 10 combatants or one subordinate per level, thereby establishing a hierarchy of command.</p>"
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

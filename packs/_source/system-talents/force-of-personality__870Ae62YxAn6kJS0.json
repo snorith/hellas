@@ -1,0 +1,19 @@
+{
+	"_id": "870Ae62YxAn6kJS0",
+	"_key": "!items!870Ae62YxAn6kJS0",
+	"name": "Force of Personality",
+	"type": "talent",
+	"img": "icons/svg/sun.svg",
+	"system": {
+		"desc": "You have a strong sense of who you are and what you believe in.",
+		"benefit": "<p>The Hero receives triple his WIL (minimum of +3) to any roll versus fear, intimidation, or torture.</p>",
+		"notes": ""
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

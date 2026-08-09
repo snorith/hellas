@@ -1,0 +1,19 @@
+{
+	"_id": "ioqkDNtII9qURu7J",
+	"_key": "!items!ioqkDNtII9qURu7J",
+	"name": "Advanced Archery Training",
+	"type": "talent",
+	"img": "icons/svg/sun.svg",
+	"system": {
+		"desc": "You have been trained in the effective use of various types of missile weapons.",
+		"benefit": "<p>The Hero receives a bonus equal to his PER (minimum of +1) to rolls involving ranged combat using bows, crossbows, slings, or thrown weapons.</p>",
+		"notes": ""
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

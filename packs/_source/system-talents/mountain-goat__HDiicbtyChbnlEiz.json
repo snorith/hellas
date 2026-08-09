@@ -1,0 +1,19 @@
+{
+	"_id": "HDiicbtyChbnlEiz",
+	"_key": "!items!HDiicbtyChbnlEiz",
+	"name": "Mountain Goat",
+	"type": "talent",
+	"img": "icons/svg/sun.svg",
+	"system": {
+		"desc": "You are especially skilled at maintaining your balance on loose stone, rubble, and steep slopes.",
+		"benefit": "<p>The Hero receives triple his DEX (minimum of +3) to Athletics skill rolls as it relates to the above conditions.</p>",
+		"notes": ""
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

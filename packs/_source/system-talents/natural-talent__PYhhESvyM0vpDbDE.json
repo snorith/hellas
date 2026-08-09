@@ -1,0 +1,19 @@
+{
+	"_id": "PYhhESvyM0vpDbDE",
+	"_key": "!items!PYhhESvyM0vpDbDE",
+	"name": "Natural Talent",
+	"type": "talent",
+	"img": "icons/svg/sun.svg",
+	"system": {
+		"desc": "You have a natural affinity for a particular skill.",
+		"benefit": "<p>Select any one skill. The Hero receives double the appropriate Attribute (minimum of +2) to rolls using this skill. The Hero may also reroll one failed roll with the skill per game.</p>\n<p>&nbsp;</p>\n<p><strong>Note</strong>: Weapons skills are excluded from this talent.</p>",
+		"notes": ""
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

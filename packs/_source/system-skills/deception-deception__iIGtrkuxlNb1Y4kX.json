@@ -1,0 +1,25 @@
+{
+	"_id": "iIGtrkuxlNb1Y4kX",
+	"_key": "!items!iIGtrkuxlNb1Y4kX",
+	"name": "Deception - Deception",
+	"type": "skill",
+	"img": "systems/hellas/assets/icons/misdirection.svg",
+	"system": {
+		"skill": "deception",
+		"attribute": "CHA",
+		"specifier": "deception",
+		"specifierCustom": "",
+		"level": {
+			"value": 0,
+			"max": 0
+		},
+		"notes": "<h1>Deception (*)</h1>\n<p><strong>Training Time (TT): 10 weeks</strong></p>\n<p><strong>Attributes: CHA (deception), INT (disguise)</strong></p>\n<p>The ability to deceive other individuals without arousing their suspicion, and win their trust by deceitful means. Includes the use of various scams, rigged games, and the like. Also includes the ability to disguise one&rsquo;s background, profession, and so forth. A Deception check DoD is usually the target&rsquo;s Deduce Motive Skill Rating.</p>\n<p>&nbsp;</p>\n<p>Disguise is a form of Deception used by characters who wish to change their appearance in some manner, usually involving some form of costume and possibly makeup and prosthetic devices. Your Results Table roll determines how good the disguise is, and the level of the skill is the DoD of others&rsquo; PER check results. If you don&rsquo;t draw any attention to yourself, others do not get to make PER checks. If you come to the attention of people who are suspicious (such as a guard who is watching commoners walking through a city gate), the Disguise check is immediately opposed. You get only one Disguise check per use of the skill, even if several people are making PER checks against it. The Disguise check is made secretly, so that you can&rsquo;t be sure how good the result is</p>"
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

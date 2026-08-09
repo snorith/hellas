@@ -1,0 +1,25 @@
+{
+	"_id": "FLmiNTrVSmjsklXJ",
+	"_key": "!items!FLmiNTrVSmjsklXJ",
+	"name": "Dynamism - Manifest",
+	"type": "skill",
+	"img": "icons/svg/lightning.svg",
+	"system": {
+		"skill": "mode",
+		"attribute": "DYN",
+		"specifier": "manifest",
+		"specifierCustom": "create",
+		"level": {
+			"value": 0,
+			"max": 0
+		},
+		"notes": "<h1>Dynamism Mode: Manifest (*)</h1>\n<p><strong>Training Time (TT): 24 weeks</strong></p>\n<p><strong>Maximum Mass</strong>: 5 Kg per level.</p>\n<p><strong>Maximum Area</strong>: 30 cubic centimeters per level.</p>\n<p><strong>Range</strong>: 20 meters (-1 to casting roll for every 3 meters of extra range).</p>\n<p><strong>Duration</strong>: 1 minutes (-1 to casting roll per additional 1 minute of duration).</p>\n<h2>Create</h2>\n<p>Manifest effects create non-living materials and objects from pure energy and make them appear at the Dynamist's disposal. Up to 5 kilograms of matter, covering an area up to 30 cubic centimeters, can be created per level. The Dynamist must be familiar with the object or material to be created, though simple shapes such as bricks, timber, bows, and swords require no special training or foreknowledge. The creation of exact replicas or finely detailed pieces incurs a -1 to -10 DoD on the casting roll, at the GM's discretion.</p>\n<p>When the duration of the Dynamism ends, the item disappears, unless it has been consumed or mixed with another material. Manifested water still quenches a being's thirst even after the duration of the Dynamism has ended, and manifested metals mixed with others in a forge will remain alloyed after the Dynamism has expired.</p>\n<h2>Reverse: Dematerialize</h2>\n<p>A Hero may want to make an amount of material disappear for a time. When using the mode in this manner the Hero can create holes in walls or make an opponent's weapon vanish from his grasp. When the item is held by an opponent, the Dynamist must add the user's Resolve Skill Rating to the final DoD to cast the power. Once the Dynamism is cast, the Hero must then target and hit the item using his CR + Manifest Mode level versus the target's DEX + Evade. If successful the item is removed from the opponent for the duration of the effect.</p>\n<p><strong>Example Uses of the Manifest Mode</strong></p>\n<blockquote>\n<p>\"I speak with the spirits of the earth and demand that they manifest small round stones under the feet of my foes to make movement difficult.\"</p>\n<p>\"I summon forth a wall of flames to repel my attackers.\"</p>\n</blockquote>"
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

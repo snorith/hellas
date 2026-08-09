@@ -1,0 +1,25 @@
+{
+	"_id": "Wq1QxKxYqoPQlsCM",
+	"_key": "!items!Wq1QxKxYqoPQlsCM",
+	"name": "Intimidate - w. Words",
+	"type": "skill",
+	"img": "systems/hellas/assets/icons/talk.svg",
+	"system": {
+		"skill": "intimidate",
+		"attribute": "CHA",
+		"specifier": "words",
+		"specifierCustom": "",
+		"level": {
+			"value": 0,
+			"max": 0
+		},
+		"notes": "<h1>Intimidate (*)</h1>\n<p><strong>Training Time (TT): 8 weeks</strong></p>\n<p>You are adept at using words, whether clever rhetoric or harsh insults, to demoralize and berate others into acting in a manner you choose. A physically impressive Hero may intimidate an opponent using his size alone (STR). You can change another&rsquo;s behavior with a successful check, with the Results Table result determining the degree to which you succeed.</p>\n<p>&nbsp;</p>\n<p>An intimidated target suffers a penalty to attack the Hero equal to half the target&rsquo;s CHA (round up, minimum of -1) for a number of rounds equal to his CHA (minimum of one round).</p>"
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

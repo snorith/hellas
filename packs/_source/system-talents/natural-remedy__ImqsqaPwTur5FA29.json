@@ -1,0 +1,19 @@
+{
+	"_id": "ImqsqaPwTur5FA29",
+	"_key": "!items!ImqsqaPwTur5FA29",
+	"name": "Natural Remedy",
+	"type": "talent",
+	"img": "icons/svg/sun.svg",
+	"system": {
+		"desc": "You are knowledgeable in the medicinal uses of herbs, roots, bark, and other forest plants.",
+		"benefit": "<p>The Hero receives triple his INT (minimum of +3) to Heal or Medicine rolls when you have access to various herbal substances. This bonus stacks with any bonus received from other talents.</p>",
+		"notes": ""
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

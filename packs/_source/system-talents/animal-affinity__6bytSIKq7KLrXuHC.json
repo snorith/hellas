@@ -1,0 +1,19 @@
+{
+	"_id": "6bytSIKq7KLrXuHC",
+	"_key": "!items!6bytSIKq7KLrXuHC",
+	"name": "Animal Affinity",
+	"type": "talent",
+	"img": "icons/svg/sun.svg",
+	"system": {
+		"desc": "You have a calming effect on the creatures of the forest, deserts, seas, arctic regions, etc.",
+		"benefit": "<p>If you encounter an animal and are not actively in combat, you may attempt to soothe the creature by making a successful Omni Table CHA check. On a partial success, the animal will simply retreat by the quickest means possible. A full success means the animal in question considers you to be friendly and may aid you in some manner.</p>",
+		"notes": ""
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

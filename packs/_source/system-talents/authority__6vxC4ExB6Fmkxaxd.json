@@ -1,0 +1,19 @@
+{
+	"_id": "6vxC4ExB6Fmkxaxd",
+	"_key": "!items!6vxC4ExB6Fmkxaxd",
+	"name": "Authority",
+	"type": "talent",
+	"img": "icons/svg/sun.svg",
+	"system": {
+		"desc": "The Hero has duties, rank, and power in his local jurisdiction.",
+		"benefit": "<p>The Hero adds triple his WIL (minimum of +3) to CHA when determining Reaction Rolls while working in your official capacity.</p>",
+		"notes": ""
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

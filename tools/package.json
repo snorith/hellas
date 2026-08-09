@@ -1,0 +1,9 @@
+{
+	"private": true,
+	"name": "hellas-tools",
+	"description": "Release tooling only — the system itself has zero build steps.",
+	"type": "module",
+	"devDependencies": {
+		"@foundryvtt/foundryvtt-cli": "^1.0.4"
+	}
+}

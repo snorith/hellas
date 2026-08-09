@@ -1,0 +1,19 @@
+{
+	"_id": "FvjqHn4Z1t75YD5L",
+	"_key": "!items!FvjqHn4Z1t75YD5L",
+	"name": "Intimidation Tactics",
+	"type": "talent",
+	"img": "icons/svg/sun.svg",
+	"system": {
+		"desc": "You have learned how scare others out of their possessions through intimidating tactics.",
+		"benefit": "<p>The Hero receives triple his STR or CHA (minimum of +3) to rolls on Intimidation and may use either STR or CHA as a modifier to that skill.</p>",
+		"notes": ""
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}

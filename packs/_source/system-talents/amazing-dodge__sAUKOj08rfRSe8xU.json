@@ -1,0 +1,19 @@
+{
+	"_id": "sAUKOj08rfRSe8xU",
+	"_key": "!items!sAUKOj08rfRSe8xU",
+	"name": "Amazing Dodge",
+	"type": "talent",
+	"img": "icons/svg/sun.svg",
+	"system": {
+		"desc": "You have a remarkable ability to avoid being hit in melee combat.",
+		"benefit": "<p>The Hero may add triple his DEX (minimum of +3) to any Evade roll (the Hero must use an action to actively evade). This may be done a number of times a day equal to his DEX (minimum of 3).</p>",
+		"notes": ""
+	},
+	"effects": [],
+	"folder": null,
+	"sort": 0,
+	"ownership": {
+		"default": 0
+	},
+	"flags": {}
+}
