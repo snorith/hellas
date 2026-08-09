@@ -228,6 +228,14 @@ for ( const p of manifest.packs ) {
 	const src = p.path.replace("packs/", "packs/_source/");
 	if ( !existsSync(src) ) { fail(`pack source missing: ${src}`); manBad++; }
 }
+for ( const mediaEntry of manifest.media ?? [] ) {
+	const p = mediaEntry.url?.replace(/^systems\/hellas\//, "");
+	if ( p && !existsSync(p) ) { fail(`manifest media url missing: ${mediaEntry.url}`); manBad++; }
+}
+if ( manifest.background ) {
+	const p = manifest.background.replace(/^systems\/hellas\//, "");
+	if ( !existsSync(p) ) { fail(`manifest background missing: ${manifest.background}`); manBad++; }
+}
 const dt = manifest.documentTypes;
 if ( !dt?.Actor?.character || Object.keys(dt?.Item ?? {}).length !== 5 ) { fail("documentTypes incomplete"); manBad++; }
 if ( !manBad ) ok("manifest: esmodules/styles/languages/pack sources/documentTypes all present");

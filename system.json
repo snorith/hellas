@@ -13,29 +13,62 @@
 			"url": "https://github.com/snorith"
 		}
 	],
-	"esmodules": ["hellas.mjs"],
-	"styles": ["styles/hellas.css"],
+	"esmodules": [
+		"hellas.mjs"
+	],
+	"styles": [
+		"styles/hellas.css"
+	],
+	"media": [
+		{
+			"type": "setup",
+			"url": "systems/hellas/assets/images/augustine-wong-li0iC0rjvvg-unsplash.jpg"
+		}
+	],
+	"background": "systems/hellas/assets/images/augustine-wong-li0iC0rjvvg-unsplash.jpg",
+	"flags": {
+		"hotReload": {
+			"paths": [
+				"styles",
+				"templates",
+				"lang"
+			]
+		}
+	},
 	"documentTypes": {
 		"Actor": {
 			"character": {
-				"htmlFields": ["biography"]
+				"htmlFields": [
+					"biography"
+				]
 			}
 		},
 		"Item": {
 			"skill": {
-				"htmlFields": ["notes"]
+				"htmlFields": [
+					"notes"
+				]
 			},
 			"dynamism": {
-				"htmlFields": ["notes"]
+				"htmlFields": [
+					"notes"
+				]
 			},
 			"weapon": {
-				"htmlFields": ["notes"]
+				"htmlFields": [
+					"notes"
+				]
 			},
 			"armor": {
-				"htmlFields": ["notes"]
+				"htmlFields": [
+					"notes"
+				]
 			},
 			"talent": {
-				"htmlFields": ["notes", "benefit"]
+				"htmlFields": [
+					"notes",
+					"benefit"
+				]
 			}
 		}
 	},
@@ -81,5 +114,5 @@
 	"license": "LICENSE",
 	"readme": "https://github.com/snorith/hellas#readme",
 	"bugs": "https://github.com/snorith/hellas/issues",
-	"changelog": "https://github.com/snorith/hellas#changelog"
+	"changelog": "https://github.com/snorith/hellas/blob/main/CHANGELOG.md"
 }

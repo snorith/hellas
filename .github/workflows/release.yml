@@ -50,7 +50,7 @@ jobs:
         run: |
           zip -r "hellas-${TAG}.zip" \
             system.json hellas.mjs module templates styles lang assets packs \
-            LICENSE README.md \
+            LICENSE README.md CHANGELOG.md \
             -x "packs/_source/*"
 
       - name: Create release
