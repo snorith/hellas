@@ -33,7 +33,7 @@ for ( const family of FAMILIES ) {
 		const block = blocks.find(([, subset, body]) =>
 			subset === "latin" && body.includes(`font-weight: ${weight}`));
 		if ( !block ) throw new Error(`no latin block for weight ${weight} in ${family.css}`);
-		const url = block[2].match(/url\((https:[^)]+\.woff2)\)/)?.[1];
+		const url = block[2].match(/url\(\s*["']?(https:[^)"']+\.woff2)["']?\s*\)/)?.[1];
 		if ( !url ) throw new Error(`no woff2 url for weight ${weight}`);
 		const buffer = Buffer.from(await (await fetch(url)).arrayBuffer());
 		if ( buffer.subarray(0, 4).toString("ascii") !== "wOF2" ) {

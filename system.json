@@ -28,6 +28,11 @@
 	"background": "systems/hellas/assets/images/augustine-wong-li0iC0rjvvg-unsplash.jpg",
 	"flags": {
 		"hotReload": {
+			"extensions": [
+				"css",
+				"hbs",
+				"json"
+			],
 			"paths": [
 				"styles",
 				"templates",

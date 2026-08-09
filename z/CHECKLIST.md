@@ -63,6 +63,7 @@ create a fresh world on the Hellas system. Keep the console (F12) open —
 - [ ] First GM launch shows the migration begun/completed notifications; a second launch is silent (the `systemMigrationVersion` setting is stamped).
 - [ ] After migration, Export Data on a legacy actor shows `sixthborn` (not `sxithborn`) and no blank-string numerics; an exported owned SKILL has no `skillid`/`fullName` keys and the actor export has no `modifiers` key — derived values stayed out of the DB.
 - [ ] An unlinked token with an ActorDelta and an owned item: the delta is untouched by migration (deliberate scope cut) and the token still works.
+- [ ] Add an Active Effect to a legacy actor (via a module or console) BEFORE migration: after the pass it still exists — stripping `effects` from the re-save payload must mean "leave untouched", never "delete".
 
 ## I. Settings
 - [ ] Settings → Hellas → "View Trademark Notice" opens the Khepera notice verbatim.

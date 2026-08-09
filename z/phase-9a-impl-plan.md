@@ -256,3 +256,15 @@ conclusion ("fold ... and it is ready") + codex's unconditional ready, the
 plan is at terminal state; a third round would re-review prose alignment only.
 Implementation may proceed. Impl-time verification notes carried: jq -er
 behavior, hotReload manifest shape.
+
+## Review ledger (implementation)
+
+### impl rev 1 — commits 0b05f32..cfe0fb4, codex (review --base) + devin (read-only)
+
+| # | Reviewer | Finding | Disposition |
+|---|----------|---------|-------------|
+| IC1 | codex | P2: flags.hotReload lacks the `extensions` list, so hot reload matches nothing | **Folded** — and it overturned this plan's own 9a-3 note: the configuration article's paths-only snippet is a simplification; the core design issue (foundryvtt#9027, the implementation spec) marks `extensions` REQUIRED and `paths` optional, and dnd5e ships both keys. `extensions: ["css","hbs","json"]` restored alongside paths. (devin's impl review, run pre-fix, praised the paths-only shape — superseded by the same evidence.) |
+| ID1 | devin | Nit: fetch-fonts woff2-URL regex breaks if Google ever quotes url(...) | **Folded**: regex now tolerates optional quotes/whitespace. |
+| ID2 | devin | Unverified: does deleting `effects` from a {diff:false} full-source payload PRESERVE embedded effects (vs deleting them)? | **Reasoned + execution-gated**: absent embedded-collection keys are untouched by Document#update (deletion requires explicit deleteEmbeddedDocuments; diff:false affects field diffing, not embedded collections) — the standard dnd5e migration pattern relies on this. Added as an explicit z/CHECKLIST.md §H row so it is confirmed by execution before release rather than asserted. |
+
+devin verdict otherwise: "Implementation is faithful to the converged plan. No blockers or majors." — every planned element verified file-by-file. Confirmation round pending.
