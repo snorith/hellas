@@ -74,6 +74,19 @@
 	a { color: var(--hellas-ink); }
 	a:hover { text-shadow: 0 0 6px var(--color-shadow-primary, #ff6400); }
 
+	/* Core's dark theme colors headings pale cream for dark grounds — on our
+	   marble they vanish. All headings take the sheet ink explicitly. */
+	h1, h2, h3, h4, .charname {
+		color: var(--hellas-ink);
+	}
+
+	/* Core's default document icons are white-line SVGs for dark grounds. A
+	   dark chip behind the image keeps them visible; raster portraits cover
+	   it entirely (object-fit: cover). */
+	.profile-img {
+		background: #3a3733;
+	}
+
 	.hellas-titling {
 		font-family: var(--hellas-font-titles);
 		text-transform: uppercase;
