@@ -370,6 +370,22 @@
 		label { text-align: right; }
 		input[type="number"] { width: 6rem; }
 		input[type="checkbox"] { justify-self: start; }
+
+		/* Field + hint cells (armor sheet): hint sits in its own column
+		   beside the input and wraps there, never underneath the box. */
+		> span {
+			display: flex;
+			align-items: center;
+			gap: 0.5rem;
+
+			input { flex: 0 0 auto; }
+			small {
+				flex: 1;
+				min-width: 0;
+				color: var(--hellas-ink-muted);
+				line-height: 1.2;
+			}
+		}
 	}
 
 	.hellas-skill-guidance {
