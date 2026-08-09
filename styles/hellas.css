@@ -64,6 +64,39 @@
 		background: var(--hellas-field-bg);
 		border: 1px solid var(--hellas-border);
 	}
+
+	/* v13 renders checkboxes as icon-font glyphs whose states are illegible on
+	   our ground (unchecked showed as a solid dark block). Take full control:
+	   suppress core's glyph pseudo-elements and draw the box + check ourselves. */
+	input[type="checkbox"] {
+		appearance: none;
+		-webkit-appearance: none;
+		width: 18px;
+		height: 18px;
+		flex: 0 0 18px;
+		display: inline-grid;
+		place-content: center;
+		background: var(--hellas-field-bg-strong);
+		border: 1px solid var(--hellas-border);
+		border-radius: 3px;
+		cursor: pointer;
+	}
+	input[type="checkbox"]::before,
+	input[type="checkbox"]::after {
+		content: none;
+	}
+	input[type="checkbox"]:checked::before {
+		content: "✔";
+		font-family: var(--hellas-font-primary);
+		font-size: 13px;
+		font-weight: bold;
+		line-height: 1;
+		color: var(--hellas-ink);
+	}
+	input[type="checkbox"]:disabled {
+		opacity: 0.5;
+		cursor: not-allowed;
+	}
 	input:disabled, select:disabled, textarea:disabled {
 		color: var(--hellas-ink-muted);
 	}
