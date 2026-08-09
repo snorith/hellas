@@ -17,6 +17,10 @@ import {
 	migrateWeaponData
 } from "../module/data/migrations.mjs";
 
+// world.mjs depends only on module/config.mjs; the version-gate helper takes
+// an injected comparator, so no foundry stubbing is needed here.
+import { needsMigration, NEEDS_MIGRATION_VERSION } from "../module/migrations/world.mjs";
+
 let passed = 0;
 function test(name, fn) {
 	fn();
@@ -107,6 +111,19 @@ test("idempotency: second migration changes nothing", () => {
 	const once = clone(source);
 	migrateCharacterData(source);
 	assert.deepEqual(source, once);
+});
+
+test("needsMigration version gate", () => {
+	// semver-ish comparator good enough for the test matrix
+	const isNewer = (a, b) => {
+		const pa = a.split(".").map(Number), pb = b.split(".").map(Number);
+		for ( let i = 0; i < 3; i++ ) { if ( (pa[i] ?? 0) !== (pb[i] ?? 0) ) return (pa[i] ?? 0) > (pb[i] ?? 0); }
+		return false;
+	};
+	assert.equal(needsMigration("", isNewer), true, "never-stamped world migrates");
+	assert.equal(needsMigration("0.3.6", isNewer), true, "older stamp migrates");
+	assert.equal(needsMigration(NEEDS_MIGRATION_VERSION, isNewer), false, "equal stamp skips");
+	assert.equal(needsMigration("0.5.0", isNewer), false, "newer stamp skips");
 });
 
 console.log(`\n${passed}/${passed} migration smoke tests passed`);

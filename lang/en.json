@@ -561,5 +561,8 @@
   "HELLAS.settings.trademark.name": "Trademark Notice",
   "HELLAS.settings.trademark.label": "View Trademark Notice",
   "HELLAS.settings.trademark.hint": "Trademark and license information for the HELLAS RPG content included in this system.",
-  "HELLAS.attributes.hitpoints.name": "Hit Points"
+  "HELLAS.attributes.hitpoints.name": "Hit Points",
+  "HELLAS.migration.begun": "Migrating the HELLAS system to version {version}. Please be patient and do not close your game or shut down the server.",
+  "HELLAS.migration.completed": "HELLAS system migration to version {version} completed ({count} documents updated).",
+  "HELLAS.migration.completedWithFailures": "HELLAS system migration to version {version} finished: {count} documents updated, {failed} failed — see the console (F12). Migration will retry on next launch."
 }

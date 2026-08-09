@@ -60,9 +60,16 @@ create a fresh world on the Hellas system. Keep the console (F12) open —
 - [ ] Character loads: attributes/HP/fate values intact; children fields intact (incl. old `sxithborn` → sixthborn); ambitions 1–4 present; blank number fields did NOT become 0s where they were blank.
 - [ ] Owned skills keep their levels; names re-derive; weapons still point at their skills (item-id refs).
 - [ ] Compendium references in old journals (`Compendium.hellas.systemSkills.<id>`) still resolve.
+- [ ] First GM launch shows the migration begun/completed notifications; a second launch is silent (the `systemMigrationVersion` setting is stamped).
+- [ ] After migration, Export Data on a legacy actor shows `sixthborn` (not `sxithborn`) and no blank-string numerics; an exported owned SKILL has no `skillid`/`fullName` keys and the actor export has no `modifiers` key — derived values stayed out of the DB.
+- [ ] An unlinked token with an ActorDelta and an owned item: the delta is untouched by migration (deliberate scope cut) and the token still works.
 
 ## I. Settings
 - [ ] Settings → Hellas → "View Trademark Notice" opens the Khepera notice verbatim.
 
 ## J. Dark mode
 - [ ] Switch core theme to dark: sheets stay legible (dark ink on marble), dialogs/chat cards themed by core, tooltips readable.
+
+## K. Offline assets
+
+- [ ] With the network blocked (devtools → offline), reload: sheet headings still render in Caesar Dressing and body text in Roboto (fonts are bundled, no Google Fonts request appears in the network tab).

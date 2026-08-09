@@ -9,7 +9,7 @@
  * Software License: MIT
  */
 
-import { HELLAS } from "./module/config.mjs";
+import { HELLAS, SYSTEM_ID } from "./module/config.mjs";
 import CharacterData from "./module/data/character.mjs";
 import SkillData from "./module/data/skill.mjs";
 import WeaponData from "./module/data/weapon.mjs";
@@ -21,8 +21,9 @@ import HellasItem from "./module/documents/item.mjs";
 import HellasItemSheet from "./module/sheets/item-sheet.mjs";
 import HellasActorSheet from "./module/sheets/actor-sheet.mjs";
 import TrademarkNotice from "./module/apps/trademark-notice.mjs";
+import { migrateWorldIfNeeded } from "./module/migrations/world.mjs";
 
-export const SYSTEM_ID = "hellas";
+export { SYSTEM_ID };
 
 /**
  * Combat-tracker initiative: SPD + first-round modifier, with SPD/100 as the
@@ -67,6 +68,13 @@ Hooks.once("init", () => {
 		label: "HELLAS.sheet.labels.item"
 	});
 
+	game.settings.register(SYSTEM_ID, "systemMigrationVersion", {
+		scope: "world",
+		config: false,
+		type: String,
+		default: ""
+	});
+
 	game.settings.registerMenu(SYSTEM_ID, "trademarkNotice", {
 		name: "HELLAS.settings.trademark.name",
 		label: "HELLAS.settings.trademark.label",
@@ -76,6 +84,8 @@ Hooks.once("init", () => {
 		restricted: false
 	});
 });
+
+Hooks.once("ready", () => migrateWorldIfNeeded());
 
 Hooks.once("setup", () => {
 	// Preload roll-flow templates (F15 — the legacy list was incomplete).

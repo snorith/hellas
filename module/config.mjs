@@ -7,6 +7,9 @@
  *  - F14: the attribute short-name key is `fatepoints`, matching the actor schema
  */
 
+/** The package id — also the settings namespace and sheet scope. */
+export const SYSTEM_ID = "hellas";
+
 /** Sentinel specifier value meaning "user supplies a custom specifier". */
 export const SPECIFY_SUBTYPE = "specify";
 
